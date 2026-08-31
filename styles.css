@@ -120,6 +120,10 @@ h1 {
   overflow: hidden;
 }
 
+.intro-contact-marquee {
+  width: 100%;
+}
+
 .intro-contact-track {
   display: flex;
   width: 100%;
@@ -830,26 +834,28 @@ body.modal-open {
   .intro-contact {
     order: -1;
     position: relative;
+    display: block;
     height: 34px;
+    overflow: hidden;
     border-bottom: 2px solid var(--line);
-    background: var(--accent);
+    background: var(--bg);
+  }
+
+  .intro-contact-marquee {
+    display: flex;
+    width: max-content;
+    min-width: max-content;
+    animation: contact-marquee 28s linear infinite;
   }
 
   .intro-contact-track,
   .intro-contact-track[aria-hidden="true"] {
     display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: max-content;
     min-width: max-content;
+    justify-content: flex-start;
     gap: 24px;
     padding: 9px 12px;
-    animation: contact-marquee 24s linear infinite;
-  }
-
-  .intro-contact-track[aria-hidden="true"] {
-    left: 100%;
   }
 
   .intro-contact p {
@@ -960,7 +966,7 @@ body.modal-open {
   }
 
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
