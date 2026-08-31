@@ -16,7 +16,7 @@
         <a href="#selected">selected works</a>
         <a href="#archive">archive</a>
         <a href="#licensing" data-route="licensing">licensing</a>
-        <a href="mailto:hello@wev.world">contact</a>
+        <a href="#contact">contact</a>
       </nav>
     </header>
 
@@ -36,7 +36,6 @@
             <p><span>inquiries</span> <a href="mailto:hello@wev.world" tabindex="-1">hello@wev.world</a></p>
           </div>
         </div>
-        <p id="site-tagline">Releases, selected works, live records, goods, fliers, licensing, and project notes.</p>
       </section>
 
       <section class="selected-page page-view is-active" id="selected" data-page="selected" aria-label="Selected works">
@@ -65,7 +64,6 @@
         <div class="left-column">
           <div class="filter-bar" role="list" aria-label="Archive filters"></div>
           <div class="archive-list" aria-live="polite"></div>
-          <div class="project-panel" hidden></div>
         </div>
       </section>
 
@@ -136,6 +134,28 @@
         </section>
       </section>
 
+      <section class="contact-page page-view" id="contact" data-page="contact" aria-labelledby="contact-title">
+        <div class="section-rule"></div>
+        <div class="about-grid">
+          <figure class="press-photo">
+            <img src="assets/wev-studio-press-photo.jpg" alt="wev seated in the studio" />
+          </figure>
+          <div class="about-copy">
+            <p class="kicker">about / contact</p>
+            <h2 id="contact-title">wev</h2>
+            <p>wev's sound is rooted in the DNA of house and garage, inherited not through clubs, but through play. Raised on '90s video game music that reflected the club music of that era, he traced those sounds back to their source and built a world where rhythm, memory, and digital texture meet.</p>
+            <p class="bio-source">Bio adapted from Resident Advisor.</p>
+            <div class="contact-stack" aria-label="Contact">
+              <a class="mail-link" href="mailto:brent@good-direction.agency">NA/SA: brent@good-direction.agency</a>
+              <a class="mail-link" href="mailto:jon@good-direction.agency">NA/SA: jon@good-direction.agency</a>
+              <a class="mail-link" href="mailto:allen@awesome-agency.com">ASIA/AUS/ROW: allen@awesome-agency.com</a>
+              <a class="mail-link" href="mailto:max@stackedmgmt.com">MGMT: max@stackedmgmt.com</a>
+              <a class="mail-link" href="mailto:hello@wev.world">inquiries: hello@wev.world</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="admin-page page-view" id="admin" data-page="admin" aria-labelledby="admin-title">
         <section class="admin-panel">
           <div>
@@ -152,6 +172,10 @@
         </section>
       </section>
     </main>
+    <div class="project-modal" hidden>
+      <div class="project-modal-backdrop" data-action="close-project"></div>
+      <div class="project-panel" role="dialog" aria-modal="true" aria-label="Project details"></div>
+    </div>
     <script src="app.js" type="module"></script>
   </body>
 </html>

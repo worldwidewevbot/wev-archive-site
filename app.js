@@ -7,6 +7,7 @@ const state = {
   catalogTag: "all",
   selectedTrackIds: new Set(),
   openProjectId: null,
+  lastFocusedElement: null,
   data: null
 };
 
@@ -17,6 +18,7 @@ const els = {
   projectPanel: document.querySelector(".project-panel"),
   videoList: document.querySelector(".video-list"),
   dateList: document.querySelector(".date-list"),
+  projectModal: document.querySelector(".project-modal"),
   trackTable: document.querySelector(".track-table"),
   catalogTags: document.querySelector(".catalog-tags"),
   catalogSearch: document.querySelector(".catalog-search input"),
@@ -28,7 +30,6 @@ const els = {
   adminEditor: document.querySelector(".admin-editor"),
   adminExport: document.querySelector(".admin-export"),
   adminActions: document.querySelectorAll("[data-admin-action]"),
-  tagline: document.querySelector("#site-tagline"),
   licensingIntro: document.querySelector("#licensing-intro")
 };
 
@@ -44,7 +45,7 @@ async function loadArchive() {
 
 function render() {
   const { site, filters, selectedWorks, items, videos, dates, licensing } = state.data;
-  setText(els.tagline, site.tagline);
+  void site;
   setText(els.licensingIntro, licensing.intro);
   renderSelectedWorks(selectedWorks);
   renderFilters(filters);
@@ -206,16 +207,11 @@ function openProject(id) {
   const archiveItems = mergeArchiveItems(state.data.selectedWorks, state.data.items, state.data.videos);
   const item = archiveItems.find((entry) => entry.id === id);
   if (!item || !item.project) return;
-  if (!els.archiveList || !els.filterBar || !els.projectPanel) return;
+  if (!els.projectModal || !els.projectPanel) return;
 
   state.openProjectId = id;
-  if (state.page !== "archive") {
-    window.location.hash = "#archive";
-    renderPage();
-  }
-  els.archiveList.hidden = true;
-  els.filterBar.hidden = true;
-  els.projectPanel.hidden = false;
+  state.lastFocusedElement = document.activeElement;
+  els.projectModal.hidden = false;
   els.projectPanel.innerHTML = `
     <article class="project-detail">
       <div class="project-detail-media">
@@ -235,16 +231,25 @@ function openProject(id) {
       </div>
     </article>
   `;
-  els.projectPanel.querySelector("[data-action='close-project']").addEventListener("click", closeProject);
+  document.body.classList.add("modal-open");
+  els.projectPanel.querySelectorAll("[data-action='close-project']").forEach((button) => {
+    button.addEventListener("click", closeProject);
+  });
+  const backdrop = els.projectModal.querySelector(".project-modal-backdrop");
+  if (backdrop) backdrop.onclick = closeProject;
+  els.projectPanel.querySelector("[data-action='close-project']")?.focus();
 }
 
 function closeProject() {
   state.openProjectId = null;
-  if (!els.projectPanel || !els.archiveList || !els.filterBar) return;
-  els.projectPanel.hidden = true;
+  if (!els.projectModal || !els.projectPanel) return;
+  els.projectModal.hidden = true;
   els.projectPanel.replaceChildren();
-  els.archiveList.hidden = false;
-  els.filterBar.hidden = false;
+  document.body.classList.remove("modal-open");
+  if (state.lastFocusedElement && typeof state.lastFocusedElement.focus === "function") {
+    state.lastFocusedElement.focus();
+  }
+  state.lastFocusedElement = null;
 }
 
 function renderCatalog() {
@@ -501,12 +506,17 @@ function renderPage() {
         ? "licensing"
         : window.location.hash === "#admin"
           ? "admin"
-          : "selected";
+          : window.location.hash === "#contact"
+            ? "contact"
+            : "selected";
   state.page = requested;
   document.querySelectorAll(".page-view").forEach((page) => {
     page.classList.toggle("is-active", page.dataset.page === state.page);
   });
-  if (state.page !== "archive" && state.openProjectId) {
+}
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && state.openProjectId) {
     closeProject();
   }
-}
+});
