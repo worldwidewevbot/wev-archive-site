@@ -40,14 +40,25 @@
       </section>
 
       <section class="selected-page page-view is-active" id="selected" data-page="selected" aria-label="Selected works">
-        <div class="selected-list" aria-live="polite"></div>
-        <section class="selected-videos" aria-label="Selected video embeds">
-          <div class="module-heading">
-            <h2>video</h2>
-            <span>selected embeds</span>
-          </div>
-          <div class="selected-video-list"></div>
-        </section>
+        <div class="selected-layout">
+          <div class="selected-list" aria-live="polite"></div>
+          <aside class="right-column selected-sidebar" aria-label="Current modules">
+            <section class="module">
+              <div class="module-heading">
+                <h2>live</h2>
+                <span>upcoming</span>
+              </div>
+              <div class="date-list"></div>
+            </section>
+            <section class="module">
+              <div class="module-heading">
+                <h2>video</h2>
+                <span>playlist</span>
+              </div>
+              <div class="video-list"></div>
+            </section>
+          </aside>
+        </div>
       </section>
 
       <section class="archive-layout page-view" id="archive" data-page="archive">

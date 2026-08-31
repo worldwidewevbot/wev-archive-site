@@ -12,10 +12,11 @@ const state = {
 
 const els = {
   selectedList: document.querySelector(".selected-list"),
-  selectedVideoList: document.querySelector(".selected-video-list"),
   filterBar: document.querySelector(".filter-bar"),
   archiveList: document.querySelector(".archive-list"),
   projectPanel: document.querySelector(".project-panel"),
+  videoList: document.querySelector(".video-list"),
+  dateList: document.querySelector(".date-list"),
   trackTable: document.querySelector(".track-table"),
   catalogTags: document.querySelector(".catalog-tags"),
   catalogSearch: document.querySelector(".catalog-search input"),
@@ -48,7 +49,8 @@ function render() {
   renderSelectedWorks(selectedWorks);
   renderFilters(filters);
   renderItems(mergeArchiveItems(selectedWorks, items, videos));
-  renderSelectedVideos(videos);
+  renderVideos(videos);
+  renderDates(dates);
   renderCatalog();
   bindCatalogControls();
   renderPage();
@@ -78,11 +80,6 @@ function mergeArchiveItems(selectedWorks, items, videos = []) {
 function renderSelectedWorks(works) {
   if (!els.selectedList) return;
   els.selectedList.replaceChildren(...works.map((work) => renderItem(work, { selected: true })));
-}
-
-function renderSelectedVideos(videos) {
-  if (!els.selectedVideoList) return;
-  els.selectedVideoList.replaceChildren(...videos.slice(0, 4).map((video) => renderVideoCard(video)));
 }
 
 function renderFilters(filters) {
@@ -169,6 +166,29 @@ function renderVideoCard(video) {
     </a>
   `;
   return article;
+}
+
+function renderVideos(videos) {
+  if (!els.videoList) return;
+  els.videoList.replaceChildren(...videos.map((video) => renderVideoCard(video)));
+}
+
+function renderDates(dates) {
+  if (!els.dateList) return;
+  els.dateList.replaceChildren(
+    ...dates.map((date) => {
+      const row = document.createElement("div");
+      row.className = "date-row";
+      row.innerHTML = `
+        <time datetime="${escapeAttribute(date.date)}">${formatDate(date.date)}</time>
+        <div>
+          <strong>${escapeHtml(date.city)}</strong>
+          <span>${escapeHtml(date.venue)} / ${escapeHtml(date.status)}</span>
+        </div>
+      `;
+      return row;
+    })
+  );
 }
 
 function renderVideoEmbed(video) {
