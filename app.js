@@ -12,11 +12,10 @@ const state = {
 
 const els = {
   selectedList: document.querySelector(".selected-list"),
+  selectedVideoList: document.querySelector(".selected-video-list"),
   filterBar: document.querySelector(".filter-bar"),
   archiveList: document.querySelector(".archive-list"),
   projectPanel: document.querySelector(".project-panel"),
-  videoList: document.querySelector(".video-list"),
-  dateList: document.querySelector(".date-list"),
   trackTable: document.querySelector(".track-table"),
   catalogTags: document.querySelector(".catalog-tags"),
   catalogSearch: document.querySelector(".catalog-search input"),
@@ -48,17 +47,28 @@ function render() {
   els.licensingIntro.textContent = licensing.intro;
   renderSelectedWorks(selectedWorks);
   renderFilters(filters);
-  renderItems(mergeArchiveItems(selectedWorks, items));
-  renderVideos(videos);
-  renderDates(dates);
+  renderItems(mergeArchiveItems(selectedWorks, items, videos));
+  renderSelectedVideos(videos);
   renderCatalog();
   bindCatalogControls();
   renderPage();
 }
 
-function mergeArchiveItems(selectedWorks, items) {
+function mergeArchiveItems(selectedWorks, items, videos = []) {
   const seen = new Set();
-  return [...selectedWorks, ...items].filter((item) => {
+  const videoItems = videos.map((video, index) => ({
+    id: `video-${video.id}`,
+    type: "video",
+    year: video.year || "video",
+    title: video.title,
+    dek: video.caption,
+    description: "Selected public video embed.",
+    links: [{ label: "youtube", url: video.url }],
+    tags: ["video", "youtube"],
+    video,
+    sortIndex: index
+  }));
+  return [...selectedWorks, ...items, ...videoItems].filter((item) => {
     if (seen.has(item.id)) return false;
     seen.add(item.id);
     return true;
@@ -67,6 +77,10 @@ function mergeArchiveItems(selectedWorks, items) {
 
 function renderSelectedWorks(works) {
   els.selectedList.replaceChildren(...works.map((work) => renderItem(work, { selected: true })));
+}
+
+function renderSelectedVideos(videos) {
+  els.selectedVideoList.replaceChildren(...videos.slice(0, 4).map((video) => renderVideoCard(video)));
 }
 
 function renderFilters(filters) {
@@ -79,7 +93,7 @@ function renderFilters(filters) {
       button.setAttribute("aria-pressed", String(filter === state.filter));
       button.addEventListener("click", () => {
         state.filter = filter;
-        renderItems(mergeArchiveItems(state.data.selectedWorks, state.data.items));
+        renderItems(mergeArchiveItems(state.data.selectedWorks, state.data.items, state.data.videos));
         renderFilters(state.data.filters);
       });
       return button;
@@ -96,6 +110,7 @@ function renderItem(item, options = {}) {
   const article = document.createElement("article");
   article.className = options.selected ? "archive-item selected-work" : "archive-item";
   article.dataset.type = item.type;
+  const media = item.video ? renderVideoEmbed(item.video) : `<img class="archive-media" src="${escapeAttribute(item.image)}" alt="" loading="lazy" />`;
   article.innerHTML = `
     <div class="archive-copy">
       <div class="meta">
@@ -114,7 +129,7 @@ function renderItem(item, options = {}) {
         </div>
       </div>
     </div>
-    <img class="archive-media" src="${escapeAttribute(item.image)}" alt="" loading="lazy" />
+    ${media}
   `;
   article.querySelectorAll("[data-action='open-project']").forEach((link) => {
     link.addEventListener("click", (event) => {
@@ -123,24 +138,6 @@ function renderItem(item, options = {}) {
     });
   });
   return article;
-}
-
-function renderVideos(videos) {
-  els.videoList.replaceChildren(
-    ...videos.map((video) => {
-      const article = document.createElement("article");
-      article.className = "video-card";
-      const embedUrl = createYoutubeEmbedUrl(video);
-      article.innerHTML = `
-        <iframe class="video-embed" src="${escapeAttribute(embedUrl.href)}" title="${escapeAttribute(video.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-        <a class="video-link" href="${escapeAttribute(video.url)}" target="_blank" rel="noreferrer">
-          <span>${escapeHtml(video.title)}</span>
-          <small>${escapeHtml(video.caption)} / open on youtube</small>
-        </a>
-      `;
-      return article;
-    })
-  );
 }
 
 function createYoutubeEmbedUrl(video) {
@@ -157,6 +154,24 @@ function createYoutubeEmbedUrl(video) {
   return embedUrl;
 }
 
+function renderVideoCard(video) {
+  const article = document.createElement("article");
+  article.className = "video-card";
+  article.innerHTML = `
+    ${renderVideoEmbed(video)}
+    <a class="video-link" href="${escapeAttribute(video.url)}" target="_blank" rel="noreferrer">
+      <span>${escapeHtml(video.title)}</span>
+      <small>${escapeHtml(video.caption)} / open on youtube</small>
+    </a>
+  `;
+  return article;
+}
+
+function renderVideoEmbed(video) {
+  const embedUrl = createYoutubeEmbedUrl(video);
+  return `<iframe class="video-embed archive-media" src="${escapeAttribute(embedUrl.href)}" title="${escapeAttribute(video.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>`;
+}
+
 function renderLink(link, item) {
   const action = link.action ? ` data-action="${escapeAttribute(link.action)}"` : "";
   const target = link.action ? "" : ' target="_blank" rel="noreferrer"';
@@ -164,7 +179,7 @@ function renderLink(link, item) {
 }
 
 function openProject(id) {
-  const archiveItems = mergeArchiveItems(state.data.selectedWorks, state.data.items);
+  const archiveItems = mergeArchiveItems(state.data.selectedWorks, state.data.items, state.data.videos);
   const item = archiveItems.find((entry) => entry.id === id);
   if (!item || !item.project) return;
 
@@ -204,23 +219,6 @@ function closeProject() {
   els.projectPanel.replaceChildren();
   els.archiveList.hidden = false;
   els.filterBar.hidden = false;
-}
-
-function renderDates(dates) {
-  els.dateList.replaceChildren(
-    ...dates.map((date) => {
-      const row = document.createElement("div");
-      row.className = "date-row";
-      row.innerHTML = `
-        <time datetime="${escapeAttribute(date.date)}">${formatDate(date.date)}</time>
-        <div>
-          <strong>${escapeHtml(date.city)}</strong>
-          <span>${escapeHtml(date.venue)} / ${escapeHtml(date.status)}</span>
-        </div>
-      `;
-      return row;
-    })
-  );
 }
 
 function renderCatalog() {
