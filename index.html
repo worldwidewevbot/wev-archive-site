@@ -22,16 +22,25 @@
     <main class="shell">
       <section class="intro" aria-labelledby="site-title">
         <div class="intro-contact" aria-label="Booking and contact emails">
-          <p><span>NA/SA bookings:</span> <a href="mailto:brent@good-direction.agency">brent@good-direction.agency</a> / <a href="mailto:jon@good-direction.agency">jon@good-direction.agency</a></p>
-          <p><span>ASIA/AUS/ROW bookings:</span> <a href="mailto:allen@awesome-agency.com">allen@awesome-agency.com</a></p>
-          <p><span>MGMT</span> <a href="mailto:max@stackedmgmt.com">max@stackedmgmt.com</a></p>
-          <p><span>inquiries</span> <a href="mailto:hello@wev.world">hello@wev.world</a></p>
+          <div class="intro-contact-track">
+            <p><span>NA/SA bookings:</span> <a href="mailto:brent@good-direction.agency">brent@good-direction.agency</a> / <a href="mailto:jon@good-direction.agency">jon@good-direction.agency</a></p>
+            <p><span>ASIA/AUS/ROW bookings:</span> <a href="mailto:allen@awesome-agency.com">allen@awesome-agency.com</a></p>
+            <p><span>MGMT</span> <a href="mailto:max@stackedmgmt.com">max@stackedmgmt.com</a></p>
+            <p><span>inquiries</span> <a href="mailto:hello@wev.world">hello@wev.world</a></p>
+          </div>
+          <div class="intro-contact-track" aria-hidden="true">
+            <p><span>NA/SA bookings:</span> <a href="mailto:brent@good-direction.agency" tabindex="-1">brent@good-direction.agency</a> / <a href="mailto:jon@good-direction.agency" tabindex="-1">jon@good-direction.agency</a></p>
+            <p><span>ASIA/AUS/ROW bookings:</span> <a href="mailto:allen@awesome-agency.com" tabindex="-1">allen@awesome-agency.com</a></p>
+            <p><span>MGMT</span> <a href="mailto:max@stackedmgmt.com" tabindex="-1">max@stackedmgmt.com</a></p>
+            <p><span>inquiries</span> <a href="mailto:hello@wev.world" tabindex="-1">hello@wev.world</a></p>
+          </div>
         </div>
         <p id="site-tagline">Releases, selected works, live records, goods, fliers, licensing, and project notes.</p>
       </section>
 
       <section class="motion-stage" aria-label="Interactive mobile motion field">
         <canvas id="motion-canvas"></canvas>
+        <div class="mobile-feature-video"></div>
         <div class="motion-overlay">
           <button class="motion-button" type="button" hidden>enable motion</button>
         </div>

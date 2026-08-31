@@ -10,6 +10,7 @@ const els = {
   archiveList: document.querySelector(".archive-list"),
   projectPanel: document.querySelector(".project-panel"),
   videoList: document.querySelector(".video-list"),
+  mobileFeatureVideo: document.querySelector(".mobile-feature-video"),
   dateList: document.querySelector(".date-list"),
   trackTable: document.querySelector(".track-table"),
   tagline: document.querySelector("#site-tagline"),
@@ -32,6 +33,7 @@ function render() {
   renderFilters(filters);
   renderItems(items);
   renderVideos(videos);
+  renderMobileFeatureVideo(videos[0]);
   renderDates(dates);
   renderTracks(licensing.tracks);
   renderPage();
@@ -93,21 +95,25 @@ function renderItem(item) {
   return article;
 }
 
+function renderMobileFeatureVideo(video) {
+  if (!video || !els.mobileFeatureVideo) return;
+
+  const embedUrl = createYoutubeEmbedUrl(video);
+  els.mobileFeatureVideo.innerHTML = `
+    <iframe class="video-embed" src="${escapeAttribute(embedUrl.href)}" title="${escapeAttribute(video.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <a class="video-link" href="${escapeAttribute(video.url)}" target="_blank" rel="noreferrer">
+      <span>${escapeHtml(video.title)}</span>
+      <small>${escapeHtml(video.caption)} / open on youtube</small>
+    </a>
+  `;
+}
+
 function renderVideos(videos) {
   els.videoList.replaceChildren(
     ...videos.map((video) => {
       const article = document.createElement("article");
       article.className = "video-card";
-      const embedUrl = new URL(`https://www.youtube.com/embed/${video.id}`);
-      embedUrl.search = new URLSearchParams({
-        autoplay: "1",
-        mute: "1",
-        playsinline: "1",
-        rel: "0",
-        modestbranding: "1",
-        enablejsapi: "1",
-        origin: window.location.origin
-      }).toString();
+      const embedUrl = createYoutubeEmbedUrl(video);
       article.innerHTML = `
         <iframe class="video-embed" src="${escapeAttribute(embedUrl.href)}" title="${escapeAttribute(video.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
         <a class="video-link" href="${escapeAttribute(video.url)}" target="_blank" rel="noreferrer">
@@ -118,6 +124,20 @@ function renderVideos(videos) {
       return article;
     })
   );
+}
+
+function createYoutubeEmbedUrl(video) {
+  const embedUrl = new URL(`https://www.youtube.com/embed/${video.id}`);
+  embedUrl.search = new URLSearchParams({
+    autoplay: "1",
+    mute: "1",
+    playsinline: "1",
+    rel: "0",
+    modestbranding: "1",
+    enablejsapi: "1",
+    origin: window.location.origin
+  }).toString();
+  return embedUrl;
 }
 
 function renderLink(link, item) {
@@ -238,6 +258,7 @@ initMotionStage();
 async function initMotionStage() {
   const canvas = document.querySelector("#motion-canvas");
   if (!canvas) return;
+  if (window.matchMedia("(max-width: 900px)").matches) return;
 
   const THREE = await import(/* @vite-ignore */ "https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js");
   const { MTLLoader } = await import(/* @vite-ignore */ "https://cdn.jsdelivr.net/npm/three@0.166.1/examples/jsm/loaders/MTLLoader.js");
