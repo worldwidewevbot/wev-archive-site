@@ -43,8 +43,8 @@ async function loadArchive() {
 
 function render() {
   const { site, filters, selectedWorks, items, videos, dates, licensing } = state.data;
-  els.tagline.textContent = site.tagline;
-  els.licensingIntro.textContent = licensing.intro;
+  setText(els.tagline, site.tagline);
+  setText(els.licensingIntro, licensing.intro);
   renderSelectedWorks(selectedWorks);
   renderFilters(filters);
   renderItems(mergeArchiveItems(selectedWorks, items, videos));
@@ -76,14 +76,17 @@ function mergeArchiveItems(selectedWorks, items, videos = []) {
 }
 
 function renderSelectedWorks(works) {
+  if (!els.selectedList) return;
   els.selectedList.replaceChildren(...works.map((work) => renderItem(work, { selected: true })));
 }
 
 function renderSelectedVideos(videos) {
+  if (!els.selectedVideoList) return;
   els.selectedVideoList.replaceChildren(...videos.slice(0, 4).map((video) => renderVideoCard(video)));
 }
 
 function renderFilters(filters) {
+  if (!els.filterBar) return;
   els.filterBar.replaceChildren(
     ...filters.map((filter) => {
       const button = document.createElement("button");
@@ -102,6 +105,7 @@ function renderFilters(filters) {
 }
 
 function renderItems(items) {
+  if (!els.archiveList) return;
   const visible = state.filter === "all" ? items : items.filter((item) => item.type === state.filter);
   els.archiveList.replaceChildren(...visible.map(renderItem));
 }
@@ -182,6 +186,7 @@ function openProject(id) {
   const archiveItems = mergeArchiveItems(state.data.selectedWorks, state.data.items, state.data.videos);
   const item = archiveItems.find((entry) => entry.id === id);
   if (!item || !item.project) return;
+  if (!els.archiveList || !els.filterBar || !els.projectPanel) return;
 
   state.openProjectId = id;
   if (state.page !== "archive") {
@@ -215,6 +220,7 @@ function openProject(id) {
 
 function closeProject() {
   state.openProjectId = null;
+  if (!els.projectPanel || !els.archiveList || !els.filterBar) return;
   els.projectPanel.hidden = true;
   els.projectPanel.replaceChildren();
   els.archiveList.hidden = false;
@@ -222,6 +228,7 @@ function closeProject() {
 }
 
 function renderCatalog() {
+  if (!els.trackTable) return;
   const tracks = getVisibleTracks();
   renderCatalogButtons();
   renderCatalogTags();
@@ -260,6 +267,7 @@ function renderCatalogButtons() {
 }
 
 function renderCatalogTags() {
+  if (!els.catalogTags) return;
   const tags = ["all", ...new Set(state.data.licensing.tracks.flatMap(getTrackTags).sort((a, b) => a.localeCompare(b)))];
   els.catalogTags.replaceChildren(
     ...tags.map((tagName) => {
@@ -278,6 +286,7 @@ function renderCatalogTags() {
 }
 
 function renderTracks(tracks) {
+  if (!els.trackTable) return;
   els.trackTable.replaceChildren(
     ...tracks.map((track) => {
       const row = document.createElement("div");
@@ -309,6 +318,7 @@ function renderTracks(tracks) {
 }
 
 function renderSelectedTracks() {
+  if (!els.selectedTracks) return;
   const selected = state.data.licensing.tracks.filter((track) => state.selectedTrackIds.has(track.id));
   els.selectedTracks.replaceChildren(
     ...(selected.length
@@ -329,6 +339,7 @@ function renderSelectedTracks() {
 }
 
 function updateRequestMail(selectedTracks) {
+  if (!els.requestForm || !els.requestMail) return;
   const formData = new FormData(els.requestForm);
   const selectedText = selectedTracks.map((track) => `- ${track.title}`).join("\n");
   const body = [
@@ -345,6 +356,7 @@ function updateRequestMail(selectedTracks) {
 }
 
 function renderAdminEditor() {
+  if (!els.adminEditor) return;
   els.adminEditor.replaceChildren(
     ...state.data.licensing.tracks.map((track) => {
       const row = document.createElement("article");
@@ -395,11 +407,11 @@ function bindCatalogControls() {
       renderCatalog();
     });
   });
-  els.catalogSearch.addEventListener("input", () => {
+  els.catalogSearch?.addEventListener("input", () => {
     state.catalogSearch = els.catalogSearch.value;
     renderCatalog();
   });
-  els.requestForm.addEventListener("input", () => {
+  els.requestForm?.addEventListener("input", () => {
     renderSelectedTracks();
   });
   els.adminActions.forEach((button) => {
@@ -449,6 +461,10 @@ function escapeHtml(value) {
 
 function escapeAttribute(value) {
   return escapeHtml(value);
+}
+
+function setText(element, value) {
+  if (element) element.textContent = value;
 }
 
 loadArchive().catch((error) => {
