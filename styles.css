@@ -188,7 +188,7 @@ h1 {
   border-bottom: 2px solid var(--line);
 }
 
-.selected-list {
+.selected-main {
   border-right: 2px solid var(--line);
 }
 
@@ -415,6 +415,10 @@ h1 {
 }
 
 .project-panel {
+  background: var(--bg);
+}
+
+.project-modal .project-panel {
   position: relative;
   z-index: 1;
   width: min(1180px, calc(100vw - 24px));
@@ -422,7 +426,6 @@ h1 {
   margin: 12px auto;
   overflow: auto;
   border: 2px solid var(--line);
-  background: var(--bg);
 }
 
 body.modal-open {
@@ -862,7 +865,7 @@ body.modal-open {
     max-height: none;
   }
 
-  .selected-list {
+  .selected-main {
     border-right: 0;
   }
 
@@ -900,7 +903,7 @@ body.modal-open {
     border-top: 2px solid var(--line);
   }
 
-  .project-panel {
+  .project-modal .project-panel {
     width: 100vw;
     max-height: 100vh;
     margin: 0;

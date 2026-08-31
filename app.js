@@ -7,15 +7,17 @@ const state = {
   catalogTag: "all",
   selectedTrackIds: new Set(),
   openProjectId: null,
+  openProjectSurface: null,
   lastFocusedElement: null,
   data: null
 };
 
 const els = {
   selectedList: document.querySelector(".selected-list"),
+  selectedProjectPanel: document.querySelector(".selected-project-panel"),
   filterBar: document.querySelector(".filter-bar"),
   archiveList: document.querySelector(".archive-list"),
-  projectPanel: document.querySelector(".project-panel"),
+  archiveProjectPanel: document.querySelector(".archive-layout .project-panel"),
   videoList: document.querySelector(".video-list"),
   dateList: document.querySelector(".date-list"),
   projectModal: document.querySelector(".project-modal"),
@@ -136,7 +138,7 @@ function renderItem(item, options = {}) {
   article.querySelectorAll("[data-action='open-project']").forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
-      openProject(item.id);
+      openProject(item.id, options.selected ? "selected" : "archive");
     });
   });
   return article;
@@ -203,16 +205,8 @@ function renderLink(link, item) {
   return `<a class="text-link" href="${escapeAttribute(link.url)}"${action}${target}>${escapeHtml(link.label)}</a>`;
 }
 
-function openProject(id) {
-  const archiveItems = mergeArchiveItems(state.data.selectedWorks, state.data.items, state.data.videos);
-  const item = archiveItems.find((entry) => entry.id === id);
-  if (!item || !item.project) return;
-  if (!els.projectModal || !els.projectPanel) return;
-
-  state.openProjectId = id;
-  state.lastFocusedElement = document.activeElement;
-  els.projectModal.hidden = false;
-  els.projectPanel.innerHTML = `
+function renderProjectDetail(item) {
+  return `
     <article class="project-detail">
       <div class="project-detail-media">
         <img src="${escapeAttribute(item.image)}" alt="" />
@@ -231,25 +225,56 @@ function openProject(id) {
       </div>
     </article>
   `;
-  document.body.classList.add("modal-open");
-  els.projectPanel.querySelectorAll("[data-action='close-project']").forEach((button) => {
+}
+
+function bindProjectClose(panel) {
+  panel.querySelectorAll("[data-action='close-project']").forEach((button) => {
     button.addEventListener("click", closeProject);
   });
-  const backdrop = els.projectModal.querySelector(".project-modal-backdrop");
-  if (backdrop) backdrop.onclick = closeProject;
-  els.projectPanel.querySelector("[data-action='close-project']")?.focus();
+}
+
+function openProject(id, surface = "archive") {
+  const archiveItems = mergeArchiveItems(state.data.selectedWorks, state.data.items, state.data.videos);
+  const item = archiveItems.find((entry) => entry.id === id);
+  if (!item || !item.project) return;
+
+  state.openProjectId = id;
+  state.openProjectSurface = surface;
+
+  if (surface === "selected" && els.selectedList && els.selectedProjectPanel) {
+    els.selectedList.hidden = true;
+    els.selectedProjectPanel.hidden = false;
+    els.selectedProjectPanel.innerHTML = renderProjectDetail(item);
+    bindProjectClose(els.selectedProjectPanel);
+    els.selectedProjectPanel.scrollIntoView({ block: "start" });
+    return;
+  }
+
+  if (!els.archiveList || !els.filterBar || !els.archiveProjectPanel) return;
+  els.archiveList.hidden = true;
+  els.filterBar.hidden = true;
+  els.archiveProjectPanel.hidden = false;
+  els.archiveProjectPanel.innerHTML = renderProjectDetail(item);
+  bindProjectClose(els.archiveProjectPanel);
 }
 
 function closeProject() {
   state.openProjectId = null;
-  if (!els.projectModal || !els.projectPanel) return;
-  els.projectModal.hidden = true;
-  els.projectPanel.replaceChildren();
-  document.body.classList.remove("modal-open");
-  if (state.lastFocusedElement && typeof state.lastFocusedElement.focus === "function") {
-    state.lastFocusedElement.focus();
+  const surface = state.openProjectSurface;
+  state.openProjectSurface = null;
+
+  if (surface === "selected" && els.selectedProjectPanel && els.selectedList) {
+    els.selectedProjectPanel.hidden = true;
+    els.selectedProjectPanel.replaceChildren();
+    els.selectedList.hidden = false;
+    return;
   }
-  state.lastFocusedElement = null;
+
+  if (!els.archiveProjectPanel || !els.archiveList || !els.filterBar) return;
+  els.archiveProjectPanel.hidden = true;
+  els.archiveProjectPanel.replaceChildren();
+  els.archiveList.hidden = false;
+  els.filterBar.hidden = false;
 }
 
 function renderCatalog() {
