@@ -9,10 +9,11 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="wordmark" href="#archive" aria-label="wev archive home">
+      <a class="wordmark" href="#selected" aria-label="wev home">
         <img src="assets/wev-logo-black-2025.png" alt="wev" />
       </a>
       <nav class="top-nav" aria-label="Primary">
+        <a href="#selected">selected works</a>
         <a href="#archive">archive</a>
         <a href="#licensing" data-route="licensing">licensing</a>
         <a href="mailto:hello@wev.world">contact</a>
@@ -38,15 +39,11 @@
         <p id="site-tagline">Releases, selected works, live records, goods, fliers, licensing, and project notes.</p>
       </section>
 
-      <section class="motion-stage" aria-label="Interactive mobile motion field">
-        <canvas id="motion-canvas"></canvas>
-        <div class="mobile-feature-video"></div>
-        <div class="motion-overlay">
-          <button class="motion-button" type="button" hidden>enable motion</button>
-        </div>
+      <section class="selected-page page-view is-active" id="selected" data-page="selected" aria-label="Selected works">
+        <div class="selected-list" aria-live="polite"></div>
       </section>
 
-      <section class="archive-layout page-view is-active" id="archive" data-page="archive">
+      <section class="archive-layout page-view" id="archive" data-page="archive">
         <div class="left-column">
           <div class="filter-bar" role="list" aria-label="Archive filters"></div>
           <div class="archive-list" aria-live="polite"></div>
@@ -85,14 +82,6 @@
         </div>
       </section>
     </main>
-
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js"
-        }
-      }
-    </script>
     <script src="app.js" type="module"></script>
   </body>
 </html>

@@ -1,27 +1,28 @@
 {
   "site": {
     "name": "wev",
-    "tagline": "Releases, works, live dates, licensing, and related artifacts.",
+    "tagline": "Selected works, placements, releases, objects, and related artifacts.",
     "contact": "hello@wev.world"
   },
   "filters": [
     "all",
     "releases",
     "projects",
+    "placements",
     "live",
     "goods",
     "fliers",
     "video",
     "licensing"
   ],
-  "items": [
+  "selectedWorks": [
     {
       "id": "ost-archive",
       "type": "releases",
       "year": "2026",
       "title": "OST",
-      "dek": "A living index of released and unreleased soundtrack material.",
-      "description": "Collected cues, edits, and release notes. Designed to hold streaming links, liner notes, credits, and purchase links without changing the page structure.",
+      "dek": "wev debut album.",
+      "description": "The debut full-length, collected as a central album entry for credits, listening links, release notes, press, and physical editions.",
       "image": "assets/ost-artwork-final.jpg",
       "links": [
         { "label": "open project", "url": "#", "action": "open-project" },
@@ -33,14 +34,196 @@
       "project": {
         "headline": "OST",
         "body": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui, aenean lacinia bibendum nulla sed consectetur.",
-          "Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod."
+          "wev debut album, released in 2026.",
+          "This project page can hold credits, liner notes, release links, listening links, and physical edition details."
         ],
         "links": [
           { "label": "spotify", "url": "https://open.spotify.com/search/wev%20OST" },
           { "label": "newsweek", "url": "https://www.newsweek.com/search/site/wev" },
           { "label": "resident advisor", "url": "https://ra.co/dj/wev" }
         ]
+      }
+    },
+    {
+      "id": "shigoto-werk-rocket-league",
+      "type": "placements",
+      "year": "2026",
+      "title": "shigoto werk",
+      "dek": "Placement in Rocket League.",
+      "description": "A game placement entry for the track, with room for soundtrack context, publisher credits, and in-game reference material.",
+      "image": "assets/placeholder-release.svg",
+      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
+      "tags": ["game", "sync", "track"],
+      "project": {
+        "headline": "shigoto werk",
+        "body": [
+          "Track placement in Rocket League.",
+          "Future archive details can include label, platform, soundtrack, announcement, and gameplay references."
+        ],
+        "links": [{ "label": "rocket league", "url": "https://www.rocketleague.com/" }]
+      }
+    },
+    {
+      "id": "start-something-vinyl",
+      "type": "goods",
+      "year": "2025",
+      "title": "start something EP vinyls",
+      "dek": "Limited vinyl edition of 100.",
+      "description": "Physical edition entry for the Start Something EP vinyl run, reserved for product photos, shop links, edition notes, and stock status.",
+      "image": "assets/placeholder-goods.svg",
+      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
+      "tags": ["vinyl", "edition of 100", "goods"],
+      "project": {
+        "headline": "start something EP vinyls",
+        "body": [
+          "Limited physical edition of 100.",
+          "This page can hold pressing notes, merch photography, edition metadata, and sales links."
+        ],
+        "links": [{ "label": "shop", "url": "https://shop.wev.world" }]
+      }
+    },
+    {
+      "id": "start-something-ep",
+      "type": "releases",
+      "year": "2025",
+      "title": "start something EP",
+      "dek": "EP release.",
+      "description": "Release entry for the Start Something EP, with space for streaming links, credits, artwork, and press.",
+      "image": "assets/placeholder-release.svg",
+      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
+      "tags": ["music", "release", "EP"],
+      "project": {
+        "headline": "start something EP",
+        "body": [
+          "wev EP release from 2025.",
+          "Future details can include credits, listening links, visual assets, and related merchandise."
+        ],
+        "links": [{ "label": "spotify", "url": "https://open.spotify.com/search/wev%20start%20something" }]
+      }
+    },
+    {
+      "id": "watchyaback-bomb-rush-cyberfunk",
+      "type": "placements",
+      "year": "2024",
+      "title": "watchyaback!",
+      "dek": "Placement in Bomb Rush Cyberfunk.",
+      "description": "A game soundtrack placement for watchyaback!, tied to the Bomb Rush Cyberfunk world.",
+      "image": "assets/placeholder-release.svg",
+      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
+      "tags": ["game", "sync", "soundtrack"],
+      "project": {
+        "headline": "watchyaback! in Bomb Rush Cyberfunk",
+        "body": [
+          "watchyaback! placement in Bomb Rush Cyberfunk.",
+          "This page can collect platform links, gameplay references, soundtrack credits, and related press."
+        ],
+        "links": [{ "label": "bomb rush cyberfunk", "url": "https://store.steampowered.com/app/1353230/Bomb_Rush_Cyberfunk/" }]
+      }
+    },
+    {
+      "id": "feel-everything-release-show",
+      "type": "live",
+      "year": "2024",
+      "title": "feel everything EP release show + merch",
+      "dek": "Release event and merchandise moment.",
+      "description": "A live/project entry for the Feel Everything release show, merch, documentation, and related ephemera.",
+      "image": "assets/placeholder-flier.svg",
+      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
+      "tags": ["live", "merch", "release show"],
+      "project": {
+        "headline": "feel everything release show + merch",
+        "body": [
+          "Release show and merch moment for the Feel Everything EP.",
+          "Future archive content can include flyers, event photos, merch images, set notes, and credits."
+        ],
+        "links": [{ "label": "inquiries", "url": "mailto:hello@wev.world" }]
+      }
+    },
+    {
+      "id": "feel-everything-ep",
+      "type": "releases",
+      "year": "2024",
+      "title": "feel everything EP",
+      "dek": "EP release.",
+      "description": "Release entry for the Feel Everything EP.",
+      "image": "assets/placeholder-release.svg",
+      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
+      "tags": ["music", "release", "EP"],
+      "project": {
+        "headline": "feel everything EP",
+        "body": [
+          "wev EP release from 2024.",
+          "Future details can include credits, listening links, artwork, and event documentation."
+        ],
+        "links": [{ "label": "spotify", "url": "https://open.spotify.com/search/wev%20feel%20everything" }]
+      }
+    },
+    {
+      "id": "watchyaback-ronin-division",
+      "type": "projects",
+      "year": "2022",
+      "title": "watchyaback! x Ronin Division",
+      "dek": "Collaborative project.",
+      "description": "A project entry for the watchyaback! x Ronin Division collaboration.",
+      "image": "assets/placeholder-release.svg",
+      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
+      "tags": ["collab", "music", "visual"],
+      "project": {
+        "headline": "watchyaback! x Ronin Division",
+        "body": [
+          "watchyaback! x Ronin Division collaboration from 2022.",
+          "This page can hold project notes, visual assets, links, credits, and related release context."
+        ],
+        "links": [{ "label": "inquiries", "url": "mailto:hello@wev.world" }]
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "ost-archive",
+      "type": "releases",
+      "year": "2026",
+      "title": "OST",
+      "dek": "wev debut album.",
+      "description": "The debut full-length, collected as a central album entry for credits, listening links, release notes, press, and physical editions.",
+      "image": "assets/ost-artwork-final.jpg",
+      "links": [
+        { "label": "open project", "url": "#", "action": "open-project" },
+        { "label": "spotify", "url": "https://open.spotify.com/search/wev%20OST" },
+        { "label": "press", "url": "https://www.newsweek.com/search/site/wev" },
+        { "label": "resident advisor", "url": "https://ra.co/dj/wev" }
+      ],
+      "tags": ["music", "release", "score"],
+      "project": {
+        "headline": "OST",
+        "body": [
+          "wev debut album, released in 2026.",
+          "This project page can hold credits, liner notes, release links, listening links, and physical edition details."
+        ],
+        "links": [
+          { "label": "spotify", "url": "https://open.spotify.com/search/wev%20OST" },
+          { "label": "newsweek", "url": "https://www.newsweek.com/search/site/wev" },
+          { "label": "resident advisor", "url": "https://ra.co/dj/wev" }
+        ]
+      }
+    },
+    {
+      "id": "shigoto-werk-rocket-league",
+      "type": "placements",
+      "year": "2026",
+      "title": "shigoto werk",
+      "dek": "Placement in Rocket League.",
+      "description": "A game placement entry for the track, with room for soundtrack context, publisher credits, and in-game reference material.",
+      "image": "assets/placeholder-release.svg",
+      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
+      "tags": ["game", "sync", "track"],
+      "project": {
+        "headline": "shigoto werk",
+        "body": [
+          "Track placement in Rocket League.",
+          "Future archive details can include label, platform, soundtrack, announcement, and gameplay references."
+        ],
+        "links": [{ "label": "rocket league", "url": "https://www.rocketleague.com/" }]
       }
     },
     {
