@@ -1,6 +1,11 @@
 const state = {
   filter: "all",
   page: "selected",
+  catalogSource: "published",
+  catalogSort: "releaseDate",
+  catalogSearch: "",
+  catalogTag: "all",
+  selectedTrackIds: new Set(),
   openProjectId: null,
   data: null
 };
@@ -13,6 +18,16 @@ const els = {
   videoList: document.querySelector(".video-list"),
   dateList: document.querySelector(".date-list"),
   trackTable: document.querySelector(".track-table"),
+  catalogTags: document.querySelector(".catalog-tags"),
+  catalogSearch: document.querySelector(".catalog-search input"),
+  catalogSourceButtons: document.querySelectorAll("[data-source]"),
+  catalogSortButtons: document.querySelectorAll("[data-sort]"),
+  selectedTracks: document.querySelector(".selected-tracks"),
+  requestForm: document.querySelector(".request-form"),
+  requestMail: document.querySelector(".request-mail"),
+  adminEditor: document.querySelector(".admin-editor"),
+  adminExport: document.querySelector(".admin-export"),
+  adminActions: document.querySelectorAll("[data-admin-action]"),
   tagline: document.querySelector("#site-tagline"),
   licensingIntro: document.querySelector("#licensing-intro")
 };
@@ -23,6 +38,7 @@ async function loadArchive() {
     throw new Error(`Archive content failed to load: ${response.status}`);
   }
   state.data = await response.json();
+  applyCatalogDraft();
   render();
 }
 
@@ -35,7 +51,8 @@ function render() {
   renderItems(mergeArchiveItems(selectedWorks, items));
   renderVideos(videos);
   renderDates(dates);
-  renderTracks(licensing.tracks);
+  renderCatalog();
+  bindCatalogControls();
   renderPage();
 }
 
@@ -206,22 +223,217 @@ function renderDates(dates) {
   );
 }
 
+function renderCatalog() {
+  const tracks = getVisibleTracks();
+  renderCatalogButtons();
+  renderCatalogTags();
+  renderTracks(tracks);
+  renderSelectedTracks();
+  renderAdminEditor();
+}
+
+function getVisibleTracks() {
+  const tracks = [...state.data.licensing.tracks];
+  return tracks
+    .filter((track) => track.source === state.catalogSource)
+    .filter((track) => {
+      if (state.catalogTag === "all") return true;
+      return getTrackTags(track).includes(state.catalogTag);
+    })
+    .filter((track) => {
+      const query = state.catalogSearch.trim().toLowerCase();
+      if (!query) return true;
+      return [track.title, track.artist, track.release, track.status, track.notes, ...getTrackTags(track)].join(" ").toLowerCase().includes(query);
+    })
+    .sort((a, b) => {
+      if (state.catalogSort === "bpm") return Number(a.bpm || 0) - Number(b.bpm || 0);
+      if (state.catalogSort === "title") return a.title.localeCompare(b.title);
+      return String(b.releaseDate || "").localeCompare(String(a.releaseDate || ""));
+    });
+}
+
+function renderCatalogButtons() {
+  els.catalogSourceButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.source === state.catalogSource));
+  });
+  els.catalogSortButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.sort === state.catalogSort));
+  });
+}
+
+function renderCatalogTags() {
+  const tags = ["all", ...new Set(state.data.licensing.tracks.flatMap(getTrackTags).sort((a, b) => a.localeCompare(b)))];
+  els.catalogTags.replaceChildren(
+    ...tags.map((tagName) => {
+      const button = document.createElement("button");
+      button.className = "tag-button";
+      button.type = "button";
+      button.textContent = tagName;
+      button.setAttribute("aria-pressed", String(tagName === state.catalogTag));
+      button.addEventListener("click", () => {
+        state.catalogTag = tagName;
+        renderCatalog();
+      });
+      return button;
+    })
+  );
+}
+
 function renderTracks(tracks) {
   els.trackTable.replaceChildren(
     ...tracks.map((track) => {
       const row = document.createElement("div");
       row.className = "track-row";
       row.role = "listitem";
+      row.dataset.trackId = track.id;
       row.innerHTML = `
-        <strong>${escapeHtml(track.title)}</strong>
-        <span class="small">${escapeHtml(track.duration)}</span>
-        <span class="small">${Number(track.bpm)} bpm</span>
-        <span class="small wide">${escapeHtml([...track.moods, ...track.uses].join(" / "))}</span>
+        <button class="track-select" type="button" aria-pressed="${state.selectedTrackIds.has(track.id)}">${state.selectedTrackIds.has(track.id) ? "selected" : "select"}</button>
+        <div>
+          <strong>${escapeHtml(track.title)}</strong>
+          <span class="small">${escapeHtml(track.artist || "wev")} / ${escapeHtml(track.release || track.source)}</span>
+        </div>
+        <span class="small">${escapeHtml(track.duration || "tbd")}</span>
+        <span class="small">${track.bpm ? `${Number(track.bpm)} bpm` : "bpm tbd"}</span>
+        <span class="small wide">${escapeHtml(getTrackTags(track).join(" / "))}</span>
         <span class="small">${escapeHtml(track.status)}</span>
       `;
+      row.querySelector(".track-select").addEventListener("click", () => {
+        if (state.selectedTrackIds.has(track.id)) {
+          state.selectedTrackIds.delete(track.id);
+        } else {
+          state.selectedTrackIds.add(track.id);
+        }
+        renderCatalog();
+      });
       return row;
     })
   );
+}
+
+function renderSelectedTracks() {
+  const selected = state.data.licensing.tracks.filter((track) => state.selectedTrackIds.has(track.id));
+  els.selectedTracks.replaceChildren(
+    ...(selected.length
+      ? selected.map((track) => {
+          const row = document.createElement("button");
+          row.className = "selected-track";
+          row.type = "button";
+          row.textContent = `${track.title} / ${track.bpm ? `${track.bpm} bpm` : "bpm tbd"}`;
+          row.addEventListener("click", () => {
+            state.selectedTrackIds.delete(track.id);
+            renderCatalog();
+          });
+          return row;
+        })
+      : [Object.assign(document.createElement("p"), { className: "empty-note", textContent: "No tracks selected." })])
+  );
+  updateRequestMail(selected);
+}
+
+function updateRequestMail(selectedTracks) {
+  const formData = new FormData(els.requestForm);
+  const selectedText = selectedTracks.map((track) => `- ${track.title}`).join("\n");
+  const body = [
+    `Name: ${formData.get("name") || ""}`,
+    `Email: ${formData.get("email") || ""}`,
+    `Usage: ${formData.get("usage") || ""}`,
+    "",
+    "Tracks:",
+    selectedText || "-",
+    "",
+    `Notes: ${formData.get("notes") || ""}`
+  ].join("\n");
+  els.requestMail.href = `mailto:hello@wev.world?subject=Music%20licensing%20inquiry&body=${encodeURIComponent(body)}`;
+}
+
+function renderAdminEditor() {
+  els.adminEditor.replaceChildren(
+    ...state.data.licensing.tracks.map((track) => {
+      const row = document.createElement("article");
+      row.className = "admin-track";
+      row.innerHTML = `
+        <strong>${escapeHtml(track.title)}</strong>
+        <label><span>bpm</span><input data-field="bpm" data-track="${escapeAttribute(track.id)}" value="${escapeAttribute(track.bpm || "")}" inputmode="numeric" /></label>
+        <label><span>source</span><select data-field="source" data-track="${escapeAttribute(track.id)}"><option>published</option><option>unreleased</option></select></label>
+        <label class="wide"><span>tags</span><input data-field="tags" data-track="${escapeAttribute(track.id)}" value="${escapeAttribute(getTrackTags(track).join(", "))}" /></label>
+      `;
+      row.querySelector("select").value = track.source;
+      row.querySelectorAll("input, select").forEach((input) => {
+        input.addEventListener("change", handleAdminChange);
+      });
+      return row;
+    })
+  );
+}
+
+function handleAdminChange(event) {
+  const { track: trackId, field } = event.target.dataset;
+  const track = state.data.licensing.tracks.find((entry) => entry.id === trackId);
+  if (!track) return;
+  if (field === "bpm") {
+    track.bpm = event.target.value ? Number(event.target.value) : null;
+  } else if (field === "source") {
+    track.source = event.target.value;
+  } else if (field === "tags") {
+    track.tags = event.target.value.split(",").map((tag) => tag.trim()).filter(Boolean);
+  }
+  saveCatalogDraft();
+  renderCatalog();
+}
+
+function bindCatalogControls() {
+  if (bindCatalogControls.bound) return;
+  bindCatalogControls.bound = true;
+
+  els.catalogSourceButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      state.catalogSource = button.dataset.source;
+      renderCatalog();
+    });
+  });
+  els.catalogSortButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      state.catalogSort = button.dataset.sort;
+      renderCatalog();
+    });
+  });
+  els.catalogSearch.addEventListener("input", () => {
+    state.catalogSearch = els.catalogSearch.value;
+    renderCatalog();
+  });
+  els.requestForm.addEventListener("input", () => {
+    renderSelectedTracks();
+  });
+  els.adminActions.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (button.dataset.adminAction === "export") {
+        els.adminExport.value = JSON.stringify(state.data.licensing.tracks, null, 2);
+      } else {
+        localStorage.removeItem("wevCatalogDraft");
+        location.reload();
+      }
+    });
+  });
+}
+
+function applyCatalogDraft() {
+  const draft = localStorage.getItem("wevCatalogDraft");
+  if (!draft) return;
+  try {
+    const tracks = JSON.parse(draft);
+    if (Array.isArray(tracks)) state.data.licensing.tracks = tracks;
+  } catch {
+    localStorage.removeItem("wevCatalogDraft");
+  }
+}
+
+function saveCatalogDraft() {
+  localStorage.setItem("wevCatalogDraft", JSON.stringify(state.data.licensing.tracks));
+}
+
+function getTrackTags(track) {
+  const tags = track.tags && track.tags.length ? track.tags : [...(track.moods || []), ...(track.uses || [])];
+  return [...new Set(tags.filter(Boolean))];
 }
 
 function formatDate(value) {
@@ -248,7 +460,14 @@ loadArchive().catch((error) => {
 window.addEventListener("hashchange", renderPage);
 
 function renderPage() {
-  const requested = window.location.hash === "#archive" ? "archive" : window.location.hash === "#licensing" ? "licensing" : "selected";
+  const requested =
+    window.location.hash === "#archive"
+      ? "archive"
+      : window.location.hash === "#licensing"
+        ? "licensing"
+        : window.location.hash === "#admin"
+          ? "admin"
+          : "selected";
   state.page = requested;
   document.querySelectorAll(".page-view").forEach((page) => {
     page.classList.toggle("is-active", page.dataset.page === state.page);

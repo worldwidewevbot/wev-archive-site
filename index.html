@@ -72,14 +72,84 @@
       <section class="licensing-page page-view" id="licensing" data-page="licensing" aria-labelledby="licensing-title">
         <div class="section-rule"></div>
         <div class="licensing-grid">
-          <div>
+          <div class="licensing-copy">
             <p class="kicker">music licensing</p>
             <h2 id="licensing-title">licensing portal</h2>
             <p id="licensing-intro">Searchable tracks, usage metadata, and direct clearance inquiries.</p>
             <a class="mail-link" href="mailto:hello@wev.world?subject=Music%20licensing%20inquiry">inquire</a>
           </div>
-          <div class="track-table" role="list" aria-label="Licensing tracks"></div>
+          <div class="licensing-tool">
+            <div class="catalog-controls" aria-label="Catalog controls">
+              <div class="control-group" aria-label="Source">
+                <span>source</span>
+                <button class="catalog-button" type="button" data-source="published">published</button>
+                <button class="catalog-button" type="button" data-source="unreleased">unreleased</button>
+              </div>
+              <div class="control-group" aria-label="Sort">
+                <span>sort</span>
+                <button class="catalog-button" type="button" data-sort="releaseDate">release date</button>
+                <button class="catalog-button" type="button" data-sort="bpm">bpm</button>
+                <button class="catalog-button" type="button" data-sort="title">title</button>
+              </div>
+              <label class="catalog-search">
+                <span>search</span>
+                <input type="search" placeholder="title, mood, use..." />
+              </label>
+            </div>
+            <div class="catalog-tags" aria-label="Catalog tags"></div>
+            <div class="track-table" role="list" aria-label="Licensing tracks"></div>
+          </div>
         </div>
+        <section class="request-panel" aria-labelledby="request-title">
+          <h3 id="request-title">licensing request</h3>
+          <div class="request-grid">
+            <div class="request-selection">
+              <p class="meta">selected tracks</p>
+              <div class="selected-tracks"></div>
+            </div>
+            <form class="request-form">
+              <label>
+                <span>name</span>
+                <input name="name" autocomplete="name" />
+              </label>
+              <label>
+                <span>email</span>
+                <input name="email" type="email" autocomplete="email" />
+              </label>
+              <label>
+                <span>usage</span>
+                <select name="usage">
+                  <option>film / tv</option>
+                  <option>commercial</option>
+                  <option>game</option>
+                  <option>social / web</option>
+                  <option>other</option>
+                </select>
+              </label>
+              <label class="wide">
+                <span>notes</span>
+                <textarea name="notes" rows="5"></textarea>
+              </label>
+              <a class="mail-link request-mail" href="mailto:hello@wev.world?subject=Music%20licensing%20inquiry">email request</a>
+            </form>
+          </div>
+        </section>
+      </section>
+
+      <section class="admin-page page-view" id="admin" data-page="admin" aria-labelledby="admin-title">
+        <section class="admin-panel">
+          <div>
+            <p class="kicker">admin scaffold</p>
+            <h2 id="admin-title">catalog editor</h2>
+            <p>Local draft editor for tags, BPM, source, usage notes, and import/export. Production auth needs a server before real passwords or API keys are added.</p>
+          </div>
+          <div class="admin-editor"></div>
+          <div class="admin-actions">
+            <button class="catalog-button" type="button" data-admin-action="export">export json</button>
+            <button class="catalog-button" type="button" data-admin-action="reset">reset local edits</button>
+          </div>
+          <textarea class="admin-export" rows="8" readonly></textarea>
+        </section>
       </section>
     </main>
     <script src="app.js" type="module"></script>

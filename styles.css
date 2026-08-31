@@ -170,6 +170,10 @@ h1 {
   display: block;
 }
 
+.admin-page.page-view.is-active {
+  display: block;
+}
+
 .selected-page.page-view.is-active {
   display: block;
 }
@@ -436,7 +440,7 @@ h1 {
 }
 
 .licensing-page {
-  padding: 0 16px 48px;
+  padding: 0 16px 64px;
 }
 
 .section-rule {
@@ -447,8 +451,14 @@ h1 {
 
 .licensing-grid {
   display: grid;
-  grid-template-columns: minmax(240px, 0.44fr) minmax(0, 1fr);
+  grid-template-columns: minmax(260px, 0.34fr) minmax(0, 1fr);
   gap: 24px;
+}
+
+.licensing-copy {
+  position: sticky;
+  top: 72px;
+  align-self: start;
 }
 
 .licensing-grid h2 {
@@ -458,17 +468,102 @@ h1 {
   text-transform: uppercase;
 }
 
-.track-table {
+.licensing-tool {
   border-top: 2px solid var(--line);
+}
+
+.catalog-controls {
+  display: grid;
+  grid-template-columns: minmax(240px, auto) minmax(320px, auto) minmax(260px, 1fr);
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 2px solid var(--line);
+  align-items: end;
+}
+
+.control-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.control-group > span,
+.catalog-search span,
+.request-form span,
+.admin-track span {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.catalog-button,
+.tag-button,
+.track-select,
+.selected-track {
+  min-height: 30px;
+  border: 2px solid var(--line);
+  padding: 3px 8px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.catalog-button[aria-pressed="true"],
+.tag-button[aria-pressed="true"],
+.track-select[aria-pressed="true"],
+.catalog-button:hover,
+.tag-button:hover,
+.track-select:hover,
+.selected-track:hover {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.catalog-search {
+  display: grid;
+  gap: 5px;
+}
+
+.catalog-search input,
+.request-form input,
+.request-form select,
+.request-form textarea,
+.admin-track input,
+.admin-track select,
+.admin-export {
+  width: 100%;
+  border: 2px solid var(--line);
+  border-radius: 0;
+  padding: 7px 8px;
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+}
+
+.catalog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 0;
+  border-bottom: 2px solid var(--line);
+}
+
+.track-table {
+  border-bottom: 2px solid var(--line);
 }
 
 .track-row {
   display: grid;
-  grid-template-columns: minmax(160px, 1.2fr) 86px 72px minmax(180px, 1fr) 88px;
+  grid-template-columns: 88px minmax(180px, 1.2fr) 72px 80px minmax(180px, 1fr) 92px;
   gap: 12px;
   padding: 12px 0;
   border-bottom: 2px solid var(--line);
-  align-items: start;
+  align-items: center;
   font-size: 14px;
 }
 
@@ -483,10 +578,116 @@ h1 {
   text-transform: uppercase;
 }
 
+.request-panel,
+.admin-panel {
+  margin-top: 36px;
+  border-top: 2px solid var(--line);
+  padding-top: 18px;
+}
+
+.request-panel h3,
+.admin-panel h2 {
+  margin-bottom: 14px;
+  font-size: clamp(30px, 5vw, 72px);
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.request-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.32fr) minmax(0, 1fr);
+  gap: 24px;
+}
+
+.selected-tracks {
+  display: grid;
+  gap: 8px;
+}
+
+.empty-note {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.request-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.request-form label,
+.admin-track label {
+  display: grid;
+  gap: 5px;
+}
+
+.request-form .wide {
+  grid-column: 1 / -1;
+}
+
+.request-mail {
+  justify-self: start;
+}
+
+.admin-page {
+  padding: 0 16px 64px;
+}
+
+.admin-panel {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.28fr) minmax(0, 1fr);
+  gap: 18px 24px;
+  border-top: 0;
+}
+
+.admin-panel > p,
+.admin-panel > div:first-child p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.admin-editor {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-track {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) 90px 130px minmax(220px, 1.2fr);
+  gap: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--soft);
+  align-items: end;
+}
+
+.admin-actions,
+.admin-export {
+  grid-column: 2;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.admin-export {
+  display: block;
+}
+
 @media (max-width: 900px) {
   .archive-layout,
-  .licensing-grid {
+  .licensing-grid,
+  .catalog-controls,
+  .request-grid,
+  .request-form,
+  .admin-panel,
+  .admin-track {
     grid-template-columns: 1fr;
+  }
+
+  .licensing-copy {
+    position: static;
   }
 
   .intro {
@@ -570,10 +771,21 @@ h1 {
 
   .track-row {
     grid-template-columns: 1fr 72px;
+    align-items: start;
+  }
+
+  .track-select {
+    grid-column: 1 / -1;
+    justify-self: start;
   }
 
   .track-row .wide {
     grid-column: 1 / -1;
+  }
+
+  .admin-actions,
+  .admin-export {
+    grid-column: 1;
   }
 }
 

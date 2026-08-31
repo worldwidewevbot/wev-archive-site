@@ -370,28 +370,79 @@
     "intro": "A direct licensing page for supervisors, editors, brands, and filmmakers.",
     "tracks": [
       {
+        "id": "night-drive-cue",
+        "source": "published",
+        "artist": "wev",
+        "release": "catalog scaffold",
+        "releaseDate": "2026-01-01",
         "title": "Night Drive Cue",
         "duration": "02:14",
         "bpm": 94,
+        "tags": ["nocturnal", "minimal", "tension", "film", "fashion", "trailer"],
         "moods": ["nocturnal", "minimal", "tension"],
         "uses": ["film", "fashion", "trailer"],
-        "status": "one-stop"
+        "status": "one-stop",
+        "notes": "Placeholder track for catalog scaffolding."
       },
       {
+        "id": "soft-impact-bed",
+        "source": "published",
+        "artist": "wev",
+        "release": "catalog scaffold",
+        "releaseDate": "2025-01-01",
         "title": "Soft Impact Bed",
         "duration": "01:48",
         "bpm": 72,
+        "tags": ["warm", "textural", "intimate", "documentary", "podcast", "brand"],
         "moods": ["warm", "textural", "intimate"],
         "uses": ["documentary", "podcast", "brand"],
-        "status": "clearable"
+        "status": "clearable",
+        "notes": "Placeholder track for catalog scaffolding."
       },
       {
+        "id": "club-fragment",
+        "source": "unreleased",
+        "artist": "wev",
+        "release": "unreleased",
+        "releaseDate": "",
         "title": "Club Fragment",
         "duration": "03:21",
         "bpm": 128,
+        "tags": ["club", "kinetic", "bright", "commercial", "recap", "sports"],
         "moods": ["club", "kinetic", "bright"],
         "uses": ["commercial", "recap", "sports"],
-        "status": "one-stop"
+        "status": "one-stop",
+        "notes": "Placeholder track for catalog scaffolding."
+      },
+      {
+        "id": "watchyaback",
+        "source": "published",
+        "artist": "wev",
+        "release": "watchyaback! x Ronin Division",
+        "releaseDate": "2022-01-01",
+        "title": "watchyaback!",
+        "duration": "tbd",
+        "bpm": null,
+        "tags": ["game", "sync", "club", "soundtrack"],
+        "moods": ["club", "kinetic"],
+        "uses": ["game", "sync"],
+        "status": "clearable",
+        "notes": "Known placement: Bomb Rush Cyberfunk."
+      },
+      {
+        "id": "shigoto-werk",
+        "source": "published",
+        "artist": "wev",
+        "release": "OST",
+        "releaseDate": "2026-01-01",
+        "title": "shigoto werk",
+        "duration": "tbd",
+        "bpm": null,
+        "tags": ["game", "sync", "club", "soundtrack"],
+        "moods": ["club", "bright"],
+        "uses": ["game", "sync"],
+        "status": "clearable",
+        "notes": "Known placement: Rocket League."
       }
     ]
   }
