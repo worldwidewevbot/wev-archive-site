@@ -762,16 +762,44 @@ body.modal-open {
   line-height: 1.18;
 }
 
-.bio-source {
-  color: var(--muted);
-  font-size: 12px !important;
-  text-transform: uppercase;
+.contact-stack {
+  display: grid;
+  gap: 18px;
+  margin-top: 4px;
 }
 
-.contact-stack {
+.contact-group {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  align-items: center;
+}
+
+.contact-group h3 {
+  flex: 0 0 100%;
+  margin: 0 0 2px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.social-links a {
+  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  padding-bottom: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 @media (max-width: 900px) {
