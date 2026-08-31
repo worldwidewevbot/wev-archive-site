@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>wev archive</title>
+    <meta name="description" content="A rolling archive for wev releases, works, live dates, licensing, goods, and fliers." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#archive" aria-label="wev archive home">
+        <img src="assets/wev-logo-black-2025.png" alt="wev" />
+      </a>
+      <nav class="top-nav" aria-label="Primary">
+        <a href="#archive">archive</a>
+        <a href="#licensing" data-route="licensing">licensing</a>
+        <a href="mailto:hello@wev.world">contact</a>
+      </nav>
+    </header>
+
+    <main class="shell">
+      <section class="intro" aria-labelledby="site-title">
+        <div class="intro-contact" aria-label="Booking and contact emails">
+          <p><span>NA/SA bookings:</span> <a href="mailto:brent@good-direction.agency">brent@good-direction.agency</a> / <a href="mailto:jon@good-direction.agency">jon@good-direction.agency</a></p>
+          <p><span>ASIA/AUS/ROW bookings:</span> <a href="mailto:allen@awesome-agency.com">allen@awesome-agency.com</a></p>
+          <p><span>MGMT</span> <a href="mailto:max@stackedmgmt.com">max@stackedmgmt.com</a></p>
+          <p><span>inquiries</span> <a href="mailto:hello@wev.world">hello@wev.world</a></p>
+        </div>
+        <p id="site-tagline">Releases, selected works, live records, goods, fliers, licensing, and project notes.</p>
+      </section>
+
+      <section class="motion-stage" aria-label="Interactive mobile motion field">
+        <canvas id="motion-canvas"></canvas>
+        <div class="motion-overlay">
+          <button class="motion-button" type="button" hidden>enable motion</button>
+        </div>
+      </section>
+
+      <section class="archive-layout page-view is-active" id="archive" data-page="archive">
+        <div class="left-column">
+          <div class="filter-bar" role="list" aria-label="Archive filters"></div>
+          <div class="archive-list" aria-live="polite"></div>
+          <div class="project-panel" hidden></div>
+        </div>
+
+        <aside class="right-column" aria-label="Current modules">
+          <section class="module">
+            <div class="module-heading">
+              <h2>video</h2>
+              <span>playlist</span>
+            </div>
+            <div class="video-list"></div>
+          </section>
+
+          <section class="module">
+            <div class="module-heading">
+              <h2>live</h2>
+              <span>upcoming</span>
+            </div>
+            <div class="date-list"></div>
+          </section>
+        </aside>
+      </section>
+
+      <section class="licensing-page page-view" id="licensing" data-page="licensing" aria-labelledby="licensing-title">
+        <div class="section-rule"></div>
+        <div class="licensing-grid">
+          <div>
+            <p class="kicker">music licensing</p>
+            <h2 id="licensing-title">licensing portal</h2>
+            <p id="licensing-intro">Searchable tracks, usage metadata, and direct clearance inquiries.</p>
+            <a class="mail-link" href="mailto:hello@wev.world?subject=Music%20licensing%20inquiry">inquire</a>
+          </div>
+          <div class="track-table" role="list" aria-label="Licensing tracks"></div>
+        </div>
+      </section>
+    </main>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js"
+        }
+      }
+    </script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

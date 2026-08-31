@@ -1,0 +1,215 @@
+{
+  "site": {
+    "name": "wev",
+    "tagline": "Releases, works, live dates, licensing, and related artifacts.",
+    "contact": "hello@wev.world"
+  },
+  "filters": [
+    "all",
+    "releases",
+    "projects",
+    "live",
+    "goods",
+    "fliers",
+    "video",
+    "licensing"
+  ],
+  "items": [
+    {
+      "id": "ost-archive",
+      "type": "releases",
+      "year": "2026",
+      "title": "OST",
+      "dek": "A living index of released and unreleased soundtrack material.",
+      "description": "Collected cues, edits, and release notes. Designed to hold streaming links, liner notes, credits, and purchase links without changing the page structure.",
+      "image": "assets/ost-artwork-final.jpg",
+      "links": [
+        { "label": "open project", "url": "#", "action": "open-project" },
+        { "label": "spotify", "url": "https://open.spotify.com/search/wev%20OST" },
+        { "label": "press", "url": "https://www.newsweek.com/search/site/wev" },
+        { "label": "resident advisor", "url": "https://ra.co/dj/wev" }
+      ],
+      "tags": ["music", "release", "score"],
+      "project": {
+        "headline": "OST",
+        "body": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui, aenean lacinia bibendum nulla sed consectetur.",
+          "Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod."
+        ],
+        "links": [
+          { "label": "spotify", "url": "https://open.spotify.com/search/wev%20OST" },
+          { "label": "newsweek", "url": "https://www.newsweek.com/search/site/wev" },
+          { "label": "resident advisor", "url": "https://ra.co/dj/wev" }
+        ]
+      }
+    },
+    {
+      "id": "selected-fliers",
+      "type": "fliers",
+      "year": "2025-2026",
+      "title": "Selected Show Fliers",
+      "dek": "A rotating wall of event graphics, posters, and one-offs.",
+      "description": "The archive keeps the page quiet and lets the images carry the color. Each entry can include venue, city, collaborator credits, and ticket or recap links.",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        { "label": "view set", "url": "#" }
+      ],
+      "tags": ["poster", "live"]
+    },
+    {
+      "id": "goods-system",
+      "type": "goods",
+      "year": "2026",
+      "title": "OST 12\" LP",
+      "dek": "Vinyl pre-order for the OST full-length.",
+      "description": "A physical edition archive entry for the OST 12-inch LP, with pre-order link, product artwork, edition notes, and future stock status.",
+      "image": "assets/ost-12-lp-preorder.jpg",
+      "links": [
+        { "label": "pre-order", "url": "https://shop.wev.world" }
+      ],
+      "tags": ["vinyl", "pre-order", "goods"]
+    },
+    {
+      "id": "license-portal",
+      "type": "licensing",
+      "year": "current",
+      "title": "music licensing",
+      "dek": "A rebuilt licensing portal aligned with the archive style.",
+      "description": "Searchable tracks, usage notes, mood tags, and a direct inquiry path. This replaces the separate license.wev.world experience with a native page in the new site.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        { "label": "open portal", "url": "#licensing" }
+      ],
+      "tags": ["sync", "film", "commercial"]
+    }
+  ],
+  "videos": [
+    {
+      "id": "1cpPujuAgx4",
+      "title": "wev OST album release @ The Lot Radio May 2026",
+      "url": "https://www.youtube.com/watch?v=1cpPujuAgx4&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
+      "caption": "from the public YouTube playlist"
+    },
+    {
+      "id": "pzMV4IEmhk4",
+      "title": "ENERGETIC HOUSE & UKG || NYC BRIDGE TAKEOVER || @worldwidewev || 4K",
+      "url": "https://www.youtube.com/watch?v=pzMV4IEmhk4&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
+      "caption": "from the public YouTube playlist"
+    },
+    {
+      "id": "jxgpqFETDSY",
+      "title": "wev (USA, New York) l SCR Guestmix l SCR",
+      "url": "https://www.youtube.com/watch?v=jxgpqFETDSY&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
+      "caption": "from the public YouTube playlist"
+    },
+    {
+      "id": "DZDFlSFrzDM",
+      "title": "wev @TheLotRadio 04-17-2025",
+      "url": "https://www.youtube.com/watch?v=DZDFlSFrzDM&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
+      "caption": "from the public YouTube playlist"
+    },
+    {
+      "id": "UajrfXY1qvI",
+      "title": "UNDER THE DISCO BALL 050 FT WEV",
+      "url": "https://www.youtube.com/watch?v=UajrfXY1qvI&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
+      "caption": "from the public YouTube playlist"
+    },
+    {
+      "id": "Yna9bhU6qJk",
+      "title": "Third Floor Sounds Volume 5 | wev | Acid House, UK Garage, Dance Music",
+      "url": "https://www.youtube.com/watch?v=Yna9bhU6qJk&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
+      "caption": "from the public YouTube playlist"
+    },
+    {
+      "id": "kvpCX2ET4fY",
+      "title": "Swami Sound b2b wev House, UKG, Jungle, Trance, Techno DJ Set | Renegade NYC",
+      "url": "https://www.youtube.com/watch?v=kvpCX2ET4fY&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
+      "caption": "from the public YouTube playlist"
+    },
+    {
+      "id": "_Mln2zZr8v0",
+      "title": "wev @ TOHA Radio 03.07.2025",
+      "url": "https://www.youtube.com/watch?v=_Mln2zZr8v0&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
+      "caption": "from the public YouTube playlist"
+    },
+    {
+      "id": "NByfv4OUoPU",
+      "title": "wev | Ice Cream Social by Sundae Sauuce",
+      "url": "https://www.youtube.com/watch?v=NByfv4OUoPU&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
+      "caption": "from the public YouTube playlist"
+    },
+    {
+      "id": "--GFLrIsehI",
+      "title": "wev DJ set @ SPEEDSTAR Los Angeles 3.16.24 | House, UKG, Speed Garage, Jungle Mix 2024",
+      "url": "https://www.youtube.com/watch?v=--GFLrIsehI&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
+      "caption": "from the public YouTube playlist"
+    },
+    {
+      "id": "Dcf7quokJsY",
+      "title": "groovy deep house vinyl mix by wev | Technica House, NYC [4K]",
+      "url": "https://www.youtube.com/watch?v=Dcf7quokJsY&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
+      "caption": "from the public YouTube playlist"
+    },
+    {
+      "id": "C_gN9Es9KPI",
+      "title": "wev | Garage & Vocal House 2023 Mix @lucidradionyc",
+      "url": "https://www.youtube.com/watch?v=C_gN9Es9KPI&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
+      "caption": "from the public YouTube playlist"
+    },
+    {
+      "id": "2H2A3zYsvmA",
+      "title": "wev b2b Nick AM | Elsewhere Hall: Brooklyn, NY",
+      "url": "https://www.youtube.com/watch?v=2H2A3zYsvmA&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
+      "caption": "from the public YouTube playlist"
+    },
+    {
+      "id": "26axV92xe4c",
+      "title": "wev - acid in tokyo feat. YINYO [official video]",
+      "url": "https://www.youtube.com/watch?v=26axV92xe4c&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
+      "caption": "from the public YouTube playlist"
+    }
+  ],
+  "dates": [
+    {
+      "date": "2026-09-12",
+      "city": "New York, NY",
+      "venue": "TBA",
+      "status": "hold"
+    },
+    {
+      "date": "2026-10-03",
+      "city": "Los Angeles, CA",
+      "venue": "TBA",
+      "status": "planned"
+    }
+  ],
+  "licensing": {
+    "intro": "A direct licensing page for supervisors, editors, brands, and filmmakers.",
+    "tracks": [
+      {
+        "title": "Night Drive Cue",
+        "duration": "02:14",
+        "bpm": 94,
+        "moods": ["nocturnal", "minimal", "tension"],
+        "uses": ["film", "fashion", "trailer"],
+        "status": "one-stop"
+      },
+      {
+        "title": "Soft Impact Bed",
+        "duration": "01:48",
+        "bpm": 72,
+        "moods": ["warm", "textural", "intimate"],
+        "uses": ["documentary", "podcast", "brand"],
+        "status": "clearable"
+      },
+      {
+        "title": "Club Fragment",
+        "duration": "03:21",
+        "bpm": 128,
+        "moods": ["club", "kinetic", "bright"],
+        "uses": ["commercial", "recap", "sports"],
+        "status": "one-stop"
+      }
+    ]
+  }
+}
