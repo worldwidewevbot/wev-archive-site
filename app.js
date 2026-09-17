@@ -381,12 +381,10 @@ function renderTracks(tracks) {
         }
       `;
       row.querySelector(".track-select").addEventListener("click", () => {
-        if (state.selectedTrackIds.has(track.id)) {
-          state.selectedTrackIds.delete(track.id);
-        } else {
-          state.selectedTrackIds.add(track.id);
-        }
+        state.selectedTrackIds.clear();
+        state.selectedTrackIds.add(track.id);
         renderCatalog();
+        scrollToRequestForm();
       });
       row.querySelector(".track-preview").addEventListener("click", () => {
         state.activePreviewTrackId = isPreviewing ? null : track.id;
@@ -446,6 +444,15 @@ function updateRequestMail(selectedTracks) {
     `Notes: ${formData.get("notes") || ""}`
   ].join("\n");
   els.requestMail.href = `mailto:hello@wev.world?subject=Music%20licensing%20inquiry&body=${encodeURIComponent(body)}`;
+}
+
+function scrollToRequestForm() {
+  window.requestAnimationFrame(() => {
+    const panel = document.querySelector(".request-panel");
+    if (!panel) return;
+    const top = panel.getBoundingClientRect().top + window.scrollY - 88;
+    window.scrollTo({ top, behavior: "instant" });
+  });
 }
 
 function renderAdminEditor() {
