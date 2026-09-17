@@ -1,0 +1,18 @@
+{
+  "watchyaback!": {
+    "bpm": null,
+    "tags": ["game", "sync", "club", "soundtrack"],
+    "moods": ["club", "kinetic"],
+    "uses": ["game", "sync"],
+    "status": "clearable",
+    "notes": "Known placement: Bomb Rush Cyberfunk."
+  },
+  "shigoto werk": {
+    "bpm": null,
+    "tags": ["game", "sync", "club", "soundtrack"],
+    "moods": ["club", "kinetic"],
+    "uses": ["game", "sync"],
+    "status": "clearable",
+    "notes": "Known placement: Rocket League."
+  }
+}

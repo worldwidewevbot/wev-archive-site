@@ -25,12 +25,29 @@
       "description": "The debut full-length, collected as a central album entry for credits, listening links, release notes, press, and physical editions.",
       "image": "assets/ost-artwork-final.jpg",
       "links": [
-        { "label": "open project", "url": "#", "action": "open-project" },
-        { "label": "spotify", "url": "https://open.spotify.com/search/wev%20OST" },
-        { "label": "press", "url": "https://www.newsweek.com/search/site/wev" },
-        { "label": "resident advisor", "url": "https://ra.co/dj/wev" }
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/search/wev%20OST"
+        },
+        {
+          "label": "press",
+          "url": "https://www.newsweek.com/search/site/wev"
+        },
+        {
+          "label": "resident advisor",
+          "url": "https://ra.co/dj/wev"
+        }
       ],
-      "tags": ["music", "release", "score"],
+      "tags": [
+        "music",
+        "release",
+        "score"
+      ],
       "project": {
         "headline": "OST",
         "body": [
@@ -38,9 +55,18 @@
           "This project page can hold credits, liner notes, release links, listening links, and physical edition details."
         ],
         "links": [
-          { "label": "spotify", "url": "https://open.spotify.com/search/wev%20OST" },
-          { "label": "newsweek", "url": "https://www.newsweek.com/search/site/wev" },
-          { "label": "resident advisor", "url": "https://ra.co/dj/wev" }
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/search/wev%20OST"
+          },
+          {
+            "label": "newsweek",
+            "url": "https://www.newsweek.com/search/site/wev"
+          },
+          {
+            "label": "resident advisor",
+            "url": "https://ra.co/dj/wev"
+          }
         ]
       }
     },
@@ -52,15 +78,30 @@
       "dek": "Placement in Rocket League.",
       "description": "A game placement entry for the track, with room for soundtrack context, publisher credits, and in-game reference material.",
       "image": "assets/placeholder-release.svg",
-      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
-      "tags": ["game", "sync", "track"],
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "game",
+        "sync",
+        "track"
+      ],
       "project": {
         "headline": "shigoto werk",
         "body": [
           "Track placement in Rocket League.",
           "Future archive details can include label, platform, soundtrack, announcement, and gameplay references."
         ],
-        "links": [{ "label": "rocket league", "url": "https://www.rocketleague.com/" }]
+        "links": [
+          {
+            "label": "rocket league",
+            "url": "https://www.rocketleague.com/"
+          }
+        ]
       }
     },
     {
@@ -71,15 +112,30 @@
       "dek": "Limited vinyl edition of 100.",
       "description": "Physical edition entry for the Start Something EP vinyl run, reserved for product photos, shop links, edition notes, and stock status.",
       "image": "assets/placeholder-goods.svg",
-      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
-      "tags": ["vinyl", "edition of 100", "goods"],
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "vinyl",
+        "edition of 100",
+        "goods"
+      ],
       "project": {
         "headline": "start something EP vinyls",
         "body": [
           "Limited physical edition of 100.",
           "This page can hold pressing notes, merch photography, edition metadata, and sales links."
         ],
-        "links": [{ "label": "shop", "url": "https://shop.wev.world" }]
+        "links": [
+          {
+            "label": "shop",
+            "url": "https://shop.wev.world"
+          }
+        ]
       }
     },
     {
@@ -90,15 +146,30 @@
       "dek": "EP release.",
       "description": "Release entry for the Start Something EP, with space for streaming links, credits, artwork, and press.",
       "image": "assets/placeholder-release.svg",
-      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
-      "tags": ["music", "release", "EP"],
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "EP"
+      ],
       "project": {
         "headline": "start something EP",
         "body": [
           "wev EP release from 2025.",
           "Future details can include credits, listening links, visual assets, and related merchandise."
         ],
-        "links": [{ "label": "spotify", "url": "https://open.spotify.com/search/wev%20start%20something" }]
+        "links": [
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/search/wev%20start%20something"
+          }
+        ]
       }
     },
     {
@@ -109,15 +180,30 @@
       "dek": "Placement in Bomb Rush Cyberfunk.",
       "description": "A game soundtrack placement for watchyaback!, tied to the Bomb Rush Cyberfunk world.",
       "image": "assets/placeholder-release.svg",
-      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
-      "tags": ["game", "sync", "soundtrack"],
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "game",
+        "sync",
+        "soundtrack"
+      ],
       "project": {
         "headline": "watchyaback! in Bomb Rush Cyberfunk",
         "body": [
           "watchyaback! placement in Bomb Rush Cyberfunk.",
           "This page can collect platform links, gameplay references, soundtrack credits, and related press."
         ],
-        "links": [{ "label": "bomb rush cyberfunk", "url": "https://store.steampowered.com/app/1353230/Bomb_Rush_Cyberfunk/" }]
+        "links": [
+          {
+            "label": "bomb rush cyberfunk",
+            "url": "https://store.steampowered.com/app/1353230/Bomb_Rush_Cyberfunk/"
+          }
+        ]
       }
     },
     {
@@ -128,15 +214,30 @@
       "dek": "Release event and merchandise moment.",
       "description": "A live/project entry for the Feel Everything release show, merch, documentation, and related ephemera.",
       "image": "assets/placeholder-flier.svg",
-      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
-      "tags": ["live", "merch", "release show"],
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "live",
+        "merch",
+        "release show"
+      ],
       "project": {
         "headline": "feel everything release show + merch",
         "body": [
           "Release show and merch moment for the Feel Everything EP.",
           "Future archive content can include flyers, event photos, merch images, set notes, and credits."
         ],
-        "links": [{ "label": "inquiries", "url": "mailto:hello@wev.world" }]
+        "links": [
+          {
+            "label": "inquiries",
+            "url": "mailto:hello@wev.world"
+          }
+        ]
       }
     },
     {
@@ -147,15 +248,30 @@
       "dek": "EP release.",
       "description": "Release entry for the Feel Everything EP.",
       "image": "assets/placeholder-release.svg",
-      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
-      "tags": ["music", "release", "EP"],
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "EP"
+      ],
       "project": {
         "headline": "feel everything EP",
         "body": [
           "wev EP release from 2024.",
           "Future details can include credits, listening links, artwork, and event documentation."
         ],
-        "links": [{ "label": "spotify", "url": "https://open.spotify.com/search/wev%20feel%20everything" }]
+        "links": [
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/search/wev%20feel%20everything"
+          }
+        ]
       }
     },
     {
@@ -166,15 +282,30 @@
       "dek": "Collaborative project.",
       "description": "A project entry for the watchyaback! x Ronin Division collaboration.",
       "image": "assets/placeholder-release.svg",
-      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
-      "tags": ["collab", "music", "visual"],
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "collab",
+        "music",
+        "visual"
+      ],
       "project": {
         "headline": "watchyaback! x Ronin Division",
         "body": [
           "watchyaback! x Ronin Division collaboration from 2022.",
           "This page can hold project notes, visual assets, links, credits, and related release context."
         ],
-        "links": [{ "label": "inquiries", "url": "mailto:hello@wev.world" }]
+        "links": [
+          {
+            "label": "inquiries",
+            "url": "mailto:hello@wev.world"
+          }
+        ]
       }
     }
   ],
@@ -188,12 +319,29 @@
       "description": "The debut full-length, collected as a central album entry for credits, listening links, release notes, press, and physical editions.",
       "image": "assets/ost-artwork-final.jpg",
       "links": [
-        { "label": "open project", "url": "#", "action": "open-project" },
-        { "label": "spotify", "url": "https://open.spotify.com/search/wev%20OST" },
-        { "label": "press", "url": "https://www.newsweek.com/search/site/wev" },
-        { "label": "resident advisor", "url": "https://ra.co/dj/wev" }
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/search/wev%20OST"
+        },
+        {
+          "label": "press",
+          "url": "https://www.newsweek.com/search/site/wev"
+        },
+        {
+          "label": "resident advisor",
+          "url": "https://ra.co/dj/wev"
+        }
       ],
-      "tags": ["music", "release", "score"],
+      "tags": [
+        "music",
+        "release",
+        "score"
+      ],
       "project": {
         "headline": "OST",
         "body": [
@@ -201,9 +349,18 @@
           "This project page can hold credits, liner notes, release links, listening links, and physical edition details."
         ],
         "links": [
-          { "label": "spotify", "url": "https://open.spotify.com/search/wev%20OST" },
-          { "label": "newsweek", "url": "https://www.newsweek.com/search/site/wev" },
-          { "label": "resident advisor", "url": "https://ra.co/dj/wev" }
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/search/wev%20OST"
+          },
+          {
+            "label": "newsweek",
+            "url": "https://www.newsweek.com/search/site/wev"
+          },
+          {
+            "label": "resident advisor",
+            "url": "https://ra.co/dj/wev"
+          }
         ]
       }
     },
@@ -215,15 +372,30 @@
       "dek": "Placement in Rocket League.",
       "description": "A game placement entry for the track, with room for soundtrack context, publisher credits, and in-game reference material.",
       "image": "assets/placeholder-release.svg",
-      "links": [{ "label": "open project", "url": "#", "action": "open-project" }],
-      "tags": ["game", "sync", "track"],
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "game",
+        "sync",
+        "track"
+      ],
       "project": {
         "headline": "shigoto werk",
         "body": [
           "Track placement in Rocket League.",
           "Future archive details can include label, platform, soundtrack, announcement, and gameplay references."
         ],
-        "links": [{ "label": "rocket league", "url": "https://www.rocketleague.com/" }]
+        "links": [
+          {
+            "label": "rocket league",
+            "url": "https://www.rocketleague.com/"
+          }
+        ]
       }
     },
     {
@@ -235,9 +407,15 @@
       "description": "The archive keeps the page quiet and lets the images carry the color. Each entry can include venue, city, collaborator credits, and ticket or recap links.",
       "image": "assets/placeholder-flier.svg",
       "links": [
-        { "label": "view set", "url": "#" }
+        {
+          "label": "view set",
+          "url": "#"
+        }
       ],
-      "tags": ["poster", "live"]
+      "tags": [
+        "poster",
+        "live"
+      ]
     },
     {
       "id": "goods-system",
@@ -248,9 +426,16 @@
       "description": "A physical edition archive entry for the OST 12-inch LP, with pre-order link, product artwork, edition notes, and future stock status.",
       "image": "assets/ost-12-lp-preorder.jpg",
       "links": [
-        { "label": "pre-order", "url": "https://shop.wev.world" }
+        {
+          "label": "pre-order",
+          "url": "https://shop.wev.world"
+        }
       ],
-      "tags": ["vinyl", "pre-order", "goods"]
+      "tags": [
+        "vinyl",
+        "pre-order",
+        "goods"
+      ]
     },
     {
       "id": "license-portal",
@@ -261,9 +446,16 @@
       "description": "Searchable tracks, usage notes, mood tags, and a direct inquiry path. This replaces the separate license.wev.world experience with a native page in the new site.",
       "image": "assets/placeholder-license.svg",
       "links": [
-        { "label": "open portal", "url": "#licensing" }
+        {
+          "label": "open portal",
+          "url": "#licensing"
+        }
       ],
-      "tags": ["sync", "film", "commercial"]
+      "tags": [
+        "sync",
+        "film",
+        "commercial"
+      ]
     }
   ],
   "videos": [
@@ -354,16 +546,57 @@
   ],
   "dates": [
     {
-      "date": "2026-09-12",
-      "city": "New York, NY",
-      "venue": "TBA",
+      "date": "2026-10-01",
+      "city": "Brooklyn, NY",
+      "venue": "Brooklyn Museum",
+      "status": "confirmed",
+      "tickets": "Invite or $35",
+      "age": "AA"
+    },
+    {
+      "date": "2026-10-16",
+      "city": "Brooklyn, NY",
+      "venue": "Market Hotel",
+      "status": "confirmed",
+      "tickets": "$20 / $25 / $30",
+      "age": "21+"
+    },
+    {
+      "date": "2026-10-24",
+      "city": "Los Angeles, CA",
+      "venue": "Casita Hollywood",
+      "status": "confirmed",
+      "age": "AA"
+    },
+    {
+      "date": "2026-12-05",
+      "city": "Seattle, WA",
+      "venue": "Nectar Lounge",
+      "status": "confirmed",
+      "tickets": "$22 / $25",
+      "age": "21+"
+    },
+    {
+      "date": "2026-12-11",
+      "city": "Brooklyn, NY",
+      "venue": "Elsewhere Zone 1",
       "status": "hold"
     },
     {
-      "date": "2026-10-03",
-      "city": "Los Angeles, CA",
-      "venue": "TBA",
-      "status": "planned"
+      "date": "2026-12-12",
+      "city": "Miami, FL",
+      "venue": "ZeyZey",
+      "status": "confirmed",
+      "tickets": "$20 / $25 / $30",
+      "age": "21+"
+    },
+    {
+      "date": "2027-04-24",
+      "city": "Las Vegas, NV",
+      "venue": "Kaos Nightclub @ The Palms",
+      "status": "confirmed",
+      "tickets": "$35 - $45",
+      "age": "21+"
     }
   ],
   "licensing": {
@@ -378,9 +611,24 @@
         "title": "Night Drive Cue",
         "duration": "02:14",
         "bpm": 94,
-        "tags": ["nocturnal", "minimal", "tension", "film", "fashion", "trailer"],
-        "moods": ["nocturnal", "minimal", "tension"],
-        "uses": ["film", "fashion", "trailer"],
+        "tags": [
+          "nocturnal",
+          "minimal",
+          "tension",
+          "film",
+          "fashion",
+          "trailer"
+        ],
+        "moods": [
+          "nocturnal",
+          "minimal",
+          "tension"
+        ],
+        "uses": [
+          "film",
+          "fashion",
+          "trailer"
+        ],
         "status": "one-stop",
         "notes": "Placeholder track for catalog scaffolding."
       },
@@ -393,9 +641,24 @@
         "title": "Soft Impact Bed",
         "duration": "01:48",
         "bpm": 72,
-        "tags": ["warm", "textural", "intimate", "documentary", "podcast", "brand"],
-        "moods": ["warm", "textural", "intimate"],
-        "uses": ["documentary", "podcast", "brand"],
+        "tags": [
+          "warm",
+          "textural",
+          "intimate",
+          "documentary",
+          "podcast",
+          "brand"
+        ],
+        "moods": [
+          "warm",
+          "textural",
+          "intimate"
+        ],
+        "uses": [
+          "documentary",
+          "podcast",
+          "brand"
+        ],
         "status": "clearable",
         "notes": "Placeholder track for catalog scaffolding."
       },
@@ -408,9 +671,24 @@
         "title": "Club Fragment",
         "duration": "03:21",
         "bpm": 128,
-        "tags": ["club", "kinetic", "bright", "commercial", "recap", "sports"],
-        "moods": ["club", "kinetic", "bright"],
-        "uses": ["commercial", "recap", "sports"],
+        "tags": [
+          "club",
+          "kinetic",
+          "bright",
+          "commercial",
+          "recap",
+          "sports"
+        ],
+        "moods": [
+          "club",
+          "kinetic",
+          "bright"
+        ],
+        "uses": [
+          "commercial",
+          "recap",
+          "sports"
+        ],
         "status": "one-stop",
         "notes": "Placeholder track for catalog scaffolding."
       },
@@ -423,9 +701,20 @@
         "title": "watchyaback!",
         "duration": "tbd",
         "bpm": null,
-        "tags": ["game", "sync", "club", "soundtrack"],
-        "moods": ["club", "kinetic"],
-        "uses": ["game", "sync"],
+        "tags": [
+          "game",
+          "sync",
+          "club",
+          "soundtrack"
+        ],
+        "moods": [
+          "club",
+          "kinetic"
+        ],
+        "uses": [
+          "game",
+          "sync"
+        ],
         "status": "clearable",
         "notes": "Known placement: Bomb Rush Cyberfunk."
       },
@@ -438,9 +727,20 @@
         "title": "shigoto werk",
         "duration": "tbd",
         "bpm": null,
-        "tags": ["game", "sync", "club", "soundtrack"],
-        "moods": ["club", "bright"],
-        "uses": ["game", "sync"],
+        "tags": [
+          "game",
+          "sync",
+          "club",
+          "soundtrack"
+        ],
+        "moods": [
+          "club",
+          "bright"
+        ],
+        "uses": [
+          "game",
+          "sync"
+        ],
         "status": "clearable",
         "notes": "Known placement: Rocket League."
       }

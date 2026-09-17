@@ -186,7 +186,7 @@ function renderDates(dates) {
         <time datetime="${escapeAttribute(date.date)}">${formatDate(date.date)}</time>
         <div>
           <strong>${escapeHtml(date.city)}</strong>
-          <span>${escapeHtml(date.venue)} / ${escapeHtml(date.status)}</span>
+          <span>${escapeHtml([date.venue, date.status, date.tickets, date.age].filter(Boolean).join(" / "))}</span>
         </div>
       `;
       return row;
