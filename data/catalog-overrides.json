@@ -1,18 +1,948 @@
 {
   "watchyaback!": {
-    "bpm": null,
-    "tags": ["game", "sync", "club", "soundtrack"],
-    "moods": ["club", "kinetic"],
-    "uses": ["game", "sync"],
+    "bpm": 130,
+    "tags": [
+      "garage house",
+      "groovy",
+      "male vocal",
+      "confident",
+      "tech",
+      "energetic"
+    ],
+    "moods": [
+      "groovy",
+      "male vocal",
+      "confident",
+      "tech",
+      "energetic"
+    ],
+    "uses": [],
     "status": "clearable",
-    "notes": "Known placement: Bomb Rush Cyberfunk."
+    "notes": "Rights/splits: 100%"
   },
   "shigoto werk": {
     "bpm": null,
-    "tags": ["game", "sync", "club", "soundtrack"],
-    "moods": ["club", "kinetic"],
-    "uses": ["game", "sync"],
+    "tags": [
+      "game",
+      "sync",
+      "club",
+      "soundtrack"
+    ],
+    "moods": [
+      "club",
+      "kinetic"
+    ],
+    "uses": [
+      "game",
+      "sync"
+    ],
     "status": "clearable",
     "notes": "Known placement: Rocket League."
+  },
+  "timesup!": {
+    "bpm": null,
+    "tags": [
+      "garage house",
+      "sexy",
+      "energetic",
+      "groovy",
+      "male vocal",
+      "ethereal"
+    ],
+    "moods": [
+      "sexy",
+      "energetic",
+      "groovy",
+      "male vocal",
+      "ethereal"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 50% Justin Joon"
+  },
+  "start something": {
+    "bpm": 128,
+    "tags": [
+      "house",
+      "acid",
+      "groovy",
+      "uplifting",
+      "energetic",
+      "happy",
+      "confident"
+    ],
+    "moods": [
+      "acid",
+      "groovy",
+      "uplifting",
+      "energetic",
+      "happy",
+      "confident"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "deepen the senses": {
+    "bpm": 125,
+    "tags": [
+      "house",
+      "dark",
+      "male vocal"
+    ],
+    "moods": [
+      "dark",
+      "male vocal"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 50% Nick Momeni"
+  },
+  "jet": {
+    "bpm": 123,
+    "tags": [
+      "house",
+      "dark",
+      "sexy",
+      "male vocal",
+      "groovy",
+      "tech",
+      "deep"
+    ],
+    "moods": [
+      "dark",
+      "sexy",
+      "male vocal",
+      "groovy",
+      "tech",
+      "deep"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 50% Nick Momeni"
+  },
+  "walk2me": {
+    "bpm": 134,
+    "tags": [
+      "techno",
+      "energetic",
+      "acid",
+      "male vocal"
+    ],
+    "moods": [
+      "energetic",
+      "acid",
+      "male vocal"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 50% Nick Momeni"
+  },
+  "circles": {
+    "bpm": 128,
+    "tags": [
+      "house",
+      "male vocal",
+      "deep",
+      "ethereal",
+      "sexy"
+    ],
+    "moods": [
+      "male vocal",
+      "deep",
+      "ethereal",
+      "sexy"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 50% Nick Momeni"
+  },
+  "feel everything": {
+    "bpm": 123,
+    "tags": [
+      "house",
+      "happy",
+      "tech",
+      "groovy",
+      "deep"
+    ],
+    "moods": [
+      "happy",
+      "tech",
+      "groovy",
+      "deep"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 50% Nick Momeni"
+  },
+  "jazz glock": {
+    "bpm": 137,
+    "tags": [
+      "house",
+      "energetic",
+      "confident",
+      "happy"
+    ],
+    "moods": [
+      "energetic",
+      "confident",
+      "happy"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 50% Nick Momeni"
+  },
+  "miles away": {
+    "bpm": 127,
+    "tags": [
+      "house",
+      "sexy",
+      "male vocal",
+      "happy",
+      "deep"
+    ],
+    "moods": [
+      "sexy",
+      "male vocal",
+      "happy",
+      "deep"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: Nick Momeni, Brandon Rowan"
+  },
+  "feel everything (entity_A 3am mix)": {
+    "bpm": 145,
+    "tags": [
+      "jungle / DnB",
+      "ethereal",
+      "cerebral"
+    ],
+    "moods": [
+      "ethereal",
+      "cerebral"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: Nick Momeni, Alison"
+  },
+  "walk2me (nextdimensional 160 mix)": {
+    "bpm": 160,
+    "tags": [
+      "jungle / DnB",
+      "dark",
+      "energetic"
+    ],
+    "moods": [
+      "dark",
+      "energetic"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: Nick Momeni, Lisa Persson"
+  },
+  "jazz glock (ynh pump up the music mix)": {
+    "bpm": 137,
+    "tags": [
+      "breakbeat",
+      "energetic",
+      "happy",
+      "confident"
+    ],
+    "moods": [
+      "energetic",
+      "happy",
+      "confident"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: Nick Momeni, Angel"
+  },
+  "miles away (shaking’s dark dub)": {
+    "bpm": 136,
+    "tags": [
+      "garage house",
+      "dark",
+      "energetic",
+      "male vocal",
+      "confident"
+    ],
+    "moods": [
+      "dark",
+      "energetic",
+      "male vocal",
+      "confident"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: Nick Momeni, Gabe"
+  },
+  "higher": {
+    "bpm": 129,
+    "tags": [
+      "house",
+      "groovy",
+      "energetic",
+      "happy",
+      "uplifting"
+    ],
+    "moods": [
+      "groovy",
+      "energetic",
+      "happy",
+      "uplifting"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "hot": {
+    "bpm": 124,
+    "tags": [
+      "breakbeat",
+      "happy",
+      "uplifting",
+      "groovy",
+      "confident"
+    ],
+    "moods": [
+      "happy",
+      "uplifting",
+      "groovy",
+      "confident"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "deep pockets": {
+    "bpm": 124,
+    "tags": [
+      "house",
+      "energetic",
+      "groovy",
+      "confident"
+    ],
+    "moods": [
+      "energetic",
+      "groovy",
+      "confident"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "wyd?": {
+    "bpm": 129,
+    "tags": [
+      "garage house",
+      "groovy",
+      "sexy",
+      "confident",
+      "energetic"
+    ],
+    "moods": [
+      "groovy",
+      "sexy",
+      "confident",
+      "energetic"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "potion": {
+    "bpm": 125,
+    "tags": [
+      "house",
+      "sexy",
+      "groovy",
+      "uplifting",
+      "confident"
+    ],
+    "moods": [
+      "sexy",
+      "groovy",
+      "uplifting",
+      "confident"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 10% Greg Monte"
+  },
+  "Gonna Get Over You (A-Trak & wev Remix)": {
+    "bpm": 126,
+    "tags": [
+      "disco",
+      "acid"
+    ],
+    "moods": [
+      "acid"
+    ],
+    "uses": [],
+    "status": "needs review",
+    "notes": "Rights/splits: uplifting, house, 0%"
+  },
+  "realornot?": {
+    "bpm": 83.25,
+    "tags": [
+      "jungle / DnB",
+      "ethereal",
+      "cerebral",
+      "energetic"
+    ],
+    "moods": [
+      "ethereal",
+      "cerebral",
+      "energetic"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "gotsmoke": {
+    "bpm": 128,
+    "tags": [
+      "house",
+      "groovy",
+      "deep",
+      "tech",
+      "cerebral"
+    ],
+    "moods": [
+      "groovy",
+      "deep",
+      "tech",
+      "cerebral"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 20% Lauren Faith"
+  },
+  "powerstar": {
+    "bpm": 130,
+    "tags": [
+      "house",
+      "groovy",
+      "sexy",
+      "deep",
+      "tech",
+      "uplifting"
+    ],
+    "moods": [
+      "groovy",
+      "sexy",
+      "deep",
+      "tech",
+      "uplifting"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "hero": {
+    "bpm": 134,
+    "tags": [
+      "house",
+      "energetic",
+      "happy",
+      "confident",
+      "tech"
+    ],
+    "moods": [
+      "energetic",
+      "happy",
+      "confident",
+      "tech"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "Tek It (wev Remix)": {
+    "bpm": 126,
+    "tags": [
+      "house",
+      "cerebral",
+      "moody",
+      "female vocal",
+      "sexy"
+    ],
+    "moods": [
+      "cerebral",
+      "moody",
+      "female vocal",
+      "sexy"
+    ],
+    "uses": [],
+    "status": "needs review",
+    "notes": "Rights/splits: Noah Yoo, Sedona Schatt (0%)"
+  },
+  "TRA (wev Remix)": {
+    "bpm": 130,
+    "tags": [
+      "tech house",
+      "groovy",
+      "energetic",
+      "tech"
+    ],
+    "moods": [
+      "groovy",
+      "energetic",
+      "tech"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: Kazuma, Kenta"
+  },
+  "dusk": {
+    "bpm": 124,
+    "tags": [
+      "house",
+      "uplifting",
+      "groovy",
+      "sexy"
+    ],
+    "moods": [
+      "uplifting",
+      "groovy",
+      "sexy"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: eOne owns license, 60%"
+  },
+  "dawn": {
+    "bpm": 115,
+    "tags": [
+      "house",
+      "female vocal",
+      "sexy",
+      "groovy"
+    ],
+    "moods": [
+      "female vocal",
+      "sexy",
+      "groovy"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: Lauren Faith, eOne owns license"
+  },
+  "poly": {
+    "bpm": 121,
+    "tags": [
+      "tech house",
+      "cerebral",
+      "confident",
+      "uplifting",
+      "groovy"
+    ],
+    "moods": [
+      "cerebral",
+      "confident",
+      "uplifting",
+      "groovy"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "let you go": {
+    "bpm": 128,
+    "tags": [
+      "deep house",
+      "male vocal",
+      "sexy",
+      "groovy"
+    ],
+    "moods": [
+      "male vocal",
+      "sexy",
+      "groovy"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 33% Brandon Rowan, Linus Hablot"
+  },
+  "out of my mind": {
+    "bpm": 126,
+    "tags": [
+      "disco",
+      "energetic",
+      "groovy",
+      "happy",
+      "uplifting",
+      "male vocal",
+      "confident"
+    ],
+    "moods": [
+      "energetic",
+      "groovy",
+      "happy",
+      "uplifting",
+      "male vocal",
+      "confident"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: Brandon Rowan, Vin DAmato, Rocko Walker, eOne owns 40%"
+  },
+  "technobody": {
+    "bpm": 126,
+    "tags": [
+      "house"
+    ],
+    "moods": [],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: Roger Schami, eOne owns 40% license"
+  },
+  "technobody (John Tejada Remix)": {
+    "bpm": 126,
+    "tags": [
+      "deep house",
+      "deep",
+      "tech",
+      "cerebral",
+      "dark",
+      "groovy"
+    ],
+    "moods": [
+      "deep",
+      "tech",
+      "cerebral",
+      "dark",
+      "groovy"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: eOne owns 40% license"
+  },
+  "technobody (KENTACATS & KZMT Remix)": {
+    "bpm": 128,
+    "tags": [
+      "house",
+      "acid",
+      "groovy",
+      "energetic",
+      "confident",
+      "happy",
+      "tech"
+    ],
+    "moods": [
+      "acid",
+      "groovy",
+      "energetic",
+      "confident",
+      "happy",
+      "tech"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: eOne owns 40% license"
+  },
+  "technobody (Little Dead Girl Remix)": {
+    "bpm": 135,
+    "tags": [
+      "lofi house",
+      "cerebral",
+      "sexy",
+      "groovy"
+    ],
+    "moods": [
+      "cerebral",
+      "sexy",
+      "groovy"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: eOne owns 40% license"
+  },
+  "technobody (Kaizo Slumber Remix)": {
+    "bpm": 166,
+    "tags": [
+      "techno",
+      "confident",
+      "energetic",
+      "happy",
+      "uplifting"
+    ],
+    "moods": [
+      "confident",
+      "energetic",
+      "happy",
+      "uplifting"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: eOne owns 40% license"
+  },
+  "enter": {
+    "bpm": 130,
+    "tags": [
+      "jungle / DnB",
+      "ethereal",
+      "moody",
+      "cerebral",
+      "groovy"
+    ],
+    "moods": [
+      "ethereal",
+      "moody",
+      "cerebral",
+      "groovy"
+    ],
+    "uses": [],
+    "status": "needs review",
+    "notes": "Rights/splits: not distributed"
+  },
+  "hash joint": {
+    "bpm": 111,
+    "tags": [
+      "breakbeat",
+      "cerebral",
+      "confident",
+      "groovy",
+      "dark"
+    ],
+    "moods": [
+      "cerebral",
+      "confident",
+      "groovy",
+      "dark"
+    ],
+    "uses": [],
+    "status": "needs review",
+    "notes": "Rights/splits: Brandon Rowan, not distributed"
+  },
+  "icantsleep": {
+    "bpm": 125,
+    "tags": [
+      "deep house",
+      "moody",
+      "cerebral",
+      "deep",
+      "tech"
+    ],
+    "moods": [
+      "moody",
+      "cerebral",
+      "deep",
+      "tech"
+    ],
+    "uses": [],
+    "status": "needs review",
+    "notes": "Rights/splits: not distributed"
+  },
+  "yearn": {
+    "bpm": 85,
+    "tags": [
+      "jungle / DnB",
+      "cerebral",
+      "energetic",
+      "uplifting"
+    ],
+    "moods": [
+      "cerebral",
+      "energetic",
+      "uplifting"
+    ],
+    "uses": [],
+    "status": "needs review",
+    "notes": "Rights/splits: Aaron Patrick, not distributed"
+  },
+  "temple": {
+    "bpm": 127,
+    "tags": [
+      "house",
+      "tech",
+      "groovy",
+      "energetic",
+      "male vocal"
+    ],
+    "moods": [
+      "tech",
+      "groovy",
+      "energetic",
+      "male vocal"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "find yourself": {
+    "bpm": 127,
+    "tags": [
+      "techno",
+      "cerebral",
+      "deep",
+      "moody",
+      "tech"
+    ],
+    "moods": [
+      "cerebral",
+      "deep",
+      "moody",
+      "tech"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "hsl": {
+    "bpm": 125,
+    "tags": [
+      "house",
+      "cerebral",
+      "male vocal",
+      "groovy",
+      "sexy"
+    ],
+    "moods": [
+      "cerebral",
+      "male vocal",
+      "groovy",
+      "sexy"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "close 2 me": {
+    "bpm": 113,
+    "tags": [
+      "house",
+      "female vocal",
+      "moody",
+      "deep",
+      "sexy"
+    ],
+    "moods": [
+      "female vocal",
+      "moody",
+      "deep",
+      "sexy"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: Adeline Um 50%"
+  },
+  "worldwide": {
+    "bpm": 126,
+    "tags": [
+      "house",
+      "energetic",
+      "happy",
+      "uplifting",
+      "groovy"
+    ],
+    "moods": [
+      "energetic",
+      "happy",
+      "uplifting",
+      "groovy"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "fixate": {
+    "bpm": 126,
+    "tags": [
+      "house",
+      "sexy",
+      "female vocal",
+      "groovy"
+    ],
+    "moods": [
+      "sexy",
+      "female vocal",
+      "groovy"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "move 2 new york": {
+    "bpm": 123,
+    "tags": [
+      "lofi house",
+      "ethereal",
+      "dark",
+      "deep"
+    ],
+    "moods": [
+      "ethereal",
+      "dark",
+      "deep"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "deep pockets dub": {
+    "bpm": 124,
+    "tags": [
+      "house",
+      "energetic",
+      "groovy",
+      "confident"
+    ],
+    "moods": [
+      "energetic",
+      "groovy",
+      "confident"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: 100%"
+  },
+  "out of my mind (ft. Birocratic & REvV)": {
+    "bpm": 126,
+    "tags": [
+      "disco",
+      "energetic",
+      "groovy",
+      "happy",
+      "uplifting",
+      "male vocal",
+      "confident"
+    ],
+    "moods": [
+      "energetic",
+      "groovy",
+      "happy",
+      "uplifting",
+      "male vocal",
+      "confident"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: Brandon Rowan, Vin DAmato, Rocko Walker, eOne owns 40%"
+  },
+  "technobody - KENTACATS&KZMT Remix": {
+    "bpm": 128,
+    "tags": [
+      "house",
+      "acid",
+      "groovy",
+      "energetic",
+      "confident",
+      "happy",
+      "tech"
+    ],
+    "moods": [
+      "acid",
+      "groovy",
+      "energetic",
+      "confident",
+      "happy",
+      "tech"
+    ],
+    "uses": [],
+    "status": "clearable",
+    "notes": "Rights/splits: eOne owns 40% license"
   }
 }

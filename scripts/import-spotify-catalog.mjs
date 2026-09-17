@@ -51,6 +51,16 @@ function slug(value) {
     .replace(/^-|-$/g, "");
 }
 
+function normalizeTitle(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[''`]/g, "")
+    .replace(/[()]/g, " ")
+    .replace(/\s+-\s+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function msToDuration(ms) {
   if (!ms) return "tbd";
   const totalSeconds = Math.round(ms / 1000);
@@ -65,7 +75,13 @@ function loadOverrides() {
 }
 
 function overrideFor(overrides, track, album) {
-  return overrides[track.id] || overrides[track.name] || overrides[`${album.name}::${track.name}`] || {};
+  if (overrides[track.id]) return overrides[track.id];
+  if (overrides[track.name]) return overrides[track.name];
+  if (overrides[`${album.name}::${track.name}`]) return overrides[`${album.name}::${track.name}`];
+
+  const normalizedTrackName = normalizeTitle(track.name);
+  const normalizedAlbumTrackName = normalizeTitle(`${album.name}::${track.name}`);
+  return Object.entries(overrides).find(([key]) => normalizeTitle(key) === normalizedTrackName || normalizeTitle(key) === normalizedAlbumTrackName)?.[1] || {};
 }
 
 const token = await spotifyToken();

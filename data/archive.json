@@ -917,11 +917,24 @@
         "title": "timesup!",
         "duration": "3:33",
         "bpm": null,
-        "tags": [],
-        "moods": [],
+        "tags": [
+          "garage house",
+          "sexy",
+          "energetic",
+          "groovy",
+          "male vocal",
+          "ethereal"
+        ],
+        "moods": [
+          "sexy",
+          "energetic",
+          "groovy",
+          "male vocal",
+          "ethereal"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 50% Justin Joon",
         "spotifyUrl": "https://open.spotify.com/track/2i03IvvkILkVyW5v9DpgSi",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2734328eea4b47814591cafbf7c"
       },
@@ -1035,23 +1048,25 @@
         "releaseDate": "2025-11-14",
         "title": "watchyaback!",
         "duration": "3:46",
-        "bpm": null,
+        "bpm": 130,
         "tags": [
-          "game",
-          "sync",
-          "club",
-          "soundtrack"
+          "garage house",
+          "groovy",
+          "male vocal",
+          "confident",
+          "tech",
+          "energetic"
         ],
         "moods": [
-          "club",
-          "kinetic"
+          "groovy",
+          "male vocal",
+          "confident",
+          "tech",
+          "energetic"
         ],
-        "uses": [
-          "game",
-          "sync"
-        ],
+        "uses": [],
         "status": "clearable",
-        "notes": "Known placement: Bomb Rush Cyberfunk.",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/3iN8Ype0KVu5MXuhIT8kMW",
         "artwork": "https://i.scdn.co/image/ab67616d0000b27371cd5a86b31947919fe3dd1a"
       },
@@ -1063,12 +1078,27 @@
         "releaseDate": "2025-04-16",
         "title": "start something",
         "duration": "4:08",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 128,
+        "tags": [
+          "house",
+          "acid",
+          "groovy",
+          "uplifting",
+          "energetic",
+          "happy",
+          "confident"
+        ],
+        "moods": [
+          "acid",
+          "groovy",
+          "uplifting",
+          "energetic",
+          "happy",
+          "confident"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/0bZYGNLzBy03mu4jE9qD8d",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2739839c7653204c5c57c09671f"
       },
@@ -1204,12 +1234,27 @@
         "releaseDate": "2025-03-24",
         "title": "start something",
         "duration": "4:08",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 128,
+        "tags": [
+          "house",
+          "acid",
+          "groovy",
+          "uplifting",
+          "energetic",
+          "happy",
+          "confident"
+        ],
+        "moods": [
+          "acid",
+          "groovy",
+          "uplifting",
+          "energetic",
+          "happy",
+          "confident"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/7An4G1EntDAaDQJRQEetPB",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273585add987f773ae3f85640bc"
       },
@@ -1256,11 +1301,24 @@
         "title": "timesup!",
         "duration": "3:33",
         "bpm": null,
-        "tags": [],
-        "moods": [],
+        "tags": [
+          "garage house",
+          "sexy",
+          "energetic",
+          "groovy",
+          "male vocal",
+          "ethereal"
+        ],
+        "moods": [
+          "sexy",
+          "energetic",
+          "groovy",
+          "male vocal",
+          "ethereal"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 50% Justin Joon",
         "spotifyUrl": "https://open.spotify.com/track/4pldXzEu61sLDxwC6nsOwP",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2738ea097ecde1a046879097a24"
       },
@@ -1289,12 +1347,27 @@
         "releaseDate": "2024-08-09",
         "title": "start something",
         "duration": "4:08",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 128,
+        "tags": [
+          "house",
+          "acid",
+          "groovy",
+          "uplifting",
+          "energetic",
+          "happy",
+          "confident"
+        ],
+        "moods": [
+          "acid",
+          "groovy",
+          "uplifting",
+          "energetic",
+          "happy",
+          "confident"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/3lKCvM21SveD6UV9uKzmiE",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273984fe2ca7ac9a1d4f7502b05"
       },
@@ -1306,12 +1379,19 @@
         "releaseDate": "2024-05-24",
         "title": "feel everything (entity_A 3am mix)",
         "duration": "3:52",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 145,
+        "tags": [
+          "jungle / DnB",
+          "ethereal",
+          "cerebral"
+        ],
+        "moods": [
+          "ethereal",
+          "cerebral"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: Nick Momeni, Alison",
         "spotifyUrl": "https://open.spotify.com/track/3pu0eF85R7eZkDG9WMzNij",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273a202e0bafc0d70dc1b011e86"
       },
@@ -1323,12 +1403,19 @@
         "releaseDate": "2024-05-24",
         "title": "walk2me (nextdimensional 160 mix)",
         "duration": "2:26",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 160,
+        "tags": [
+          "jungle / DnB",
+          "dark",
+          "energetic"
+        ],
+        "moods": [
+          "dark",
+          "energetic"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: Nick Momeni, Lisa Persson",
         "spotifyUrl": "https://open.spotify.com/track/2O4dZvruZkCJul36NFy6kG",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273a202e0bafc0d70dc1b011e86"
       },
@@ -1340,12 +1427,21 @@
         "releaseDate": "2024-05-24",
         "title": "jazz glock (ynh pump up the music mix)",
         "duration": "2:52",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 137,
+        "tags": [
+          "breakbeat",
+          "energetic",
+          "happy",
+          "confident"
+        ],
+        "moods": [
+          "energetic",
+          "happy",
+          "confident"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: Nick Momeni, Angel",
         "spotifyUrl": "https://open.spotify.com/track/3GNSpjMhYqRvMNZBjpwtkq",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273a202e0bafc0d70dc1b011e86"
       },
@@ -1374,12 +1470,19 @@
         "releaseDate": "2024-04-05",
         "title": "deepen the senses",
         "duration": "5:40",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 125,
+        "tags": [
+          "house",
+          "dark",
+          "male vocal"
+        ],
+        "moods": [
+          "dark",
+          "male vocal"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 50% Nick Momeni",
         "spotifyUrl": "https://open.spotify.com/track/3UCugCe2gQpxy7Z9wHF0tZ",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
       },
@@ -1391,12 +1494,27 @@
         "releaseDate": "2024-04-05",
         "title": "jet",
         "duration": "2:42",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 123,
+        "tags": [
+          "house",
+          "dark",
+          "sexy",
+          "male vocal",
+          "groovy",
+          "tech",
+          "deep"
+        ],
+        "moods": [
+          "dark",
+          "sexy",
+          "male vocal",
+          "groovy",
+          "tech",
+          "deep"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 50% Nick Momeni",
         "spotifyUrl": "https://open.spotify.com/track/55ez35S1kbeVfSJAFfB7rP",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
       },
@@ -1408,12 +1526,21 @@
         "releaseDate": "2024-04-05",
         "title": "walk2me",
         "duration": "4:25",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 134,
+        "tags": [
+          "techno",
+          "energetic",
+          "acid",
+          "male vocal"
+        ],
+        "moods": [
+          "energetic",
+          "acid",
+          "male vocal"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 50% Nick Momeni",
         "spotifyUrl": "https://open.spotify.com/track/17MevaLGEHQAapphuYhASf",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
       },
@@ -1425,12 +1552,23 @@
         "releaseDate": "2024-04-05",
         "title": "circles",
         "duration": "3:49",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 128,
+        "tags": [
+          "house",
+          "male vocal",
+          "deep",
+          "ethereal",
+          "sexy"
+        ],
+        "moods": [
+          "male vocal",
+          "deep",
+          "ethereal",
+          "sexy"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 50% Nick Momeni",
         "spotifyUrl": "https://open.spotify.com/track/6EuIW3GQvql61O0rQWkYXX",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
       },
@@ -1442,12 +1580,23 @@
         "releaseDate": "2024-04-05",
         "title": "feel everything",
         "duration": "4:50",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 123,
+        "tags": [
+          "house",
+          "happy",
+          "tech",
+          "groovy",
+          "deep"
+        ],
+        "moods": [
+          "happy",
+          "tech",
+          "groovy",
+          "deep"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 50% Nick Momeni",
         "spotifyUrl": "https://open.spotify.com/track/25GxTAPl59nSAFB2yphERX",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
       },
@@ -1459,12 +1608,21 @@
         "releaseDate": "2024-04-05",
         "title": "jazz glock",
         "duration": "4:47",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 137,
+        "tags": [
+          "house",
+          "energetic",
+          "confident",
+          "happy"
+        ],
+        "moods": [
+          "energetic",
+          "confident",
+          "happy"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 50% Nick Momeni",
         "spotifyUrl": "https://open.spotify.com/track/2aSvUsuFeDAk7tW0yWC72r",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
       },
@@ -1476,12 +1634,23 @@
         "releaseDate": "2024-04-05",
         "title": "miles away",
         "duration": "5:22",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 127,
+        "tags": [
+          "house",
+          "sexy",
+          "male vocal",
+          "happy",
+          "deep"
+        ],
+        "moods": [
+          "sexy",
+          "male vocal",
+          "happy",
+          "deep"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: Nick Momeni, Brandon Rowan",
         "spotifyUrl": "https://open.spotify.com/track/5NkntuzsKIWVn6CzxUg2b2",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
       },
@@ -1510,12 +1679,23 @@
         "releaseDate": "2023-07-27",
         "title": "higher",
         "duration": "4:00",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 129,
+        "tags": [
+          "house",
+          "groovy",
+          "energetic",
+          "happy",
+          "uplifting"
+        ],
+        "moods": [
+          "groovy",
+          "energetic",
+          "happy",
+          "uplifting"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/6XTXNo2pzhl7UXu8IRyhtO",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273e2d5ab71df905972a1ce2a3e"
       },
@@ -1527,12 +1707,23 @@
         "releaseDate": "2023-06-16",
         "title": "hot",
         "duration": "5:11",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 124,
+        "tags": [
+          "breakbeat",
+          "happy",
+          "uplifting",
+          "groovy",
+          "confident"
+        ],
+        "moods": [
+          "happy",
+          "uplifting",
+          "groovy",
+          "confident"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/2v2nsGjVVmfQxRRqpQ71x3",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273a624c888c9f16c332cb17af2"
       },
@@ -1544,12 +1735,21 @@
         "releaseDate": "2023-06-16",
         "title": "deep pockets dub",
         "duration": "3:43",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 124,
+        "tags": [
+          "house",
+          "energetic",
+          "groovy",
+          "confident"
+        ],
+        "moods": [
+          "energetic",
+          "groovy",
+          "confident"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/0kOIbvU5jddwyVvsThBubH",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273a624c888c9f16c332cb17af2"
       },
@@ -1561,12 +1761,23 @@
         "releaseDate": "2023-04-14",
         "title": "wyd?",
         "duration": "3:21",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 129,
+        "tags": [
+          "garage house",
+          "groovy",
+          "sexy",
+          "confident",
+          "energetic"
+        ],
+        "moods": [
+          "groovy",
+          "sexy",
+          "confident",
+          "energetic"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/6zXeepCIC93tL49DV7MME4",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273eabe2cde24276349052ffe00"
       },
@@ -1578,12 +1789,23 @@
         "releaseDate": "2023-03-01",
         "title": "potion",
         "duration": "3:51",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 125,
+        "tags": [
+          "house",
+          "sexy",
+          "groovy",
+          "uplifting",
+          "confident"
+        ],
+        "moods": [
+          "sexy",
+          "groovy",
+          "uplifting",
+          "confident"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 10% Greg Monte",
         "spotifyUrl": "https://open.spotify.com/track/25iLE1R2utWKzwbqgjdwwh",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273bcc92bb94f34df784c126ee6"
       },
@@ -1595,12 +1817,17 @@
         "releaseDate": "2023-01-27",
         "title": "Gonna Get Over You - A-Trak & wev Remix",
         "duration": "5:24",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 126,
+        "tags": [
+          "disco",
+          "acid"
+        ],
+        "moods": [
+          "acid"
+        ],
         "uses": [],
-        "status": "clearable",
-        "notes": "",
+        "status": "needs review",
+        "notes": "Rights/splits: uplifting, house, 0%",
         "spotifyUrl": "https://open.spotify.com/track/5Q5ZyDXzk1PTTbQjD9smer",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273f080680bd2278e56aaacc5c0"
       },
@@ -1612,23 +1839,25 @@
         "releaseDate": "2022-12-02",
         "title": "watchyaback!",
         "duration": "3:46",
-        "bpm": null,
+        "bpm": 130,
         "tags": [
-          "game",
-          "sync",
-          "club",
-          "soundtrack"
+          "garage house",
+          "groovy",
+          "male vocal",
+          "confident",
+          "tech",
+          "energetic"
         ],
         "moods": [
-          "club",
-          "kinetic"
+          "groovy",
+          "male vocal",
+          "confident",
+          "tech",
+          "energetic"
         ],
-        "uses": [
-          "game",
-          "sync"
-        ],
+        "uses": [],
         "status": "clearable",
-        "notes": "Known placement: Bomb Rush Cyberfunk.",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/3MDEBIP4Pqdp1BBbNS37UT",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2737237b61f23ac7eb1f24f061a"
       },
@@ -1640,12 +1869,21 @@
         "releaseDate": "2022-10-28",
         "title": "realornot?",
         "duration": "2:33",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 83.25,
+        "tags": [
+          "jungle / DnB",
+          "ethereal",
+          "cerebral",
+          "energetic"
+        ],
+        "moods": [
+          "ethereal",
+          "cerebral",
+          "energetic"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/6C0tLRlczAtO5nnbCjvjPp",
         "artwork": "https://i.scdn.co/image/ab67616d0000b27319fb1f03ee8ce393994506d9"
       },
@@ -1657,12 +1895,23 @@
         "releaseDate": "2022-07-29",
         "title": "gotsmoke",
         "duration": "6:23",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 128,
+        "tags": [
+          "house",
+          "groovy",
+          "deep",
+          "tech",
+          "cerebral"
+        ],
+        "moods": [
+          "groovy",
+          "deep",
+          "tech",
+          "cerebral"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 20% Lauren Faith",
         "spotifyUrl": "https://open.spotify.com/track/114TPnE57dEwKFziVKqadl",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2734646271c73c28b73a2f0bc60"
       },
@@ -1674,12 +1923,25 @@
         "releaseDate": "2022-07-29",
         "title": "powerstar",
         "duration": "4:59",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 130,
+        "tags": [
+          "house",
+          "groovy",
+          "sexy",
+          "deep",
+          "tech",
+          "uplifting"
+        ],
+        "moods": [
+          "groovy",
+          "sexy",
+          "deep",
+          "tech",
+          "uplifting"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/0OG68Z5G2pTY8hD0zxO8B7",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2734646271c73c28b73a2f0bc60"
       },
@@ -1691,12 +1953,23 @@
         "releaseDate": "2022-07-29",
         "title": "hero",
         "duration": "5:35",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 134,
+        "tags": [
+          "house",
+          "energetic",
+          "happy",
+          "confident",
+          "tech"
+        ],
+        "moods": [
+          "energetic",
+          "happy",
+          "confident",
+          "tech"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/1Bp9xv6cY3rk3abQEFoZEe",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2734646271c73c28b73a2f0bc60"
       },
@@ -1708,12 +1981,23 @@
         "releaseDate": "2022-06-17",
         "title": "Tek It - wev Remix",
         "duration": "3:50",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 126,
+        "tags": [
+          "house",
+          "cerebral",
+          "moody",
+          "female vocal",
+          "sexy"
+        ],
+        "moods": [
+          "cerebral",
+          "moody",
+          "female vocal",
+          "sexy"
+        ],
         "uses": [],
-        "status": "clearable",
-        "notes": "",
+        "status": "needs review",
+        "notes": "Rights/splits: Noah Yoo, Sedona Schatt (0%)",
         "spotifyUrl": "https://open.spotify.com/track/7Av3sPMhVUh6xUEp5jSnn7",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273075ddc5c9219defa60cfa201"
       },
@@ -1725,12 +2009,23 @@
         "releaseDate": "2022-05-20",
         "title": "Tek It - wev Remix",
         "duration": "3:50",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 126,
+        "tags": [
+          "house",
+          "cerebral",
+          "moody",
+          "female vocal",
+          "sexy"
+        ],
+        "moods": [
+          "cerebral",
+          "moody",
+          "female vocal",
+          "sexy"
+        ],
         "uses": [],
-        "status": "clearable",
-        "notes": "",
+        "status": "needs review",
+        "notes": "Rights/splits: Noah Yoo, Sedona Schatt (0%)",
         "spotifyUrl": "https://open.spotify.com/track/6HaWHsTkOd5KLEPx4BBUri",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2733bc3729b4296779fb7966df8"
       },
@@ -1742,12 +2037,21 @@
         "releaseDate": "2022-02-23",
         "title": "TRA - wev Remix",
         "duration": "6:28",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 130,
+        "tags": [
+          "tech house",
+          "groovy",
+          "energetic",
+          "tech"
+        ],
+        "moods": [
+          "groovy",
+          "energetic",
+          "tech"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: Kazuma, Kenta",
         "spotifyUrl": "https://open.spotify.com/track/2l4eRln2VCZaO5jTfxLJqf",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273cb9f602dfe90699ec065165c"
       },
@@ -1759,12 +2063,21 @@
         "releaseDate": "2022-01-27",
         "title": "dusk",
         "duration": "5:06",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 124,
+        "tags": [
+          "house",
+          "uplifting",
+          "groovy",
+          "sexy"
+        ],
+        "moods": [
+          "uplifting",
+          "groovy",
+          "sexy"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: eOne owns license, 60%",
         "spotifyUrl": "https://open.spotify.com/track/5PJqh937aJ6Uz144LwKjIT",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273d08d2fbe4b66712cd8436135"
       },
@@ -1776,12 +2089,21 @@
         "releaseDate": "2022-01-27",
         "title": "dawn",
         "duration": "3:55",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 115,
+        "tags": [
+          "house",
+          "female vocal",
+          "sexy",
+          "groovy"
+        ],
+        "moods": [
+          "female vocal",
+          "sexy",
+          "groovy"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: Lauren Faith, eOne owns license",
         "spotifyUrl": "https://open.spotify.com/track/72jigqO30yB7NCYQ4rE7AT",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273d08d2fbe4b66712cd8436135"
       },
@@ -1793,12 +2115,23 @@
         "releaseDate": "2022-01-13",
         "title": "poly",
         "duration": "5:51",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 121,
+        "tags": [
+          "tech house",
+          "cerebral",
+          "confident",
+          "uplifting",
+          "groovy"
+        ],
+        "moods": [
+          "cerebral",
+          "confident",
+          "uplifting",
+          "groovy"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/1AZs17VcLmB8MICpw08Ig3",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2737d76269434a0bc8ca9c72b68"
       },
@@ -1810,12 +2143,21 @@
         "releaseDate": "2020-04-17",
         "title": "let you go",
         "duration": "3:10",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 128,
+        "tags": [
+          "deep house",
+          "male vocal",
+          "sexy",
+          "groovy"
+        ],
+        "moods": [
+          "male vocal",
+          "sexy",
+          "groovy"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 33% Brandon Rowan, Linus Hablot",
         "spotifyUrl": "https://open.spotify.com/track/1yvdszSpZllWcXLxCYEHVB",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273922c1545cbc831bd97ab24e7"
       },
@@ -1827,12 +2169,27 @@
         "releaseDate": "2022-01-13",
         "title": "out of my mind (ft. Birocratic & REvV)",
         "duration": "4:19",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 126,
+        "tags": [
+          "disco",
+          "energetic",
+          "groovy",
+          "happy",
+          "uplifting",
+          "male vocal",
+          "confident"
+        ],
+        "moods": [
+          "energetic",
+          "groovy",
+          "happy",
+          "uplifting",
+          "male vocal",
+          "confident"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: Brandon Rowan, Vin DAmato, Rocko Walker, eOne owns 40%",
         "spotifyUrl": "https://open.spotify.com/track/5PNcFx5VyFUkCmowC5oyvA",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2737d76269434a0bc8ca9c72b68"
       },
@@ -1844,12 +2201,14 @@
         "releaseDate": "2022-01-13",
         "title": "technobody",
         "duration": "5:24",
-        "bpm": null,
-        "tags": [],
+        "bpm": 126,
+        "tags": [
+          "house"
+        ],
         "moods": [],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: Roger Schami, eOne owns 40% license",
         "spotifyUrl": "https://open.spotify.com/track/0HEQZnAKovevaOgnQ7dB1Y",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2737d76269434a0bc8ca9c72b68"
       },
@@ -1861,12 +2220,25 @@
         "releaseDate": "2021-09-03",
         "title": "technobody - John Tejada Remix",
         "duration": "5:44",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 126,
+        "tags": [
+          "deep house",
+          "deep",
+          "tech",
+          "cerebral",
+          "dark",
+          "groovy"
+        ],
+        "moods": [
+          "deep",
+          "tech",
+          "cerebral",
+          "dark",
+          "groovy"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: eOne owns 40% license",
         "spotifyUrl": "https://open.spotify.com/track/5FxUQLmK0Hn52kJQzXFIeW",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959"
       },
@@ -1895,12 +2267,27 @@
         "releaseDate": "2021-09-03",
         "title": "technobody - KENTACATS&KZMT Remix",
         "duration": "5:26",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 128,
+        "tags": [
+          "house",
+          "acid",
+          "groovy",
+          "energetic",
+          "confident",
+          "happy",
+          "tech"
+        ],
+        "moods": [
+          "acid",
+          "groovy",
+          "energetic",
+          "confident",
+          "happy",
+          "tech"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: eOne owns 40% license",
         "spotifyUrl": "https://open.spotify.com/track/0eCBdSWZISY2TI0ATg6qfF",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959"
       },
@@ -1912,12 +2299,21 @@
         "releaseDate": "2021-09-03",
         "title": "technobody - Little Dead Girl Remix",
         "duration": "4:42",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 135,
+        "tags": [
+          "lofi house",
+          "cerebral",
+          "sexy",
+          "groovy"
+        ],
+        "moods": [
+          "cerebral",
+          "sexy",
+          "groovy"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: eOne owns 40% license",
         "spotifyUrl": "https://open.spotify.com/track/6k15gxEzc2pjIMGycsQego",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959"
       },
@@ -1929,12 +2325,23 @@
         "releaseDate": "2021-09-03",
         "title": "technobody - Kaizo Slumber Remix",
         "duration": "3:22",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 166,
+        "tags": [
+          "techno",
+          "confident",
+          "energetic",
+          "happy",
+          "uplifting"
+        ],
+        "moods": [
+          "confident",
+          "energetic",
+          "happy",
+          "uplifting"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: eOne owns 40% license",
         "spotifyUrl": "https://open.spotify.com/track/7zZqEKmzLrmjZVwTS4icSI",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959"
       },
@@ -1963,12 +2370,23 @@
         "releaseDate": "2020-03-11",
         "title": "poly",
         "duration": "5:51",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 121,
+        "tags": [
+          "tech house",
+          "cerebral",
+          "confident",
+          "uplifting",
+          "groovy"
+        ],
+        "moods": [
+          "cerebral",
+          "confident",
+          "uplifting",
+          "groovy"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/2yOyDtc8ADpUqjjGrmLesA",
         "artwork": "https://i.scdn.co/image/ab67616d0000b2735dda5bf799c7e6326b206b68"
       },
@@ -1980,12 +2398,23 @@
         "releaseDate": "2019-04-19",
         "title": "temple",
         "duration": "5:06",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 127,
+        "tags": [
+          "house",
+          "tech",
+          "groovy",
+          "energetic",
+          "male vocal"
+        ],
+        "moods": [
+          "tech",
+          "groovy",
+          "energetic",
+          "male vocal"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/6sNqckRJbawyxFPNQdm4YM",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273aedc36335ce8e9bd11daffbf"
       },
@@ -1997,12 +2426,23 @@
         "releaseDate": "2019-01-29",
         "title": "find yourself",
         "duration": "5:40",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 127,
+        "tags": [
+          "techno",
+          "cerebral",
+          "deep",
+          "moody",
+          "tech"
+        ],
+        "moods": [
+          "cerebral",
+          "deep",
+          "moody",
+          "tech"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/1xjHnmmPDHOxPEr0pq0HTN",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273b30921d88d5f3576658439d1"
       },
@@ -2014,12 +2454,23 @@
         "releaseDate": "2019-01-29",
         "title": "hsl",
         "duration": "4:57",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 125,
+        "tags": [
+          "house",
+          "cerebral",
+          "male vocal",
+          "groovy",
+          "sexy"
+        ],
+        "moods": [
+          "cerebral",
+          "male vocal",
+          "groovy",
+          "sexy"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/2i2tNsMz4ny9Fewc5QODIS",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273b30921d88d5f3576658439d1"
       },
@@ -2031,12 +2482,23 @@
         "releaseDate": "2019-01-29",
         "title": "close 2 me",
         "duration": "3:41",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 113,
+        "tags": [
+          "house",
+          "female vocal",
+          "moody",
+          "deep",
+          "sexy"
+        ],
+        "moods": [
+          "female vocal",
+          "moody",
+          "deep",
+          "sexy"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: Adeline Um 50%",
         "spotifyUrl": "https://open.spotify.com/track/3FVmR894eEcr8lPTD3Iz0o",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273b30921d88d5f3576658439d1"
       },
@@ -2048,12 +2510,23 @@
         "releaseDate": "2018-12-18",
         "title": "worldwide",
         "duration": "5:54",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 126,
+        "tags": [
+          "house",
+          "energetic",
+          "happy",
+          "uplifting",
+          "groovy"
+        ],
+        "moods": [
+          "energetic",
+          "happy",
+          "uplifting",
+          "groovy"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/0DOTk0bWxtQlSxZQ0y30Aa",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273ce698b6435479c17a3e30f81"
       },
@@ -2065,12 +2538,21 @@
         "releaseDate": "2018-11-28",
         "title": "fixate",
         "duration": "4:27",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 126,
+        "tags": [
+          "house",
+          "sexy",
+          "female vocal",
+          "groovy"
+        ],
+        "moods": [
+          "sexy",
+          "female vocal",
+          "groovy"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/3l7Meoqx81lMv1qIdDCOWy",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273d82927ac729a17fcab2c93fe"
       },
@@ -2082,12 +2564,21 @@
         "releaseDate": "2018-09-12",
         "title": "move 2 new york",
         "duration": "4:56",
-        "bpm": null,
-        "tags": [],
-        "moods": [],
+        "bpm": 123,
+        "tags": [
+          "lofi house",
+          "ethereal",
+          "dark",
+          "deep"
+        ],
+        "moods": [
+          "ethereal",
+          "dark",
+          "deep"
+        ],
         "uses": [],
         "status": "clearable",
-        "notes": "",
+        "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/0gYR4FzmkwyuZi4bDN02hU",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273f1570d5512011097a4809d94"
       }
