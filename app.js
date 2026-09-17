@@ -5,6 +5,7 @@ const state = {
   catalogSort: "releaseDate",
   catalogSearch: "",
   catalogTag: "all",
+  activePreviewTrackId: null,
   selectedTrackIds: new Set(),
   openProjectId: null,
   openProjectSurface: null,
@@ -26,6 +27,7 @@ const els = {
   catalogSearch: document.querySelector(".catalog-search input"),
   catalogSourceButtons: document.querySelectorAll("[data-source]"),
   catalogSortButtons: document.querySelectorAll("[data-sort]"),
+  spotifyPreview: document.querySelector(".spotify-preview"),
   selectedTracks: document.querySelector(".selected-tracks"),
   requestForm: document.querySelector(".request-form"),
   requestMail: document.querySelector(".request-mail"),
@@ -282,6 +284,7 @@ function renderCatalog() {
   const tracks = getVisibleTracks();
   renderCatalogButtons();
   renderCatalogTags();
+  renderSpotifyPreview();
   renderTracks(tracks);
   renderSelectedTracks();
   renderAdminEditor();
@@ -343,16 +346,26 @@ function renderTracks(tracks) {
       row.className = "track-row";
       row.role = "listitem";
       row.dataset.trackId = track.id;
+      const isSelected = state.selectedTrackIds.has(track.id);
+      const isPreviewing = state.activePreviewTrackId === track.id;
+      const spotifyId = getSpotifyTrackId(track);
       row.innerHTML = `
-        <button class="track-select" type="button" aria-pressed="${state.selectedTrackIds.has(track.id)}">${state.selectedTrackIds.has(track.id) ? "selected" : "select"}</button>
-        <div>
-          <strong>${escapeHtml(track.title)}</strong>
-          <span class="small">${escapeHtml(track.artist || "wev")} / ${escapeHtml(track.release || track.source)}</span>
+        <img class="track-artwork" src="${escapeAttribute(track.artwork || "assets/placeholder-license.svg")}" alt="" loading="lazy" />
+        <div class="track-main">
+          <strong class="track-title">${escapeHtml(track.title)}</strong>
+          <span class="track-release">${escapeHtml(track.release || track.source)}</span>
+          <span class="track-artist">${escapeHtml(track.artist || "wev")}</span>
         </div>
-        <span class="small">${escapeHtml(track.duration || "tbd")}</span>
-        <span class="small">${track.bpm ? `${Number(track.bpm)} bpm` : "bpm tbd"}</span>
-        <span class="small wide">${escapeHtml(getTrackTags(track).join(" / "))}</span>
-        <span class="small">${escapeHtml(track.status)}</span>
+        <div class="track-meta">
+          <span>${escapeHtml(track.duration || "tbd")}</span>
+          <span>${track.bpm ? `${Number(track.bpm)} bpm` : "bpm tbd"}</span>
+          <span>${escapeHtml(track.status)}</span>
+        </div>
+        <span class="track-tags">${escapeHtml(getTrackTags(track).join(" / "))}</span>
+        <div class="track-actions">
+          <button class="track-select" type="button" aria-pressed="${isSelected}">${isSelected ? "selected" : "select"}</button>
+          <button class="track-preview" type="button" ${spotifyId ? "" : "disabled"} aria-pressed="${isPreviewing}">${isPreviewing ? "playing" : "preview"}</button>
+        </div>
       `;
       row.querySelector(".track-select").addEventListener("click", () => {
         if (state.selectedTrackIds.has(track.id)) {
@@ -362,9 +375,32 @@ function renderTracks(tracks) {
         }
         renderCatalog();
       });
+      row.querySelector(".track-preview").addEventListener("click", () => {
+        state.activePreviewTrackId = isPreviewing ? null : track.id;
+        renderCatalog();
+      });
       return row;
     })
   );
+}
+
+function renderSpotifyPreview() {
+  if (!els.spotifyPreview) return;
+  const track = state.data.licensing.tracks.find((entry) => entry.id === state.activePreviewTrackId);
+  const spotifyId = track ? getSpotifyTrackId(track) : "";
+  if (!track || !spotifyId) {
+    els.spotifyPreview.hidden = true;
+    els.spotifyPreview.replaceChildren();
+    return;
+  }
+  els.spotifyPreview.hidden = false;
+  els.spotifyPreview.innerHTML = `
+    <div>
+      <span>previewing</span>
+      <strong>${escapeHtml(track.title)}</strong>
+    </div>
+    <iframe src="https://open.spotify.com/embed/track/${escapeAttribute(spotifyId)}?utm_source=generator&theme=0" title="${escapeAttribute(`Spotify preview: ${track.title}`)}" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  `;
 }
 
 function renderSelectedTracks() {
@@ -494,6 +530,18 @@ function saveCatalogDraft() {
 function getTrackTags(track) {
   const tags = track.tags && track.tags.length ? track.tags : [...(track.moods || []), ...(track.uses || [])];
   return [...new Set(tags.filter(Boolean))];
+}
+
+function getSpotifyTrackId(track) {
+  if (!track?.spotifyUrl) return "";
+  try {
+    const url = new URL(track.spotifyUrl);
+    const parts = url.pathname.split("/").filter(Boolean);
+    const trackIndex = parts.indexOf("track");
+    return trackIndex >= 0 ? parts[trackIndex + 1] || "" : "";
+  } catch {
+    return "";
+  }
 }
 
 function formatDate(value) {
