@@ -349,23 +349,36 @@ function renderTracks(tracks) {
       const isSelected = state.selectedTrackIds.has(track.id);
       const isPreviewing = state.activePreviewTrackId === track.id;
       const spotifyId = getSpotifyTrackId(track);
+      const artwork = track.artwork || "assets/placeholder-license.svg";
+      const releaseDate = formatReleaseDate(track.releaseDate);
+      const tags = getTrackTags(track);
       row.innerHTML = `
-        <img class="track-artwork" src="${escapeAttribute(track.artwork || "assets/placeholder-license.svg")}" alt="" loading="lazy" />
-        <div class="track-main">
-          <strong class="track-title">${escapeHtml(track.title)}</strong>
-          <span class="track-release">${escapeHtml(track.release || track.source)}</span>
-          <span class="track-artist">${escapeHtml(track.artist || "wev")}</span>
+        <div class="track-hero" style="--track-art: url('${escapeAttribute(artwork)}')">
+          <img class="track-artwork" src="${escapeAttribute(artwork)}" alt="" loading="lazy" />
+          <div class="track-main">
+            <strong class="track-title">${escapeHtml(track.title)}</strong>
+            <span class="track-release">${escapeHtml(track.release || track.source)}</span>
+            <span class="track-bpm">${track.bpm ? `${Number(track.bpm)}bpm` : "bpm tbd"}</span>
+          </div>
+          <span class="track-date">${escapeHtml(releaseDate)}</span>
+          <button class="track-preview" type="button" ${spotifyId ? "" : "disabled"} aria-label="${escapeAttribute(isPreviewing ? `Close Spotify preview for ${track.title}` : `Preview ${track.title} on Spotify`)}" aria-pressed="${isPreviewing}">
+            <span>${isPreviewing ? "pause" : "play"}</span>
+          </button>
         </div>
-        <div class="track-meta">
-          <span>${escapeHtml(track.duration || "tbd")}</span>
-          <span>${track.bpm ? `${Number(track.bpm)} bpm` : "bpm tbd"}</span>
-          <span>${escapeHtml(track.status)}</span>
+        <div class="track-lower">
+          <div class="track-tags" aria-label="Track tags">
+            ${tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("") || "<span>tag tbd</span>"}
+          </div>
+          <div class="track-actions">
+            <span class="track-status">${escapeHtml(track.status || "clearable")}</span>
+            <button class="track-select" type="button" aria-pressed="${isSelected}">${isSelected ? "Requested" : "Request"}</button>
+          </div>
         </div>
-        <span class="track-tags">${escapeHtml(getTrackTags(track).join(" / "))}</span>
-        <div class="track-actions">
-          <button class="track-select" type="button" aria-pressed="${isSelected}">${isSelected ? "selected" : "select"}</button>
-          <button class="track-preview" type="button" ${spotifyId ? "" : "disabled"} aria-pressed="${isPreviewing}">${isPreviewing ? "playing" : "preview"}</button>
-        </div>
+        ${
+          isPreviewing && spotifyId
+            ? `<div class="track-player"><iframe src="https://open.spotify.com/embed/track/${escapeAttribute(spotifyId)}?utm_source=generator&theme=0" title="${escapeAttribute(`Spotify preview: ${track.title}`)}" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>`
+            : ""
+        }
       `;
       row.querySelector(".track-select").addEventListener("click", () => {
         if (state.selectedTrackIds.has(track.id)) {
@@ -386,21 +399,15 @@ function renderTracks(tracks) {
 
 function renderSpotifyPreview() {
   if (!els.spotifyPreview) return;
-  const track = state.data.licensing.tracks.find((entry) => entry.id === state.activePreviewTrackId);
-  const spotifyId = track ? getSpotifyTrackId(track) : "";
-  if (!track || !spotifyId) {
-    els.spotifyPreview.hidden = true;
-    els.spotifyPreview.replaceChildren();
-    return;
-  }
-  els.spotifyPreview.hidden = false;
-  els.spotifyPreview.innerHTML = `
-    <div>
-      <span>previewing</span>
-      <strong>${escapeHtml(track.title)}</strong>
-    </div>
-    <iframe src="https://open.spotify.com/embed/track/${escapeAttribute(spotifyId)}?utm_source=generator&theme=0" title="${escapeAttribute(`Spotify preview: ${track.title}`)}" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  `;
+  els.spotifyPreview.hidden = true;
+  els.spotifyPreview.replaceChildren();
+}
+
+function formatReleaseDate(value) {
+  if (!value) return "";
+  const [year, month, day] = String(value).split("-");
+  if (!year || !month || !day) return String(value);
+  return `${year}-${month}-${day}`;
 }
 
 function renderSelectedTracks() {
