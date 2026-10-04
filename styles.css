@@ -174,10 +174,6 @@ h1 {
   display: block;
 }
 
-.works-page.page-view.is-active {
-  display: block;
-}
-
 .admin-page.page-view.is-active {
   display: block;
 }
@@ -549,10 +545,6 @@ body.modal-open {
   padding: 0 16px 64px;
 }
 
-.works-page {
-  padding: 0 16px 64px;
-}
-
 .section-rule {
   height: 2px;
   margin: 0 -16px 28px;
@@ -563,24 +555,6 @@ body.modal-open {
   display: grid;
   grid-template-columns: minmax(260px, 0.34fr) minmax(0, 1fr);
   gap: 24px;
-}
-
-.works-heading {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.3fr) minmax(0, 1fr);
-  gap: 12px 24px;
-  margin-bottom: 24px;
-}
-
-.works-heading h2 {
-  margin: 0;
-  font-size: clamp(58px, 12vw, 180px);
-  line-height: 0.78;
-  text-transform: uppercase;
-}
-
-.works-heading .kicker {
-  grid-row: span 2;
 }
 
 .works-dek {
@@ -624,6 +598,27 @@ body.modal-open {
 .licensing-tool {
   min-width: 0;
   border-top: 2px solid var(--line);
+}
+
+.licensing-works {
+  border-bottom: 2px solid var(--line);
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+}
+
+.licensing-works-heading {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.22fr) minmax(0, 1fr);
+  gap: 14px;
+  padding: 12px 0;
+  align-items: baseline;
+}
+
+.licensing-works-heading h3 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 58px);
+  line-height: 0.94;
+  text-transform: uppercase;
 }
 
 .catalog-controls {
@@ -1081,6 +1076,57 @@ body.modal-open {
   padding: 0 16px 64px;
 }
 
+.admin-gate {
+  display: grid;
+  max-width: 560px;
+  gap: 14px;
+  padding-top: 34px;
+}
+
+.admin-gate h2 {
+  margin: 0;
+  font-size: clamp(42px, 8vw, 92px);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.admin-login {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: end;
+}
+
+.admin-login label,
+.admin-picker {
+  display: grid;
+  gap: 5px;
+}
+
+.admin-login input,
+.admin-picker select {
+  width: 100%;
+  border: 2px solid var(--line);
+  border-radius: 0;
+  padding: 7px 8px;
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+}
+
+.admin-login span,
+.admin-picker span {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.admin-login-error {
+  color: #b00020;
+  font-size: 13px;
+}
+
 .admin-panel {
   display: grid;
   grid-template-columns: minmax(240px, 0.28fr) minmax(0, 1fr);
@@ -1105,6 +1151,10 @@ body.modal-open {
   gap: 14px;
 }
 
+.admin-picker {
+  grid-column: 2;
+}
+
 .admin-subhead {
   grid-column: 2;
   border-top: 2px solid var(--line);
@@ -1119,11 +1169,27 @@ body.modal-open {
 
 .admin-item {
   display: grid;
-  grid-template-columns: minmax(160px, 1fr) 140px 160px;
+  grid-template-columns: minmax(160px, 1fr) 160px 180px;
   gap: 10px;
   padding-bottom: 14px;
   border-bottom: 1px solid var(--soft);
   align-items: end;
+}
+
+.admin-designations {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 1 / -1;
+  gap: 8px 14px;
+  padding: 10px 0;
+  border-top: 1px solid var(--soft);
+  border-bottom: 1px solid var(--soft);
+}
+
+.admin-designations label {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
 }
 
 .admin-item-head {
@@ -1266,14 +1332,15 @@ body.modal-open {
 
 @media (max-width: 900px) {
   .selected-layout,
-  .works-heading,
   .works-list,
+  .licensing-works-heading,
   .licensing-grid,
   .about-grid,
   .catalog-controls,
   .request-grid,
   .request-form,
   .admin-panel,
+  .admin-login,
   .admin-item,
   .admin-track {
     grid-template-columns: 1fr;
@@ -1396,12 +1463,8 @@ body.modal-open {
     padding-inline: 12px;
   }
 
-  .works-page {
-    padding-inline: 12px;
-  }
-
-  .works-heading .kicker,
   .admin-archive-editor,
+  .admin-picker,
   .admin-subhead {
     grid-column: auto;
     grid-row: auto;

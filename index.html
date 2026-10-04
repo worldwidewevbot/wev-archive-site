@@ -14,11 +14,9 @@
       </a>
       <nav class="top-nav" aria-label="Primary">
         <a href="#selected">selected works</a>
-        <a href="#works">works</a>
         <a href="#archive">archive</a>
         <a href="#licensing" data-route="licensing">licensing</a>
         <a href="#contact">contact</a>
-        <a href="#admin">cms</a>
       </nav>
     </header>
 
@@ -74,26 +72,23 @@
         </div>
       </section>
 
-      <section class="works-page page-view" id="works" data-page="works" aria-labelledby="works-title">
-        <div class="section-rule"></div>
-        <div class="works-heading">
-          <p class="kicker">sync / brand placements</p>
-          <h2 id="works-title">works</h2>
-          <p class="works-dek"></p>
-        </div>
-        <div class="works-list" aria-live="polite"></div>
-      </section>
-
       <section class="licensing-page page-view" id="licensing" data-page="licensing" aria-labelledby="licensing-title">
         <div class="section-rule"></div>
         <div class="licensing-grid">
           <div class="licensing-copy">
-            <p class="kicker">music licensing</p>
+            <p class="kicker">sync / licensing</p>
             <h2 id="licensing-title">licensing portal</h2>
             <p id="licensing-intro">Searchable tracks, usage metadata, and direct clearance inquiries.</p>
             <a class="mail-link" href="mailto:hello@wev.world?subject=Music%20licensing%20inquiry">inquire</a>
           </div>
           <div class="licensing-tool">
+            <section class="licensing-works" aria-labelledby="licensing-works-title">
+              <div class="licensing-works-heading">
+                <h3 id="licensing-works-title">sync works</h3>
+                <p class="works-dek"></p>
+              </div>
+              <div class="works-list" aria-live="polite"></div>
+            </section>
             <div class="catalog-controls" aria-label="Catalog controls">
               <div class="control-group" aria-label="Source">
                 <span>source</span>
@@ -188,12 +183,28 @@
       </section>
 
       <section class="admin-page page-view" id="admin" data-page="admin" aria-labelledby="admin-title">
+        <section class="admin-gate" aria-labelledby="admin-gate-title">
+          <p class="kicker">private cms</p>
+          <h2 id="admin-gate-title">enter password</h2>
+          <form class="admin-login">
+            <label>
+              <span>password</span>
+              <input name="password" type="password" autocomplete="current-password" />
+            </label>
+            <button class="catalog-button" type="submit">unlock</button>
+          </form>
+          <p class="admin-login-error" hidden>Wrong password.</p>
+        </section>
         <section class="admin-panel">
           <div>
             <p class="kicker">cms</p>
             <h2 id="admin-title">archive editor</h2>
-            <p>Local draft editor for archive entries, tags, content blocks, links, and per-entry media uploads. Export the JSON when the edit pass is ready to publish.</p>
+            <p>Choose one post, edit its content, upload media, and designate where it appears across the site. Export the JSON when the edit pass is ready to publish.</p>
           </div>
+          <label class="admin-picker">
+            <span>post</span>
+            <select class="admin-item-select"></select>
+          </label>
           <div class="admin-archive-editor"></div>
           <div class="admin-subhead">
             <h3>licensing catalog</h3>

@@ -16,13 +16,16 @@
   ],
   "selectedWorks": [
     {
-      "id": "ost-2026-05-29",
+      "showInArchive": true,
+      "isSelectedWork": true,
+      "showInWorks": false,
+      "id": "watchyaback-2022-12-02",
       "type": "releases",
-      "year": "2026",
-      "date": "2026-05-29",
-      "title": "OST",
-      "dek": "Album release.",
-      "description": "Debut album. Mixed by @nosajkrap, mastered by @joshuapleeter. Contributors include @lordstingray, @sc.ruz, @nick.am, @yoshitee_ and more. Early listening @dimension.70. Release set @thelotradio 2026-06-02. 12” translucent purple vinyl pre-order (Aug 2026). “a record which captures the spirit i feel living and working in new york.”",
+      "year": "2022",
+      "date": "2022-12-02",
+      "title": "watchyaback!",
+      "dek": "Single release.",
+      "description": "Collab + visual with @lordstingray for @ronindivision 10th anniversary. Teaser did 1,432 likes.",
       "image": "assets/placeholder-release.svg",
       "links": [
         {
@@ -32,32 +35,76 @@
         },
         {
           "label": "instagram source",
-          "url": "https://www.instagram.com/p/DY788qXGpCM/"
+          "url": "https://www.instagram.com/reel/ClmaHfyOie_/"
         }
       ],
       "tags": [
-        "album",
-        "apparel",
         "music",
-        "radio",
         "release",
-        "vinyl"
+        "single"
       ],
       "project": {
-        "headline": "OST",
+        "headline": "watchyaback!",
         "body": [
-          "Debut album. Mixed by @nosajkrap, mastered by @joshuapleeter. Contributors include @lordstingray, @sc.ruz, @nick.am, @yoshitee_ and more. Early listening @dimension.70. Release set @thelotradio 2026-06-02. 12” translucent purple vinyl pre-order (Aug 2026). “a record which captures the spirit i feel living and working in new york.”",
+          "Collab + visual with @lordstingray for @ronindivision 10th anniversary. Teaser did 1,432 likes.",
           "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
         ],
         "links": [
           {
             "label": "instagram source",
-            "url": "https://www.instagram.com/p/DY788qXGpCM/"
+            "url": "https://www.instagram.com/reel/ClmaHfyOie_/"
           }
         ]
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": true,
+      "showInWorks": false,
+      "id": "feel-everything-ep-w-nick-am-2024-04-05",
+      "type": "releases",
+      "year": "2024",
+      "date": "2024-04-05",
+      "title": "feel everything EP (w/ nick.am)",
+      "dek": "Ep release.",
+      "description": "3+ years in the making. Cover art @bubbltek, world-building @lordstingray. EP lore series on IG (PlayStation production, ‘circles’ origin story). 12” vinyl announced 2024-04-22, stocked at @humanheadnyc.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/C5YxJ7jOBq5/"
+        }
+      ],
+      "tags": [
+        "EP",
+        "ep",
+        "music",
+        "release",
+        "vinyl"
+      ],
+      "project": {
+        "headline": "feel everything EP (w/ nick.am)",
+        "body": [
+          "3+ years in the making. Cover art @bubbltek, world-building @lordstingray. EP lore series on IG (PlayStation production, ‘circles’ origin story). 12” vinyl announced 2024-04-22, stocked at @humanheadnyc.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/C5YxJ7jOBq5/"
+          }
+        ]
+      }
+    },
+    {
+      "showInArchive": true,
+      "isSelectedWork": true,
+      "showInWorks": false,
       "id": "shigoto-werk-2025-03-24",
       "type": "releases",
       "year": "2025",
@@ -101,6 +148,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": true,
+      "showInWorks": false,
       "id": "start-something-ep-2025-04-16",
       "type": "releases",
       "year": "2025",
@@ -144,13 +194,16 @@
       }
     },
     {
-      "id": "feel-everything-ep-w-nick-am-2024-04-05",
+      "showInArchive": true,
+      "isSelectedWork": true,
+      "showInWorks": false,
+      "id": "ost-2026-05-29",
       "type": "releases",
-      "year": "2024",
-      "date": "2024-04-05",
-      "title": "feel everything EP (w/ nick.am)",
-      "dek": "Ep release.",
-      "description": "3+ years in the making. Cover art @bubbltek, world-building @lordstingray. EP lore series on IG (PlayStation production, ‘circles’ origin story). 12” vinyl announced 2024-04-22, stocked at @humanheadnyc.",
+      "year": "2026",
+      "date": "2026-05-29",
+      "title": "OST",
+      "dek": "Album release.",
+      "description": "Debut album. Mixed by @nosajkrap, mastered by @joshuapleeter. Contributors include @lordstingray, @sc.ruz, @nick.am, @yoshitee_ and more. Early listening @dimension.70. Release set @thelotradio 2026-06-02. 12” translucent purple vinyl pre-order (Aug 2026). “a record which captures the spirit i feel living and working in new york.”",
       "image": "assets/placeholder-release.svg",
       "links": [
         {
@@ -160,70 +213,35 @@
         },
         {
           "label": "instagram source",
-          "url": "https://www.instagram.com/p/C5YxJ7jOBq5/"
+          "url": "https://www.instagram.com/p/DY788qXGpCM/"
         }
       ],
       "tags": [
-        "EP",
-        "ep",
+        "album",
+        "apparel",
         "music",
+        "radio",
         "release",
         "vinyl"
       ],
       "project": {
-        "headline": "feel everything EP (w/ nick.am)",
+        "headline": "OST",
         "body": [
-          "3+ years in the making. Cover art @bubbltek, world-building @lordstingray. EP lore series on IG (PlayStation production, ‘circles’ origin story). 12” vinyl announced 2024-04-22, stocked at @humanheadnyc.",
+          "Debut album. Mixed by @nosajkrap, mastered by @joshuapleeter. Contributors include @lordstingray, @sc.ruz, @nick.am, @yoshitee_ and more. Early listening @dimension.70. Release set @thelotradio 2026-06-02. 12” translucent purple vinyl pre-order (Aug 2026). “a record which captures the spirit i feel living and working in new york.”",
           "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
         ],
         "links": [
           {
             "label": "instagram source",
-            "url": "https://www.instagram.com/p/C5YxJ7jOBq5/"
+            "url": "https://www.instagram.com/p/DY788qXGpCM/"
           }
         ]
       }
     },
     {
-      "id": "watchyaback-2022-12-02",
-      "type": "releases",
-      "year": "2022",
-      "date": "2022-12-02",
-      "title": "watchyaback!",
-      "dek": "Single release.",
-      "description": "Collab + visual with @lordstingray for @ronindivision 10th anniversary. Teaser did 1,432 likes.",
-      "image": "assets/placeholder-release.svg",
-      "links": [
-        {
-          "label": "open project",
-          "url": "#",
-          "action": "open-project"
-        },
-        {
-          "label": "instagram source",
-          "url": "https://www.instagram.com/reel/ClmaHfyOie_/"
-        }
-      ],
-      "tags": [
-        "music",
-        "release",
-        "single"
-      ],
-      "project": {
-        "headline": "watchyaback!",
-        "body": [
-          "Collab + visual with @lordstingray for @ronindivision 10th anniversary. Teaser did 1,432 likes.",
-          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
-        ],
-        "links": [
-          {
-            "label": "instagram source",
-            "url": "https://www.instagram.com/reel/ClmaHfyOie_/"
-          }
-        ]
-      }
-    },
-    {
+      "showInArchive": true,
+      "isSelectedWork": true,
+      "showInWorks": false,
       "id": "williamsburg-bridge-secret-rave-2024-05-30",
       "type": "live",
       "year": "2024",
@@ -263,6 +281,9 @@
   ],
   "items": [
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "e4rfquake-edit-2019-05-27",
       "type": "releases",
       "year": "2019",
@@ -302,6 +323,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "poly-2020-03-11",
       "type": "releases",
       "year": "2020",
@@ -342,6 +366,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "out-of-my-mind-feat-birocratic-revvtheband-2020-09-16",
       "type": "releases",
       "year": "2020",
@@ -381,6 +408,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "2manychain-2020-11-27",
       "type": "releases",
       "year": "2020",
@@ -420,6 +450,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "technobody-w-djhoodboi-2021-03-10",
       "type": "releases",
       "year": "2021",
@@ -459,6 +492,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "technobody-remix-pack-2021-09-03",
       "type": "releases",
       "year": "2021",
@@ -500,6 +536,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "pinkpantheress-edit-2021-09-22",
       "type": "releases",
       "year": "2021",
@@ -539,6 +578,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "dawn-w-laurenfaith-2021-10-21",
       "type": "releases",
       "year": "2021",
@@ -578,6 +620,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "dusk-2022-01-27",
       "type": "releases",
       "year": "2022",
@@ -617,6 +662,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "tek-it-wev-remix-for-cafune-2022-05-20",
       "type": "releases",
       "year": "2022",
@@ -657,6 +705,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "hero-ep-2022-07-29",
       "type": "releases",
       "year": "2022",
@@ -697,6 +748,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "powerstar-2022-07-31",
       "type": "releases",
       "year": "2022",
@@ -736,6 +790,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "gotsmoke-2022-08-03",
       "type": "releases",
       "year": "2022",
@@ -775,6 +832,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "hot-2022-09-26",
       "type": "releases",
       "year": "2022",
@@ -815,6 +875,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": true,
+      "showInWorks": false,
       "id": "watchyaback-2022-12-02",
       "type": "releases",
       "year": "2022",
@@ -854,6 +917,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "deep-pockets-dub-2023-06-15",
       "type": "releases",
       "year": "2023",
@@ -895,6 +961,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "higher-2023-07-27",
       "type": "releases",
       "year": "2023",
@@ -934,6 +1003,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "walk2me-w-nick-am-2024-02-02",
       "type": "releases",
       "year": "2024",
@@ -973,6 +1045,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "second-nick-am-single-2024-02-23",
       "type": "releases",
       "year": "2024",
@@ -1012,6 +1087,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": true,
+      "showInWorks": false,
       "id": "feel-everything-ep-w-nick-am-2024-04-05",
       "type": "releases",
       "year": "2024",
@@ -1053,6 +1131,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "feel-everything-remixes-2024-05-24",
       "type": "releases",
       "year": "2024",
@@ -1094,6 +1175,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "start-something-2024-08-09",
       "type": "releases",
       "year": "2024",
@@ -1133,6 +1217,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "mazeworld-wev-remix-for-nextdimensional-2024-09-18",
       "type": "releases",
       "year": "2024",
@@ -1172,6 +1259,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "timesup-w-carbike000-2024-10-11",
       "type": "releases",
       "year": "2024",
@@ -1213,6 +1303,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "savestate-wev-s-metro-acid-mix-for-boy-2ooo-2025-03-07",
       "type": "releases",
       "year": "2025",
@@ -1252,6 +1345,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": true,
+      "showInWorks": false,
       "id": "shigoto-werk-2025-03-24",
       "type": "releases",
       "year": "2025",
@@ -1295,6 +1391,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "acid-in-tokyo-feat-yinyo-tyo-2025-04-03",
       "type": "releases",
       "year": "2025",
@@ -1336,6 +1435,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": true,
+      "showInWorks": false,
       "id": "start-something-ep-2025-04-16",
       "type": "releases",
       "year": "2025",
@@ -1379,6 +1481,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "technochronic-feat-yoshitee-2026-02-19",
       "type": "releases",
       "year": "2026",
@@ -1419,6 +1524,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "remix-for-fifi-zhang-x-2026-02-04",
       "type": "releases",
       "year": "2026",
@@ -1459,6 +1567,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "get-w-this-2026-04-03",
       "type": "releases",
       "year": "2026",
@@ -1499,6 +1610,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "spectrum-w-sc-ruz-2026-05-15",
       "type": "releases",
       "year": "2026",
@@ -1538,6 +1652,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": true,
+      "showInWorks": false,
       "id": "ost-2026-05-29",
       "type": "releases",
       "year": "2026",
@@ -1580,6 +1697,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "shiki-no-uta-wev-edit-2026-10-02",
       "type": "releases",
       "year": "2026",
@@ -1619,6 +1739,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "twitch-streaming-era-2020-2021",
       "type": "live",
       "year": "2020",
@@ -1647,6 +1770,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "denver-debut-2022-02-20",
       "type": "live",
       "year": "2022",
@@ -1684,6 +1810,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "first-europe-shows-announced-2022-04-14",
       "type": "live",
       "year": "2022",
@@ -1721,6 +1850,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "sold-out-babysallright-2022-07-10",
       "type": "live",
       "year": "2022",
@@ -1759,6 +1891,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "elsewhere-camcorder-set-2022-10-17",
       "type": "live",
       "year": "2022",
@@ -1797,6 +1932,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "first-sold-out-set-of-2023-2023-03-27",
       "type": "live",
       "year": "2023",
@@ -1835,6 +1973,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "opening-for-rome-in-silver-elsewhere-2023-04-26",
       "type": "live",
       "year": "2023",
@@ -1874,6 +2015,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "tokyo-debut-japan-run-2023-08-29-09-2023",
       "type": "live",
       "year": "2023",
@@ -1913,6 +2057,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "supporting-sammy-virji-elsewhere-2024-02-01",
       "type": "live",
       "year": "2024",
@@ -1950,6 +2097,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "viral-anime-edit-reel-era-2024-02",
       "type": "live",
       "year": "2024",
@@ -1988,6 +2138,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "first-la-headline-fountain-la-2024-03-16",
       "type": "live",
       "year": "2024",
@@ -2026,6 +2179,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "feel-everything-immersive-release-show-2024-05-09",
       "type": "live",
       "year": "2024",
@@ -2066,6 +2222,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": true,
+      "showInWorks": false,
       "id": "williamsburg-bridge-secret-rave-2024-05-30",
       "type": "live",
       "year": "2024",
@@ -2103,6 +2262,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "japan-tour-2nd-2024-06-07-2024",
       "type": "live",
       "year": "2024",
@@ -2143,6 +2305,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "elsewhere-headline-2024-07-30",
       "type": "live",
       "year": "2024",
@@ -2181,6 +2346,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "philly-wowphilly-2024-10-17",
       "type": "live",
       "year": "2024",
@@ -2219,6 +2387,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "first-thelotradio-set-2025-04-21",
       "type": "live",
       "year": "2025",
@@ -2260,6 +2431,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "house-of-yes-debut-2025-04-29",
       "type": "live",
       "year": "2025",
@@ -2297,6 +2471,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "worldwide-summer-tour-2025-06-26-08-2025",
       "type": "live",
       "year": "2025",
@@ -2346,6 +2523,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "speedstar-x-2-2025-09-15",
       "type": "live",
       "year": "2025",
@@ -2383,6 +2563,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "ost-release-set-thelotradio-2026-06-02",
       "type": "live",
       "year": "2026",
@@ -2423,6 +2606,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "ost-release-party-market-hotel-2026-07-02",
       "type": "live",
       "year": "2026",
@@ -2462,6 +2648,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "texas-run-2026-07",
       "type": "live",
       "year": "2026",
@@ -2499,6 +2688,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "animenyc-official-afterparty-headliner-2026-08-20",
       "type": "live",
       "year": "2026",
@@ -2537,6 +2729,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "12-12-zeyzey-miami-announced-2026-09-05",
       "type": "live",
       "year": "2026",
@@ -2575,6 +2770,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "le-bain-upcoming-2026-10-17",
       "type": "live",
       "year": "2026",
@@ -2603,6 +2801,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "re-mesh-reflector-oversized-tee-w-phylo-2021-01-13",
       "type": "goods",
       "year": "2021",
@@ -2641,6 +2842,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "first-vinyl-via-phylo-2021-02-13",
       "type": "goods",
       "year": "2021",
@@ -2679,6 +2883,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "wev-on-vinyl-part-2-2022-03-26",
       "type": "goods",
       "year": "2022",
@@ -2717,6 +2924,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "wireframe-hoodies-2022-05-13",
       "type": "goods",
       "year": "2022",
@@ -2756,6 +2966,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "watchyaback-tees-via-ronindivision-2022-12-09",
       "type": "goods",
       "year": "2022",
@@ -2793,6 +3006,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "feel-everything-12-vinyl-2024-04-22",
       "type": "goods",
       "year": "2024",
@@ -2831,6 +3047,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "feel-everything-collectible-toy-2024-05-08",
       "type": "goods",
       "year": "2024",
@@ -2872,6 +3091,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "303-keychain-miniature-303-2025-03-03",
       "type": "goods",
       "year": "2025",
@@ -2911,6 +3133,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "start-something-12-lp-white-label-2025-10-01",
       "type": "goods",
       "year": "2025",
@@ -2949,6 +3174,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "shred-head-w64-beanies-2026-01-29",
       "type": "goods",
       "year": "2026",
@@ -2988,6 +3216,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "ost-cds-7oz-ost-shirts-2026-06-26",
       "type": "goods",
       "year": "2026",
@@ -3028,6 +3259,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "ost-12-translucent-purple-vinyl-2026-08-03",
       "type": "goods",
       "year": "2026",
@@ -3066,6 +3300,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "the-new-order-magazine-025-interview-2021-10-07",
       "type": "placements",
       "year": "2021",
@@ -3104,6 +3341,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "zozo-villa-ss22-fashion-film-2022-05-05",
       "type": "placements",
       "year": "2022",
@@ -3143,6 +3383,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "serato-sample-ad-2022-07-13",
       "type": "placements",
       "year": "2022",
@@ -3182,6 +3425,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "highsnobiety-x-adidas-hot-2022-09-29",
       "type": "placements",
       "year": "2022",
@@ -3221,6 +3467,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "bbc-ice-cream-x-g-shock-20th-anniversary-2023-06-12",
       "type": "placements",
       "year": "2023",
@@ -3261,6 +3510,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "bomb-rush-cyberfunk-team-reptile-2023-08-17",
       "type": "placements",
       "year": "2023",
@@ -3301,6 +3553,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "forbes-feature-2023-12-19",
       "type": "placements",
       "year": "2023",
@@ -3338,6 +3593,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "audio-technica-vinyl-mix-2024-04-30",
       "type": "placements",
       "year": "2024",
@@ -3376,6 +3634,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "marc-jacobs-connection-2024-08-09",
       "type": "placements",
       "year": "2024",
@@ -3406,6 +3667,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "start-something-for-marc-jacobs-2024-10-09-highlight",
       "type": "placements",
       "year": "2024",
@@ -3436,6 +3700,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "hash-joint-w-birocratic-for-gu-japan-2024-10-09-highlight",
       "type": "placements",
       "year": "2024",
@@ -3467,6 +3734,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "hero-for-heavn-2024-10-09-highlight",
       "type": "placements",
       "year": "2024",
@@ -3496,6 +3766,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "circles-w-nick-am-for-zozo-villa-2024-10-09-highlight",
       "type": "placements",
       "year": "2024",
@@ -3525,6 +3798,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "paralympics-x-toyota-animation-sync-2025-03-27",
       "type": "placements",
       "year": "2025",
@@ -3566,6 +3842,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "rocket-league-wev-flag-in-game-2026-03-12",
       "type": "placements",
       "year": "2026",
@@ -3605,6 +3884,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": true,
       "id": "5-records-that-found-me-2026-05-03",
       "type": "placements",
       "year": "2026",
@@ -3642,6 +3924,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "who-is-wev-hyde-fm-2026-05-15",
       "type": "placements",
       "year": "2026",
@@ -3680,6 +3965,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "earmilk-ost-release-day-interview-2026-05-29",
       "type": "placements",
       "year": "2026",
@@ -3711,6 +3999,9 @@
       }
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "selected-fliers",
       "type": "fliers",
       "year": "2025-2026",
@@ -3730,6 +4021,9 @@
       ]
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "goods-system",
       "type": "goods",
       "year": "2026",
@@ -3750,6 +4044,9 @@
       ]
     },
     {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
       "id": "license-portal",
       "type": "licensing",
       "year": "current",
@@ -5937,6 +6234,13 @@
       "embed",
       "link",
       "quote"
+    ],
+    "secretHash": "#cms",
+    "passwordHint": "client-side static gate; replace with real auth before storing private material",
+    "designations": [
+      "showInArchive",
+      "isSelectedWork",
+      "showInWorks"
     ]
   }
 }

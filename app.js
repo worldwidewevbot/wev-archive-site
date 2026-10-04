@@ -1,6 +1,8 @@
 const state = {
   filter: "all",
   page: "selected",
+  adminUnlocked: sessionStorage.getItem("wevCmsUnlocked") === "true",
+  adminItemId: null,
   catalogSource: "published",
   catalogSort: "releaseDate",
   catalogSearch: "",
@@ -34,6 +36,11 @@ const els = {
   requestForm: document.querySelector(".request-form"),
   requestMail: document.querySelector(".request-mail"),
   adminArchiveEditor: document.querySelector(".admin-archive-editor"),
+  adminGate: document.querySelector(".admin-gate"),
+  adminLogin: document.querySelector(".admin-login"),
+  adminLoginError: document.querySelector(".admin-login-error"),
+  adminPanel: document.querySelector(".admin-panel"),
+  adminItemSelect: document.querySelector(".admin-item-select"),
   adminEditor: document.querySelector(".admin-editor"),
   adminExport: document.querySelector(".admin-export"),
   adminActions: document.querySelectorAll("[data-admin-action]"),
@@ -51,13 +58,14 @@ async function loadArchive() {
 }
 
 function render() {
-  const { site, filters, selectedWorks, items, videos, dates, licensing } = state.data;
+  const { site, filters, items, videos, dates, licensing } = state.data;
   void site;
   setText(els.licensingIntro, licensing.intro);
-  renderSelectedWorks(selectedWorks);
+  syncCollectionDesignations();
+  renderSelectedWorks(getSelectedWorks());
   renderWorks();
   renderFilters(filters);
-  renderItems(mergeArchiveItems(selectedWorks, items, videos));
+  renderItems(mergeArchiveItems(getSelectedWorks(), items, videos));
   renderVideos(videos);
   renderDates(dates);
   renderCatalog();
@@ -79,26 +87,63 @@ function mergeArchiveItems(selectedWorks, items, videos = []) {
     video,
     sortIndex: index
   }));
-  return [...selectedWorks, ...items, ...videoItems].filter((item) => {
+  return [...selectedWorks, ...items, ...videoItems].filter((item) => item.showInArchive !== false).filter((item) => {
     if (seen.has(item.id)) return false;
     seen.add(item.id);
     return true;
-  });
+  }).sort(sortByMostRecent);
 }
 
 function renderSelectedWorks(works) {
   if (!els.selectedList) return;
-  els.selectedList.replaceChildren(...works.map((work) => renderItem(work, { selected: true })));
+  els.selectedList.replaceChildren(...works.sort(sortByMostRecent).map((work) => renderItem(work, { selected: true })));
+}
+
+function syncCollectionDesignations() {
+  const selectedIds = new Set((state.data.selectedWorks || []).map((item) => item.id));
+  const worksIds = new Set(state.data.sections?.works?.featuredIds || []);
+  state.data.items.forEach((item) => {
+    item.isSelectedWork = item.isSelectedWork || selectedIds.has(item.id);
+    item.showInWorks = item.showInWorks || worksIds.has(item.id);
+    if (item.showInArchive === undefined) item.showInArchive = true;
+  });
+  state.data.selectedWorks = getSelectedWorks();
+  if (state.data.sections?.works) state.data.sections.works.featuredIds = getWorksItems().map((item) => item.id);
+  if (!state.adminItemId && state.data.items.length) state.adminItemId = [...state.data.items].sort(sortByMostRecent)[0].id;
+}
+
+function getSelectedWorks() {
+  return state.data.items.filter((item) => item.isSelectedWork);
+}
+
+function getWorksItems() {
+  return state.data.items.filter((item) => item.showInWorks);
+}
+
+function sortByMostRecent(a, b) {
+  const aTime = getSortTime(a);
+  const bTime = getSortTime(b);
+  if (aTime !== bTime) return bTime - aTime;
+  return String(a.title || "").localeCompare(String(b.title || ""));
+}
+
+function getSortTime(item) {
+  const raw = item.date || item.year || "";
+  const match = String(raw).match(/\d{4}(?:-\d{2})?(?:-\d{2})?/);
+  if (!match) return 0;
+  const value = match[0].length === 4 ? `${match[0]}-12-31` : match[0].length === 7 ? `${match[0]}-28` : match[0];
+  const time = new Date(`${value}T12:00:00`).getTime();
+  return Number.isFinite(time) ? time : 0;
 }
 
 function renderWorks() {
   if (!els.worksList || !state.data.sections?.works) return;
   const section = state.data.sections.works;
   setText(els.worksDek, section.dek);
-  const archiveItems = mergeArchiveItems(state.data.selectedWorks, state.data.items, state.data.videos);
+  const archiveItems = mergeArchiveItems(getSelectedWorks(), state.data.items, state.data.videos);
   const byId = new Map(archiveItems.map((item) => [item.id, item]));
-  const featured = (section.featuredIds || []).map((id) => byId.get(id)).filter(Boolean);
-  els.worksList.replaceChildren(...featured.map((item) => renderItem(item, { compact: true })));
+  const featured = getWorksItems().map((item) => byId.get(item.id) || item).filter(Boolean).sort(sortByMostRecent);
+  els.worksList.replaceChildren(...featured.map((item) => renderItem(item, { compact: true, surface: "licensing" })));
 }
 
 function renderFilters(filters) {
@@ -112,7 +157,7 @@ function renderFilters(filters) {
       button.setAttribute("aria-pressed", String(filter === state.filter));
       button.addEventListener("click", () => {
         state.filter = filter;
-        renderItems(mergeArchiveItems(state.data.selectedWorks, state.data.items, state.data.videos));
+        renderItems(mergeArchiveItems(getSelectedWorks(), state.data.items, state.data.videos));
         renderFilters(state.data.filters);
       });
       return button;
@@ -155,7 +200,7 @@ function renderItem(item, options = {}) {
   article.querySelectorAll("[data-action='open-project']").forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
-      openProject(item.id, options.selected ? "selected" : "archive");
+      openProject(item.id, options.surface || (options.selected ? "selected" : "archive"));
     });
   });
   return article;
@@ -296,7 +341,7 @@ function bindProjectClose(panel) {
 }
 
 function openProject(id, surface = "archive") {
-  const archiveItems = mergeArchiveItems(state.data.selectedWorks, state.data.items, state.data.videos);
+  const archiveItems = mergeArchiveItems(getSelectedWorks(), state.data.items, state.data.videos);
   const item = archiveItems.find((entry) => entry.id === id);
   if (!item || !item.project) return;
 
@@ -313,11 +358,25 @@ function openProject(id, surface = "archive") {
   }
 
   if (!els.archiveList || !els.filterBar || !els.archiveProjectPanel) return;
+  if (surface !== "archive") {
+    openProjectModal(item);
+    return;
+  }
   els.archiveList.hidden = true;
   els.filterBar.hidden = true;
   els.archiveProjectPanel.hidden = false;
   els.archiveProjectPanel.innerHTML = renderProjectDetail(item);
   bindProjectClose(els.archiveProjectPanel);
+}
+
+function openProjectModal(item) {
+  if (!els.projectModal) return;
+  state.lastFocusedElement = document.activeElement;
+  document.body.classList.add("modal-open");
+  const panel = els.projectModal.querySelector(".project-panel");
+  panel.innerHTML = renderProjectDetail(item);
+  bindProjectClose(els.projectModal);
+  els.projectModal.hidden = false;
 }
 
 function closeProject() {
@@ -333,6 +392,13 @@ function closeProject() {
   }
 
   if (!els.archiveProjectPanel || !els.archiveList || !els.filterBar) return;
+  if (els.projectModal && !els.projectModal.hidden) {
+    els.projectModal.hidden = true;
+    els.projectModal.querySelector(".project-panel")?.replaceChildren();
+    document.body.classList.remove("modal-open");
+    state.lastFocusedElement?.focus?.();
+    return;
+  }
   els.archiveProjectPanel.hidden = true;
   els.archiveProjectPanel.replaceChildren();
   els.archiveList.hidden = false;
@@ -347,45 +413,86 @@ function renderCatalog() {
   renderSpotifyPreview();
   renderTracks(tracks);
   renderSelectedTracks();
+  renderAdminGate();
   renderAdminArchiveEditor();
   renderAdminEditor();
 }
 
 function renderAdminArchiveEditor() {
   if (!els.adminArchiveEditor) return;
-  const items = state.data.items;
-  els.adminArchiveEditor.replaceChildren(
+  if (!state.adminUnlocked) {
+    els.adminArchiveEditor.replaceChildren();
+    return;
+  }
+  renderAdminPicker();
+  const item = state.data.items.find((entry) => entry.id === state.adminItemId) || state.data.items[0];
+  if (!item) return;
+  state.adminItemId = item.id;
+  const article = document.createElement("article");
+  article.className = "admin-item";
+  article.dataset.itemId = item.id;
+  article.innerHTML = `
+    <div class="admin-item-head">
+      <strong>${escapeHtml(item.title)}</strong>
+      <span>${escapeHtml([item.type, item.year].filter(Boolean).join(" / "))}</span>
+    </div>
+    <div class="admin-designations" aria-label="Site placement">
+      <label><input data-item-flag="showInArchive" type="checkbox" ${item.showInArchive !== false ? "checked" : ""} /> <span>archive</span></label>
+      <label><input data-item-flag="isSelectedWork" type="checkbox" ${item.isSelectedWork ? "checked" : ""} /> <span>selected work</span></label>
+      <label><input data-item-flag="showInWorks" type="checkbox" ${item.showInWorks ? "checked" : ""} /> <span>sync/licensing work</span></label>
+    </div>
+    <label><span>title</span><input data-item-field="title" value="${escapeAttribute(item.title || "")}" /></label>
+    <label><span>type</span><select data-item-field="type">${state.data.filters.filter((filter) => filter !== "all").map((filter) => `<option>${escapeHtml(filter)}</option>`).join("")}</select></label>
+    <label><span>date / year</span><input data-item-field="date" value="${escapeAttribute(item.date || item.year || "")}" /></label>
+    <label class="wide"><span>dek</span><input data-item-field="dek" value="${escapeAttribute(item.dek || "")}" /></label>
+    <label class="wide"><span>description</span><textarea data-item-field="description" rows="3">${escapeHtml(item.description || "")}</textarea></label>
+    <label class="wide"><span>tags</span><input data-item-field="tags" value="${escapeAttribute((item.tags || []).join(", "))}" /></label>
+    <label class="wide"><span>links</span><textarea data-item-field="links" rows="3">${escapeHtml(formatLinksForEdit(item.links || []))}</textarea></label>
+    <label class="wide"><span>content blocks</span><textarea data-item-field="blocks" rows="5">${escapeHtml(formatBlocksForEdit(item))}</textarea></label>
+    <label class="wide media-upload"><span>upload image / video</span><input data-item-upload type="file" accept="image/*,video/*" /></label>
+    <div class="media-bin">${renderAdminMediaBin(item)}</div>
+  `;
+  article.querySelector("[data-item-field='type']").value = item.type;
+  article.querySelectorAll("[data-item-field]").forEach((input) => {
+    input.addEventListener("change", handleArchiveItemChange);
+  });
+  article.querySelectorAll("[data-item-flag]").forEach((input) => {
+    input.addEventListener("change", handleArchiveFlagChange);
+  });
+  article.querySelector("[data-item-upload]").addEventListener("change", handleArchiveUpload);
+  article.querySelectorAll("[data-remove-media]").forEach((button) => {
+    button.addEventListener("click", handleRemoveMedia);
+  });
+  els.adminArchiveEditor.replaceChildren(article);
+}
+
+function renderAdminGate() {
+  if (!els.adminGate || !els.adminPanel) return;
+  els.adminGate.hidden = state.adminUnlocked;
+  els.adminPanel.hidden = !state.adminUnlocked;
+}
+
+function renderAdminPicker() {
+  if (!els.adminItemSelect) return;
+  const items = [...state.data.items].sort(sortByMostRecent);
+  els.adminItemSelect.replaceChildren(
     ...items.map((item) => {
-      const article = document.createElement("article");
-      article.className = "admin-item";
-      article.dataset.itemId = item.id;
-      article.innerHTML = `
-        <div class="admin-item-head">
-          <strong>${escapeHtml(item.title)}</strong>
-          <span>${escapeHtml([item.type, item.year].filter(Boolean).join(" / "))}</span>
-        </div>
-        <label><span>title</span><input data-item-field="title" value="${escapeAttribute(item.title || "")}" /></label>
-        <label><span>type</span><select data-item-field="type">${state.data.filters.filter((filter) => filter !== "all").map((filter) => `<option>${escapeHtml(filter)}</option>`).join("")}</select></label>
-        <label><span>date / year</span><input data-item-field="date" value="${escapeAttribute(item.date || item.year || "")}" /></label>
-        <label class="wide"><span>dek</span><input data-item-field="dek" value="${escapeAttribute(item.dek || "")}" /></label>
-        <label class="wide"><span>description</span><textarea data-item-field="description" rows="3">${escapeHtml(item.description || "")}</textarea></label>
-        <label class="wide"><span>tags</span><input data-item-field="tags" value="${escapeAttribute((item.tags || []).join(", "))}" /></label>
-        <label class="wide"><span>links</span><textarea data-item-field="links" rows="3">${escapeHtml(formatLinksForEdit(item.links || []))}</textarea></label>
-        <label class="wide"><span>content blocks</span><textarea data-item-field="blocks" rows="5">${escapeHtml(formatBlocksForEdit(item))}</textarea></label>
-        <label class="wide media-upload"><span>upload image / video</span><input data-item-upload type="file" accept="image/*,video/*" /></label>
-        <div class="media-bin">${renderAdminMediaBin(item)}</div>
-      `;
-      article.querySelector("[data-item-field='type']").value = item.type;
-      article.querySelectorAll("[data-item-field]").forEach((input) => {
-        input.addEventListener("change", handleArchiveItemChange);
-      });
-      article.querySelector("[data-item-upload]").addEventListener("change", handleArchiveUpload);
-      article.querySelectorAll("[data-remove-media]").forEach((button) => {
-        button.addEventListener("click", handleRemoveMedia);
-      });
-      return article;
+      const option = document.createElement("option");
+      option.value = item.id;
+      option.textContent = [item.date || item.year, item.title, item.type].filter(Boolean).join(" / ");
+      return option;
     })
   );
+  els.adminItemSelect.value = state.adminItemId || items[0]?.id || "";
+}
+
+function handleArchiveFlagChange(event) {
+  const item = getAdminItem(event.target);
+  if (!item) return;
+  item[event.target.dataset.itemFlag] = event.target.checked;
+  syncCollectionDesignations();
+  saveArchiveDraft();
+  render();
 }
 
 function handleArchiveItemChange(event) {
@@ -658,6 +765,10 @@ function scrollToRequestForm() {
 
 function renderAdminEditor() {
   if (!els.adminEditor) return;
+  if (!state.adminUnlocked) {
+    els.adminEditor.replaceChildren();
+    return;
+  }
   els.adminEditor.replaceChildren(
     ...state.data.licensing.tracks.map((track) => {
       const row = document.createElement("article");
@@ -714,6 +825,21 @@ function bindCatalogControls() {
   });
   els.requestForm?.addEventListener("input", () => {
     renderSelectedTracks();
+  });
+  els.adminLogin?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const password = new FormData(els.adminLogin).get("password");
+    if (password === "wevarchive") {
+      state.adminUnlocked = true;
+      sessionStorage.setItem("wevCmsUnlocked", "true");
+      render();
+      return;
+    }
+    if (els.adminLoginError) els.adminLoginError.hidden = false;
+  });
+  els.adminItemSelect?.addEventListener("change", () => {
+    state.adminItemId = els.adminItemSelect.value;
+    renderAdminArchiveEditor();
   });
   els.adminActions.forEach((button) => {
     button.addEventListener("click", () => {
@@ -796,11 +922,9 @@ function renderPage() {
   const requested =
     window.location.hash === "#archive"
       ? "archive"
-      : window.location.hash === "#works"
-        ? "works"
       : window.location.hash === "#licensing"
         ? "licensing"
-        : window.location.hash === "#admin"
+        : window.location.hash === "#cms" || window.location.hash === "#admin"
           ? "admin"
           : window.location.hash === "#contact"
             ? "contact"
