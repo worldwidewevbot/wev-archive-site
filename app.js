@@ -8,7 +8,6 @@ const state = {
   catalogSort: "releaseDate",
   catalogSearch: "",
   catalogTag: "all",
-  activePreviewTrackId: null,
   selectedTrackIds: new Set(),
   openProjectId: null,
   openProjectSurface: null,
@@ -22,7 +21,6 @@ const els = {
   filterBar: document.querySelector(".filter-bar"),
   archiveList: document.querySelector(".archive-list"),
   archiveProjectPanel: document.querySelector(".archive-layout .project-panel"),
-  worksDek: document.querySelector(".works-dek"),
   worksList: document.querySelector(".works-list"),
   videoList: document.querySelector(".video-list"),
   dateList: document.querySelector(".date-list"),
@@ -32,8 +30,8 @@ const els = {
   catalogSearch: document.querySelector(".catalog-search input"),
   catalogSourceButtons: document.querySelectorAll("[data-source]"),
   catalogSortButtons: document.querySelectorAll("[data-sort]"),
-  spotifyPreview: document.querySelector(".spotify-preview"),
   selectedTracks: document.querySelector(".selected-tracks"),
+  requestPanel: document.querySelector(".request-panel"),
   requestForm: document.querySelector(".request-form"),
   requestMail: document.querySelector(".request-mail"),
   adminArchiveEditor: document.querySelector(".admin-archive-editor"),
@@ -47,7 +45,6 @@ const els = {
   adminExport: document.querySelector(".admin-export"),
   adminSaveStatus: document.querySelector(".admin-save-status"),
   adminActions: document.querySelectorAll("[data-admin-action]"),
-  licensingIntro: document.querySelector("#licensing-intro")
 };
 
 async function loadArchive() {
@@ -61,9 +58,8 @@ async function loadArchive() {
 }
 
 function render() {
-  const { site, filters, items, videos, dates, licensing } = state.data;
+  const { site, filters, items, videos, dates } = state.data;
   void site;
-  setText(els.licensingIntro, licensing.intro);
   syncCollectionDesignations();
   renderSelectedWorks(getSelectedWorks());
   renderWorks();
@@ -148,12 +144,22 @@ function getSortTime(item) {
 
 function renderWorks() {
   if (!els.worksList || !state.data.sections?.works) return;
-  const section = state.data.sections.works;
-  setText(els.worksDek, section.dek);
   const archiveItems = mergeArchiveItems(getSelectedWorks(), state.data.items, state.data.videos);
   const byId = new Map(archiveItems.map((item) => [item.id, item]));
   const featured = getWorksItems().map((item) => byId.get(item.id) || item).filter(Boolean).sort(sortByMostRecent);
-  els.worksList.replaceChildren(...featured.map((item) => renderItem(item, { compact: true, surface: "licensing" })));
+  els.worksList.replaceChildren(...featured.map(renderWorksTreeItem));
+}
+
+function renderWorksTreeItem(item) {
+  const button = document.createElement("button");
+  button.className = "works-tree-item";
+  button.type = "button";
+  button.innerHTML = `
+    <span>${escapeHtml(item.title)}</span>
+    <small>${escapeHtml([item.year, item.dek].filter(Boolean).join(" / "))}</small>
+  `;
+  button.addEventListener("click", () => openProject(item.id, "licensing"));
+  return button;
 }
 
 function renderFilters(filters) {
@@ -420,7 +426,6 @@ function renderCatalog() {
   const tracks = getVisibleTracks();
   renderCatalogButtons();
   renderCatalogTags();
-  renderSpotifyPreview();
   renderTracks(tracks);
   renderSelectedTracks();
   renderAdminGate();
@@ -749,13 +754,11 @@ function renderTracks(tracks) {
       row.role = "listitem";
       row.dataset.trackId = track.id;
       const isSelected = state.selectedTrackIds.has(track.id);
-      const isPreviewing = state.activePreviewTrackId === track.id;
       const spotifyId = getSpotifyTrackId(track);
       const artwork = track.artwork || "assets/placeholder-license.svg";
       const releaseDate = formatReleaseDate(track.releaseDate);
       const tags = getTrackTags(track);
       const bpm = formatBpm(track.bpm);
-      const spotifyEmbedUrl = spotifyId ? createSpotifyEmbedUrl(spotifyId) : "";
       row.innerHTML = `
         <div class="track-hero" style="--track-art: url('${escapeAttribute(artwork)}')">
           <img class="track-artwork" src="${escapeAttribute(artwork)}" alt="" loading="lazy" />
@@ -765,8 +768,8 @@ function renderTracks(tracks) {
             ${bpm ? `<span class="track-bpm">${escapeHtml(bpm)}</span>` : ""}
           </div>
           ${releaseDate ? `<span class="track-date">${escapeHtml(releaseDate)}</span>` : ""}
-          <button class="track-preview" type="button" ${spotifyId ? "" : "disabled"} aria-label="${escapeAttribute(isPreviewing ? `Close Spotify preview for ${track.title}` : `Preview ${track.title} on Spotify`)}" aria-pressed="${isPreviewing}">
-            <span>${isPreviewing ? "Close preview" : "Preview"}</span>
+          <button class="track-preview" type="button" ${spotifyId ? "" : "disabled"} aria-label="${escapeAttribute(`Open ${track.title} on Spotify`)}">
+            <span>Open Spotify</span>
           </button>
         </div>
         <div class="track-lower">
@@ -776,11 +779,6 @@ function renderTracks(tracks) {
             <button class="track-select" type="button" aria-pressed="${isSelected}">${isSelected ? "Requested" : "Request"}</button>
           </div>
         </div>
-        ${
-          isPreviewing && spotifyEmbedUrl
-            ? `<div class="track-player"><iframe src="${escapeAttribute(spotifyEmbedUrl)}" title="${escapeAttribute(`Spotify preview: ${track.title}`)}" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="eager"></iframe></div>`
-            : ""
-        }
       `;
       row.querySelector(".track-select").addEventListener("click", () => {
         state.selectedTrackIds.clear();
@@ -789,18 +787,11 @@ function renderTracks(tracks) {
         scrollToRequestForm();
       });
       row.querySelector(".track-preview").addEventListener("click", () => {
-        state.activePreviewTrackId = isPreviewing ? null : track.id;
-        renderCatalog();
+        if (track.spotifyUrl) window.open(track.spotifyUrl, "_blank", "noopener,noreferrer");
       });
       return row;
     })
   );
-}
-
-function renderSpotifyPreview() {
-  if (!els.spotifyPreview) return;
-  els.spotifyPreview.hidden = true;
-  els.spotifyPreview.replaceChildren();
 }
 
 function formatReleaseDate(value) {
@@ -820,6 +811,7 @@ function formatBpm(value) {
 function renderSelectedTracks() {
   if (!els.selectedTracks) return;
   const selected = state.data.licensing.tracks.filter((track) => state.selectedTrackIds.has(track.id));
+  if (els.requestPanel) els.requestPanel.hidden = selected.length === 0;
   els.selectedTracks.replaceChildren(
     ...(selected.length
       ? selected.map((track) => {
@@ -1116,12 +1108,6 @@ function getSpotifyTrackId(track) {
   } catch {
     return "";
   }
-}
-
-function createSpotifyEmbedUrl(spotifyId) {
-  const embedUrl = new URL(`https://open.spotify.com/embed/track/${spotifyId}`);
-  embedUrl.search = new URLSearchParams({ utm_source: "generator", theme: "0" }).toString();
-  return embedUrl.href;
 }
 
 function formatDate(value) {

@@ -551,48 +551,48 @@ body.modal-open {
   background: var(--line);
 }
 
-.licensing-grid {
-  display: grid;
-  grid-template-columns: minmax(260px, 0.34fr) minmax(0, 1fr);
-  gap: 24px;
-}
-
-.works-dek {
-  max-width: 62ch;
-  font-size: 22px;
-  line-height: 1.15;
-}
-
 .works-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: 2px solid var(--line);
-  border-left: 2px solid var(--line);
-}
-
-.works-item {
   grid-template-columns: 1fr;
-  border-right: 2px solid var(--line);
+  border-top: 2px solid var(--line);
 }
 
-.works-item .archive-copy {
-  grid-template-columns: 82px minmax(0, 1fr);
+.works-tree-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  width: 100%;
+  min-height: 44px;
+  align-items: center;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 8px 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
-.licensing-copy {
-  display: block;
-  position: sticky;
-  top: 72px;
-  align-self: start;
-  min-width: 0;
+.works-tree-item:hover {
+  background: var(--ink);
+  color: var(--bg);
+  padding-inline: 8px;
 }
 
-.licensing-grid h2 {
-  margin-bottom: 12px;
-  font-size: clamp(40px, 5.6vw, 86px);
-  line-height: 0.94;
-  overflow-wrap: normal;
+.works-tree-item span {
+  font-size: 14px;
+  font-weight: 700;
   text-transform: uppercase;
+}
+
+.works-tree-item small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.works-tree-item:hover small {
+  color: var(--soft);
 }
 
 .licensing-tool {
@@ -603,22 +603,36 @@ body.modal-open {
 .licensing-works {
   border-bottom: 2px solid var(--line);
   margin-bottom: 22px;
-  padding-bottom: 22px;
+  padding-bottom: 0;
 }
 
-.licensing-works-heading {
-  display: grid;
-  grid-template-columns: minmax(140px, 0.22fr) minmax(0, 1fr);
-  gap: 14px;
-  padding: 12px 0;
-  align-items: baseline;
-}
-
-.licensing-works-heading h3 {
-  margin: 0;
-  font-size: clamp(28px, 4vw, 58px);
-  line-height: 0.94;
+.licensing-works summary {
+  display: flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
   text-transform: uppercase;
+}
+
+.licensing-works summary::-webkit-details-marker {
+  display: none;
+}
+
+.licensing-works summary span:last-child {
+  font-size: 20px;
+  transition: transform 160ms ease;
+}
+
+.licensing-works[open] summary span:last-child {
+  transform: rotate(180deg);
+}
+
+.licensing-works[open] .works-list {
+  margin-bottom: 22px;
 }
 
 .catalog-controls {
@@ -757,42 +771,6 @@ body.modal-open {
   border-top: 1px solid #c8c9ce;
   border-bottom: 0;
   padding-top: 34px;
-}
-
-.spotify-preview {
-  display: grid;
-  grid-template-columns: minmax(180px, 0.28fr) minmax(0, 1fr);
-  gap: 12px;
-  padding: 12px 0;
-  border-bottom: 2px solid var(--line);
-  align-items: center;
-}
-
-.spotify-preview[hidden] {
-  display: none;
-}
-
-.spotify-preview div {
-  display: grid;
-  gap: 4px;
-}
-
-.spotify-preview span {
-  color: var(--muted);
-  font-size: 11px;
-  text-transform: uppercase;
-}
-
-.spotify-preview strong {
-  font-size: clamp(24px, 3vw, 42px);
-  line-height: 0.95;
-  text-transform: uppercase;
-}
-
-.spotify-preview iframe {
-  display: block;
-  width: 100%;
-  border: 0;
 }
 
 .track-row {
@@ -1014,18 +992,6 @@ body.modal-open {
   color: #fff;
 }
 
-.track-player {
-  padding: 0 14px 14px;
-}
-
-.track-player iframe {
-  display: block;
-  width: 100%;
-  height: 80px;
-  border: 0;
-  border-radius: 6px;
-}
-
 .track-preview:disabled {
   cursor: not-allowed;
   opacity: 0.4;
@@ -1037,6 +1003,10 @@ body.modal-open {
   scroll-margin-top: 92px;
   border-top: 2px solid var(--line);
   padding-top: 18px;
+}
+
+.request-panel[hidden] {
+  display: none;
 }
 
 .request-panel h3,
@@ -1397,8 +1367,6 @@ body.modal-open {
 @media (max-width: 900px) {
   .selected-layout,
   .works-list,
-  .licensing-works-heading,
-  .licensing-grid,
   .about-grid,
   .catalog-controls,
   .request-grid,
@@ -1409,10 +1377,6 @@ body.modal-open {
   .admin-block-row,
   .admin-track {
     grid-template-columns: 1fr;
-  }
-
-  .licensing-copy {
-    position: static;
   }
 
   .intro {
@@ -1519,13 +1483,13 @@ body.modal-open {
     font-size: 18px;
   }
 
-  .licensing-grid h2 {
-    font-size: clamp(34px, 11vw, 58px);
-    overflow-wrap: anywhere;
-  }
-
   .licensing-page {
     padding-inline: 12px;
+  }
+
+  .works-tree-item {
+    grid-template-columns: 1fr;
+    gap: 2px;
   }
 
   .admin-archive-editor,
@@ -1535,14 +1499,6 @@ body.modal-open {
   .admin-subhead {
     grid-column: auto;
     grid-row: auto;
-  }
-
-  .works-list {
-    border-left: 0;
-  }
-
-  .works-item {
-    border-right: 0;
   }
 
   .catalog-button,
@@ -1583,10 +1539,6 @@ body.modal-open {
 
   .track-row {
     border-radius: 7px;
-  }
-
-  .spotify-preview {
-    grid-template-columns: 1fr;
   }
 
   .track-hero {
@@ -1666,10 +1618,6 @@ body.modal-open {
   .track-select {
     min-width: 92px;
     font-size: 14px;
-  }
-
-  .track-player {
-    padding: 0 12px 12px;
   }
 
   .admin-actions,

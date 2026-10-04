@@ -72,23 +72,16 @@
         </div>
       </section>
 
-      <section class="licensing-page page-view" id="licensing" data-page="licensing" aria-labelledby="licensing-title">
+      <section class="licensing-page page-view" id="licensing" data-page="licensing" aria-label="Licensing">
         <div class="section-rule"></div>
-        <div class="licensing-grid">
-          <div class="licensing-copy">
-            <p class="kicker">sync / licensing</p>
-            <h2 id="licensing-title">licensing portal</h2>
-            <p id="licensing-intro">Searchable tracks, usage metadata, and direct clearance inquiries.</p>
-            <a class="mail-link" href="mailto:hello@wev.world?subject=Music%20licensing%20inquiry">inquire</a>
-          </div>
-          <div class="licensing-tool">
-            <section class="licensing-works" aria-labelledby="licensing-works-title">
-              <div class="licensing-works-heading">
-                <h3 id="licensing-works-title">sync works</h3>
-                <p class="works-dek"></p>
-              </div>
+        <div class="licensing-tool">
+            <details class="licensing-works">
+              <summary>
+                <span>works</span>
+                <span aria-hidden="true">↓</span>
+              </summary>
               <div class="works-list" aria-live="polite"></div>
-            </section>
+            </details>
             <div class="catalog-controls" aria-label="Catalog controls">
               <div class="control-group" aria-label="Source">
                 <span>source</span>
@@ -107,11 +100,9 @@
               </label>
             </div>
             <div class="catalog-tags" aria-label="Catalog tags"></div>
-            <div class="spotify-preview" hidden aria-live="polite"></div>
             <div class="track-table" role="list" aria-label="Licensing tracks"></div>
-          </div>
         </div>
-        <section class="request-panel" aria-labelledby="request-title">
+        <section class="request-panel" aria-labelledby="request-title" hidden>
           <h3 id="request-title">licensing request</h3>
           <div class="request-grid">
             <div class="request-selection">
