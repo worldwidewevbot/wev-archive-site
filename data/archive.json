@@ -7,7 +7,6 @@
   "filters": [
     "all",
     "releases",
-    "projects",
     "placements",
     "live",
     "goods",
@@ -17,13 +16,14 @@
   ],
   "selectedWorks": [
     {
-      "id": "ost-archive",
+      "id": "ost-2026-05-29",
       "type": "releases",
       "year": "2026",
+      "date": "2026-05-29",
       "title": "OST",
-      "dek": "wev debut album.",
-      "description": "The debut full-length, collected as a central album entry for credits, listening links, release notes, press, and physical editions.",
-      "image": "assets/ost-artwork-final.jpg",
+      "dek": "Album release.",
+      "description": "Debut album. Mixed by @nosajkrap, mastered by @joshuapleeter. Contributors include @lordstingray, @sc.ruz, @nick.am, @yoshitee_ and more. Early listening @dimension.70. Release set @thelotradio 2026-06-02. 12” translucent purple vinyl pre-order (Aug 2026). “a record which captures the spirit i feel living and working in new york.”",
+      "image": "assets/placeholder-release.svg",
       "links": [
         {
           "label": "open project",
@@ -31,188 +31,1601 @@
           "action": "open-project"
         },
         {
-          "label": "spotify",
-          "url": "https://open.spotify.com/search/wev%20OST"
-        },
-        {
-          "label": "press",
-          "url": "https://www.newsweek.com/search/site/wev"
-        },
-        {
-          "label": "resident advisor",
-          "url": "https://ra.co/dj/wev"
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DY788qXGpCM/"
         }
       ],
       "tags": [
+        "album",
+        "apparel",
         "music",
+        "radio",
         "release",
-        "score"
+        "vinyl"
       ],
       "project": {
         "headline": "OST",
         "body": [
-          "wev debut album, released in 2026.",
-          "This project page can hold credits, liner notes, release links, listening links, and physical edition details."
+          "Debut album. Mixed by @nosajkrap, mastered by @joshuapleeter. Contributors include @lordstingray, @sc.ruz, @nick.am, @yoshitee_ and more. Early listening @dimension.70. Release set @thelotradio 2026-06-02. 12” translucent purple vinyl pre-order (Aug 2026). “a record which captures the spirit i feel living and working in new york.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
         ],
         "links": [
           {
-            "label": "spotify",
-            "url": "https://open.spotify.com/search/wev%20OST"
-          },
-          {
-            "label": "newsweek",
-            "url": "https://www.newsweek.com/search/site/wev"
-          },
-          {
-            "label": "resident advisor",
-            "url": "https://ra.co/dj/wev"
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DY788qXGpCM/"
           }
         ]
       }
     },
     {
-      "id": "shigoto-werk-rocket-league",
-      "type": "placements",
-      "year": "2026",
+      "id": "shigoto-werk-2025-03-24",
+      "type": "releases",
+      "year": "2025",
+      "date": "2025-03-24",
       "title": "shigoto werk",
-      "dek": "Placement in Rocket League.",
-      "description": "A game placement entry for the track, with room for soundtrack context, publisher credits, and in-game reference material.",
+      "dek": "Single release.",
+      "description": "Made on tour in Japan (summer 2024) in a home studio. “have been rinsing it in my sets since then, and now it’s yours.” Later: Rocket League Season 21 soundtrack + in-game feature.",
       "image": "assets/placeholder-release.svg",
       "links": [
         {
           "label": "open project",
           "url": "#",
           "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DHlkVxnO4FB/"
         }
       ],
       "tags": [
         "game",
-        "sync",
-        "track"
+        "japan",
+        "music",
+        "release",
+        "Rocket League",
+        "single",
+        "tour"
       ],
       "project": {
         "headline": "shigoto werk",
         "body": [
-          "Track placement in Rocket League.",
-          "Future archive details can include label, platform, soundtrack, announcement, and gameplay references."
+          "Made on tour in Japan (summer 2024) in a home studio. “have been rinsing it in my sets since then, and now it’s yours.” Later: Rocket League Season 21 soundtrack + in-game feature.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
         ],
         "links": [
           {
-            "label": "rocket league",
-            "url": "https://www.rocketleague.com/"
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DHlkVxnO4FB/"
           }
         ]
       }
     },
     {
-      "id": "start-something-vinyl",
-      "type": "goods",
-      "year": "2025",
-      "title": "start something EP vinyls",
-      "dek": "Limited vinyl edition of 100.",
-      "description": "Physical edition entry for the Start Something EP vinyl run, reserved for product photos, shop links, edition notes, and stock status.",
-      "image": "assets/placeholder-goods.svg",
-      "links": [
-        {
-          "label": "open project",
-          "url": "#",
-          "action": "open-project"
-        }
-      ],
-      "tags": [
-        "vinyl",
-        "edition of 100",
-        "goods"
-      ],
-      "project": {
-        "headline": "start something EP vinyls",
-        "body": [
-          "Limited physical edition of 100.",
-          "This page can hold pressing notes, merch photography, edition metadata, and sales links."
-        ],
-        "links": [
-          {
-            "label": "shop",
-            "url": "https://shop.wev.world"
-          }
-        ]
-      }
-    },
-    {
-      "id": "start-something-ep",
+      "id": "start-something-ep-2025-04-16",
       "type": "releases",
       "year": "2025",
+      "date": "2025-04-16",
       "title": "start something EP",
-      "dek": "EP release.",
-      "description": "Release entry for the Start Something EP, with space for streaming links, credits, artwork, and press.",
+      "dek": "Ep release.",
+      "description": "Six acid tracks, “made between new york and tokyo over the last year.” 12” white-label vinyl ed. 100, hand-stamped/numbered in Brooklyn (Dec 2025). Bonus @castillonaire remix.",
       "image": "assets/placeholder-release.svg",
       "links": [
         {
           "label": "open project",
           "url": "#",
           "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DIhU0qsTz5K/"
+        }
+      ],
+      "tags": [
+        "EP",
+        "ep",
+        "music",
+        "release",
+        "remix",
+        "tokyo",
+        "vinyl"
+      ],
+      "project": {
+        "headline": "start something EP",
+        "body": [
+          "Six acid tracks, “made between new york and tokyo over the last year.” 12” white-label vinyl ed. 100, hand-stamped/numbered in Brooklyn (Dec 2025). Bonus @castillonaire remix.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DIhU0qsTz5K/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "feel-everything-ep-w-nick-am-2024-04-05",
+      "type": "releases",
+      "year": "2024",
+      "date": "2024-04-05",
+      "title": "feel everything EP (w/ nick.am)",
+      "dek": "Ep release.",
+      "description": "3+ years in the making. Cover art @bubbltek, world-building @lordstingray. EP lore series on IG (PlayStation production, ‘circles’ origin story). 12” vinyl announced 2024-04-22, stocked at @humanheadnyc.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/C5YxJ7jOBq5/"
+        }
+      ],
+      "tags": [
+        "EP",
+        "ep",
+        "music",
+        "release",
+        "vinyl"
+      ],
+      "project": {
+        "headline": "feel everything EP (w/ nick.am)",
+        "body": [
+          "3+ years in the making. Cover art @bubbltek, world-building @lordstingray. EP lore series on IG (PlayStation production, ‘circles’ origin story). 12” vinyl announced 2024-04-22, stocked at @humanheadnyc.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/C5YxJ7jOBq5/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "watchyaback-2022-12-02",
+      "type": "releases",
+      "year": "2022",
+      "date": "2022-12-02",
+      "title": "watchyaback!",
+      "dek": "Single release.",
+      "description": "Collab + visual with @lordstingray for @ronindivision 10th anniversary. Teaser did 1,432 likes.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/ClmaHfyOie_/"
         }
       ],
       "tags": [
         "music",
         "release",
-        "EP"
+        "single"
       ],
       "project": {
-        "headline": "start something EP",
+        "headline": "watchyaback!",
         "body": [
-          "wev EP release from 2025.",
-          "Future details can include credits, listening links, visual assets, and related merchandise."
+          "Collab + visual with @lordstingray for @ronindivision 10th anniversary. Teaser did 1,432 likes.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
         ],
         "links": [
           {
-            "label": "spotify",
-            "url": "https://open.spotify.com/search/wev%20start%20something"
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/ClmaHfyOie_/"
           }
         ]
       }
     },
     {
-      "id": "watchyaback-bomb-rush-cyberfunk",
-      "type": "placements",
+      "id": "williamsburg-bridge-secret-rave-2024-05-30",
+      "type": "live",
       "year": "2024",
-      "title": "watchyaback!",
-      "dek": "Placement in Bomb Rush Cyberfunk.",
-      "description": "A game soundtrack placement for watchyaback!, tied to the Bomb Rush Cyberfunk world.",
+      "date": "2024-05-30",
+      "title": "Williamsburg Bridge secret rave",
+      "dek": "Live Moment.",
+      "description": "Guest set; full set on YouTube. “DJ set of the year, on the williamsburg bridge. i love my city.”",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/DKhanrjsWnv/"
+        }
+      ],
+      "tags": [
+        "live moment"
+      ],
+      "project": {
+        "headline": "Williamsburg Bridge secret rave",
+        "body": [
+          "Guest set; full set on YouTube. “DJ set of the year, on the williamsburg bridge. i love my city.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/DKhanrjsWnv/"
+          }
+        ]
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "e4rfquake-edit-2019-05-27",
+      "type": "releases",
+      "year": "2019",
+      "date": "2019-05-27",
+      "title": "e4rfquake edit",
+      "dek": "Edit release.",
+      "description": "“e4rfquake edit out now, link in biology 🌐”.",
       "image": "assets/placeholder-release.svg",
       "links": [
         {
           "label": "open project",
           "url": "#",
           "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/Bx-boD9nK9n/"
         }
       ],
       "tags": [
-        "game",
-        "sync",
-        "soundtrack"
+        "edit",
+        "music",
+        "release"
       ],
       "project": {
-        "headline": "watchyaback! in Bomb Rush Cyberfunk",
+        "headline": "e4rfquake edit",
         "body": [
-          "watchyaback! placement in Bomb Rush Cyberfunk.",
-          "This page can collect platform links, gameplay references, soundtrack credits, and related press."
+          "“e4rfquake edit out now, link in biology 🌐”.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
         ],
         "links": [
           {
-            "label": "bomb rush cyberfunk",
-            "url": "https://store.steampowered.com/app/1353230/Bomb_Rush_Cyberfunk/"
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/Bx-boD9nK9n/"
           }
         ]
       }
     },
     {
-      "id": "feel-everything-release-show",
-      "type": "live",
+      "id": "poly-2020-03-11",
+      "type": "releases",
+      "year": "2020",
+      "date": "2020-03-11",
+      "title": "poly",
+      "dek": "Single release.",
+      "description": "“first single and title track of my album… poly reflects the many people, places, and things that have influenced me over the last 3 years.” Announced 2020-03-04, out 2020-03-11.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/B9mCPLYJHCK/"
+        }
+      ],
+      "tags": [
+        "album",
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "poly",
+        "body": [
+          "“first single and title track of my album… poly reflects the many people, places, and things that have influenced me over the last 3 years.” Announced 2020-03-04, out 2020-03-11.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/B9mCPLYJHCK/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "out-of-my-mind-feat-birocratic-revvtheband-2020-09-16",
+      "type": "releases",
+      "year": "2020",
+      "date": "2020-09-16",
+      "title": "OUT OF MY MIND (feat. birocratic + revvtheband)",
+      "dek": "Single release.",
+      "description": "“been waiting a long time to share it w yall, its a song i made w some of my closest friends.”",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CFN8JjCJK60/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "OUT OF MY MIND (feat. birocratic + revvtheband)",
+        "body": [
+          "“been waiting a long time to share it w yall, its a song i made w some of my closest friends.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CFN8JjCJK60/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2manychain-2020-11-27",
+      "type": "releases",
+      "year": "2020",
+      "date": "2020-11-27",
+      "title": "2manychain$",
+      "dek": "Single release.",
+      "description": "Teased as “*2manychain$ 🔗🌐🔗”.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CIG1UfapkME/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "2manychain$",
+        "body": [
+          "Teased as “*2manychain$ 🔗🌐🔗”.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CIG1UfapkME/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "technobody-w-djhoodboi-2021-03-10",
+      "type": "releases",
+      "year": "2021",
+      "date": "2021-03-10",
+      "title": "technobody (w/ djhoodboi)",
+      "dek": "Single release.",
+      "description": "Premiere stream night before; IG filter made for the release. Visuals: @lordstingray. “so pumped for this song to finally be in the world.”",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CMQGp8YJuXb/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "technobody (w/ djhoodboi)",
+        "body": [
+          "Premiere stream night before; IG filter made for the release. Visuals: @lordstingray. “so pumped for this song to finally be in the world.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CMQGp8YJuXb/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "technobody-remix-pack-2021-09-03",
+      "type": "releases",
+      "year": "2021",
+      "date": "2021-09-03",
+      "title": "technobody remix pack",
+      "dek": "Pack release.",
+      "description": "Remixers: John Tejada, Kenta Cats, Kazuma Takahashi, littledeadgirl, kaizoslumber.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CTYBvkmvpCF/"
+        }
+      ],
+      "tags": [
+        "music",
+        "pack",
+        "release",
+        "remix",
+        "remix pack"
+      ],
+      "project": {
+        "headline": "technobody remix pack",
+        "body": [
+          "Remixers: John Tejada, Kenta Cats, Kazuma Takahashi, littledeadgirl, kaizoslumber.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CTYBvkmvpCF/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pinkpantheress-edit-2021-09-22",
+      "type": "releases",
+      "year": "2021",
+      "date": "2021-09-22",
+      "title": "pinkpantheress edit",
+      "dek": "Edit release.",
+      "description": "“pinkpantheress edit out now 💔”.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CUIQ_8Bgc9v/"
+        }
+      ],
+      "tags": [
+        "edit",
+        "music",
+        "release"
+      ],
+      "project": {
+        "headline": "pinkpantheress edit",
+        "body": [
+          "“pinkpantheress edit out now 💔”.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CUIQ_8Bgc9v/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dawn-w-laurenfaith-2021-10-21",
+      "type": "releases",
+      "year": "2021",
+      "date": "2021-10-21",
+      "title": "dawn (w/ laurenfaith)",
+      "dek": "Single release.",
+      "description": "“dawn w/ @laurenfaith — out now everywhere 🌇🌐”.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CVSzUOUAmTJ/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "dawn (w/ laurenfaith)",
+        "body": [
+          "“dawn w/ @laurenfaith — out now everywhere 🌇🌐”.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CVSzUOUAmTJ/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dusk-2022-01-27",
+      "type": "releases",
+      "year": "2022",
+      "date": "2022-01-27",
+      "title": "dusk",
+      "dek": "Single release.",
+      "description": "“dusk OUT NOW on all platforms 🌐💫 feeling very blessed”.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CZPomZ0OT-a/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "dusk",
+        "body": [
+          "“dusk OUT NOW on all platforms 🌐💫 feeling very blessed”.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CZPomZ0OT-a/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tek-it-wev-remix-for-cafune-2022-05-20",
+      "type": "releases",
+      "year": "2022",
+      "date": "2022-05-20",
+      "title": "tek it (wev remix) for cafune",
+      "dek": "Remix release.",
+      "description": "“@wearecafune tek it remix out now 🌐💫”.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/Cdy5FDCvFOd/"
+        }
+      ],
+      "tags": [
+        "CD",
+        "music",
+        "release",
+        "remix"
+      ],
+      "project": {
+        "headline": "tek it (wev remix) for cafune",
+        "body": [
+          "“@wearecafune tek it remix out now 🌐💫”.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/Cdy5FDCvFOd/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hero-ep-2022-07-29",
+      "type": "releases",
+      "year": "2022",
+      "date": "2022-07-29",
+      "title": "HERO EP",
+      "dek": "Ep release.",
+      "description": "3 tracks “for deep in the club”, self-released. ‘hero’ visualizer by @lordstingray did 1,057 likes.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CglTSCvs5iZ/"
+        }
+      ],
+      "tags": [
+        "EP",
+        "ep",
+        "music",
+        "release"
+      ],
+      "project": {
+        "headline": "HERO EP",
+        "body": [
+          "3 tracks “for deep in the club”, self-released. ‘hero’ visualizer by @lordstingray did 1,057 likes.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CglTSCvs5iZ/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "powerstar-2022-07-31",
+      "type": "releases",
+      "year": "2022",
+      "date": "2022-07-31",
+      "title": "powerstar",
+      "dek": "Single release.",
+      "description": "“my new song ‘powerstar’ 🌠”, visuals by @lordstingray, 952 likes.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/Cgr5qGPJQB5/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "powerstar",
+        "body": [
+          "“my new song ‘powerstar’ 🌠”, visuals by @lordstingray, 952 likes.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/Cgr5qGPJQB5/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gotsmoke-2022-08-03",
+      "type": "releases",
+      "year": "2022",
+      "date": "2022-08-03",
+      "title": "gotsmoke",
+      "dek": "Single release.",
+      "description": "“my new song ‘gotsmoke’ 🌐”.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/Cg0gn4dL7Pa/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "gotsmoke",
+        "body": [
+          "“my new song ‘gotsmoke’ 🌐”.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/Cg0gn4dL7Pa/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hot-2022-09-26",
+      "type": "releases",
+      "year": "2022",
+      "date": "2022-09-26",
+      "title": "hot",
+      "dek": "Single release.",
+      "description": "“i made a record and it’s hot, this is not a game 🌐 available everywhere”.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/Ci-p3c8upse/"
+        }
+      ],
+      "tags": [
+        "game",
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "hot",
+        "body": [
+          "“i made a record and it’s hot, this is not a game 🌐 available everywhere”.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/Ci-p3c8upse/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "watchyaback-2022-12-02",
+      "type": "releases",
+      "year": "2022",
+      "date": "2022-12-02",
+      "title": "watchyaback!",
+      "dek": "Single release.",
+      "description": "Collab + visual with @lordstingray for @ronindivision 10th anniversary. Teaser did 1,432 likes.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/ClmaHfyOie_/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "watchyaback!",
+        "body": [
+          "Collab + visual with @lordstingray for @ronindivision 10th anniversary. Teaser did 1,432 likes.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/ClmaHfyOie_/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "deep-pockets-dub-2023-06-15",
+      "type": "releases",
+      "year": "2023",
+      "date": "2023-06-15",
+      "title": "deep pockets dub",
+      "dek": "Single release.",
+      "description": "“hidden B side unlocked: deep pockets dub 💽. ‘hot’ was originally an EP with two campaign placements lined up.”",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CtiH85aNIIs/"
+        }
+      ],
+      "tags": [
+        "EP",
+        "music",
+        "placement",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "deep pockets dub",
+        "body": [
+          "“hidden B side unlocked: deep pockets dub 💽. ‘hot’ was originally an EP with two campaign placements lined up.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CtiH85aNIIs/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "higher-2023-07-27",
+      "type": "releases",
+      "year": "2023",
+      "date": "2023-07-27",
+      "title": "higher",
+      "dek": "Single release.",
+      "description": "“higher 💥💫🌐 out now everywhere”, visuals by @ch4ch__. “been rinsing it in my sets for quite a while.”",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/CvNNhHQtkFg/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "higher",
+        "body": [
+          "“higher 💥💫🌐 out now everywhere”, visuals by @ch4ch__. “been rinsing it in my sets for quite a while.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/CvNNhHQtkFg/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "walk2me-w-nick-am-2024-02-02",
+      "type": "releases",
       "year": "2024",
-      "title": "feel everything EP release show + merch",
-      "dek": "Release event and merchandise moment.",
-      "description": "A live/project entry for the Feel Everything release show, merch, documentation, and related ephemera.",
+      "date": "2024-02-02",
+      "title": "walk2me (w/ nick.am)",
+      "dek": "Single release.",
+      "description": "First single of the nick.am project. “just put out this tune with my friend @nick.am.”",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/C23Eq4sOGzy/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "walk2me (w/ nick.am)",
+        "body": [
+          "First single of the nick.am project. “just put out this tune with my friend @nick.am.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/C23Eq4sOGzy/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "second-nick-am-single-2024-02-23",
+      "type": "releases",
+      "year": "2024",
+      "date": "2024-02-23",
+      "title": "second nick.am single",
+      "dek": "Single release.",
+      "description": "“the second single from our project is out today ✈️🌐”. Made on a PlayStation (project lore).",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/C3sudVXOdA9/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "second nick.am single",
+        "body": [
+          "“the second single from our project is out today ✈️🌐”. Made on a PlayStation (project lore).",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/C3sudVXOdA9/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "feel-everything-ep-w-nick-am-2024-04-05",
+      "type": "releases",
+      "year": "2024",
+      "date": "2024-04-05",
+      "title": "feel everything EP (w/ nick.am)",
+      "dek": "Ep release.",
+      "description": "3+ years in the making. Cover art @bubbltek, world-building @lordstingray. EP lore series on IG (PlayStation production, ‘circles’ origin story). 12” vinyl announced 2024-04-22, stocked at @humanheadnyc.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/C5YxJ7jOBq5/"
+        }
+      ],
+      "tags": [
+        "EP",
+        "ep",
+        "music",
+        "release",
+        "vinyl"
+      ],
+      "project": {
+        "headline": "feel everything EP (w/ nick.am)",
+        "body": [
+          "3+ years in the making. Cover art @bubbltek, world-building @lordstingray. EP lore series on IG (PlayStation production, ‘circles’ origin story). 12” vinyl announced 2024-04-22, stocked at @humanheadnyc.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/C5YxJ7jOBq5/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "feel-everything-remixes-2024-05-24",
+      "type": "releases",
+      "year": "2024",
+      "date": "2024-05-24",
+      "title": "feel everything (remixes)",
+      "dek": "Pack release.",
+      "description": "Remixers incl. Discord remix-contest winner.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/C7W9WZuuYVD/"
+        }
+      ],
+      "tags": [
+        "music",
+        "pack",
+        "release",
+        "remix",
+        "remix pack"
+      ],
+      "project": {
+        "headline": "feel everything (remixes)",
+        "body": [
+          "Remixers incl. Discord remix-contest winner.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/C7W9WZuuYVD/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "start-something-2024-08-09",
+      "type": "releases",
+      "year": "2024",
+      "date": "2024-08-09",
+      "title": "start something",
+      "dek": "Single release.",
+      "description": "“out now everywhere + my favorite mix i’ve ever recorded for @thirdfloorsounds.” Tagged @marcjacobs.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/C-kv0onu8Jx/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "start something",
+        "body": [
+          "“out now everywhere + my favorite mix i’ve ever recorded for @thirdfloorsounds.” Tagged @marcjacobs.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/C-kv0onu8Jx/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mazeworld-wev-remix-for-nextdimensional-2024-09-18",
+      "type": "releases",
+      "year": "2024",
+      "date": "2024-09-18",
+      "title": "mazeworld (wev remix) for nextdimensional",
+      "dek": "Remix release.",
+      "description": "“my remix for @nextdimensional mazeworld 🌐💫”.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DAEMuADOS37/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "remix"
+      ],
+      "project": {
+        "headline": "mazeworld (wev remix) for nextdimensional",
+        "body": [
+          "“my remix for @nextdimensional mazeworld 🌐💫”.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DAEMuADOS37/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "timesup-w-carbike000-2024-10-11",
+      "type": "releases",
+      "year": "2024",
+      "date": "2024-10-11",
+      "title": "timesup! (w/ carbike000)",
+      "dek": "Single release.",
+      "description": "“New single timesup! Out everywhere with @worldwidewev.” Lore post: vocal scratch recorded from hotel-room demos on Japan tour.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DA_zU5PzBcu/"
+        }
+      ],
+      "tags": [
+        "japan",
+        "music",
+        "release",
+        "single",
+        "tour"
+      ],
+      "project": {
+        "headline": "timesup! (w/ carbike000)",
+        "body": [
+          "“New single timesup! Out everywhere with @worldwidewev.” Lore post: vocal scratch recorded from hotel-room demos on Japan tour.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DA_zU5PzBcu/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "savestate-wev-s-metro-acid-mix-for-boy-2ooo-2025-03-07",
+      "type": "releases",
+      "year": "2025",
+      "date": "2025-03-07",
+      "title": "savestate (wev’s metro acid mix) for boy.2ooo",
+      "dek": "Remix release.",
+      "description": "“have been rinsing this heavy in my sets lately.” How-i-made-it reel exists.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/DG6E6Lsxydm/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "remix"
+      ],
+      "project": {
+        "headline": "savestate (wev’s metro acid mix) for boy.2ooo",
+        "body": [
+          "“have been rinsing this heavy in my sets lately.” How-i-made-it reel exists.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/DG6E6Lsxydm/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "shigoto-werk-2025-03-24",
+      "type": "releases",
+      "year": "2025",
+      "date": "2025-03-24",
+      "title": "shigoto werk",
+      "dek": "Single release.",
+      "description": "Made on tour in Japan (summer 2024) in a home studio. “have been rinsing it in my sets since then, and now it’s yours.” Later: Rocket League Season 21 soundtrack + in-game feature.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DHlkVxnO4FB/"
+        }
+      ],
+      "tags": [
+        "game",
+        "japan",
+        "music",
+        "release",
+        "Rocket League",
+        "single",
+        "tour"
+      ],
+      "project": {
+        "headline": "shigoto werk",
+        "body": [
+          "Made on tour in Japan (summer 2024) in a home studio. “have been rinsing it in my sets since then, and now it’s yours.” Later: Rocket League Season 21 soundtrack + in-game feature.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DHlkVxnO4FB/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "acid-in-tokyo-feat-yinyo-tyo-2025-04-03",
+      "type": "releases",
+      "year": "2025",
+      "date": "2025-04-03",
+      "title": "acid in tokyo (feat. yinyo_tyo)",
+      "dek": "Single release.",
+      "description": "Japan-only release. Camcorder music video shot in Tokyo (released Nov 2025).",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DIAMSqMz6GV/"
+        }
+      ],
+      "tags": [
+        "japan",
+        "music",
+        "release",
+        "single",
+        "tokyo"
+      ],
+      "project": {
+        "headline": "acid in tokyo (feat. yinyo_tyo)",
+        "body": [
+          "Japan-only release. Camcorder music video shot in Tokyo (released Nov 2025).",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DIAMSqMz6GV/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "start-something-ep-2025-04-16",
+      "type": "releases",
+      "year": "2025",
+      "date": "2025-04-16",
+      "title": "start something EP",
+      "dek": "Ep release.",
+      "description": "Six acid tracks, “made between new york and tokyo over the last year.” 12” white-label vinyl ed. 100, hand-stamped/numbered in Brooklyn (Dec 2025). Bonus @castillonaire remix.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DIhU0qsTz5K/"
+        }
+      ],
+      "tags": [
+        "EP",
+        "ep",
+        "music",
+        "release",
+        "remix",
+        "tokyo",
+        "vinyl"
+      ],
+      "project": {
+        "headline": "start something EP",
+        "body": [
+          "Six acid tracks, “made between new york and tokyo over the last year.” 12” white-label vinyl ed. 100, hand-stamped/numbered in Brooklyn (Dec 2025). Bonus @castillonaire remix.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DIhU0qsTz5K/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "technochronic-feat-yoshitee-2026-02-19",
+      "type": "releases",
+      "year": "2026",
+      "date": "2026-02-19",
+      "title": "TECHNOCHRONIC (feat. yoshitee_)",
+      "dek": "Single release.",
+      "description": "“the second or third time yoshi pulled up… his scratch flow reminded me of daft punk’s ‘technologic’.” Visuals @lordstingray.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DU9MlSJkfQv/"
+        }
+      ],
+      "tags": [
+        "apparel",
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "TECHNOCHRONIC (feat. yoshitee_)",
+        "body": [
+          "“the second or third time yoshi pulled up… his scratch flow reminded me of daft punk’s ‘technologic’.” Visuals @lordstingray.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DU9MlSJkfQv/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "remix-for-fifi-zhang-x-2026-02-04",
+      "type": "releases",
+      "year": "2026",
+      "date": "2026-02-04",
+      "title": "remix for fifi zhang x",
+      "dek": "Remix release.",
+      "description": "“new remix for @fifizhangx icymi”.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DUWdSDdEpjg/"
+        }
+      ],
+      "tags": [
+        "EP",
+        "music",
+        "release",
+        "remix"
+      ],
+      "project": {
+        "headline": "remix for fifi zhang x",
+        "body": [
+          "“new remix for @fifizhangx icymi”.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DUWdSDdEpjg/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "get-w-this-2026-04-03",
+      "type": "releases",
+      "year": "2026",
+      "date": "2026-04-03",
+      "title": "GET W THIS",
+      "dek": "Single release.",
+      "description": "Lead single; OST album announced same day. 3,453 likes — biggest announcement post to date. Visualizer @lordstingray.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DWrccYJFfvb/"
+        }
+      ],
+      "tags": [
+        "album",
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "GET W THIS",
+        "body": [
+          "Lead single; OST album announced same day. 3,453 likes — biggest announcement post to date. Visualizer @lordstingray.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DWrccYJFfvb/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "spectrum-w-sc-ruz-2026-05-15",
+      "type": "releases",
+      "year": "2026",
+      "date": "2026-05-15",
+      "title": "SPECTRUM (w/ sc.ruz)",
+      "dek": "Single release.",
+      "description": "“easily the most requested ID i’ve had since starting to rinse it a couple years ago… over the next 2 years there were more [versions].” OST single.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DYXqMIVmu15/"
+        }
+      ],
+      "tags": [
+        "music",
+        "release",
+        "single"
+      ],
+      "project": {
+        "headline": "SPECTRUM (w/ sc.ruz)",
+        "body": [
+          "“easily the most requested ID i’ve had since starting to rinse it a couple years ago… over the next 2 years there were more [versions].” OST single.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DYXqMIVmu15/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ost-2026-05-29",
+      "type": "releases",
+      "year": "2026",
+      "date": "2026-05-29",
+      "title": "OST",
+      "dek": "Album release.",
+      "description": "Debut album. Mixed by @nosajkrap, mastered by @joshuapleeter. Contributors include @lordstingray, @sc.ruz, @nick.am, @yoshitee_ and more. Early listening @dimension.70. Release set @thelotradio 2026-06-02. 12” translucent purple vinyl pre-order (Aug 2026). “a record which captures the spirit i feel living and working in new york.”",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DY788qXGpCM/"
+        }
+      ],
+      "tags": [
+        "album",
+        "apparel",
+        "music",
+        "radio",
+        "release",
+        "vinyl"
+      ],
+      "project": {
+        "headline": "OST",
+        "body": [
+          "Debut album. Mixed by @nosajkrap, mastered by @joshuapleeter. Contributors include @lordstingray, @sc.ruz, @nick.am, @yoshitee_ and more. Early listening @dimension.70. Release set @thelotradio 2026-06-02. 12” translucent purple vinyl pre-order (Aug 2026). “a record which captures the spirit i feel living and working in new york.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DY788qXGpCM/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "shiki-no-uta-wev-edit-2026-10-02",
+      "type": "releases",
+      "year": "2026",
+      "date": "2026-10-02",
+      "title": "shiki no uta (wev edit)",
+      "dek": "Edit release.",
+      "description": "Samurai Champloo ending-theme edit, teased on reels for ~2 years (“sorry it took 2 years lol”). Released on Bandcamp Friday; announcement reel did 885 likes / 64 comments. Discography now 33 releases.",
+      "image": "assets/placeholder-release.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/DeAD1LXqJb3/"
+        }
+      ],
+      "tags": [
+        "edit",
+        "music",
+        "release"
+      ],
+      "project": {
+        "headline": "shiki no uta (wev edit)",
+        "body": [
+          "Samurai Champloo ending-theme edit, teased on reels for ~2 years (“sorry it took 2 years lol”). Released on Bandcamp Friday; announcement reel did 885 likes / 64 comments. Discography now 33 releases.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/DeAD1LXqJb3/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "twitch-streaming-era-2020-2021",
+      "type": "live",
+      "year": "2020",
+      "date": "2020–2021",
+      "title": "Twitch streaming era",
+      "dek": "Live Moment.",
+      "description": "Regular twitch.tv/worldwidewev sets; technobody premiere stream pulled 30 subs in one stream.",
       "image": "assets/placeholder-flier.svg",
       "links": [
         {
@@ -222,102 +1635,26 @@
         }
       ],
       "tags": [
-        "live",
-        "merch",
-        "release show"
+        "live moment"
       ],
       "project": {
-        "headline": "feel everything release show + merch",
+        "headline": "Twitch streaming era",
         "body": [
-          "Release show and merch moment for the Feel Everything EP.",
-          "Future archive content can include flyers, event photos, merch images, set notes, and credits."
+          "Regular twitch.tv/worldwidewev sets; technobody premiere stream pulled 30 subs in one stream.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
         ],
-        "links": [
-          {
-            "label": "inquiries",
-            "url": "mailto:hello@wev.world"
-          }
-        ]
+        "links": []
       }
     },
     {
-      "id": "feel-everything-ep",
-      "type": "releases",
-      "year": "2024",
-      "title": "feel everything EP",
-      "dek": "EP release.",
-      "description": "Release entry for the Feel Everything EP.",
-      "image": "assets/placeholder-release.svg",
-      "links": [
-        {
-          "label": "open project",
-          "url": "#",
-          "action": "open-project"
-        }
-      ],
-      "tags": [
-        "music",
-        "release",
-        "EP"
-      ],
-      "project": {
-        "headline": "feel everything EP",
-        "body": [
-          "wev EP release from 2024.",
-          "Future details can include credits, listening links, artwork, and event documentation."
-        ],
-        "links": [
-          {
-            "label": "spotify",
-            "url": "https://open.spotify.com/search/wev%20feel%20everything"
-          }
-        ]
-      }
-    },
-    {
-      "id": "watchyaback-ronin-division",
-      "type": "projects",
+      "id": "denver-debut-2022-02-20",
+      "type": "live",
       "year": "2022",
-      "title": "watchyaback! x Ronin Division",
-      "dek": "Collaborative project.",
-      "description": "A project entry for the watchyaback! x Ronin Division collaboration.",
-      "image": "assets/placeholder-release.svg",
-      "links": [
-        {
-          "label": "open project",
-          "url": "#",
-          "action": "open-project"
-        }
-      ],
-      "tags": [
-        "collab",
-        "music",
-        "visual"
-      ],
-      "project": {
-        "headline": "watchyaback! x Ronin Division",
-        "body": [
-          "watchyaback! x Ronin Division collaboration from 2022.",
-          "This page can hold project notes, visual assets, links, credits, and related release context."
-        ],
-        "links": [
-          {
-            "label": "inquiries",
-            "url": "mailto:hello@wev.world"
-          }
-        ]
-      }
-    }
-  ],
-  "items": [
-    {
-      "id": "ost-archive",
-      "type": "releases",
-      "year": "2026",
-      "title": "OST",
-      "dek": "wev debut album.",
-      "description": "The debut full-length, collected as a central album entry for credits, listening links, release notes, press, and physical editions.",
-      "image": "assets/ost-artwork-final.jpg",
+      "date": "2022-02-20",
+      "title": "Denver debut",
+      "dek": "Live Moment.",
+      "description": "“possibly my favorite set so far” w/ @ecodao_.",
+      "image": "assets/placeholder-flier.svg",
       "links": [
         {
           "label": "open project",
@@ -325,77 +1662,2052 @@
           "action": "open-project"
         },
         {
-          "label": "spotify",
-          "url": "https://open.spotify.com/search/wev%20OST"
-        },
-        {
-          "label": "press",
-          "url": "https://www.newsweek.com/search/site/wev"
-        },
-        {
-          "label": "resident advisor",
-          "url": "https://ra.co/dj/wev"
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CaNsQyqP3eJ/"
         }
       ],
       "tags": [
-        "music",
-        "release",
-        "score"
+        "live moment"
       ],
       "project": {
-        "headline": "OST",
+        "headline": "Denver debut",
         "body": [
-          "wev debut album, released in 2026.",
-          "This project page can hold credits, liner notes, release links, listening links, and physical edition details."
+          "“possibly my favorite set so far” w/ @ecodao_.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
         ],
         "links": [
           {
-            "label": "spotify",
-            "url": "https://open.spotify.com/search/wev%20OST"
-          },
-          {
-            "label": "newsweek",
-            "url": "https://www.newsweek.com/search/site/wev"
-          },
-          {
-            "label": "resident advisor",
-            "url": "https://ra.co/dj/wev"
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CaNsQyqP3eJ/"
           }
         ]
       }
     },
     {
-      "id": "shigoto-werk-rocket-league",
-      "type": "placements",
-      "year": "2026",
-      "title": "shigoto werk",
-      "dek": "Placement in Rocket League.",
-      "description": "A game placement entry for the track, with room for soundtrack context, publisher credits, and in-game reference material.",
-      "image": "assets/placeholder-release.svg",
+      "id": "first-europe-shows-announced-2022-04-14",
+      "type": "live",
+      "year": "2022",
+      "date": "2022-04-14",
+      "title": "First Europe shows announced",
+      "dek": "Live Moment.",
+      "description": "“can’t believe i’m about to play my songs in europe???”",
+      "image": "assets/placeholder-flier.svg",
       "links": [
         {
           "label": "open project",
           "url": "#",
           "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CcWGPh-Oh_Z/"
+        }
+      ],
+      "tags": [
+        "live moment"
+      ],
+      "project": {
+        "headline": "First Europe shows announced",
+        "body": [
+          "“can’t believe i’m about to play my songs in europe???”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CcWGPh-Oh_Z/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sold-out-babysallright-2022-07-10",
+      "type": "live",
+      "year": "2022",
+      "date": "2022-07-10",
+      "title": "Sold-out @babysallright",
+      "dek": "Live Moment.",
+      "description": "“played my music to a sold out @babysallright… 8 year old me would be proud.”",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/Cf2eNFSuyHG/"
+        }
+      ],
+      "tags": [
+        "live moment",
+        "sold out"
+      ],
+      "project": {
+        "headline": "Sold-out @babysallright",
+        "body": [
+          "“played my music to a sold out @babysallright… 8 year old me would be proud.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/Cf2eNFSuyHG/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "elsewhere-camcorder-set-2022-10-17",
+      "type": "live",
+      "year": "2022",
+      "date": "2022-10-17",
+      "title": "Elsewhere camcorder set",
+      "dek": "Live Moment.",
+      "description": "“king @jazensaga caught me on the camcorder finally rinsing this edit at @elsewherespace.”",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/Cj1G0yfNpm4/"
+        }
+      ],
+      "tags": [
+        "edit",
+        "live moment"
+      ],
+      "project": {
+        "headline": "Elsewhere camcorder set",
+        "body": [
+          "“king @jazensaga caught me on the camcorder finally rinsing this edit at @elsewherespace.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/Cj1G0yfNpm4/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "first-sold-out-set-of-2023-2023-03-27",
+      "type": "live",
+      "year": "2023",
+      "date": "2023-03-27",
+      "title": "First sold-out set of 2023",
+      "dek": "Live Moment.",
+      "description": "@homeroom.music / @grooveclub.nyc. “friday was a movie.”",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CqT2WDSulGG/"
+        }
+      ],
+      "tags": [
+        "live moment",
+        "sold out"
+      ],
+      "project": {
+        "headline": "First sold-out set of 2023",
+        "body": [
+          "@homeroom.music / @grooveclub.nyc. “friday was a movie.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CqT2WDSulGG/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "opening-for-rome-in-silver-elsewhere-2023-04-26",
+      "type": "live",
+      "year": "2023",
+      "date": "2023-04-26",
+      "title": "Opening for Rome in Silver @ Elsewhere",
+      "dek": "Live Moment.",
+      "description": "Plus @atrak remix pressings arrived same week.",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/Crgdo4juQZb/"
+        }
+      ],
+      "tags": [
+        "live moment",
+        "press",
+        "remix"
+      ],
+      "project": {
+        "headline": "Opening for Rome in Silver @ Elsewhere",
+        "body": [
+          "Plus @atrak remix pressings arrived same week.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/Crgdo4juQZb/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tokyo-debut-japan-run-2023-08-29-09-2023",
+      "type": "live",
+      "year": "2023",
+      "date": "2023-08-29 → 09-2023",
+      "title": "Tokyo debut + Japan run",
+      "dek": "Live Moment.",
+      "description": "First Tokyo show; “in 2016 i was in japan taking photos for DJs, dreaming of being behind the decks | 7 years later i was booked at that same club to play my own songs.” @entershibuya, @music_bar_lion.",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CwytU-FSNc7/"
+        }
+      ],
+      "tags": [
+        "japan",
+        "live moment",
+        "tokyo"
+      ],
+      "project": {
+        "headline": "Tokyo debut + Japan run",
+        "body": [
+          "First Tokyo show; “in 2016 i was in japan taking photos for DJs, dreaming of being behind the decks | 7 years later i was booked at that same club to play my own songs.” @entershibuya, @music_bar_lion.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CwytU-FSNc7/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "supporting-sammy-virji-elsewhere-2024-02-01",
+      "type": "live",
+      "year": "2024",
+      "date": "2024-02-01",
+      "title": "Supporting Sammy Virji @ Elsewhere",
+      "dek": "Live Moment.",
+      "description": "“big one… been dreaming about playing my tunes here since i moved to brooklyn.” Recap (1,078 likes): “this night will be living rent free in my head forever.”",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/C28T_HlOb3x/"
+        }
+      ],
+      "tags": [
+        "live moment"
+      ],
+      "project": {
+        "headline": "Supporting Sammy Virji @ Elsewhere",
+        "body": [
+          "“big one… been dreaming about playing my tunes here since i moved to brooklyn.” Recap (1,078 likes): “this night will be living rent free in my head forever.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/C28T_HlOb3x/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "viral-anime-edit-reel-era-2024-02",
+      "type": "live",
+      "year": "2024",
+      "date": "2024-02",
+      "title": "Viral anime-edit reel era",
+      "dek": "Live Moment.",
+      "description": "Toonami/Kingdom Hearts/Naruto/Donkey Kong reels; top post “this one’s for tom” hit 598K likes, “still looking for my kairi” 129K. The breakout moment.",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/C3DSII0uNNT/"
+        }
+      ],
+      "tags": [
+        "edit",
+        "live moment"
+      ],
+      "project": {
+        "headline": "Viral anime-edit reel era",
+        "body": [
+          "Toonami/Kingdom Hearts/Naruto/Donkey Kong reels; top post “this one’s for tom” hit 598K likes, “still looking for my kairi” 129K. The breakout moment.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/C3DSII0uNNT/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "first-la-headline-fountain-la-2024-03-16",
+      "type": "live",
+      "year": "2024",
+      "date": "2024-03-16",
+      "title": "First LA headline @ fountain.la",
+      "dek": "Live Moment.",
+      "description": "“first LA show was a movie.”",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/C5BbIbuO1ca/"
+        }
+      ],
+      "tags": [
+        "headline",
+        "live moment"
+      ],
+      "project": {
+        "headline": "First LA headline @ fountain.la",
+        "body": [
+          "“first LA show was a movie.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/C5BbIbuO1ca/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "feel-everything-immersive-release-show-2024-05-09",
+      "type": "live",
+      "year": "2024",
+      "date": "2024-05-09",
+      "title": "feel everything immersive release show",
+      "dek": "Live Moment.",
+      "description": "Brooklyn w/ @lordstingray immersive visuals, @dazegxd @feverdreamxx @perfectchao. Sold-out collectible toy drop. Recap: “it’s hard to find the words for how much this night means to me.”",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/C7M7DX4urb_/"
+        }
+      ],
+      "tags": [
+        "collectible",
+        "live moment",
+        "release",
+        "sold out"
+      ],
+      "project": {
+        "headline": "feel everything immersive release show",
+        "body": [
+          "Brooklyn w/ @lordstingray immersive visuals, @dazegxd @feverdreamxx @perfectchao. Sold-out collectible toy drop. Recap: “it’s hard to find the words for how much this night means to me.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/C7M7DX4urb_/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "williamsburg-bridge-secret-rave-2024-05-30",
+      "type": "live",
+      "year": "2024",
+      "date": "2024-05-30",
+      "title": "Williamsburg Bridge secret rave",
+      "dek": "Live Moment.",
+      "description": "Guest set; full set on YouTube. “DJ set of the year, on the williamsburg bridge. i love my city.”",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/DKhanrjsWnv/"
+        }
+      ],
+      "tags": [
+        "live moment"
+      ],
+      "project": {
+        "headline": "Williamsburg Bridge secret rave",
+        "body": [
+          "Guest set; full set on YouTube. “DJ set of the year, on the williamsburg bridge. i love my city.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/DKhanrjsWnv/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "japan-tour-2nd-2024-06-07-2024",
+      "type": "live",
+      "year": "2024",
+      "date": "2024-06 → 07-2024",
+      "title": "Japan tour (2nd)",
+      "dek": "Live Moment.",
+      "description": "Tokyo (whitespace lab, Circus Tokyo), Fukuoka. “japan tour is a wrap, what a surreal month.”",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/C88V5zFyRra/"
+        }
+      ],
+      "tags": [
+        "japan",
+        "live moment",
+        "tokyo",
+        "tour"
+      ],
+      "project": {
+        "headline": "Japan tour (2nd)",
+        "body": [
+          "Tokyo (whitespace lab, Circus Tokyo), Fukuoka. “japan tour is a wrap, what a surreal month.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/C88V5zFyRra/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "elsewhere-headline-2024-07-30",
+      "type": "live",
+      "year": "2024",
+      "date": "2024-07-30",
+      "title": "Elsewhere headline",
+      "dek": "Live Moment.",
+      "description": "“have dreamed of headlining this room since moving to brooklyn.”",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/C-EVRshNgxV/"
+        }
+      ],
+      "tags": [
+        "headline",
+        "live moment"
+      ],
+      "project": {
+        "headline": "Elsewhere headline",
+        "body": [
+          "“have dreamed of headlining this room since moving to brooklyn.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/C-EVRshNgxV/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "philly-wowphilly-2024-10-17",
+      "type": "live",
+      "year": "2024",
+      "date": "2024-10-17",
+      "title": "Philly @ wowphilly",
+      "dek": "Live Moment.",
+      "description": "Halloween weekend set; best costume won a signed vinyl.",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/DBPNUKWykyM/"
+        }
+      ],
+      "tags": [
+        "live moment",
+        "vinyl"
+      ],
+      "project": {
+        "headline": "Philly @ wowphilly",
+        "body": [
+          "Halloween weekend set; best costume won a signed vinyl.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/DBPNUKWykyM/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "first-thelotradio-set-2025-04-21",
+      "type": "live",
+      "year": "2025",
+      "date": "2025-04-21",
+      "title": "First @thelotradio set",
+      "dek": "Live Moment.",
+      "description": "“rinsed some tracks from the EP, japanese CD shop finds, cutty OST tracks.”",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DIuDZg4RXwc/"
+        }
+      ],
+      "tags": [
+        "CD",
+        "EP",
+        "japan",
+        "live moment",
+        "radio"
+      ],
+      "project": {
+        "headline": "First @thelotradio set",
+        "body": [
+          "“rinsed some tracks from the EP, japanese CD shop finds, cutty OST tracks.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DIuDZg4RXwc/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "house-of-yes-debut-2025-04-29",
+      "type": "live",
+      "year": "2025",
+      "date": "2025-04-29",
+      "title": "House of Yes debut",
+      "dek": "Live Moment.",
+      "description": "“have always wanted to play music here.”",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DJCq3kKRcJp/"
+        }
+      ],
+      "tags": [
+        "live moment"
+      ],
+      "project": {
+        "headline": "House of Yes debut",
+        "body": [
+          "“have always wanted to play music here.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DJCq3kKRcJp/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "worldwide-summer-tour-2025-06-26-08-2025",
+      "type": "live",
+      "year": "2025",
+      "date": "2025-06-26 → 08-2025",
+      "title": "Worldwide summer tour",
+      "dek": "Live Moment.",
+      "description": "Taipei (toha.radio, rabbithole), Tokyo (circus_tokyo), Seoul (scr_radio), Fukuoka, SF, NYC, Denver (club vinyl), Chicago, Miami, Seattle (madame lous). Announced: https://www.instagram.com/p/DLYDnDRRxkD/ — recap: https://www.instagram.com/p/DO6bIFEkX3p/",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DLYDnDRRxkD/"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DO6bIFEkX3p/"
+        }
+      ],
+      "tags": [
+        "live moment",
+        "radio",
+        "tokyo",
+        "tour",
+        "vinyl"
+      ],
+      "project": {
+        "headline": "Worldwide summer tour",
+        "body": [
+          "Taipei (toha.radio, rabbithole), Tokyo (circus_tokyo), Seoul (scr_radio), Fukuoka, SF, NYC, Denver (club vinyl), Chicago, Miami, Seattle (madame lous). Announced: https://www.instagram.com/p/DLYDnDRRxkD/ — recap: https://www.instagram.com/p/DO6bIFEkX3p/",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DLYDnDRRxkD/"
+          },
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DO6bIFEkX3p/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "speedstar-x-2-2025-09-15",
+      "type": "live",
+      "year": "2025",
+      "date": "2025-09-15",
+      "title": "SPEEDSTAR X-2",
+      "dek": "Live Moment.",
+      "description": "“PURE.RAVE.DANCE.UTOPIA” sequel w/ @perfectchao + more. 1,459 likes.",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/DOokV5vktmo/"
+        }
+      ],
+      "tags": [
+        "live moment"
+      ],
+      "project": {
+        "headline": "SPEEDSTAR X-2",
+        "body": [
+          "“PURE.RAVE.DANCE.UTOPIA” sequel w/ @perfectchao + more. 1,459 likes.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/DOokV5vktmo/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ost-release-set-thelotradio-2026-06-02",
+      "type": "live",
+      "year": "2026",
+      "date": "2026-06-02",
+      "title": "OST release set @ thelotradio",
+      "dek": "Live Moment.",
+      "description": "Full album tracklist w/ guests.",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DZGKJ_jGjzu/"
+        }
+      ],
+      "tags": [
+        "album",
+        "live moment",
+        "radio",
+        "release"
+      ],
+      "project": {
+        "headline": "OST release set @ thelotradio",
+        "body": [
+          "Full album tracklist w/ guests.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DZGKJ_jGjzu/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ost-release-party-market-hotel-2026-07-02",
+      "type": "live",
+      "year": "2026",
+      "date": "2026-07-02",
+      "title": "OST release party @ market.hotel",
+      "dek": "Live Moment.",
+      "description": "w/ @nextdimensional + @ossx_nj + secret guests; OST CDs exclusive to the show. “a special one… still buzzing a week later.”",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DajAK3emk8U/"
+        }
+      ],
+      "tags": [
+        "CD",
+        "live moment",
+        "release"
+      ],
+      "project": {
+        "headline": "OST release party @ market.hotel",
+        "body": [
+          "w/ @nextdimensional + @ossx_nj + secret guests; OST CDs exclusive to the show. “a special one… still buzzing a week later.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DajAK3emk8U/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "texas-run-2026-07",
+      "type": "live",
+      "year": "2026",
+      "date": "2026-07",
+      "title": "Texas run",
+      "dek": "Live Moment.",
+      "description": "“houston texas was top 5 sets ever”; Boise debut @haphap_lounge, Denver @daytripla.",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/Da3XT-cGvqm/"
+        }
+      ],
+      "tags": [
+        "live moment"
+      ],
+      "project": {
+        "headline": "Texas run",
+        "body": [
+          "“houston texas was top 5 sets ever”; Boise debut @haphap_lounge, Denver @daytripla.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/Da3XT-cGvqm/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "animenyc-official-afterparty-headliner-2026-08-20",
+      "type": "live",
+      "year": "2026",
+      "date": "2026-08-20",
+      "title": "AnimeNYC official afterparty headliner",
+      "dek": "Live Moment.",
+      "description": "@slateny. “best anime intro mixes.”",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/Da-2lUQjtss/"
+        }
+      ],
+      "tags": [
+        "headline",
+        "live moment"
+      ],
+      "project": {
+        "headline": "AnimeNYC official afterparty headliner",
+        "body": [
+          "@slateny. “best anime intro mixes.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/Da-2lUQjtss/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "12-12-zeyzey-miami-announced-2026-09-05",
+      "type": "live",
+      "year": "2026",
+      "date": "2026-09-05",
+      "title": "12.12 @ ZeyZey Miami announced",
+      "dek": "Live Moment.",
+      "description": "“WEV brings video game-inspired sounds to our disco on 12.12.” Tickets: zeyzeymiami.com.",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/Dc61nQUj_Y3/"
         }
       ],
       "tags": [
         "game",
-        "sync",
-        "track"
+        "live moment"
       ],
       "project": {
-        "headline": "shigoto werk",
+        "headline": "12.12 @ ZeyZey Miami announced",
         "body": [
-          "Track placement in Rocket League.",
-          "Future archive details can include label, platform, soundtrack, announcement, and gameplay references."
+          "“WEV brings video game-inspired sounds to our disco on 12.12.” Tickets: zeyzeymiami.com.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
         ],
         "links": [
           {
-            "label": "rocket league",
-            "url": "https://www.rocketleague.com/"
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/Dc61nQUj_Y3/"
           }
         ]
+      }
+    },
+    {
+      "id": "le-bain-upcoming-2026-10-17",
+      "type": "live",
+      "year": "2026",
+      "date": "2026-10-17",
+      "title": "Le Bain (upcoming)",
+      "dek": "Live Moment.",
+      "description": "NYC. Details TBD.",
+      "image": "assets/placeholder-flier.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "live moment"
+      ],
+      "project": {
+        "headline": "Le Bain (upcoming)",
+        "body": [
+          "NYC. Details TBD.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": []
+      }
+    },
+    {
+      "id": "re-mesh-reflector-oversized-tee-w-phylo-2021-01-13",
+      "type": "goods",
+      "year": "2021",
+      "date": "2021-01-13",
+      "title": "re-mesh reflector oversized tee (w/ @__phylo__)",
+      "dek": "Good.",
+      "description": "First merch collab.",
+      "image": "assets/placeholder-goods.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CJ_2XQ8JV2m/"
+        }
+      ],
+      "tags": [
+        "apparel",
+        "good"
+      ],
+      "project": {
+        "headline": "re-mesh reflector oversized tee (w/ @__phylo__)",
+        "body": [
+          "First merch collab.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CJ_2XQ8JV2m/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "first-vinyl-via-phylo-2021-02-13",
+      "type": "goods",
+      "year": "2021",
+      "date": "2021-02-13",
+      "title": "First vinyl via @__phylo__",
+      "dek": "Good.",
+      "description": "“my music now lives on vinyl 🤯”.",
+      "image": "assets/placeholder-goods.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CLPt8HlJ1IL/"
+        }
+      ],
+      "tags": [
+        "good",
+        "vinyl"
+      ],
+      "project": {
+        "headline": "First vinyl via @__phylo__",
+        "body": [
+          "“my music now lives on vinyl 🤯”.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CLPt8HlJ1IL/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wev-on-vinyl-part-2-2022-03-26",
+      "type": "goods",
+      "year": "2022",
+      "date": "2022-03-26",
+      "title": "wev on vinyl part 2",
+      "dek": "Good.",
+      "description": "Via @________gr8 + @thenewordermagazine; exclusive tune w/ @nick.am.",
+      "image": "assets/placeholder-goods.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CbknHWug9T5/"
+        }
+      ],
+      "tags": [
+        "good",
+        "vinyl"
+      ],
+      "project": {
+        "headline": "wev on vinyl part 2",
+        "body": [
+          "Via @________gr8 + @thenewordermagazine; exclusive tune w/ @nick.am.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CbknHWug9T5/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wireframe-hoodies-2022-05-13",
+      "type": "goods",
+      "year": "2022",
+      "date": "2022-05-13",
+      "title": "wireframe hoodies",
+      "dek": "Good.",
+      "description": "Pre-order til 5/20. Embroidered.",
+      "image": "assets/placeholder-goods.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CdgrbwivW5t/"
+        }
+      ],
+      "tags": [
+        "apparel",
+        "CD",
+        "good"
+      ],
+      "project": {
+        "headline": "wireframe hoodies",
+        "body": [
+          "Pre-order til 5/20. Embroidered.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CdgrbwivW5t/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "watchyaback-tees-via-ronindivision-2022-12-09",
+      "type": "goods",
+      "year": "2022",
+      "date": "2022-12-09",
+      "title": "watchyaback! tees via @ronindivision",
+      "dek": "Good.",
+      "description": "",
+      "image": "assets/placeholder-goods.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/Cl9cJT7OC5K/"
+        }
+      ],
+      "tags": [
+        "apparel",
+        "good"
+      ],
+      "project": {
+        "headline": "watchyaback! tees via @ronindivision",
+        "body": [
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/Cl9cJT7OC5K/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "feel-everything-12-vinyl-2024-04-22",
+      "type": "goods",
+      "year": "2024",
+      "date": "2024-04-22",
+      "title": "feel everything 12” vinyl",
+      "dek": "Good.",
+      "description": "140g black, poster by @lordstingray, cover @bubbltek. First batch shipped 2024-04-26.",
+      "image": "assets/placeholder-goods.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/C6E83EOuKde/"
+        }
+      ],
+      "tags": [
+        "good",
+        "vinyl"
+      ],
+      "project": {
+        "headline": "feel everything 12” vinyl",
+        "body": [
+          "140g black, poster by @lordstingray, cover @bubbltek. First batch shipped 2024-04-26.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/C6E83EOuKde/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "feel-everything-collectible-toy-2024-05-08",
+      "type": "goods",
+      "year": "2024",
+      "date": "2024-05-08",
+      "title": "feel everything collectible toy",
+      "dek": "Good.",
+      "description": "Blister-pack PVC figures w/ @lordstingray + @y2_kyle. Sold out at release show; online restock 2024-05-21.",
+      "image": "assets/placeholder-goods.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/C6uRQvWulM8/"
+        }
+      ],
+      "tags": [
+        "collectible",
+        "good",
+        "release",
+        "remix pack",
+        "sold out"
+      ],
+      "project": {
+        "headline": "feel everything collectible toy",
+        "body": [
+          "Blister-pack PVC figures w/ @lordstingray + @y2_kyle. Sold out at release show; online restock 2024-05-21.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/C6uRQvWulM8/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "303-keychain-miniature-303-2025-03-03",
+      "type": "goods",
+      "year": "2025",
+      "date": "2025-03-03",
+      "title": "303 keychain (miniature 303)",
+      "dek": "Good.",
+      "description": "Designed + 3D-printed in Brooklyn; “collectible version of the #303 used to make my EP.” How-it’s-made reel 2025-05-08.",
+      "image": "assets/placeholder-goods.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DGwAsVryNK6/"
+        }
+      ],
+      "tags": [
+        "collectible",
+        "EP",
+        "good"
+      ],
+      "project": {
+        "headline": "303 keychain (miniature 303)",
+        "body": [
+          "Designed + 3D-printed in Brooklyn; “collectible version of the #303 used to make my EP.” How-it’s-made reel 2025-05-08.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DGwAsVryNK6/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "start-something-12-lp-white-label-2025-10-01",
+      "type": "goods",
+      "year": "2025",
+      "date": "2025-10-01",
+      "title": "start something 12” LP white label",
+      "dek": "Good.",
+      "description": "Hand-stamped/numbered, ed. 100, bonus @castillonaire remix. Pre-order til 10/17.",
+      "image": "assets/placeholder-goods.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DPRv8nyCV9o/"
+        }
+      ],
+      "tags": [
+        "good",
+        "remix"
+      ],
+      "project": {
+        "headline": "start something 12” LP white label",
+        "body": [
+          "Hand-stamped/numbered, ed. 100, bonus @castillonaire remix. Pre-order til 10/17.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DPRv8nyCV9o/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "shred-head-w64-beanies-2026-01-29",
+      "type": "goods",
+      "year": "2026",
+      "date": "2026-01-29",
+      "title": "shred head + W64 beanies",
+      "dek": "Good.",
+      "description": "Artwork @sevensixties. Shred heads sold out same day; restocked 2026-02-04.",
+      "image": "assets/placeholder-goods.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DUGigNIkYYb/"
+        }
+      ],
+      "tags": [
+        "apparel",
+        "good",
+        "sold out"
+      ],
+      "project": {
+        "headline": "shred head + W64 beanies",
+        "body": [
+          "Artwork @sevensixties. Shred heads sold out same day; restocked 2026-02-04.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DUGigNIkYYb/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ost-cds-7oz-ost-shirts-2026-06-26",
+      "type": "goods",
+      "year": "2026",
+      "date": "2026-06-26",
+      "title": "OST CDs + 7oz OST shirts",
+      "dek": "Good.",
+      "description": "CDs exclusive to 7/2 release party; shirts limited. Designed w/ @n8mandreza.",
+      "image": "assets/placeholder-goods.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DaDrm6uFT8E/"
+        }
+      ],
+      "tags": [
+        "apparel",
+        "CD",
+        "good",
+        "release"
+      ],
+      "project": {
+        "headline": "OST CDs + 7oz OST shirts",
+        "body": [
+          "CDs exclusive to 7/2 release party; shirts limited. Designed w/ @n8mandreza.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DaDrm6uFT8E/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ost-12-translucent-purple-vinyl-2026-08-03",
+      "type": "goods",
+      "year": "2026",
+      "date": "2026-08-03",
+      "title": "OST 12” translucent purple vinyl",
+      "dek": "Good.",
+      "description": "Pre-order on Bandcamp; first 100 at $30 pre-order price.",
+      "image": "assets/placeholder-goods.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DbmCbk4Gksp/"
+        }
+      ],
+      "tags": [
+        "good",
+        "vinyl"
+      ],
+      "project": {
+        "headline": "OST 12” translucent purple vinyl",
+        "body": [
+          "Pre-order on Bandcamp; first 100 at $30 pre-order price.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DbmCbk4Gksp/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "the-new-order-magazine-025-interview-2021-10-07",
+      "type": "placements",
+      "year": "2021",
+      "date": "2021-10-07",
+      "title": "The New Order Magazine 025 interview",
+      "dek": "Placement.",
+      "description": "w/ @nick.am.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/CUvm93FAWVt/"
+        }
+      ],
+      "tags": [
+        "placement",
+        "press"
+      ],
+      "project": {
+        "headline": "The New Order Magazine 025 interview",
+        "body": [
+          "w/ @nick.am.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/CUvm93FAWVt/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "zozo-villa-ss22-fashion-film-2022-05-05",
+      "type": "placements",
+      "year": "2022",
+      "date": "2022-05-05",
+      "title": "ZOZO Villa SS22 fashion film",
+      "dek": "Placement.",
+      "description": "Music by wev + @nick.am, produced by @backcoltd.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/CdMK32jvJ0G/"
+        }
+      ],
+      "tags": [
+        "CD",
+        "placement",
+        "ZOZO Villa"
+      ],
+      "project": {
+        "headline": "ZOZO Villa SS22 fashion film",
+        "body": [
+          "Music by wev + @nick.am, produced by @backcoltd.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/CdMK32jvJ0G/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "serato-sample-ad-2022-07-13",
+      "type": "placements",
+      "year": "2022",
+      "date": "2022-07-13",
+      "title": "Serato Sample ad",
+      "dek": "Placement.",
+      "description": "w/ @laurenfaith — “we used serato sample to make a record for our upcoming EP.” #ad.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/tv/Cf9dEtSjpfZ/"
+        }
+      ],
+      "tags": [
+        "EP",
+        "placement",
+        "Serato"
+      ],
+      "project": {
+        "headline": "Serato Sample ad",
+        "body": [
+          "w/ @laurenfaith — “we used serato sample to make a record for our upcoming EP.” #ad.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/tv/Cf9dEtSjpfZ/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "highsnobiety-x-adidas-hot-2022-09-29",
+      "type": "placements",
+      "year": "2022",
+      "date": "2022-09-29",
+      "title": "Highsnobiety x adidas — ‘hot’",
+      "dek": "Placement.",
+      "description": "Visual by @lordstingray.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/CjGfg4MsdYd/"
+        }
+      ],
+      "tags": [
+        "adidas",
+        "Highsnobiety",
+        "placement"
+      ],
+      "project": {
+        "headline": "Highsnobiety x adidas — ‘hot’",
+        "body": [
+          "Visual by @lordstingray.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/CjGfg4MsdYd/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bbc-ice-cream-x-g-shock-20th-anniversary-2023-06-12",
+      "type": "placements",
+      "year": "2023",
+      "date": "2023-06-12",
+      "title": "BBC Ice Cream x G-Shock 20th anniversary",
+      "dek": "Placement.",
+      "description": "Unreleased dub w/ @lordstingray visual.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/CtaDUtFNBXh/"
+        }
+      ],
+      "tags": [
+        "BBC Ice Cream",
+        "G-Shock",
+        "placement",
+        "release"
+      ],
+      "project": {
+        "headline": "BBC Ice Cream x G-Shock 20th anniversary",
+        "body": [
+          "Unreleased dub w/ @lordstingray visual.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/CtaDUtFNBXh/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bomb-rush-cyberfunk-team-reptile-2023-08-17",
+      "type": "placements",
+      "year": "2023",
+      "date": "2023-08-17",
+      "title": "Bomb Rush Cyberfunk (Team Reptile)",
+      "dek": "Placement.",
+      "description": "“my first tune in a video game 🥲” — Switch + Steam. 1,416 likes.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/CwD1ibzKH6h/"
+        }
+      ],
+      "tags": [
+        "Bomb Rush Cyberfunk",
+        "EP",
+        "game",
+        "placement"
+      ],
+      "project": {
+        "headline": "Bomb Rush Cyberfunk (Team Reptile)",
+        "body": [
+          "“my first tune in a video game 🥲” — Switch + Steam. 1,416 likes.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/CwD1ibzKH6h/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "forbes-feature-2023-12-19",
+      "type": "placements",
+      "year": "2023",
+      "date": "2023-12-19",
+      "title": "Forbes feature",
+      "dek": "Placement.",
+      "description": "w/ @swamisound for @renegade.nyc — b2b off the back of a box truck.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DDxa4zDTBYM/"
+        }
+      ],
+      "tags": [
+        "placement"
+      ],
+      "project": {
+        "headline": "Forbes feature",
+        "body": [
+          "w/ @swamisound for @renegade.nyc — b2b off the back of a box truck.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DDxa4zDTBYM/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "audio-technica-vinyl-mix-2024-04-30",
+      "type": "placements",
+      "year": "2024",
+      "date": "2024-04-30",
+      "title": "Audio-Technica vinyl mix",
+      "dek": "Placement.",
+      "description": "“recorded my first vinyl mix for @audiotechnicausa.”",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/C6Y8NucOPrF/"
+        }
+      ],
+      "tags": [
+        "placement",
+        "vinyl"
+      ],
+      "project": {
+        "headline": "Audio-Technica vinyl mix",
+        "body": [
+          "“recorded my first vinyl mix for @audiotechnicausa.”",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/C6Y8NucOPrF/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "marc-jacobs-connection-2024-08-09",
+      "type": "placements",
+      "year": "2024",
+      "date": "2024-08-09",
+      "title": "Marc Jacobs connection",
+      "dek": "Placement.",
+      "description": "‘start something’ post tagged @marcjacobs. Brand relationship on record.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "brand",
+        "Marc Jacobs",
+        "placement"
+      ],
+      "project": {
+        "headline": "Marc Jacobs connection",
+        "body": [
+          "‘start something’ post tagged @marcjacobs. Brand relationship on record.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": []
+      }
+    },
+    {
+      "id": "start-something-for-marc-jacobs-2024-10-09-highlight",
+      "type": "placements",
+      "year": "2024",
+      "date": "2024-10-09 (highlight)",
+      "title": "‘start something’ for Marc Jacobs",
+      "dek": "Placement.",
+      "description": "Placement listed in the “placements” highlight; visual by @lordstingray. Confirms the Marc Jacobs brand relationship beyond the 2024-08-09 grid tag.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "brand",
+        "Marc Jacobs",
+        "placement"
+      ],
+      "project": {
+        "headline": "‘start something’ for Marc Jacobs",
+        "body": [
+          "Placement listed in the “placements” highlight; visual by @lordstingray. Confirms the Marc Jacobs brand relationship beyond the 2024-08-09 grid tag.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": []
+      }
+    },
+    {
+      "id": "hash-joint-w-birocratic-for-gu-japan-2024-10-09-highlight",
+      "type": "placements",
+      "year": "2024",
+      "date": "2024-10-09 (highlight)",
+      "title": "‘hash joint’ (w/ birocratic) for GU Japan",
+      "dek": "Placement.",
+      "description": "Placement listed in the “placements” highlight; cc @backcoltd. (GU = Uniqlo’s sister brand.)",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "brand",
+        "GU Japan",
+        "japan",
+        "placement"
+      ],
+      "project": {
+        "headline": "‘hash joint’ (w/ birocratic) for GU Japan",
+        "body": [
+          "Placement listed in the “placements” highlight; cc @backcoltd. (GU = Uniqlo’s sister brand.)",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": []
+      }
+    },
+    {
+      "id": "hero-for-heavn-2024-10-09-highlight",
+      "type": "placements",
+      "year": "2024",
+      "date": "2024-10-09 (highlight)",
+      "title": "‘hero’ for heavn",
+      "dek": "Placement.",
+      "description": "Placement listed in the “placements” highlight; visual by @lordstingray.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "heavn",
+        "placement"
+      ],
+      "project": {
+        "headline": "‘hero’ for heavn",
+        "body": [
+          "Placement listed in the “placements” highlight; visual by @lordstingray.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": []
+      }
+    },
+    {
+      "id": "circles-w-nick-am-for-zozo-villa-2024-10-09-highlight",
+      "type": "placements",
+      "year": "2024",
+      "date": "2024-10-09 (highlight)",
+      "title": "‘circles’ (w/ nick.am) for ZOZO Villa",
+      "dek": "Placement.",
+      "description": "Placement listed in the “placements” highlight. Companion to the 2022-05-05 grid post about the ZOZO Villa SS22 film — this names the specific track placed.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "placement",
+        "ZOZO Villa"
+      ],
+      "project": {
+        "headline": "‘circles’ (w/ nick.am) for ZOZO Villa",
+        "body": [
+          "Placement listed in the “placements” highlight. Companion to the 2022-05-05 grid post about the ZOZO Villa SS22 film — this names the specific track placed.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": []
+      }
+    },
+    {
+      "id": "paralympics-x-toyota-animation-sync-2025-03-27",
+      "type": "placements",
+      "year": "2025",
+      "date": "2025-03-27",
+      "title": "Paralympics x Toyota animation sync",
+      "dek": "Placement.",
+      "description": "‘shigoto werk’ featured in @biibocc animation for @paralympics w/ @toyota_jp. 1,246 likes.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DHuKDbtSOU0/"
+        }
+      ],
+      "tags": [
+        "collectible",
+        "Paralympics",
+        "placement",
+        "sync",
+        "Toyota"
+      ],
+      "project": {
+        "headline": "Paralympics x Toyota animation sync",
+        "body": [
+          "‘shigoto werk’ featured in @biibocc animation for @paralympics w/ @toyota_jp. 1,246 likes.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DHuKDbtSOU0/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rocket-league-wev-flag-in-game-2026-03-12",
+      "type": "placements",
+      "year": "2026",
+      "date": "2026-03-12",
+      "title": "Rocket League — wev flag in-game",
+      "dek": "Placement.",
+      "description": "“you can now fly the wev flag in @rocketleague 🤯… ‘shigoto werk’ also featured in game.” 578 likes.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DVy-A5FFcid/"
+        }
+      ],
+      "tags": [
+        "game",
+        "placement",
+        "Rocket League"
+      ],
+      "project": {
+        "headline": "Rocket League — wev flag in-game",
+        "body": [
+          "“you can now fly the wev flag in @rocketleague 🤯… ‘shigoto werk’ also featured in game.” 578 likes.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DVy-A5FFcid/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5-records-that-found-me-2026-05-03",
+      "type": "placements",
+      "year": "2026",
+      "date": "2026-05-03",
+      "title": "5 Records That Found Me",
+      "dek": "Placement.",
+      "description": "Video feature.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/reel/DX4wG_qic3r/"
+        }
+      ],
+      "tags": [
+        "placement"
+      ],
+      "project": {
+        "headline": "5 Records That Found Me",
+        "body": [
+          "Video feature.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/reel/DX4wG_qic3r/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "who-is-wev-hyde-fm-2026-05-15",
+      "type": "placements",
+      "year": "2026",
+      "date": "2026-05-15",
+      "title": "WHO IS WEV? (Hyde FM)",
+      "dek": "Placement.",
+      "description": "Interview + Spotify top 10.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        },
+        {
+          "label": "instagram source",
+          "url": "https://www.instagram.com/p/DYXtrXaFo3f/"
+        }
+      ],
+      "tags": [
+        "placement",
+        "press"
+      ],
+      "project": {
+        "headline": "WHO IS WEV? (Hyde FM)",
+        "body": [
+          "Interview + Spotify top 10.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": [
+          {
+            "label": "instagram source",
+            "url": "https://www.instagram.com/p/DYXtrXaFo3f/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "earmilk-ost-release-day-interview-2026-05-29",
+      "type": "placements",
+      "year": "2026",
+      "date": "2026-05-29",
+      "title": "EARMILK OST release-day interview",
+      "dek": "Placement.",
+      "description": "Press around the album launch.",
+      "image": "assets/placeholder-license.svg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "album",
+        "placement",
+        "press",
+        "release"
+      ],
+      "project": {
+        "headline": "EARMILK OST release-day interview",
+        "body": [
+          "Press around the album launch.",
+          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+        ],
+        "links": []
       }
     },
     {
@@ -2582,6 +5894,49 @@
         "spotifyUrl": "https://open.spotify.com/track/0gYR4FzmkwyuZi4bDN02hU",
         "artwork": "https://i.scdn.co/image/ab67616d0000b273f1570d5512011097a4809d94"
       }
+    ]
+  },
+  "sections": {
+    "works": {
+      "title": "works",
+      "dek": "Sync, games, brand placements, press, and commercial worlds around the music.",
+      "featuredIds": [
+        "the-new-order-magazine-025-interview-2021-10-07",
+        "zozo-villa-ss22-fashion-film-2022-05-05",
+        "serato-sample-ad-2022-07-13",
+        "highsnobiety-x-adidas-hot-2022-09-29",
+        "bbc-ice-cream-x-g-shock-20th-anniversary-2023-06-12",
+        "bomb-rush-cyberfunk-team-reptile-2023-08-17",
+        "forbes-feature-2023-12-19",
+        "audio-technica-vinyl-mix-2024-04-30",
+        "marc-jacobs-connection-2024-08-09",
+        "start-something-for-marc-jacobs-2024-10-09-highlight",
+        "hash-joint-w-birocratic-for-gu-japan-2024-10-09-highlight",
+        "hero-for-heavn-2024-10-09-highlight",
+        "circles-w-nick-am-for-zozo-villa-2024-10-09-highlight",
+        "paralympics-x-toyota-animation-sync-2025-03-27",
+        "rocket-league-wev-flag-in-game-2026-03-12",
+        "5-records-that-found-me-2026-05-03"
+      ]
+    }
+  },
+  "cms": {
+    "version": 1,
+    "editableCollections": [
+      "selectedWorks",
+      "items",
+      "videos",
+      "dates",
+      "licensing.tracks"
+    ],
+    "mediaStorage": "local browser drafts; export JSON/media for production commit",
+    "blockTypes": [
+      "text",
+      "image",
+      "video",
+      "embed",
+      "link",
+      "quote"
     ]
   }
 }

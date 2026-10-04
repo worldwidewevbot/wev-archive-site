@@ -19,6 +19,8 @@ const els = {
   filterBar: document.querySelector(".filter-bar"),
   archiveList: document.querySelector(".archive-list"),
   archiveProjectPanel: document.querySelector(".archive-layout .project-panel"),
+  worksDek: document.querySelector(".works-dek"),
+  worksList: document.querySelector(".works-list"),
   videoList: document.querySelector(".video-list"),
   dateList: document.querySelector(".date-list"),
   projectModal: document.querySelector(".project-modal"),
@@ -31,6 +33,7 @@ const els = {
   selectedTracks: document.querySelector(".selected-tracks"),
   requestForm: document.querySelector(".request-form"),
   requestMail: document.querySelector(".request-mail"),
+  adminArchiveEditor: document.querySelector(".admin-archive-editor"),
   adminEditor: document.querySelector(".admin-editor"),
   adminExport: document.querySelector(".admin-export"),
   adminActions: document.querySelectorAll("[data-admin-action]"),
@@ -43,7 +46,7 @@ async function loadArchive() {
     throw new Error(`Archive content failed to load: ${response.status}`);
   }
   state.data = await response.json();
-  applyCatalogDraft();
+  applyArchiveDraft();
   render();
 }
 
@@ -52,6 +55,7 @@ function render() {
   void site;
   setText(els.licensingIntro, licensing.intro);
   renderSelectedWorks(selectedWorks);
+  renderWorks();
   renderFilters(filters);
   renderItems(mergeArchiveItems(selectedWorks, items, videos));
   renderVideos(videos);
@@ -87,6 +91,16 @@ function renderSelectedWorks(works) {
   els.selectedList.replaceChildren(...works.map((work) => renderItem(work, { selected: true })));
 }
 
+function renderWorks() {
+  if (!els.worksList || !state.data.sections?.works) return;
+  const section = state.data.sections.works;
+  setText(els.worksDek, section.dek);
+  const archiveItems = mergeArchiveItems(state.data.selectedWorks, state.data.items, state.data.videos);
+  const byId = new Map(archiveItems.map((item) => [item.id, item]));
+  const featured = (section.featuredIds || []).map((id) => byId.get(id)).filter(Boolean);
+  els.worksList.replaceChildren(...featured.map((item) => renderItem(item, { compact: true })));
+}
+
 function renderFilters(filters) {
   if (!els.filterBar) return;
   els.filterBar.replaceChildren(
@@ -114,9 +128,9 @@ function renderItems(items) {
 
 function renderItem(item, options = {}) {
   const article = document.createElement("article");
-  article.className = options.selected ? "archive-item selected-work" : "archive-item";
+  article.className = options.selected ? "archive-item selected-work" : options.compact ? "archive-item works-item" : "archive-item";
   article.dataset.type = item.type;
-  const media = item.video ? renderVideoEmbed(item.video) : `<img class="archive-media" src="${escapeAttribute(item.image)}" alt="" loading="lazy" />`;
+  const media = renderItemMedia(item);
   article.innerHTML = `
     <div class="archive-copy">
       <div class="meta">
@@ -133,6 +147,7 @@ function renderItem(item, options = {}) {
         <div class="tag-row" aria-label="Tags">
           ${item.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}
         </div>
+        ${renderBlockSummary(item)}
       </div>
     </div>
     ${media}
@@ -144,6 +159,27 @@ function renderItem(item, options = {}) {
     });
   });
   return article;
+}
+
+function renderItemMedia(item) {
+  const media = getPrimaryMedia(item);
+  if (item.video) return renderVideoEmbed(item.video);
+  if (media?.kind === "video") {
+    return `<video class="archive-media" src="${escapeAttribute(media.src)}" controls playsinline preload="metadata"></video>`;
+  }
+  return `<img class="archive-media" src="${escapeAttribute(media?.src || item.image || "assets/placeholder-release.svg")}" alt="" loading="lazy" />`;
+}
+
+function getPrimaryMedia(item) {
+  if (Array.isArray(item.media) && item.media.length) return item.media[0];
+  if (item.image) return { kind: "image", src: item.image };
+  return null;
+}
+
+function renderBlockSummary(item) {
+  const blocks = item.blocks || [];
+  if (!blocks.length) return "";
+  return `<div class="block-summary">${blocks.slice(0, 3).map((block) => `<span>${escapeHtml(block.type || "block")}</span>`).join("")}</div>`;
 }
 
 function createYoutubeEmbedUrl(video) {
@@ -211,7 +247,7 @@ function renderProjectDetail(item) {
   return `
     <article class="project-detail">
       <div class="project-detail-media">
-        <img src="${escapeAttribute(item.image)}" alt="" />
+        ${renderProjectMedia(item)}
         <button class="text-link button-link project-close" type="button" data-action="close-project">close</button>
       </div>
       <div class="project-detail-copy">
@@ -221,12 +257,36 @@ function renderProjectDetail(item) {
         </div>
         <h2>${escapeHtml(item.project.headline)}</h2>
         ${item.project.body.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+        ${renderProjectBlocks(item)}
         <div class="link-row" aria-label="Links">
           ${item.project.links.map((link) => `<a class="text-link" href="${escapeAttribute(link.url)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>`).join("")}
         </div>
       </div>
     </article>
   `;
+}
+
+function renderProjectMedia(item) {
+  const media = getPrimaryMedia(item);
+  if (media?.kind === "video") {
+    return `<video src="${escapeAttribute(media.src)}" controls playsinline preload="metadata"></video>`;
+  }
+  return `<img src="${escapeAttribute(media?.src || item.image || "assets/placeholder-release.svg")}" alt="" />`;
+}
+
+function renderProjectBlocks(item) {
+  const blocks = item.blocks || [];
+  if (!blocks.length) return "";
+  return `<div class="project-blocks">${blocks.map(renderProjectBlock).join("")}</div>`;
+}
+
+function renderProjectBlock(block) {
+  if (block.type === "image") return `<figure><img src="${escapeAttribute(block.src || "")}" alt="" /><figcaption>${escapeHtml(block.caption || "")}</figcaption></figure>`;
+  if (block.type === "video") return `<figure><video src="${escapeAttribute(block.src || "")}" controls playsinline preload="metadata"></video><figcaption>${escapeHtml(block.caption || "")}</figcaption></figure>`;
+  if (block.type === "embed") return `<p><a class="text-link" href="${escapeAttribute(block.url || "#")}" target="_blank" rel="noreferrer">${escapeHtml(block.label || block.url || "embed")}</a></p>`;
+  if (block.type === "quote") return `<blockquote>${escapeHtml(block.text || "")}</blockquote>`;
+  if (block.type === "link") return `<p><a class="text-link" href="${escapeAttribute(block.url || "#")}" target="_blank" rel="noreferrer">${escapeHtml(block.label || block.url || "link")}</a></p>`;
+  return `<p>${escapeHtml(block.text || "")}</p>`;
 }
 
 function bindProjectClose(panel) {
@@ -287,7 +347,141 @@ function renderCatalog() {
   renderSpotifyPreview();
   renderTracks(tracks);
   renderSelectedTracks();
+  renderAdminArchiveEditor();
   renderAdminEditor();
+}
+
+function renderAdminArchiveEditor() {
+  if (!els.adminArchiveEditor) return;
+  const items = state.data.items;
+  els.adminArchiveEditor.replaceChildren(
+    ...items.map((item) => {
+      const article = document.createElement("article");
+      article.className = "admin-item";
+      article.dataset.itemId = item.id;
+      article.innerHTML = `
+        <div class="admin-item-head">
+          <strong>${escapeHtml(item.title)}</strong>
+          <span>${escapeHtml([item.type, item.year].filter(Boolean).join(" / "))}</span>
+        </div>
+        <label><span>title</span><input data-item-field="title" value="${escapeAttribute(item.title || "")}" /></label>
+        <label><span>type</span><select data-item-field="type">${state.data.filters.filter((filter) => filter !== "all").map((filter) => `<option>${escapeHtml(filter)}</option>`).join("")}</select></label>
+        <label><span>date / year</span><input data-item-field="date" value="${escapeAttribute(item.date || item.year || "")}" /></label>
+        <label class="wide"><span>dek</span><input data-item-field="dek" value="${escapeAttribute(item.dek || "")}" /></label>
+        <label class="wide"><span>description</span><textarea data-item-field="description" rows="3">${escapeHtml(item.description || "")}</textarea></label>
+        <label class="wide"><span>tags</span><input data-item-field="tags" value="${escapeAttribute((item.tags || []).join(", "))}" /></label>
+        <label class="wide"><span>links</span><textarea data-item-field="links" rows="3">${escapeHtml(formatLinksForEdit(item.links || []))}</textarea></label>
+        <label class="wide"><span>content blocks</span><textarea data-item-field="blocks" rows="5">${escapeHtml(formatBlocksForEdit(item))}</textarea></label>
+        <label class="wide media-upload"><span>upload image / video</span><input data-item-upload type="file" accept="image/*,video/*" /></label>
+        <div class="media-bin">${renderAdminMediaBin(item)}</div>
+      `;
+      article.querySelector("[data-item-field='type']").value = item.type;
+      article.querySelectorAll("[data-item-field]").forEach((input) => {
+        input.addEventListener("change", handleArchiveItemChange);
+      });
+      article.querySelector("[data-item-upload]").addEventListener("change", handleArchiveUpload);
+      article.querySelectorAll("[data-remove-media]").forEach((button) => {
+        button.addEventListener("click", handleRemoveMedia);
+      });
+      return article;
+    })
+  );
+}
+
+function handleArchiveItemChange(event) {
+  const item = getAdminItem(event.target);
+  if (!item) return;
+  const field = event.target.dataset.itemField;
+  if (field === "tags") {
+    item.tags = splitLinesOrCommas(event.target.value);
+  } else if (field === "links") {
+    item.links = parseLinksFromEdit(event.target.value);
+    item.project = item.project || { headline: item.title, body: [], links: [] };
+    item.project.links = item.links.filter((link) => !link.action);
+  } else if (field === "blocks") {
+    item.blocks = parseBlocksFromEdit(event.target.value);
+  } else if (field === "date") {
+    item.date = event.target.value.trim();
+    item.year = inferYear(item.date);
+  } else {
+    item[field] = event.target.value.trim();
+    if (field === "title" && item.project) item.project.headline = item.title;
+  }
+  saveArchiveDraft();
+  render();
+}
+
+function handleArchiveUpload(event) {
+  const item = getAdminItem(event.target);
+  const file = event.target.files?.[0];
+  if (!item || !file) return;
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    const kind = file.type.startsWith("video/") ? "video" : "image";
+    item.media = [{ kind, src: reader.result, name: file.name }, ...(item.media || [])];
+    item.image = kind === "image" ? reader.result : item.image;
+    saveArchiveDraft();
+    render();
+  });
+  reader.readAsDataURL(file);
+}
+
+function handleRemoveMedia(event) {
+  const item = getAdminItem(event.target);
+  if (!item) return;
+  const index = Number(event.target.dataset.removeMedia);
+  item.media = (item.media || []).filter((_, mediaIndex) => mediaIndex !== index);
+  saveArchiveDraft();
+  render();
+}
+
+function getAdminItem(target) {
+  const id = target.closest("[data-item-id]")?.dataset.itemId;
+  return state.data.items.find((item) => item.id === id);
+}
+
+function renderAdminMediaBin(item) {
+  const media = item.media || [];
+  if (!media.length) return `<p class="empty-note">No uploaded media.</p>`;
+  return media.map((entry, index) => `<button class="selected-track" type="button" data-remove-media="${index}">${escapeHtml(entry.name || entry.kind || "media")} ×</button>`).join("");
+}
+
+function formatLinksForEdit(links) {
+  return links.filter((link) => !link.action).map((link) => `${link.label || "link"} | ${link.url || ""}`).join("\n");
+}
+
+function parseLinksFromEdit(value) {
+  const links = [{ label: "open project", url: "#", action: "open-project" }];
+  value.split("\n").map((line) => line.trim()).filter(Boolean).forEach((line) => {
+    const [label, url] = line.split("|").map((part) => part.trim());
+    if (url) links.push({ label: label || "link", url });
+  });
+  return links;
+}
+
+function formatBlocksForEdit(item) {
+  const blocks = item.blocks?.length ? item.blocks : (item.project?.body || []).map((text) => ({ type: "text", text }));
+  return blocks.map((block) => `${block.type || "text"} | ${block.text || block.caption || block.url || ""}`).join("\n");
+}
+
+function parseBlocksFromEdit(value) {
+  return value.split("\n").map((line) => line.trim()).filter(Boolean).map((line) => {
+    const [typeRaw, contentRaw] = line.split("|");
+    const type = (typeRaw || "text").trim().toLowerCase();
+    const content = (contentRaw || "").trim();
+    if (type === "link" || type === "embed") return { type, label: content, url: content };
+    if (type === "quote") return { type, text: content };
+    return { type: "text", text: content || line };
+  });
+}
+
+function splitLinesOrCommas(value) {
+  return value.split(/[\n,]/).map((entry) => entry.trim()).filter(Boolean);
+}
+
+function inferYear(value) {
+  const match = String(value || "").match(/\d{4}/);
+  return match ? match[0] : value;
 }
 
 function getVisibleTracks() {
@@ -352,31 +546,31 @@ function renderTracks(tracks) {
       const artwork = track.artwork || "assets/placeholder-license.svg";
       const releaseDate = formatReleaseDate(track.releaseDate);
       const tags = getTrackTags(track);
+      const bpm = formatBpm(track.bpm);
+      const spotifyEmbedUrl = spotifyId ? createSpotifyEmbedUrl(spotifyId) : "";
       row.innerHTML = `
         <div class="track-hero" style="--track-art: url('${escapeAttribute(artwork)}')">
           <img class="track-artwork" src="${escapeAttribute(artwork)}" alt="" loading="lazy" />
           <div class="track-main">
             <strong class="track-title">${escapeHtml(track.title)}</strong>
             <span class="track-release">${escapeHtml(track.release || track.source)}</span>
-            <span class="track-bpm">${track.bpm ? `${Number(track.bpm)}bpm` : "bpm tbd"}</span>
+            ${bpm ? `<span class="track-bpm">${escapeHtml(bpm)}</span>` : ""}
           </div>
-          <span class="track-date">${escapeHtml(releaseDate)}</span>
+          ${releaseDate ? `<span class="track-date">${escapeHtml(releaseDate)}</span>` : ""}
           <button class="track-preview" type="button" ${spotifyId ? "" : "disabled"} aria-label="${escapeAttribute(isPreviewing ? `Close Spotify preview for ${track.title}` : `Preview ${track.title} on Spotify`)}" aria-pressed="${isPreviewing}">
-            <span>${isPreviewing ? "pause" : "play"}</span>
+            <span>${isPreviewing ? "Close preview" : "Preview"}</span>
           </button>
         </div>
         <div class="track-lower">
-          <div class="track-tags" aria-label="Track tags">
-            ${tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("") || "<span>tag tbd</span>"}
-          </div>
+          ${tags.length ? `<div class="track-tags" aria-label="Track tags">${tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>` : ""}
           <div class="track-actions">
             <span class="track-status">${escapeHtml(track.status || "clearable")}</span>
             <button class="track-select" type="button" aria-pressed="${isSelected}">${isSelected ? "Requested" : "Request"}</button>
           </div>
         </div>
         ${
-          isPreviewing && spotifyId
-            ? `<div class="track-player"><iframe src="https://open.spotify.com/embed/track/${escapeAttribute(spotifyId)}?utm_source=generator&theme=0" title="${escapeAttribute(`Spotify preview: ${track.title}`)}" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>`
+          isPreviewing && spotifyEmbedUrl
+            ? `<div class="track-player"><iframe src="${escapeAttribute(spotifyEmbedUrl)}" title="${escapeAttribute(`Spotify preview: ${track.title}`)}" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="eager"></iframe></div>`
             : ""
         }
       `;
@@ -408,6 +602,13 @@ function formatReleaseDate(value) {
   return `${year}-${month}-${day}`;
 }
 
+function formatBpm(value) {
+  if (value === null || value === undefined || value === "") return "";
+  const bpm = Number(value);
+  if (!Number.isFinite(bpm) || bpm <= 0) return "";
+  return `${Number.isInteger(bpm) ? bpm : bpm.toFixed(2).replace(/\.?0+$/, "")} bpm`;
+}
+
 function renderSelectedTracks() {
   if (!els.selectedTracks) return;
   const selected = state.data.licensing.tracks.filter((track) => state.selectedTrackIds.has(track.id));
@@ -417,7 +618,7 @@ function renderSelectedTracks() {
           const row = document.createElement("button");
           row.className = "selected-track";
           row.type = "button";
-          row.textContent = `${track.title} / ${track.bpm ? `${track.bpm} bpm` : "bpm tbd"}`;
+          row.textContent = [track.title, formatBpm(track.bpm)].filter(Boolean).join(" / ");
           row.addEventListener("click", () => {
             state.selectedTrackIds.delete(track.id);
             renderCatalog();
@@ -487,7 +688,7 @@ function handleAdminChange(event) {
   } else if (field === "tags") {
     track.tags = event.target.value.split(",").map((tag) => tag.trim()).filter(Boolean);
   }
-  saveCatalogDraft();
+  saveArchiveDraft();
   renderCatalog();
 }
 
@@ -517,28 +718,28 @@ function bindCatalogControls() {
   els.adminActions.forEach((button) => {
     button.addEventListener("click", () => {
       if (button.dataset.adminAction === "export") {
-        els.adminExport.value = JSON.stringify(state.data.licensing.tracks, null, 2);
+        els.adminExport.value = JSON.stringify(state.data, null, 2);
       } else {
-        localStorage.removeItem("wevCatalogDraft");
+        localStorage.removeItem("wevArchiveDraft");
         location.reload();
       }
     });
   });
 }
 
-function applyCatalogDraft() {
-  const draft = localStorage.getItem("wevCatalogDraft");
+function applyArchiveDraft() {
+  const draft = localStorage.getItem("wevArchiveDraft");
   if (!draft) return;
   try {
-    const tracks = JSON.parse(draft);
-    if (Array.isArray(tracks)) state.data.licensing.tracks = tracks;
+    const archive = JSON.parse(draft);
+    if (archive && typeof archive === "object") state.data = archive;
   } catch {
-    localStorage.removeItem("wevCatalogDraft");
+    localStorage.removeItem("wevArchiveDraft");
   }
 }
 
-function saveCatalogDraft() {
-  localStorage.setItem("wevCatalogDraft", JSON.stringify(state.data.licensing.tracks));
+function saveArchiveDraft() {
+  localStorage.setItem("wevArchiveDraft", JSON.stringify(state.data));
 }
 
 function getTrackTags(track) {
@@ -556,6 +757,12 @@ function getSpotifyTrackId(track) {
   } catch {
     return "";
   }
+}
+
+function createSpotifyEmbedUrl(spotifyId) {
+  const embedUrl = new URL(`https://open.spotify.com/embed/track/${spotifyId}`);
+  embedUrl.search = new URLSearchParams({ utm_source: "generator", theme: "0" }).toString();
+  return embedUrl.href;
 }
 
 function formatDate(value) {
@@ -589,6 +796,8 @@ function renderPage() {
   const requested =
     window.location.hash === "#archive"
       ? "archive"
+      : window.location.hash === "#works"
+        ? "works"
       : window.location.hash === "#licensing"
         ? "licensing"
         : window.location.hash === "#admin"

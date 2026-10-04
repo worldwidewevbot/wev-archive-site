@@ -14,9 +14,11 @@
       </a>
       <nav class="top-nav" aria-label="Primary">
         <a href="#selected">selected works</a>
+        <a href="#works">works</a>
         <a href="#archive">archive</a>
         <a href="#licensing" data-route="licensing">licensing</a>
         <a href="#contact">contact</a>
+        <a href="#admin">cms</a>
       </nav>
     </header>
 
@@ -70,6 +72,16 @@
           <div class="filter-bar" role="list" aria-label="Archive filters"></div>
           <div class="archive-list" aria-live="polite"></div>
         </div>
+      </section>
+
+      <section class="works-page page-view" id="works" data-page="works" aria-labelledby="works-title">
+        <div class="section-rule"></div>
+        <div class="works-heading">
+          <p class="kicker">sync / brand placements</p>
+          <h2 id="works-title">works</h2>
+          <p class="works-dek"></p>
+        </div>
+        <div class="works-list" aria-live="polite"></div>
       </section>
 
       <section class="licensing-page page-view" id="licensing" data-page="licensing" aria-labelledby="licensing-title">
@@ -178,13 +190,17 @@
       <section class="admin-page page-view" id="admin" data-page="admin" aria-labelledby="admin-title">
         <section class="admin-panel">
           <div>
-            <p class="kicker">admin scaffold</p>
-            <h2 id="admin-title">catalog editor</h2>
-            <p>Local draft editor for tags, BPM, source, usage notes, and import/export. Production auth needs a server before real passwords or API keys are added.</p>
+            <p class="kicker">cms</p>
+            <h2 id="admin-title">archive editor</h2>
+            <p>Local draft editor for archive entries, tags, content blocks, links, and per-entry media uploads. Export the JSON when the edit pass is ready to publish.</p>
+          </div>
+          <div class="admin-archive-editor"></div>
+          <div class="admin-subhead">
+            <h3>licensing catalog</h3>
           </div>
           <div class="admin-editor"></div>
           <div class="admin-actions">
-            <button class="catalog-button" type="button" data-admin-action="export">export json</button>
+            <button class="catalog-button" type="button" data-admin-action="export">export archive json</button>
             <button class="catalog-button" type="button" data-admin-action="reset">reset local edits</button>
           </div>
           <textarea class="admin-export" rows="8" readonly></textarea>
