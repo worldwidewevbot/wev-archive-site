@@ -8,6 +8,7 @@ const state = {
   catalogSort: "releaseDate",
   catalogSearch: "",
   catalogTag: "all",
+  activePreviewTrackId: null,
   selectedTrackIds: new Set(),
   openProjectId: null,
   openProjectSurface: null,
@@ -299,6 +300,7 @@ function renderVideoEmbed(video) {
 }
 
 function renderLink(link, item) {
+  if (link.label?.toLowerCase() === "instagram source") return "";
   const action = link.action ? ` data-action="${escapeAttribute(link.action)}"` : "";
   const target = link.action ? "" : ' target="_blank" rel="noreferrer"';
   return `<a class="text-link" href="${escapeAttribute(link.url)}"${action}${target}>${escapeHtml(link.label)}</a>`;
@@ -759,6 +761,8 @@ function renderTracks(tracks) {
       const releaseDate = formatReleaseDate(track.releaseDate);
       const tags = getTrackTags(track);
       const bpm = formatBpm(track.bpm);
+      const isPreviewing = state.activePreviewTrackId === track.id;
+      const playerUrl = createSpotifyEmbedUrl(spotifyId);
       row.innerHTML = `
         <div class="track-hero" style="--track-art: url('${escapeAttribute(artwork)}')">
           <img class="track-artwork" src="${escapeAttribute(artwork)}" alt="" loading="lazy" />
@@ -768,8 +772,8 @@ function renderTracks(tracks) {
             ${bpm ? `<span class="track-bpm">${escapeHtml(bpm)}</span>` : ""}
           </div>
           ${releaseDate ? `<span class="track-date">${escapeHtml(releaseDate)}</span>` : ""}
-          <button class="track-preview" type="button" ${spotifyId ? "" : "disabled"} aria-label="${escapeAttribute(`Open ${track.title} on Spotify`)}">
-            <span>Open Spotify</span>
+          <button class="track-preview" type="button" ${spotifyId || track.previewUrl ? "" : "disabled"} aria-label="${escapeAttribute(`Preview ${track.title}`)}" aria-pressed="${isPreviewing}">
+            <span>${isPreviewing ? "Close preview" : "Preview"}</span>
           </button>
         </div>
         <div class="track-lower">
@@ -779,6 +783,11 @@ function renderTracks(tracks) {
             <button class="track-select" type="button" aria-pressed="${isSelected}">${isSelected ? "Requested" : "Request"}</button>
           </div>
         </div>
+        ${
+          isPreviewing
+            ? `<div class="track-player">${renderTrackPlayer(track, playerUrl)}</div>`
+            : ""
+        }
       `;
       row.querySelector(".track-select").addEventListener("click", () => {
         state.selectedTrackIds.clear();
@@ -787,11 +796,22 @@ function renderTracks(tracks) {
         scrollToRequestForm();
       });
       row.querySelector(".track-preview").addEventListener("click", () => {
-        if (track.spotifyUrl) window.open(track.spotifyUrl, "_blank", "noopener,noreferrer");
+        state.activePreviewTrackId = isPreviewing ? null : track.id;
+        renderCatalog();
       });
       return row;
     })
   );
+}
+
+function renderTrackPlayer(track, spotifyEmbedUrl) {
+  if (track.previewUrl) {
+    return `<audio src="${escapeAttribute(track.previewUrl)}" controls autoplay></audio>`;
+  }
+  if (spotifyEmbedUrl) {
+    return `<iframe src="${escapeAttribute(spotifyEmbedUrl)}" title="${escapeAttribute(`Spotify preview: ${track.title}`)}" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="eager"></iframe>`;
+  }
+  return "";
 }
 
 function formatReleaseDate(value) {
@@ -1108,6 +1128,13 @@ function getSpotifyTrackId(track) {
   } catch {
     return "";
   }
+}
+
+function createSpotifyEmbedUrl(spotifyId) {
+  if (!spotifyId) return "";
+  const embedUrl = new URL(`https://open.spotify.com/embed/track/${spotifyId}`);
+  embedUrl.search = new URLSearchParams({ utm_source: "generator", theme: "0", autoplay: "1" }).toString();
+  return embedUrl.href;
 }
 
 function formatDate(value) {
