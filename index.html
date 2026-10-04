@@ -205,15 +205,30 @@
             <span>post</span>
             <select class="admin-item-select"></select>
           </label>
+          <div class="admin-inline-actions">
+            <button class="catalog-button" type="button" data-admin-action="new-post">new post</button>
+            <button class="catalog-button danger-button" type="button" data-admin-action="delete-post">delete post</button>
+          </div>
           <div class="admin-archive-editor"></div>
           <div class="admin-subhead">
             <h3>licensing catalog</h3>
           </div>
+          <label class="admin-picker admin-track-picker">
+            <span>track</span>
+            <select class="admin-track-select"></select>
+          </label>
+          <div class="admin-inline-actions admin-track-actions">
+            <button class="catalog-button" type="button" data-admin-action="new-track">new track</button>
+            <button class="catalog-button danger-button" type="button" data-admin-action="delete-track">delete track</button>
+          </div>
           <div class="admin-editor"></div>
           <div class="admin-actions">
+            <button class="catalog-button" type="button" data-admin-action="save">save changes</button>
             <button class="catalog-button" type="button" data-admin-action="export">export archive json</button>
+            <button class="catalog-button" type="button" data-admin-action="download">download json</button>
             <button class="catalog-button" type="button" data-admin-action="reset">reset local edits</button>
           </div>
+          <p class="admin-save-status" aria-live="polite"></p>
           <textarea class="admin-export" rows="8" readonly></textarea>
         </section>
       </section>

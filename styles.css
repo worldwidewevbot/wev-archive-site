@@ -665,6 +665,16 @@ body.modal-open {
   cursor: pointer;
 }
 
+.danger-button {
+  border-color: #b00020;
+  color: #b00020;
+}
+
+.danger-button:hover {
+  background: #b00020;
+  color: #fff;
+}
+
 .catalog-button[aria-pressed="true"],
 .tag-button[aria-pressed="true"],
 .catalog-button:hover,
@@ -685,6 +695,7 @@ body.modal-open {
 .request-form textarea,
 .admin-track input,
 .admin-track select,
+.admin-track textarea,
 .admin-item input,
 .admin-item select,
 .admin-item textarea,
@@ -1151,8 +1162,16 @@ body.modal-open {
   gap: 14px;
 }
 
-.admin-picker {
+.admin-picker,
+.admin-inline-actions,
+.admin-save-status {
   grid-column: 2;
+}
+
+.admin-inline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .admin-subhead {
@@ -1219,6 +1238,35 @@ body.modal-open {
   grid-column: 1 / -1;
 }
 
+.admin-block-editor {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-block-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.admin-block-header > span {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.admin-block-list {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-block-row {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr) minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
 .media-bin {
   grid-column: 1 / -1;
   display: flex;
@@ -1228,11 +1276,20 @@ body.modal-open {
 
 .admin-track {
   display: grid;
-  grid-template-columns: minmax(160px, 1fr) 90px 130px minmax(220px, 1.2fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
-  padding-bottom: 8px;
+  padding-bottom: 14px;
   border-bottom: 1px solid var(--soft);
   align-items: end;
+}
+
+.admin-track > strong {
+  grid-column: 1 / -1;
+  font-size: 18px;
+}
+
+.admin-track .wide {
+  grid-column: 1 / -1;
 }
 
 .admin-actions,
@@ -1244,6 +1301,13 @@ body.modal-open {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.admin-save-status {
+  min-height: 20px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .admin-export {
@@ -1342,6 +1406,7 @@ body.modal-open {
   .admin-panel,
   .admin-login,
   .admin-item,
+  .admin-block-row,
   .admin-track {
     grid-template-columns: 1fr;
   }
@@ -1465,6 +1530,8 @@ body.modal-open {
 
   .admin-archive-editor,
   .admin-picker,
+  .admin-inline-actions,
+  .admin-save-status,
   .admin-subhead {
     grid-column: auto;
     grid-row: auto;

@@ -3,6 +3,7 @@ const state = {
   page: "selected",
   adminUnlocked: sessionStorage.getItem("wevCmsUnlocked") === "true",
   adminItemId: null,
+  adminTrackId: null,
   catalogSource: "published",
   catalogSort: "releaseDate",
   catalogSearch: "",
@@ -41,8 +42,10 @@ const els = {
   adminLoginError: document.querySelector(".admin-login-error"),
   adminPanel: document.querySelector(".admin-panel"),
   adminItemSelect: document.querySelector(".admin-item-select"),
+  adminTrackSelect: document.querySelector(".admin-track-select"),
   adminEditor: document.querySelector(".admin-editor"),
   adminExport: document.querySelector(".admin-export"),
+  adminSaveStatus: document.querySelector(".admin-save-status"),
   adminActions: document.querySelectorAll("[data-admin-action]"),
   licensingIntro: document.querySelector("#licensing-intro")
 };
@@ -110,6 +113,7 @@ function syncCollectionDesignations() {
   state.data.selectedWorks = getSelectedWorks();
   if (state.data.sections?.works) state.data.sections.works.featuredIds = getWorksItems().map((item) => item.id);
   if (!state.adminItemId && state.data.items.length) state.adminItemId = [...state.data.items].sort(sortByMostRecent)[0].id;
+  if (!state.adminTrackId && state.data.licensing?.tracks?.length) state.adminTrackId = [...state.data.licensing.tracks].sort(sortTracksForAdmin)[0].id;
 }
 
 function getSelectedWorks() {
@@ -124,6 +128,12 @@ function sortByMostRecent(a, b) {
   const aTime = getSortTime(a);
   const bTime = getSortTime(b);
   if (aTime !== bTime) return bTime - aTime;
+  return String(a.title || "").localeCompare(String(b.title || ""));
+}
+
+function sortTracksForAdmin(a, b) {
+  const dateSort = String(b.releaseDate || "").localeCompare(String(a.releaseDate || ""));
+  if (dateSort) return dateSort;
   return String(a.title || "").localeCompare(String(b.title || ""));
 }
 
@@ -448,7 +458,13 @@ function renderAdminArchiveEditor() {
     <label class="wide"><span>description</span><textarea data-item-field="description" rows="3">${escapeHtml(item.description || "")}</textarea></label>
     <label class="wide"><span>tags</span><input data-item-field="tags" value="${escapeAttribute((item.tags || []).join(", "))}" /></label>
     <label class="wide"><span>links</span><textarea data-item-field="links" rows="3">${escapeHtml(formatLinksForEdit(item.links || []))}</textarea></label>
-    <label class="wide"><span>content blocks</span><textarea data-item-field="blocks" rows="5">${escapeHtml(formatBlocksForEdit(item))}</textarea></label>
+    <div class="admin-block-editor wide">
+      <div class="admin-block-header">
+        <span>content blocks</span>
+        <button class="catalog-button" type="button" data-add-block>add block</button>
+      </div>
+      <div class="admin-block-list">${renderAdminBlockRows(item)}</div>
+    </div>
     <label class="wide media-upload"><span>upload image / video</span><input data-item-upload type="file" accept="image/*,video/*" /></label>
     <div class="media-bin">${renderAdminMediaBin(item)}</div>
   `;
@@ -459,6 +475,13 @@ function renderAdminArchiveEditor() {
   article.querySelectorAll("[data-item-flag]").forEach((input) => {
     input.addEventListener("change", handleArchiveFlagChange);
   });
+  article.querySelectorAll("[data-block-field]").forEach((input) => {
+    input.addEventListener("change", handleBlockChange);
+  });
+  article.querySelectorAll("[data-delete-block]").forEach((button) => {
+    button.addEventListener("click", handleDeleteBlock);
+  });
+  article.querySelector("[data-add-block]").addEventListener("click", handleAddBlock);
   article.querySelector("[data-item-upload]").addEventListener("change", handleArchiveUpload);
   article.querySelectorAll("[data-remove-media]").forEach((button) => {
     button.addEventListener("click", handleRemoveMedia);
@@ -486,12 +509,85 @@ function renderAdminPicker() {
   els.adminItemSelect.value = state.adminItemId || items[0]?.id || "";
 }
 
+function renderAdminTrackPicker() {
+  if (!els.adminTrackSelect) return;
+  const tracks = [...state.data.licensing.tracks].sort(sortTracksForAdmin);
+  els.adminTrackSelect.replaceChildren(
+    ...tracks.map((track) => {
+      const option = document.createElement("option");
+      option.value = track.id;
+      option.textContent = [track.releaseDate, track.title, track.release].filter(Boolean).join(" / ");
+      return option;
+    })
+  );
+  els.adminTrackSelect.value = state.adminTrackId || tracks[0]?.id || "";
+}
+
+function renderAdminBlockRows(item) {
+  const blocks = getEditableBlocks(item);
+  if (!blocks.length) return `<p class="empty-note">No content blocks yet.</p>`;
+  return blocks.map((block, index) => `
+    <div class="admin-block-row" data-block-index="${index}">
+      <select data-block-field="type">
+        ${["text", "quote", "link", "embed", "image", "video"].map((type) => `<option ${block.type === type ? "selected" : ""}>${type}</option>`).join("")}
+      </select>
+      <input data-block-field="text" value="${escapeAttribute(block.text || block.caption || block.label || "")}" placeholder="text / caption / label" />
+      <input data-block-field="url" value="${escapeAttribute(block.url || block.src || "")}" placeholder="url or media path" />
+      <button class="catalog-button danger-button" type="button" data-delete-block="${index}">delete</button>
+    </div>
+  `).join("");
+}
+
+function getEditableBlocks(item) {
+  if (!Array.isArray(item.blocks)) {
+    item.blocks = (item.project?.body || []).map((text) => ({ type: "text", text }));
+  }
+  return item.blocks;
+}
+
+function handleAddBlock(event) {
+  const item = getAdminItem(event.target);
+  if (!item) return;
+  getEditableBlocks(item).push({ type: "text", text: "New block" });
+  markCmsDirty();
+  renderAdminArchiveEditor();
+}
+
+function handleDeleteBlock(event) {
+  const item = getAdminItem(event.target);
+  if (!item) return;
+  const index = Number(event.target.dataset.deleteBlock);
+  item.blocks = getEditableBlocks(item).filter((_, blockIndex) => blockIndex !== index);
+  markCmsDirty();
+  renderAdminArchiveEditor();
+}
+
+function handleBlockChange(event) {
+  const item = getAdminItem(event.target);
+  if (!item) return;
+  const row = event.target.closest("[data-block-index]");
+  const block = getEditableBlocks(item)[Number(row.dataset.blockIndex)];
+  if (!block) return;
+  const field = event.target.dataset.blockField;
+  if (field === "type") block.type = event.target.value;
+  if (field === "text") {
+    block.text = event.target.value;
+    block.caption = event.target.value;
+    block.label = event.target.value;
+  }
+  if (field === "url") {
+    block.url = event.target.value;
+    block.src = event.target.value;
+  }
+  markCmsDirty();
+}
+
 function handleArchiveFlagChange(event) {
   const item = getAdminItem(event.target);
   if (!item) return;
   item[event.target.dataset.itemFlag] = event.target.checked;
   syncCollectionDesignations();
-  saveArchiveDraft();
+  markCmsDirty();
   render();
 }
 
@@ -514,7 +610,7 @@ function handleArchiveItemChange(event) {
     item[field] = event.target.value.trim();
     if (field === "title" && item.project) item.project.headline = item.title;
   }
-  saveArchiveDraft();
+  markCmsDirty();
   render();
 }
 
@@ -527,7 +623,7 @@ function handleArchiveUpload(event) {
     const kind = file.type.startsWith("video/") ? "video" : "image";
     item.media = [{ kind, src: reader.result, name: file.name }, ...(item.media || [])];
     item.image = kind === "image" ? reader.result : item.image;
-    saveArchiveDraft();
+    markCmsDirty();
     render();
   });
   reader.readAsDataURL(file);
@@ -538,13 +634,18 @@ function handleRemoveMedia(event) {
   if (!item) return;
   const index = Number(event.target.dataset.removeMedia);
   item.media = (item.media || []).filter((_, mediaIndex) => mediaIndex !== index);
-  saveArchiveDraft();
+  markCmsDirty();
   render();
 }
 
 function getAdminItem(target) {
   const id = target.closest("[data-item-id]")?.dataset.itemId;
   return state.data.items.find((item) => item.id === id);
+}
+
+function getAdminTrack(target) {
+  const id = target.closest("[data-track-id]")?.dataset.trackId;
+  return state.data.licensing.tracks.find((track) => track.id === id);
 }
 
 function renderAdminMediaBin(item) {
@@ -769,37 +870,49 @@ function renderAdminEditor() {
     els.adminEditor.replaceChildren();
     return;
   }
-  els.adminEditor.replaceChildren(
-    ...state.data.licensing.tracks.map((track) => {
-      const row = document.createElement("article");
-      row.className = "admin-track";
-      row.innerHTML = `
-        <strong>${escapeHtml(track.title)}</strong>
-        <label><span>bpm</span><input data-field="bpm" data-track="${escapeAttribute(track.id)}" value="${escapeAttribute(track.bpm || "")}" inputmode="numeric" /></label>
-        <label><span>source</span><select data-field="source" data-track="${escapeAttribute(track.id)}"><option>published</option><option>unreleased</option></select></label>
-        <label class="wide"><span>tags</span><input data-field="tags" data-track="${escapeAttribute(track.id)}" value="${escapeAttribute(getTrackTags(track).join(", "))}" /></label>
-      `;
-      row.querySelector("select").value = track.source;
-      row.querySelectorAll("input, select").forEach((input) => {
-        input.addEventListener("change", handleAdminChange);
-      });
-      return row;
-    })
-  );
+  renderAdminTrackPicker();
+  const track = state.data.licensing.tracks.find((entry) => entry.id === state.adminTrackId) || state.data.licensing.tracks[0];
+  if (!track) {
+    els.adminEditor.replaceChildren();
+    return;
+  }
+  state.adminTrackId = track.id;
+  const row = document.createElement("article");
+  row.className = "admin-track";
+  row.dataset.trackId = track.id;
+  row.innerHTML = `
+    <strong>${escapeHtml(track.title || "Untitled track")}</strong>
+    <label><span>title</span><input data-field="title" value="${escapeAttribute(track.title || "")}" /></label>
+    <label><span>artist</span><input data-field="artist" value="${escapeAttribute(track.artist || "")}" /></label>
+    <label><span>release</span><input data-field="release" value="${escapeAttribute(track.release || "")}" /></label>
+    <label><span>release date</span><input data-field="releaseDate" value="${escapeAttribute(track.releaseDate || "")}" /></label>
+    <label><span>bpm</span><input data-field="bpm" value="${escapeAttribute(track.bpm || "")}" inputmode="numeric" /></label>
+    <label><span>source</span><select data-field="source"><option>published</option><option>unreleased</option></select></label>
+    <label><span>status</span><input data-field="status" value="${escapeAttribute(track.status || "")}" /></label>
+    <label class="wide"><span>tags</span><input data-field="tags" value="${escapeAttribute(getTrackTags(track).join(", "))}" /></label>
+    <label class="wide"><span>spotify url</span><input data-field="spotifyUrl" value="${escapeAttribute(track.spotifyUrl || "")}" /></label>
+    <label class="wide"><span>artwork url</span><input data-field="artwork" value="${escapeAttribute(track.artwork || "")}" /></label>
+    <label class="wide"><span>notes</span><textarea data-field="notes" rows="3">${escapeHtml(track.notes || "")}</textarea></label>
+  `;
+  row.querySelector("select").value = track.source || "published";
+  row.querySelectorAll("input, select, textarea").forEach((input) => {
+    input.addEventListener("change", handleAdminChange);
+  });
+  els.adminEditor.replaceChildren(row);
 }
 
 function handleAdminChange(event) {
-  const { track: trackId, field } = event.target.dataset;
-  const track = state.data.licensing.tracks.find((entry) => entry.id === trackId);
+  const track = getAdminTrack(event.target);
   if (!track) return;
+  const { field } = event.target.dataset;
   if (field === "bpm") {
     track.bpm = event.target.value ? Number(event.target.value) : null;
-  } else if (field === "source") {
-    track.source = event.target.value;
   } else if (field === "tags") {
-    track.tags = event.target.value.split(",").map((tag) => tag.trim()).filter(Boolean);
+    track.tags = splitLinesOrCommas(event.target.value);
+  } else {
+    track[field] = event.target.value.trim();
   }
-  saveArchiveDraft();
+  markCmsDirty();
   renderCatalog();
 }
 
@@ -841,16 +954,39 @@ function bindCatalogControls() {
     state.adminItemId = els.adminItemSelect.value;
     renderAdminArchiveEditor();
   });
+  els.adminTrackSelect?.addEventListener("change", () => {
+    state.adminTrackId = els.adminTrackSelect.value;
+    renderAdminEditor();
+  });
   els.adminActions.forEach((button) => {
     button.addEventListener("click", () => {
-      if (button.dataset.adminAction === "export") {
-        els.adminExport.value = JSON.stringify(state.data, null, 2);
-      } else {
-        localStorage.removeItem("wevArchiveDraft");
-        location.reload();
-      }
+      handleAdminAction(button.dataset.adminAction);
     });
   });
+}
+
+function handleAdminAction(action) {
+  if (action === "save") {
+    saveArchiveDraft();
+    setSaveStatus("Saved local draft.");
+  } else if (action === "export") {
+    els.adminExport.value = JSON.stringify(state.data, null, 2);
+    setSaveStatus("Export ready.");
+  } else if (action === "download") {
+    downloadArchiveJson();
+    setSaveStatus("Downloaded archive JSON.");
+  } else if (action === "reset") {
+    localStorage.removeItem("wevArchiveDraft");
+    location.reload();
+  } else if (action === "new-post") {
+    createArchiveItem();
+  } else if (action === "delete-post") {
+    deleteArchiveItem();
+  } else if (action === "new-track") {
+    createLicensingTrack();
+  } else if (action === "delete-track") {
+    deleteLicensingTrack();
+  }
 }
 
 function applyArchiveDraft() {
@@ -866,6 +1002,103 @@ function applyArchiveDraft() {
 
 function saveArchiveDraft() {
   localStorage.setItem("wevArchiveDraft", JSON.stringify(state.data));
+}
+
+function markCmsDirty() {
+  setSaveStatus("Unsaved changes.");
+}
+
+function setSaveStatus(message) {
+  if (els.adminSaveStatus) els.adminSaveStatus.textContent = message;
+}
+
+function createArchiveItem() {
+  const id = createId("new-post");
+  const item = {
+    id,
+    type: "projects",
+    year: new Date().getFullYear().toString(),
+    date: new Date().toISOString().slice(0, 10),
+    title: "New post",
+    dek: "Draft archive entry.",
+    description: "",
+    image: "assets/placeholder-release.svg",
+    links: [{ label: "open project", url: "#", action: "open-project" }],
+    tags: ["draft"],
+    showInArchive: true,
+    isSelectedWork: false,
+    showInWorks: false,
+    blocks: [{ type: "text", text: "New block" }],
+    project: { headline: "New post", body: ["New block"], links: [] }
+  };
+  state.data.items.unshift(item);
+  state.adminItemId = id;
+  markCmsDirty();
+  render();
+}
+
+function deleteArchiveItem() {
+  if (!state.adminItemId) return;
+  const current = state.data.items.find((item) => item.id === state.adminItemId);
+  if (!current) return;
+  const confirmed = window.confirm(`Delete "${current.title}"?`);
+  if (!confirmed) return;
+  state.data.items = state.data.items.filter((item) => item.id !== state.adminItemId);
+  state.adminItemId = [...state.data.items].sort(sortByMostRecent)[0]?.id || null;
+  syncCollectionDesignations();
+  markCmsDirty();
+  render();
+}
+
+function createLicensingTrack() {
+  const id = createId("new-track");
+  const track = {
+    id,
+    source: "published",
+    artist: "wev",
+    release: "",
+    releaseDate: new Date().toISOString().slice(0, 10),
+    title: "New track",
+    duration: "",
+    bpm: null,
+    tags: ["draft"],
+    moods: [],
+    uses: [],
+    status: "clearable",
+    notes: "",
+    spotifyUrl: "",
+    artwork: "assets/placeholder-license.svg"
+  };
+  state.data.licensing.tracks.unshift(track);
+  state.adminTrackId = id;
+  markCmsDirty();
+  render();
+}
+
+function deleteLicensingTrack() {
+  if (!state.adminTrackId) return;
+  const current = state.data.licensing.tracks.find((track) => track.id === state.adminTrackId);
+  if (!current) return;
+  const confirmed = window.confirm(`Delete "${current.title}" from licensing catalog?`);
+  if (!confirmed) return;
+  state.data.licensing.tracks = state.data.licensing.tracks.filter((track) => track.id !== state.adminTrackId);
+  state.adminTrackId = [...state.data.licensing.tracks].sort(sortTracksForAdmin)[0]?.id || null;
+  markCmsDirty();
+  render();
+}
+
+function downloadArchiveJson() {
+  const blob = new Blob([JSON.stringify(state.data, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "archive.json";
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
+function createId(prefix) {
+  return `${prefix}-${Date.now().toString(36)}`;
 }
 
 function getTrackTags(track) {
