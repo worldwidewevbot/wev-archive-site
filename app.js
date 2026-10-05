@@ -9,6 +9,7 @@ const state = {
   catalogSearch: "",
   catalogTag: "all",
   activePreviewTrackId: null,
+  activePreviewAudio: null,
   selectedTrackIds: new Set(),
   openProjectId: null,
   openProjectSurface: null,
@@ -756,13 +757,13 @@ function renderTracks(tracks) {
       row.role = "listitem";
       row.dataset.trackId = track.id;
       const isSelected = state.selectedTrackIds.has(track.id);
-      const spotifyId = getSpotifyTrackId(track);
       const artwork = track.artwork || "assets/placeholder-license.svg";
       const releaseDate = formatReleaseDate(track.releaseDate);
       const tags = getTrackTags(track);
       const bpm = formatBpm(track.bpm);
       const isPreviewing = state.activePreviewTrackId === track.id;
-      const playerUrl = createSpotifyEmbedUrl(spotifyId);
+      const previewUrl = getTrackPreviewUrl(track);
+      row.classList.toggle("is-previewing", isPreviewing);
       row.innerHTML = `
         <div class="track-hero" style="--track-art: url('${escapeAttribute(artwork)}')">
           <img class="track-artwork" src="${escapeAttribute(artwork)}" alt="" loading="lazy" />
@@ -772,8 +773,8 @@ function renderTracks(tracks) {
             ${bpm ? `<span class="track-bpm">${escapeHtml(bpm)}</span>` : ""}
           </div>
           ${releaseDate ? `<span class="track-date">${escapeHtml(releaseDate)}</span>` : ""}
-          <button class="track-preview" type="button" ${spotifyId || track.previewUrl ? "" : "disabled"} aria-label="${escapeAttribute(`Preview ${track.title}`)}" aria-pressed="${isPreviewing}">
-            <span>${isPreviewing ? "Close preview" : "Preview"}</span>
+          <button class="track-preview" type="button" ${previewUrl ? "" : "disabled"} aria-label="${escapeAttribute(`${isPreviewing ? "Pause" : "Play"} ${track.title}`)}" aria-pressed="${isPreviewing}">
+            <span>${previewUrl ? (isPreviewing ? "Pause" : "Play") : "No preview"}</span>
           </button>
         </div>
         <div class="track-lower">
@@ -783,11 +784,7 @@ function renderTracks(tracks) {
             <button class="track-select" type="button" aria-pressed="${isSelected}">${isSelected ? "Requested" : "Request"}</button>
           </div>
         </div>
-        ${
-          isPreviewing
-            ? `<div class="track-player">${renderTrackPlayer(track, playerUrl)}</div>`
-            : ""
-        }
+        ${isPreviewing ? `<div class="track-player" aria-live="polite">playing preview</div>` : ""}
       `;
       row.querySelector(".track-select").addEventListener("click", () => {
         state.selectedTrackIds.clear();
@@ -796,22 +793,53 @@ function renderTracks(tracks) {
         scrollToRequestForm();
       });
       row.querySelector(".track-preview").addEventListener("click", () => {
-        state.activePreviewTrackId = isPreviewing ? null : track.id;
-        renderCatalog();
+        toggleTrackPreview(track);
       });
       return row;
     })
   );
 }
 
-function renderTrackPlayer(track, spotifyEmbedUrl) {
-  if (track.previewUrl) {
-    return `<audio src="${escapeAttribute(track.previewUrl)}" controls autoplay></audio>`;
+function getTrackPreviewUrl(track) {
+  return track.previewUrl || track.preview_url || track.prev_url || "";
+}
+
+function stopTrackPreview() {
+  if (state.activePreviewAudio) {
+    state.activePreviewAudio.pause();
+    state.activePreviewAudio.currentTime = 0;
+    state.activePreviewAudio = null;
   }
-  if (spotifyEmbedUrl) {
-    return `<iframe src="${escapeAttribute(spotifyEmbedUrl)}" title="${escapeAttribute(`Spotify preview: ${track.title}`)}" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="eager"></iframe>`;
+  state.activePreviewTrackId = null;
+}
+
+function toggleTrackPreview(track) {
+  const previewUrl = getTrackPreviewUrl(track);
+  if (!previewUrl) return;
+  if (state.activePreviewTrackId === track.id) {
+    stopTrackPreview();
+    renderCatalog();
+    return;
   }
-  return "";
+  stopTrackPreview();
+  const audio = new Audio(previewUrl);
+  state.activePreviewAudio = audio;
+  state.activePreviewTrackId = track.id;
+  audio.addEventListener("ended", () => {
+    if (state.activePreviewAudio === audio) {
+      state.activePreviewAudio = null;
+      state.activePreviewTrackId = null;
+      renderCatalog();
+    }
+  });
+  audio.play().catch(() => {
+    if (state.activePreviewAudio === audio) {
+      state.activePreviewAudio = null;
+      state.activePreviewTrackId = null;
+      renderCatalog();
+    }
+  });
+  renderCatalog();
 }
 
 function formatReleaseDate(value) {
@@ -902,6 +930,7 @@ function renderAdminEditor() {
     <label><span>source</span><select data-field="source"><option>published</option><option>unreleased</option></select></label>
     <label><span>status</span><input data-field="status" value="${escapeAttribute(track.status || "")}" /></label>
     <label class="wide"><span>tags</span><input data-field="tags" value="${escapeAttribute(getTrackTags(track).join(", "))}" /></label>
+    <label class="wide"><span>preview audio url</span><input data-field="previewUrl" value="${escapeAttribute(getTrackPreviewUrl(track))}" /></label>
     <label class="wide"><span>spotify url</span><input data-field="spotifyUrl" value="${escapeAttribute(track.spotifyUrl || "")}" /></label>
     <label class="wide"><span>artwork url</span><input data-field="artwork" value="${escapeAttribute(track.artwork || "")}" /></label>
     <label class="wide"><span>notes</span><textarea data-field="notes" rows="3">${escapeHtml(track.notes || "")}</textarea></label>
@@ -1078,6 +1107,7 @@ function createLicensingTrack() {
     uses: [],
     status: "clearable",
     notes: "",
+    previewUrl: "",
     spotifyUrl: "",
     artwork: "assets/placeholder-license.svg"
   };
@@ -1116,25 +1146,6 @@ function createId(prefix) {
 function getTrackTags(track) {
   const tags = track.tags && track.tags.length ? track.tags : [...(track.moods || []), ...(track.uses || [])];
   return [...new Set(tags.filter(Boolean))];
-}
-
-function getSpotifyTrackId(track) {
-  if (!track?.spotifyUrl) return "";
-  try {
-    const url = new URL(track.spotifyUrl);
-    const parts = url.pathname.split("/").filter(Boolean);
-    const trackIndex = parts.indexOf("track");
-    return trackIndex >= 0 ? parts[trackIndex + 1] || "" : "";
-  } catch {
-    return "";
-  }
-}
-
-function createSpotifyEmbedUrl(spotifyId) {
-  if (!spotifyId) return "";
-  const embedUrl = new URL(`https://open.spotify.com/embed/track/${spotifyId}`);
-  embedUrl.search = new URLSearchParams({ utm_source: "generator", theme: "0", autoplay: "1" }).toString();
-  return embedUrl.href;
 }
 
 function formatDate(value) {

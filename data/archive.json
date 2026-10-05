@@ -4525,7 +4525,7 @@
         "releaseDate": "2026-05-08",
         "title": "timesup!",
         "duration": "3:33",
-        "bpm": null,
+        "bpm": "137",
         "tags": [
           "garage house",
           "sexy",
@@ -4545,7 +4545,8 @@
         "status": "clearable",
         "notes": "Rights/splits: 50% Justin Joon",
         "spotifyUrl": "https://open.spotify.com/track/2i03IvvkILkVyW5v9DpgSi",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2734328eea4b47814591cafbf7c"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2734328eea4b47814591cafbf7c",
+        "genre": "Dance"
       },
       {
         "id": "6EIJe54nMbVipzOC0DFjRA",
@@ -4677,7 +4678,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/3iN8Ype0KVu5MXuhIT8kMW",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b27371cd5a86b31947919fe3dd1a"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b27371cd5a86b31947919fe3dd1a",
+        "previewUrl": "https://p.scdn.co/mp3-preview/89e6af8dfb0da41e124e3283fe87d7252ac21d05?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "garage house"
       },
       {
         "id": "0bZYGNLzBy03mu4jE9qD8d",
@@ -4709,7 +4712,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/0bZYGNLzBy03mu4jE9qD8d",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2739839c7653204c5c57c09671f"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2739839c7653204c5c57c09671f",
+        "previewUrl": "https://p.scdn.co/mp3-preview/d22d00a776107360947e2a0b9bead415620fce66?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "7KBAYBF3tRjKdXc8QzUtsx",
@@ -4719,14 +4724,22 @@
         "releaseDate": "2025-04-16",
         "title": "coconut rice",
         "duration": "4:08",
-        "bpm": null,
-        "tags": [],
+        "bpm": "126",
+        "tags": [
+          "male vocal",
+          "confident",
+          "groovy",
+          "acid",
+          "energetic",
+          "sexy"
+        ],
         "moods": [],
         "uses": [],
         "status": "clearable",
         "notes": "",
         "spotifyUrl": "https://open.spotify.com/track/7KBAYBF3tRjKdXc8QzUtsx",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2739839c7653204c5c57c09671f"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2739839c7653204c5c57c09671f",
+        "genre": "house"
       },
       {
         "id": "03F6AMY0m8eQJLFX5cO5Mf",
@@ -4753,14 +4766,20 @@
         "releaseDate": "2025-04-16",
         "title": "numbers",
         "duration": "4:23",
-        "bpm": null,
-        "tags": [],
+        "bpm": "118",
+        "tags": [
+          "male vocal",
+          "confident",
+          "energetic",
+          "acid"
+        ],
         "moods": [],
         "uses": [],
         "status": "clearable",
         "notes": "",
         "spotifyUrl": "https://open.spotify.com/track/7CSSOjtolGXhGNmhuM2rwb",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2739839c7653204c5c57c09671f"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2739839c7653204c5c57c09671f",
+        "genre": "Breakbeat"
       },
       {
         "id": "5yKQcIOf1arJDHkxn2P3h3",
@@ -4770,7 +4789,7 @@
         "releaseDate": "2025-04-16",
         "title": "shigoto werk",
         "duration": "3:58",
-        "bpm": null,
+        "bpm": "133",
         "tags": [
           "game",
           "sync",
@@ -4788,7 +4807,8 @@
         "status": "clearable",
         "notes": "Known placement: Rocket League.",
         "spotifyUrl": "https://open.spotify.com/track/5yKQcIOf1arJDHkxn2P3h3",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2739839c7653204c5c57c09671f"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2739839c7653204c5c57c09671f",
+        "genre": "Garage House"
       },
       {
         "id": "3hsyAzPjnC81XRT7xD2QDv",
@@ -4798,14 +4818,23 @@
         "releaseDate": "2025-04-16",
         "title": "acid in tokyo",
         "duration": "5:01",
-        "bpm": null,
-        "tags": [],
+        "bpm": "131",
+        "tags": [
+          "male vocal",
+          "dark",
+          "confident",
+          "groovy",
+          "acid",
+          "moody",
+          "sexy"
+        ],
         "moods": [],
         "uses": [],
         "status": "clearable",
         "notes": "",
         "spotifyUrl": "https://open.spotify.com/track/3hsyAzPjnC81XRT7xD2QDv",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2739839c7653204c5c57c09671f"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2739839c7653204c5c57c09671f",
+        "genre": "House"
       },
       {
         "id": "63krCWOT3qW7Ztj3IXVPKh",
@@ -4815,7 +4844,7 @@
         "releaseDate": "2025-03-24",
         "title": "shigoto werk",
         "duration": "3:58",
-        "bpm": null,
+        "bpm": "133",
         "tags": [
           "game",
           "sync",
@@ -4833,7 +4862,8 @@
         "status": "clearable",
         "notes": "Known placement: Rocket League.",
         "spotifyUrl": "https://open.spotify.com/track/63krCWOT3qW7Ztj3IXVPKh",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273585add987f773ae3f85640bc"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273585add987f773ae3f85640bc",
+        "genre": "Garage House"
       },
       {
         "id": "7An4G1EntDAaDQJRQEetPB",
@@ -4865,7 +4895,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/7An4G1EntDAaDQJRQEetPB",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273585add987f773ae3f85640bc"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273585add987f773ae3f85640bc",
+        "previewUrl": "https://p.scdn.co/mp3-preview/d22d00a776107360947e2a0b9bead415620fce66?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "44cG3eorXQnpPpyjVe5FUV",
@@ -4909,7 +4941,7 @@
         "releaseDate": "2024-10-11",
         "title": "timesup!",
         "duration": "3:33",
-        "bpm": null,
+        "bpm": "137",
         "tags": [
           "garage house",
           "sexy",
@@ -4929,7 +4961,8 @@
         "status": "clearable",
         "notes": "Rights/splits: 50% Justin Joon",
         "spotifyUrl": "https://open.spotify.com/track/4pldXzEu61sLDxwC6nsOwP",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2738ea097ecde1a046879097a24"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2738ea097ecde1a046879097a24",
+        "genre": "Dance"
       },
       {
         "id": "1iMcPHmS90HuFm2P1v6Jvy",
@@ -4939,14 +4972,21 @@
         "releaseDate": "2024-09-18",
         "title": "mazeworld - wev Remix",
         "duration": "5:05",
-        "bpm": null,
-        "tags": [],
+        "bpm": 123,
+        "tags": [
+          "groovy",
+          "sexy",
+          "male vocal",
+          "confident"
+        ],
         "moods": [],
         "uses": [],
         "status": "clearable",
         "notes": "",
         "spotifyUrl": "https://open.spotify.com/track/1iMcPHmS90HuFm2P1v6Jvy",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b27356a4c5ab97dddf7965e73dd7"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b27356a4c5ab97dddf7965e73dd7",
+        "previewUrl": "https://p.scdn.co/mp3-preview/6bec8a7941e34c633f6cd7eeec301e50643118fe?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "3lKCvM21SveD6UV9uKzmiE",
@@ -4978,7 +5018,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/3lKCvM21SveD6UV9uKzmiE",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273984fe2ca7ac9a1d4f7502b05"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273984fe2ca7ac9a1d4f7502b05",
+        "previewUrl": "https://p.scdn.co/mp3-preview/d22d00a776107360947e2a0b9bead415620fce66?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "3pu0eF85R7eZkDG9WMzNij",
@@ -5002,7 +5044,9 @@
         "status": "clearable",
         "notes": "Rights/splits: Nick Momeni, Alison",
         "spotifyUrl": "https://open.spotify.com/track/3pu0eF85R7eZkDG9WMzNij",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273a202e0bafc0d70dc1b011e86"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273a202e0bafc0d70dc1b011e86",
+        "previewUrl": "https://p.scdn.co/mp3-preview/93cbd1205f39b048c4504daef4883809ddcc6173?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "jungle / DnB"
       },
       {
         "id": "2O4dZvruZkCJul36NFy6kG",
@@ -5026,7 +5070,9 @@
         "status": "clearable",
         "notes": "Rights/splits: Nick Momeni, Lisa Persson",
         "spotifyUrl": "https://open.spotify.com/track/2O4dZvruZkCJul36NFy6kG",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273a202e0bafc0d70dc1b011e86"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273a202e0bafc0d70dc1b011e86",
+        "previewUrl": "https://p.scdn.co/mp3-preview/437937e4e5b83bd914ffa7db84e96bc17c914af4?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "jungle / DnB"
       },
       {
         "id": "3GNSpjMhYqRvMNZBjpwtkq",
@@ -5052,7 +5098,9 @@
         "status": "clearable",
         "notes": "Rights/splits: Nick Momeni, Angel",
         "spotifyUrl": "https://open.spotify.com/track/3GNSpjMhYqRvMNZBjpwtkq",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273a202e0bafc0d70dc1b011e86"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273a202e0bafc0d70dc1b011e86",
+        "previewUrl": "https://p.scdn.co/mp3-preview/f309e6fbb5f5f127a8e606f36232f7a52bd4a834?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "breakbeat"
       },
       {
         "id": "3heEu2be2DaFBBvQLh38sP",
@@ -5062,14 +5110,21 @@
         "releaseDate": "2024-05-24",
         "title": "miles away (shaking's dark dub)",
         "duration": "5:22",
-        "bpm": null,
-        "tags": [],
+        "bpm": 136,
+        "tags": [
+          "dark",
+          "energetic",
+          "male vocal",
+          "confident"
+        ],
         "moods": [],
         "uses": [],
         "status": "clearable",
         "notes": "",
         "spotifyUrl": "https://open.spotify.com/track/3heEu2be2DaFBBvQLh38sP",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273a202e0bafc0d70dc1b011e86"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273a202e0bafc0d70dc1b011e86",
+        "previewUrl": "https://p.scdn.co/mp3-preview/77680af9f2e1bcd59f5fe28668ce343ff0dced17?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "3UCugCe2gQpxy7Z9wHF0tZ",
@@ -5093,7 +5148,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 50% Nick Momeni",
         "spotifyUrl": "https://open.spotify.com/track/3UCugCe2gQpxy7Z9wHF0tZ",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4",
+        "previewUrl": "https://p.scdn.co/mp3-preview/e01829f898e0a4bdf99a4174c25648825c5fd009?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "55ez35S1kbeVfSJAFfB7rP",
@@ -5125,7 +5182,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 50% Nick Momeni",
         "spotifyUrl": "https://open.spotify.com/track/55ez35S1kbeVfSJAFfB7rP",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4",
+        "previewUrl": "https://p.scdn.co/mp3-preview/4edead393cc42f86c73aff2a863e86be8cb6faf6?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "17MevaLGEHQAapphuYhASf",
@@ -5151,7 +5210,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 50% Nick Momeni",
         "spotifyUrl": "https://open.spotify.com/track/17MevaLGEHQAapphuYhASf",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4",
+        "previewUrl": "https://p.scdn.co/mp3-preview/33b0fd205421805cea908198adad9f183388515c?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "techno"
       },
       {
         "id": "6EuIW3GQvql61O0rQWkYXX",
@@ -5179,7 +5240,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 50% Nick Momeni",
         "spotifyUrl": "https://open.spotify.com/track/6EuIW3GQvql61O0rQWkYXX",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4",
+        "previewUrl": "https://p.scdn.co/mp3-preview/04c6df9a49342dba70512d1ec5558cfa047c8431?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "25GxTAPl59nSAFB2yphERX",
@@ -5207,7 +5270,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 50% Nick Momeni",
         "spotifyUrl": "https://open.spotify.com/track/25GxTAPl59nSAFB2yphERX",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4",
+        "previewUrl": "https://p.scdn.co/mp3-preview/1c716f59d4dd0cd79cccdd7b9a28bd40e0f63d85?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "2aSvUsuFeDAk7tW0yWC72r",
@@ -5233,7 +5298,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 50% Nick Momeni",
         "spotifyUrl": "https://open.spotify.com/track/2aSvUsuFeDAk7tW0yWC72r",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4",
+        "previewUrl": "https://p.scdn.co/mp3-preview/788d4dbd4eb04af48987fe08f2b0633918a53f1d?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "5NkntuzsKIWVn6CzxUg2b2",
@@ -5261,7 +5328,9 @@
         "status": "clearable",
         "notes": "Rights/splits: Nick Momeni, Brandon Rowan",
         "spotifyUrl": "https://open.spotify.com/track/5NkntuzsKIWVn6CzxUg2b2",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4",
+        "previewUrl": "https://p.scdn.co/mp3-preview/626d6221c863219bc4c2403477fa40e6a6618e44?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "1GkXsFB3wrGMnENSB9qiNw",
@@ -5271,14 +5340,21 @@
         "releaseDate": "2024-04-05",
         "title": "circles (original mix)",
         "duration": "6:49",
-        "bpm": null,
-        "tags": [],
+        "bpm": 127,
+        "tags": [
+          "male vocal",
+          "ethereal",
+          "deep",
+          "sexy"
+        ],
         "moods": [],
         "uses": [],
         "status": "clearable",
         "notes": "",
         "spotifyUrl": "https://open.spotify.com/track/1GkXsFB3wrGMnENSB9qiNw",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4",
+        "previewUrl": "https://p.scdn.co/mp3-preview/f8d8d05dd74655909ec43a9443808bad4a27e45e?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "6XTXNo2pzhl7UXu8IRyhtO",
@@ -5306,7 +5382,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/6XTXNo2pzhl7UXu8IRyhtO",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273e2d5ab71df905972a1ce2a3e"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273e2d5ab71df905972a1ce2a3e",
+        "previewUrl": "https://p.scdn.co/mp3-preview/49d3bf67dd7efe516692580ab87bae839b025fe6?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "2v2nsGjVVmfQxRRqpQ71x3",
@@ -5334,7 +5412,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/2v2nsGjVVmfQxRRqpQ71x3",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273a624c888c9f16c332cb17af2"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273a624c888c9f16c332cb17af2",
+        "previewUrl": "https://p.scdn.co/mp3-preview/e3c16e3b4eae02876e18921dd8ec5df4b9b31791?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "breakbeat"
       },
       {
         "id": "0kOIbvU5jddwyVvsThBubH",
@@ -5360,7 +5440,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/0kOIbvU5jddwyVvsThBubH",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273a624c888c9f16c332cb17af2"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273a624c888c9f16c332cb17af2",
+        "previewUrl": "https://p.scdn.co/mp3-preview/f49dbb761828f18e7835da193d1e80f1524d4549?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "6zXeepCIC93tL49DV7MME4",
@@ -5388,7 +5470,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/6zXeepCIC93tL49DV7MME4",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273eabe2cde24276349052ffe00"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273eabe2cde24276349052ffe00",
+        "previewUrl": "https://p.scdn.co/mp3-preview/430c2ed035073304961a92a9ac1989fc690b0ef9?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "garage house"
       },
       {
         "id": "25iLE1R2utWKzwbqgjdwwh",
@@ -5416,7 +5500,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 10% Greg Monte",
         "spotifyUrl": "https://open.spotify.com/track/25iLE1R2utWKzwbqgjdwwh",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273bcc92bb94f34df784c126ee6"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273bcc92bb94f34df784c126ee6",
+        "previewUrl": "https://p.scdn.co/mp3-preview/9fc8cfc6554d1cd151e99590a4d1513205978f5c?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "5Q5ZyDXzk1PTTbQjD9smer",
@@ -5438,7 +5524,9 @@
         "status": "needs review",
         "notes": "Rights/splits: uplifting, house, 0%",
         "spotifyUrl": "https://open.spotify.com/track/5Q5ZyDXzk1PTTbQjD9smer",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273f080680bd2278e56aaacc5c0"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273f080680bd2278e56aaacc5c0",
+        "previewUrl": "https://p.scdn.co/mp3-preview/7952380dd5cce3240ab5cf85c95d99b4c7e24de6?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "3MDEBIP4Pqdp1BBbNS37UT",
@@ -5468,7 +5556,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/3MDEBIP4Pqdp1BBbNS37UT",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2737237b61f23ac7eb1f24f061a"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2737237b61f23ac7eb1f24f061a",
+        "previewUrl": "https://p.scdn.co/mp3-preview/89e6af8dfb0da41e124e3283fe87d7252ac21d05?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "garage house"
       },
       {
         "id": "6C0tLRlczAtO5nnbCjvjPp",
@@ -5494,7 +5584,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/6C0tLRlczAtO5nnbCjvjPp",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b27319fb1f03ee8ce393994506d9"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b27319fb1f03ee8ce393994506d9",
+        "previewUrl": "https://p.scdn.co/mp3-preview/b1f2d25dae1c6e0a6ccf6384427d52d3134e3421?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "jungle / DnB"
       },
       {
         "id": "114TPnE57dEwKFziVKqadl",
@@ -5522,7 +5614,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 20% Lauren Faith",
         "spotifyUrl": "https://open.spotify.com/track/114TPnE57dEwKFziVKqadl",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2734646271c73c28b73a2f0bc60"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2734646271c73c28b73a2f0bc60",
+        "previewUrl": "https://p.scdn.co/mp3-preview/16aee6f063c183bfe3739d77f8456e1667392780?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "0OG68Z5G2pTY8hD0zxO8B7",
@@ -5552,7 +5646,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/0OG68Z5G2pTY8hD0zxO8B7",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2734646271c73c28b73a2f0bc60"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2734646271c73c28b73a2f0bc60",
+        "previewUrl": "https://p.scdn.co/mp3-preview/511d279599380a100c865ac01daf5169c776acad?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "1Bp9xv6cY3rk3abQEFoZEe",
@@ -5580,7 +5676,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/1Bp9xv6cY3rk3abQEFoZEe",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2734646271c73c28b73a2f0bc60"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2734646271c73c28b73a2f0bc60",
+        "previewUrl": "https://p.scdn.co/mp3-preview/870c17a85b5eff3118fdf7a405b3794b06babecc?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "7Av3sPMhVUh6xUEp5jSnn7",
@@ -5608,7 +5706,9 @@
         "status": "needs review",
         "notes": "Rights/splits: Noah Yoo, Sedona Schatt (0%)",
         "spotifyUrl": "https://open.spotify.com/track/7Av3sPMhVUh6xUEp5jSnn7",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273075ddc5c9219defa60cfa201"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273075ddc5c9219defa60cfa201",
+        "previewUrl": "https://p.scdn.co/mp3-preview/46764e058c9b3067e643b7b103ce50ea2ffce39a?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "6HaWHsTkOd5KLEPx4BBUri",
@@ -5636,7 +5736,9 @@
         "status": "needs review",
         "notes": "Rights/splits: Noah Yoo, Sedona Schatt (0%)",
         "spotifyUrl": "https://open.spotify.com/track/6HaWHsTkOd5KLEPx4BBUri",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2733bc3729b4296779fb7966df8"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2733bc3729b4296779fb7966df8",
+        "previewUrl": "https://p.scdn.co/mp3-preview/46764e058c9b3067e643b7b103ce50ea2ffce39a?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "2l4eRln2VCZaO5jTfxLJqf",
@@ -5662,7 +5764,9 @@
         "status": "clearable",
         "notes": "Rights/splits: Kazuma, Kenta",
         "spotifyUrl": "https://open.spotify.com/track/2l4eRln2VCZaO5jTfxLJqf",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273cb9f602dfe90699ec065165c"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273cb9f602dfe90699ec065165c",
+        "previewUrl": "https://p.scdn.co/mp3-preview/5d0ec37de3d5d6803f62b741f14f881733e31e77?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "5PJqh937aJ6Uz144LwKjIT",
@@ -5688,7 +5792,9 @@
         "status": "clearable",
         "notes": "Rights/splits: eOne owns license, 60%",
         "spotifyUrl": "https://open.spotify.com/track/5PJqh937aJ6Uz144LwKjIT",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273d08d2fbe4b66712cd8436135"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273d08d2fbe4b66712cd8436135",
+        "previewUrl": "https://p.scdn.co/mp3-preview/0d19ab77130cf7a34ea85d8761aa1e554fae5998?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "72jigqO30yB7NCYQ4rE7AT",
@@ -5714,7 +5820,9 @@
         "status": "clearable",
         "notes": "Rights/splits: Lauren Faith, eOne owns license",
         "spotifyUrl": "https://open.spotify.com/track/72jigqO30yB7NCYQ4rE7AT",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273d08d2fbe4b66712cd8436135"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273d08d2fbe4b66712cd8436135",
+        "previewUrl": "https://p.scdn.co/mp3-preview/892b588d07d4b5a776b0720c2c8ea4cf0dc3fd0c?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "5euT6RL6XsOgy6Dvfp9Ugl",
@@ -5742,7 +5850,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/1AZs17VcLmB8MICpw08Ig3",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2737d76269434a0bc8ca9c72b68"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2737d76269434a0bc8ca9c72b68",
+        "previewUrl": "https://p.scdn.co/mp3-preview/b041888083fe7225bce7255010c45b96aa297b9d?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "1yvdszSpZllWcXLxCYEHVB",
@@ -5768,7 +5878,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 33% Brandon Rowan, Linus Hablot",
         "spotifyUrl": "https://open.spotify.com/track/1yvdszSpZllWcXLxCYEHVB",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273922c1545cbc831bd97ab24e7"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273922c1545cbc831bd97ab24e7",
+        "previewUrl": "https://p.scdn.co/mp3-preview/3257827f90c5748a629044744071237713440251?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "deep house"
       },
       {
         "id": "5PNcFx5VyFUkCmowC5oyvA",
@@ -5800,7 +5912,9 @@
         "status": "clearable",
         "notes": "Rights/splits: Brandon Rowan, Vin DAmato, Rocko Walker, eOne owns 40%",
         "spotifyUrl": "https://open.spotify.com/track/5PNcFx5VyFUkCmowC5oyvA",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2737d76269434a0bc8ca9c72b68"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2737d76269434a0bc8ca9c72b68",
+        "previewUrl": "https://p.scdn.co/mp3-preview/39b5df4c81ed33599a1ab0f37dd9ffc08656d4c6?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "0HEQZnAKovevaOgnQ7dB1Y",
@@ -5819,7 +5933,9 @@
         "status": "clearable",
         "notes": "Rights/splits: Roger Schami, eOne owns 40% license",
         "spotifyUrl": "https://open.spotify.com/track/0HEQZnAKovevaOgnQ7dB1Y",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2737d76269434a0bc8ca9c72b68"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2737d76269434a0bc8ca9c72b68",
+        "previewUrl": "https://p.scdn.co/mp3-preview/01f31f7290ceeb34657681eee5329d156e456b01?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "5FxUQLmK0Hn52kJQzXFIeW",
@@ -5849,7 +5965,9 @@
         "status": "clearable",
         "notes": "Rights/splits: eOne owns 40% license",
         "spotifyUrl": "https://open.spotify.com/track/5FxUQLmK0Hn52kJQzXFIeW",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959",
+        "previewUrl": "https://p.scdn.co/mp3-preview/8adb0f88ab1a6d899efe25cdb6f9bc63dd12ac61?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "3YMhUj0WkkRFAW16oPXhh1",
@@ -5859,14 +5977,16 @@
         "releaseDate": "2021-09-03",
         "title": "technobody (John Tejada Remix) - Edit",
         "duration": "3:26",
-        "bpm": null,
+        "bpm": 126,
         "tags": [],
         "moods": [],
         "uses": [],
         "status": "clearable",
         "notes": "",
         "spotifyUrl": "https://open.spotify.com/track/3YMhUj0WkkRFAW16oPXhh1",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959",
+        "previewUrl": "https://p.scdn.co/mp3-preview/6d31c6c00f4e719da390c818c43f8a8cd00bae70?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "0eCBdSWZISY2TI0ATg6qfF",
@@ -5898,7 +6018,9 @@
         "status": "clearable",
         "notes": "Rights/splits: eOne owns 40% license",
         "spotifyUrl": "https://open.spotify.com/track/0eCBdSWZISY2TI0ATg6qfF",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959",
+        "previewUrl": "https://p.scdn.co/mp3-preview/33668910a2b200258fd24b6e914aa370ef10c7dc?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "6k15gxEzc2pjIMGycsQego",
@@ -5924,7 +6046,9 @@
         "status": "clearable",
         "notes": "Rights/splits: eOne owns 40% license",
         "spotifyUrl": "https://open.spotify.com/track/6k15gxEzc2pjIMGycsQego",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959",
+        "previewUrl": "https://p.scdn.co/mp3-preview/be50de67c4201c9a672f972f7e062dad9cead0de?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "7zZqEKmzLrmjZVwTS4icSI",
@@ -5952,7 +6076,9 @@
         "status": "clearable",
         "notes": "Rights/splits: eOne owns 40% license",
         "spotifyUrl": "https://open.spotify.com/track/7zZqEKmzLrmjZVwTS4icSI",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959",
+        "previewUrl": "https://p.scdn.co/mp3-preview/a026215e7ab4602ab42b5b0a9c90c6cc73d497f3?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "1G1xbtnfo72slkVrTQUgar",
@@ -5962,14 +6088,16 @@
         "releaseDate": "2021-06-25",
         "title": "All I Know - wev Jungle Edit",
         "duration": "4:29",
-        "bpm": null,
+        "bpm": 156,
         "tags": [],
         "moods": [],
         "uses": [],
         "status": "clearable",
         "notes": "",
         "spotifyUrl": "https://open.spotify.com/track/1G1xbtnfo72slkVrTQUgar",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273aa4c7a0e189e5da4a2b2e590"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273aa4c7a0e189e5da4a2b2e590",
+        "previewUrl": "https://p.scdn.co/mp3-preview/a9d7d24dd20d48acb515f4e120511f9bc7ce915d?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "2yOyDtc8ADpUqjjGrmLesA",
@@ -5997,7 +6125,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/2yOyDtc8ADpUqjjGrmLesA",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b2735dda5bf799c7e6326b206b68"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b2735dda5bf799c7e6326b206b68",
+        "previewUrl": "https://p.scdn.co/mp3-preview/b041888083fe7225bce7255010c45b96aa297b9d?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "6sNqckRJbawyxFPNQdm4YM",
@@ -6025,7 +6155,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/6sNqckRJbawyxFPNQdm4YM",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273aedc36335ce8e9bd11daffbf"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273aedc36335ce8e9bd11daffbf",
+        "previewUrl": "https://p.scdn.co/mp3-preview/9777c86e3cb1f03e7bc26f3e59cde0c445132d03?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "1xjHnmmPDHOxPEr0pq0HTN",
@@ -6053,7 +6185,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/1xjHnmmPDHOxPEr0pq0HTN",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273b30921d88d5f3576658439d1"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273b30921d88d5f3576658439d1",
+        "previewUrl": "https://p.scdn.co/mp3-preview/63a1d775d81d73d8f893fa4309bb4f8c9f66d878?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "techno"
       },
       {
         "id": "2i2tNsMz4ny9Fewc5QODIS",
@@ -6081,7 +6215,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/2i2tNsMz4ny9Fewc5QODIS",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273b30921d88d5f3576658439d1"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273b30921d88d5f3576658439d1",
+        "previewUrl": "https://p.scdn.co/mp3-preview/ad7631395167ca151f5567fc91b5d3713b4250dc?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "3FVmR894eEcr8lPTD3Iz0o",
@@ -6109,7 +6245,9 @@
         "status": "clearable",
         "notes": "Rights/splits: Adeline Um 50%",
         "spotifyUrl": "https://open.spotify.com/track/3FVmR894eEcr8lPTD3Iz0o",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273b30921d88d5f3576658439d1"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273b30921d88d5f3576658439d1",
+        "previewUrl": "https://p.scdn.co/mp3-preview/425cfbc3716c718a1f77b4197b39d9bc8d329f57?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "0DOTk0bWxtQlSxZQ0y30Aa",
@@ -6137,7 +6275,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/0DOTk0bWxtQlSxZQ0y30Aa",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273ce698b6435479c17a3e30f81"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273ce698b6435479c17a3e30f81",
+        "previewUrl": "https://p.scdn.co/mp3-preview/bb258cae625243a8f7ff4d83f170ebab195c5ae4?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "3l7Meoqx81lMv1qIdDCOWy",
@@ -6163,7 +6303,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/3l7Meoqx81lMv1qIdDCOWy",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273d82927ac729a17fcab2c93fe"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273d82927ac729a17fcab2c93fe",
+        "previewUrl": "https://p.scdn.co/mp3-preview/95bd02c8d89fa3f11ce8f88b3510278e4a2e7e19?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "house"
       },
       {
         "id": "0gYR4FzmkwyuZi4bDN02hU",
@@ -6189,7 +6331,9 @@
         "status": "clearable",
         "notes": "Rights/splits: 100%",
         "spotifyUrl": "https://open.spotify.com/track/0gYR4FzmkwyuZi4bDN02hU",
-        "artwork": "https://i.scdn.co/image/ab67616d0000b273f1570d5512011097a4809d94"
+        "artwork": "https://i.scdn.co/image/ab67616d0000b273f1570d5512011097a4809d94",
+        "previewUrl": "https://p.scdn.co/mp3-preview/a03902423cadfb31cbe6384820e5582937cc47a2?cid=f94bfdc2708e49b0a440ba9304642c10",
+        "genre": "lofi house"
       }
     ]
   },

@@ -1006,17 +1006,19 @@ body.modal-open {
   opacity: 0.4;
 }
 
-.track-player {
-  padding: 0 14px 14px;
+.track-row.is-previewing .track-preview {
+  background: #111;
+  color: #fff;
 }
 
-.track-player iframe,
-.track-player audio {
-  display: block;
-  width: 100%;
-  height: 80px;
-  border: 0;
+.track-player {
+  margin: 0 14px 14px;
   border-radius: 6px;
+  background: #111;
+  color: #fff;
+  padding: 8px 10px;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .request-panel,

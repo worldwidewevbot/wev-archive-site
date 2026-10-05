@@ -115,6 +115,7 @@ for (const album of uniqueAlbums) {
       uses: custom.uses || [],
       status: custom.status || "clearable",
       notes: custom.notes || "",
+      previewUrl: custom.previewUrl || custom.preview_url || track.preview_url || "",
       spotifyUrl: track.external_urls?.spotify || album.external_urls?.spotify || "",
       artwork: album.images?.[0]?.url || ""
     });
