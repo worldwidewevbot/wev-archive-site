@@ -763,7 +763,6 @@ function renderTracks(tracks) {
       const bpm = formatBpm(track.bpm);
       const isPreviewing = state.activePreviewTrackId === track.id;
       const previewUrl = getTrackPreviewUrl(track);
-      const playerUrl = getTrackPlayerUrl(track);
       row.classList.toggle("is-previewing", isPreviewing);
       row.innerHTML = `
         <div class="track-hero" style="--track-art: url('${escapeAttribute(artwork)}')">
@@ -774,8 +773,8 @@ function renderTracks(tracks) {
             ${bpm ? `<span class="track-bpm">${escapeHtml(bpm)}</span>` : ""}
           </div>
           ${releaseDate ? `<span class="track-date">${escapeHtml(releaseDate)}</span>` : ""}
-          <button class="track-preview" type="button" ${playerUrl ? "" : "disabled"} aria-label="${escapeAttribute(`${isPreviewing ? "Pause" : "Play"} ${track.title}`)}" aria-pressed="${isPreviewing}">
-            <span>${playerUrl ? (isPreviewing ? "Pause" : "Play") : "No preview"}</span>
+          <button class="track-preview" type="button" ${previewUrl ? "" : "disabled"} aria-label="${escapeAttribute(`${isPreviewing ? "Pause" : "Play"} ${track.title}`)}" aria-pressed="${isPreviewing}">
+            <span>${previewUrl ? (isPreviewing ? "Pause" : "Play") : "No preview"}</span>
           </button>
         </div>
         <div class="track-lower">
@@ -785,7 +784,6 @@ function renderTracks(tracks) {
             <button class="track-select" type="button" aria-pressed="${isSelected}">${isSelected ? "Requested" : "Request"}</button>
           </div>
         </div>
-        ${isPreviewing ? renderTrackPlayer(track) : ""}
       `;
       row.querySelector(".track-select").addEventListener("click", () => {
         state.selectedTrackIds.clear();
@@ -805,37 +803,6 @@ function getTrackPreviewUrl(track) {
   return track.previewUrl || track.preview_url || track.prev_url || "";
 }
 
-function getTrackSpotifyUrl(track) {
-  return track.spotifyUrl || track.spotify_url || "";
-}
-
-function getSpotifyTrackId(url) {
-  const match = String(url || "").match(/open\.spotify\.com\/track\/([A-Za-z0-9]+)/);
-  return match?.[1] || "";
-}
-
-function getTrackSpotifyEmbedUrl(track) {
-  const trackId = getSpotifyTrackId(getTrackSpotifyUrl(track));
-  if (!trackId) return "";
-  return `https://open.spotify.com/embed/track/${trackId}?utm_source=generator`;
-}
-
-function getTrackPlayerUrl(track) {
-  return getTrackSpotifyEmbedUrl(track) || getTrackPreviewUrl(track);
-}
-
-function renderTrackPlayer(track) {
-  const embedUrl = getTrackSpotifyEmbedUrl(track);
-  if (embedUrl) {
-    return `
-      <div class="track-player track-player-embed" aria-live="polite">
-        <iframe src="${escapeAttribute(embedUrl)}" title="${escapeAttribute(`${track.title} Spotify player`)}" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      </div>
-    `;
-  }
-  return `<div class="track-player" aria-live="polite">playing preview</div>`;
-}
-
 function stopTrackPreview() {
   if (state.activePreviewAudio) {
     state.activePreviewAudio.pause();
@@ -846,20 +813,14 @@ function stopTrackPreview() {
 }
 
 function toggleTrackPreview(track) {
-  const embedUrl = getTrackSpotifyEmbedUrl(track);
   const previewUrl = getTrackPreviewUrl(track);
-  if (!embedUrl && !previewUrl) return;
+  if (!previewUrl) return;
   if (state.activePreviewTrackId === track.id) {
     stopTrackPreview();
     renderCatalog();
     return;
   }
   stopTrackPreview();
-  if (embedUrl) {
-    state.activePreviewTrackId = track.id;
-    renderCatalog();
-    return;
-  }
   const audio = new Audio(previewUrl);
   state.activePreviewAudio = audio;
   state.activePreviewTrackId = track.id;

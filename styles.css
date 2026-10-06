@@ -1011,29 +1011,6 @@ body.modal-open {
   color: #fff;
 }
 
-.track-player {
-  margin: 0 14px 14px;
-  border-radius: 6px;
-  background: #111;
-  color: #fff;
-  padding: 8px 10px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.track-player-embed {
-  overflow: hidden;
-  padding: 0;
-  background: transparent;
-}
-
-.track-player iframe {
-  display: block;
-  width: 100%;
-  height: 80px;
-  border: 0;
-}
-
 .request-panel,
 .admin-panel {
   margin-top: 36px;
@@ -1655,10 +1632,6 @@ body.modal-open {
   .track-select {
     min-width: 92px;
     font-size: 14px;
-  }
-
-  .track-player {
-    padding: 0 12px 12px;
   }
 
   .admin-actions,
