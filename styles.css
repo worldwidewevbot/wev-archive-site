@@ -619,8 +619,8 @@ body.modal-open {
   display: flex;
   min-height: 46px;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  justify-content: flex-start;
+  gap: 10px;
   cursor: pointer;
   font-size: 18px;
   font-weight: 700;
@@ -631,13 +631,15 @@ body.modal-open {
   display: none;
 }
 
-.licensing-works summary span:last-child {
-  font-size: 20px;
+.licensing-works summary .works-toggle {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
   transition: transform 160ms ease;
 }
 
-.licensing-works[open] summary span:last-child {
-  transform: rotate(180deg);
+.licensing-works[open] summary .works-toggle {
+  transform: rotate(45deg);
 }
 
 .licensing-works[open] .works-list {
@@ -740,36 +742,30 @@ body.modal-open {
 .catalog-tags {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  padding: 14px 12px;
+  justify-content: flex-start;
+  gap: 6px;
+  padding: 10px 0;
   border: 0;
-  border-radius: 4px;
-  background: #dedfe3;
-}
-
-.catalog-tags::before {
-  content: "Tags:";
-  flex: 0 0 100%;
-  border-bottom: 1px solid #c8c9ce;
-  padding-bottom: 7px;
-  color: #1f1f22;
-  font-size: 14px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
+  background: transparent;
 }
 
 .catalog-tags .tag-button {
-  min-height: 36px;
-  border: 0;
-  border-radius: 4px;
-  padding: 6px 12px;
-  color: #404044;
-  background: #fff;
-  box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
-  font-size: 12px;
+  min-height: 26px;
+  border: 1px solid #c8c9ce;
+  border-radius: 99px;
+  padding: 3px 10px;
+  color: var(--muted);
+  background: transparent;
+  box-shadow: none;
+  font-size: 11px;
   text-transform: uppercase;
+}
+
+.catalog-tags .tag-button[aria-pressed="true"],
+.catalog-tags .tag-button:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+  background: transparent;
 }
 
 .track-table {
@@ -1528,27 +1524,13 @@ body.modal-open {
 
   .catalog-tags {
     flex-wrap: nowrap;
-    justify-content: flex-start;
     max-width: 100%;
     overflow-x: auto;
-    padding: 12px;
-  }
-
-  .catalog-tags::before {
-    position: sticky;
-    left: 0;
-    flex: 0 0 auto;
-    width: auto;
-    border-bottom: 0;
-    padding: 6px 10px 0 0;
-    background: #dedfe3;
-    font-size: 12px;
+    padding: 8px 0;
   }
 
   .catalog-tags .tag-button {
     flex: 0 0 auto;
-    min-height: 30px;
-    font-size: 11px;
   }
 
   .track-row {
