@@ -714,6 +714,9 @@ function getVisibleTracks() {
       return [track.title, track.artist, track.release, track.status, track.notes, ...getTrackTags(track)].join(" ").toLowerCase().includes(query);
     })
     .sort((a, b) => {
+      const aHasPreview = getTrackPreviewUrl(a) ? 0 : 1;
+      const bHasPreview = getTrackPreviewUrl(b) ? 0 : 1;
+      if (aHasPreview !== bHasPreview) return aHasPreview - bHasPreview;
       if (state.catalogSort === "bpm") return Number(a.bpm || 0) - Number(b.bpm || 0);
       if (state.catalogSort === "title") return a.title.localeCompare(b.title);
       return String(b.releaseDate || "").localeCompare(String(a.releaseDate || ""));
