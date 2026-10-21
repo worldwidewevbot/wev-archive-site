@@ -333,7 +333,7 @@
       "title": "poly",
       "dek": "Single release.",
       "description": "“first single and title track of my album… poly reflects the many people, places, and things that have influenced me over the last 3 years.” Announced 2020-03-04, out 2020-03-11.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b2735dda5bf799c7e6326b206b68",
       "links": [
         {
           "label": "open project",
@@ -343,6 +343,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/B9mCPLYJHCK/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/0LrXxAlHPnn5y16OQOt1EL"
         }
       ],
       "tags": [
@@ -361,6 +365,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/B9mCPLYJHCK/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/0LrXxAlHPnn5y16OQOt1EL"
           }
         ]
       }
@@ -376,7 +384,7 @@
       "title": "OUT OF MY MIND (feat. birocratic + revvtheband)",
       "dek": "Single release.",
       "description": "“been waiting a long time to share it w yall, its a song i made w some of my closest friends.”",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/91/2e/32/912e3274-d760-a894-fa01-3fcf027eccb1/625612857639.png/1000x1000bb.jpg",
       "links": [
         {
           "label": "open project",
@@ -386,6 +394,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/CFN8JjCJK60/"
+        },
+        {
+          "label": "apple music",
+          "url": "https://music.apple.com/us/album/out-of-my-mind/1603489396?i=1603489399"
         }
       ],
       "tags": [
@@ -403,6 +415,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/CFN8JjCJK60/"
+          },
+          {
+            "label": "apple music",
+            "url": "https://music.apple.com/us/album/out-of-my-mind/1603489396?i=1603489399"
           }
         ]
       }
@@ -460,7 +476,7 @@
       "title": "technobody (w/ djhoodboi)",
       "dek": "Single release.",
       "description": "Premiere stream night before; IG filter made for the release. Visuals: @lordstingray. “so pumped for this song to finally be in the world.”",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/91/2e/32/912e3274-d760-a894-fa01-3fcf027eccb1/625612857639.png/1000x1000bb.jpg",
       "links": [
         {
           "label": "open project",
@@ -470,6 +486,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/CMQGp8YJuXb/"
+        },
+        {
+          "label": "apple music",
+          "url": "https://music.apple.com/us/album/technobody/1603489396?i=1603489397"
         }
       ],
       "tags": [
@@ -487,6 +507,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/CMQGp8YJuXb/"
+          },
+          {
+            "label": "apple music",
+            "url": "https://music.apple.com/us/album/technobody/1603489396?i=1603489397"
           }
         ]
       }
@@ -502,7 +526,7 @@
       "title": "technobody remix pack",
       "dek": "Pack release.",
       "description": "Remixers: John Tejada, Kenta Cats, Kazuma Takahashi, littledeadgirl, kaizoslumber.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b2733de7100e57ce095fef520959",
       "links": [
         {
           "label": "open project",
@@ -512,6 +536,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/CTYBvkmvpCF/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/1aOJMaKI9Vn8At6qe0znfd"
         }
       ],
       "tags": [
@@ -531,6 +559,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/CTYBvkmvpCF/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/1aOJMaKI9Vn8At6qe0znfd"
           }
         ]
       }
@@ -587,8 +619,8 @@
       "date": "2021-10-21",
       "title": "dawn (w/ laurenfaith)",
       "dek": "Single release.",
-      "description": "“dawn w/ @laurenfaith — out now everywhere 🌇🌐”.",
-      "image": "assets/placeholder-release.svg",
+      "description": "B-side to dusk, released as a double single with Lauren Faith in January 2022.",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/38/3b/16/383b16d0-89cd-1cb9-bedc-a54bd640bede/625612857738.png/1000x1000bb.jpg",
       "links": [
         {
           "label": "open project",
@@ -598,6 +630,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/CVSzUOUAmTJ/"
+        },
+        {
+          "label": "apple music",
+          "url": "https://music.apple.com/us/album/dawn/1603940668?i=1603940670"
         }
       ],
       "tags": [
@@ -608,13 +644,17 @@
       "project": {
         "headline": "dawn (w/ laurenfaith)",
         "body": [
-          "“dawn w/ @laurenfaith — out now everywhere 🌇🌐”.",
-          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+          "B-side to dusk, released as a double single with Lauren Faith in January 2022.",
+          "“dawn w/ @laurenfaith — out now everywhere 🌇🌐”."
         ],
         "links": [
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/CVSzUOUAmTJ/"
+          },
+          {
+            "label": "apple music",
+            "url": "https://music.apple.com/us/album/dawn/1603940668?i=1603940670"
           }
         ]
       }
@@ -630,7 +670,7 @@
       "title": "dusk",
       "dek": "Single release.",
       "description": "“dusk OUT NOW on all platforms 🌐💫 feeling very blessed”.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273d08d2fbe4b66712cd8436135",
       "links": [
         {
           "label": "open project",
@@ -640,6 +680,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/CZPomZ0OT-a/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/2qp9qhgtySlWF53XO5WPUV"
         }
       ],
       "tags": [
@@ -657,6 +701,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/CZPomZ0OT-a/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/2qp9qhgtySlWF53XO5WPUV"
           }
         ]
       }
@@ -672,7 +720,7 @@
       "title": "tek it (wev remix) for cafune",
       "dek": "Remix release.",
       "description": "“@wearecafune tek it remix out now 🌐💫”.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b2733bc3729b4296779fb7966df8",
       "links": [
         {
           "label": "open project",
@@ -682,6 +730,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/Cdy5FDCvFOd/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/7L4YbGMRpxPpz3Pck79BIa"
         }
       ],
       "tags": [
@@ -700,6 +752,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/Cdy5FDCvFOd/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/7L4YbGMRpxPpz3Pck79BIa"
           }
         ]
       }
@@ -715,7 +771,7 @@
       "title": "HERO EP",
       "dek": "Ep release.",
       "description": "3 tracks “for deep in the club”, self-released. ‘hero’ visualizer by @lordstingray did 1,057 likes.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b2734646271c73c28b73a2f0bc60",
       "links": [
         {
           "label": "open project",
@@ -725,6 +781,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/CglTSCvs5iZ/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/4bQgSVot1TtemJa0unTZvv"
         }
       ],
       "tags": [
@@ -743,6 +803,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/CglTSCvs5iZ/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/4bQgSVot1TtemJa0unTZvv"
           }
         ]
       }
@@ -758,7 +822,7 @@
       "title": "powerstar",
       "dek": "Single release.",
       "description": "“my new song ‘powerstar’ 🌠”, visuals by @lordstingray, 952 likes.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4",
       "links": [
         {
           "label": "open project",
@@ -768,6 +832,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/reel/Cgr5qGPJQB5/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/5R2UA1UYqEBQUqz3RH0j6i"
         }
       ],
       "tags": [
@@ -785,6 +853,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/reel/Cgr5qGPJQB5/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/5R2UA1UYqEBQUqz3RH0j6i"
           }
         ]
       }
@@ -800,7 +872,7 @@
       "title": "gotsmoke",
       "dek": "Single release.",
       "description": "“my new song ‘gotsmoke’ 🌐”.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4",
       "links": [
         {
           "label": "open project",
@@ -810,6 +882,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/reel/Cg0gn4dL7Pa/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/5R2UA1UYqEBQUqz3RH0j6i"
         }
       ],
       "tags": [
@@ -827,6 +903,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/reel/Cg0gn4dL7Pa/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/5R2UA1UYqEBQUqz3RH0j6i"
           }
         ]
       }
@@ -842,7 +922,7 @@
       "title": "hot",
       "dek": "Single release.",
       "description": "“i made a record and it’s hot, this is not a game 🌐 available everywhere”.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273a624c888c9f16c332cb17af2",
       "links": [
         {
           "label": "open project",
@@ -852,6 +932,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/Ci-p3c8upse/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/3oaSFfg9So5ZMaIagLVVDi"
         }
       ],
       "tags": [
@@ -870,6 +954,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/Ci-p3c8upse/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/3oaSFfg9So5ZMaIagLVVDi"
           }
         ]
       }
@@ -885,7 +973,7 @@
       "title": "watchyaback!",
       "dek": "Single release.",
       "description": "Collab + visual with @lordstingray for @ronindivision 10th anniversary. Teaser did 1,432 likes.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b2737237b61f23ac7eb1f24f061a",
       "links": [
         {
           "label": "open project",
@@ -895,6 +983,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/reel/ClmaHfyOie_/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/1cwvh5CxBaWnBa96KQsfjs"
         }
       ],
       "tags": [
@@ -912,6 +1004,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/reel/ClmaHfyOie_/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/1cwvh5CxBaWnBa96KQsfjs"
           }
         ]
       }
@@ -927,7 +1023,7 @@
       "title": "deep pockets dub",
       "dek": "Single release.",
       "description": "“hidden B side unlocked: deep pockets dub 💽. ‘hot’ was originally an EP with two campaign placements lined up.”",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4",
       "links": [
         {
           "label": "open project",
@@ -937,6 +1033,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/CtiH85aNIIs/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/5R2UA1UYqEBQUqz3RH0j6i"
         }
       ],
       "tags": [
@@ -956,6 +1056,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/CtiH85aNIIs/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/5R2UA1UYqEBQUqz3RH0j6i"
           }
         ]
       }
@@ -971,7 +1075,7 @@
       "title": "higher",
       "dek": "Single release.",
       "description": "“higher 💥💫🌐 out now everywhere”, visuals by @ch4ch__. “been rinsing it in my sets for quite a while.”",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273e2d5ab71df905972a1ce2a3e",
       "links": [
         {
           "label": "open project",
@@ -981,6 +1085,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/reel/CvNNhHQtkFg/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/7Jf1rQXWama6maj2H2F8IK"
         }
       ],
       "tags": [
@@ -998,6 +1106,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/reel/CvNNhHQtkFg/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/7Jf1rQXWama6maj2H2F8IK"
           }
         ]
       }
@@ -1013,7 +1125,7 @@
       "title": "walk2me (w/ nick.am)",
       "dek": "Single release.",
       "description": "First single of the nick.am project. “just put out this tune with my friend @nick.am.”",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4",
       "links": [
         {
           "label": "open project",
@@ -1023,6 +1135,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/C23Eq4sOGzy/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/5R2UA1UYqEBQUqz3RH0j6i"
         }
       ],
       "tags": [
@@ -1040,6 +1156,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/C23Eq4sOGzy/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/5R2UA1UYqEBQUqz3RH0j6i"
           }
         ]
       }
@@ -1055,7 +1175,7 @@
       "title": "second nick.am single",
       "dek": "Single release.",
       "description": "“the second single from our project is out today ✈️🌐”. Made on a PlayStation (project lore).",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4",
       "links": [
         {
           "label": "open project",
@@ -1065,6 +1185,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/C3sudVXOdA9/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/5R2UA1UYqEBQUqz3RH0j6i"
         }
       ],
       "tags": [
@@ -1082,6 +1206,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/C3sudVXOdA9/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/5R2UA1UYqEBQUqz3RH0j6i"
           }
         ]
       }
@@ -1097,7 +1225,7 @@
       "title": "feel everything EP (w/ nick.am)",
       "dek": "Ep release.",
       "description": "3+ years in the making. Cover art @bubbltek, world-building @lordstingray. EP lore series on IG (PlayStation production, ‘circles’ origin story). 12” vinyl announced 2024-04-22, stocked at @humanheadnyc.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273c200017312cad8d5a5b8cde4",
       "links": [
         {
           "label": "open project",
@@ -1107,6 +1235,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/C5YxJ7jOBq5/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/5R2UA1UYqEBQUqz3RH0j6i"
         }
       ],
       "tags": [
@@ -1126,6 +1258,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/C5YxJ7jOBq5/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/5R2UA1UYqEBQUqz3RH0j6i"
           }
         ]
       }
@@ -1141,7 +1277,7 @@
       "title": "feel everything (remixes)",
       "dek": "Pack release.",
       "description": "Remixers incl. Discord remix-contest winner.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273a202e0bafc0d70dc1b011e86",
       "links": [
         {
           "label": "open project",
@@ -1151,6 +1287,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/C7W9WZuuYVD/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/6uJILMCaPM24MYElPqZWoI"
         }
       ],
       "tags": [
@@ -1170,6 +1310,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/C7W9WZuuYVD/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/6uJILMCaPM24MYElPqZWoI"
           }
         ]
       }
@@ -1185,7 +1329,7 @@
       "title": "start something",
       "dek": "Single release.",
       "description": "“out now everywhere + my favorite mix i’ve ever recorded for @thirdfloorsounds.” Tagged @marcjacobs.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273984fe2ca7ac9a1d4f7502b05",
       "links": [
         {
           "label": "open project",
@@ -1195,6 +1339,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/reel/C-kv0onu8Jx/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/0uG1I6xF87XXT25dWuloo0"
         }
       ],
       "tags": [
@@ -1212,6 +1360,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/reel/C-kv0onu8Jx/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/0uG1I6xF87XXT25dWuloo0"
           }
         ]
       }
@@ -1227,7 +1379,7 @@
       "title": "mazeworld (wev remix) for nextdimensional",
       "dek": "Remix release.",
       "description": "“my remix for @nextdimensional mazeworld 🌐💫”.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b27356a4c5ab97dddf7965e73dd7",
       "links": [
         {
           "label": "open project",
@@ -1237,6 +1389,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/DAEMuADOS37/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/7ktbEr9DdTZfVlkQTBB7YA"
         }
       ],
       "tags": [
@@ -1254,6 +1410,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/DAEMuADOS37/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/7ktbEr9DdTZfVlkQTBB7YA"
           }
         ]
       }
@@ -1269,7 +1429,7 @@
       "title": "timesup! (w/ carbike000)",
       "dek": "Single release.",
       "description": "“New single timesup! Out everywhere with @worldwidewev.” Lore post: vocal scratch recorded from hotel-room demos on Japan tour.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b2738ea097ecde1a046879097a24",
       "links": [
         {
           "label": "open project",
@@ -1279,6 +1439,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/DA_zU5PzBcu/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/3rJoasU24Qx185KPQ6fKD9"
         }
       ],
       "tags": [
@@ -1298,6 +1462,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/DA_zU5PzBcu/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/3rJoasU24Qx185KPQ6fKD9"
           }
         ]
       }
@@ -1355,7 +1523,7 @@
       "title": "shigoto werk",
       "dek": "Single release.",
       "description": "Made on tour in Japan (summer 2024) in a home studio. “have been rinsing it in my sets since then, and now it’s yours.” Later: Rocket League Season 21 soundtrack + in-game feature.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273585add987f773ae3f85640bc",
       "links": [
         {
           "label": "open project",
@@ -1365,6 +1533,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/DHlkVxnO4FB/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/5EpGMUkh0letnOqx4GhuHz"
         }
       ],
       "tags": [
@@ -1386,6 +1558,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/DHlkVxnO4FB/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/5EpGMUkh0letnOqx4GhuHz"
           }
         ]
       }
@@ -1401,7 +1577,7 @@
       "title": "acid in tokyo (feat. yinyo_tyo)",
       "dek": "Single release.",
       "description": "Japan-only release. Camcorder music video shot in Tokyo (released Nov 2025).",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/08/46/bd/0846bd7c-c913-e208-f189-5caad037ba4e/663918135204.jpg/1000x1000bb.jpg",
       "links": [
         {
           "label": "open project",
@@ -1411,6 +1587,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/DIAMSqMz6GV/"
+        },
+        {
+          "label": "apple music",
+          "url": "https://music.apple.com/us/album/acid-in-tokyo-feat-yinyo/1801396263?i=1801396273"
         }
       ],
       "tags": [
@@ -1430,6 +1610,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/DIAMSqMz6GV/"
+          },
+          {
+            "label": "apple music",
+            "url": "https://music.apple.com/us/album/acid-in-tokyo-feat-yinyo/1801396263?i=1801396273"
           }
         ]
       }
@@ -1445,7 +1629,7 @@
       "title": "start something EP",
       "dek": "Ep release.",
       "description": "Six acid tracks, “made between new york and tokyo over the last year.” 12” white-label vinyl ed. 100, hand-stamped/numbered in Brooklyn (Dec 2025). Bonus @castillonaire remix.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b2739839c7653204c5c57c09671f",
       "links": [
         {
           "label": "open project",
@@ -1455,6 +1639,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/DIhU0qsTz5K/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/5sOR6YEvoUWPRZDDmRIirR"
         }
       ],
       "tags": [
@@ -1476,6 +1664,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/DIhU0qsTz5K/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/5sOR6YEvoUWPRZDDmRIirR"
           }
         ]
       }
@@ -1491,7 +1683,7 @@
       "title": "TECHNOCHRONIC (feat. yoshitee_)",
       "dek": "Single release.",
       "description": "“the second or third time yoshi pulled up… his scratch flow reminded me of daft punk’s ‘technologic’.” Visuals @lordstingray.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273cc70bc8c5382d386d65370bc",
       "links": [
         {
           "label": "open project",
@@ -1501,6 +1693,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/DU9MlSJkfQv/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/3hayQmXiv1NyCk8ibHGqAb"
         }
       ],
       "tags": [
@@ -1519,6 +1715,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/DU9MlSJkfQv/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/3hayQmXiv1NyCk8ibHGqAb"
           }
         ]
       }
@@ -1533,8 +1733,8 @@
       "date": "2026-02-04",
       "title": "remix for fifi zhang x",
       "dek": "Remix release.",
-      "description": "“new remix for @fifizhangx icymi”.",
-      "image": "assets/placeholder-release.svg",
+      "description": "wev's remix of 'Run Away, My Lover' for FiFi Zhang, featured on the FLEETING HEARTS: REBIRTH compilation (2026).",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/4d/f5/4e/4df54e13-de59-34ae-ba65-9c0404c9a6f1/5063904813935_cover.jpg/1000x1000bb.jpg",
       "links": [
         {
           "label": "open project",
@@ -1544,6 +1744,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/DUWdSDdEpjg/"
+        },
+        {
+          "label": "apple music",
+          "url": "https://music.apple.com/us/album/run-away-my-lover-wev-remix/1874910664?i=1874910767"
         }
       ],
       "tags": [
@@ -1555,13 +1759,17 @@
       "project": {
         "headline": "remix for fifi zhang x",
         "body": [
-          "“new remix for @fifizhangx icymi”.",
-          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+          "wev's remix of 'Run Away, My Lover' for FiFi Zhang, featured on the FLEETING HEARTS: REBIRTH compilation (2026).",
+          "“new remix for @fifizhangx icymi”."
         ],
         "links": [
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/DUWdSDdEpjg/"
+          },
+          {
+            "label": "apple music",
+            "url": "https://music.apple.com/us/album/run-away-my-lover-wev-remix/1874910664?i=1874910767"
           }
         ]
       }
@@ -1577,7 +1785,7 @@
       "title": "GET W THIS",
       "dek": "Single release.",
       "description": "Lead single; OST album announced same day. 3,453 likes — biggest announcement post to date. Visualizer @lordstingray.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273c25905cb5b033acc06088812",
       "links": [
         {
           "label": "open project",
@@ -1587,6 +1795,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/DWrccYJFfvb/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/2ZpQqO3Oa0ZWuYKZZPqr8o"
         }
       ],
       "tags": [
@@ -1605,6 +1817,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/DWrccYJFfvb/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/2ZpQqO3Oa0ZWuYKZZPqr8o"
           }
         ]
       }
@@ -1620,7 +1836,7 @@
       "title": "SPECTRUM (w/ sc.ruz)",
       "dek": "Single release.",
       "description": "“easily the most requested ID i’ve had since starting to rinse it a couple years ago… over the next 2 years there were more [versions].” OST single.",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b27330f9dc2015bf513b3e832f35",
       "links": [
         {
           "label": "open project",
@@ -1630,6 +1846,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/DYXqMIVmu15/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/0efHSSeL9EvkNEAYwLW00N"
         }
       ],
       "tags": [
@@ -1647,6 +1867,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/DYXqMIVmu15/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/0efHSSeL9EvkNEAYwLW00N"
           }
         ]
       }
@@ -1662,7 +1886,7 @@
       "title": "OST",
       "dek": "Album release.",
       "description": "Debut album. Mixed by @nosajkrap, mastered by @joshuapleeter. Contributors include @lordstingray, @sc.ruz, @nick.am, @yoshitee_ and more. Early listening @dimension.70. Release set @thelotradio 2026-06-02. 12” translucent purple vinyl pre-order (Aug 2026). “a record which captures the spirit i feel living and working in new york.”",
-      "image": "assets/placeholder-release.svg",
+      "image": "https://i.scdn.co/image/ab67616d0000b273c4e59cd42e2d3155c39af482",
       "links": [
         {
           "label": "open project",
@@ -1672,6 +1896,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/DY788qXGpCM/"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/album/0bW9pf2djC7kJKs0b2GWUi"
         }
       ],
       "tags": [
@@ -1692,6 +1920,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/DY788qXGpCM/"
+          },
+          {
+            "label": "spotify",
+            "url": "https://open.spotify.com/album/0bW9pf2djC7kJKs0b2GWUi"
           }
         ]
       }
@@ -1717,6 +1949,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/reel/DeAD1LXqJb3/"
+        },
+        {
+          "label": "bandcamp",
+          "url": "https://worldwidewev.bandcamp.com/track/shiki-no-uta-wev-edit"
         }
       ],
       "tags": [
@@ -1734,6 +1970,10 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/reel/DeAD1LXqJb3/"
+          },
+          {
+            "label": "bandcamp",
+            "url": "https://worldwidewev.bandcamp.com/track/shiki-no-uta-wev-edit"
           }
         ]
       }
@@ -2314,8 +2554,8 @@
       "date": "2024-07-30",
       "title": "Elsewhere headline",
       "dek": "Live Moment.",
-      "description": "“have dreamed of headlining this room since moving to brooklyn.”",
-      "image": "assets/placeholder-flier.svg",
+      "description": "wev b2b Nick AM headline set at Elsewhere Hall, Brooklyn NY, September 2024 — the feel everything EP release show.",
+      "image": "https://img.youtube.com/vi/2H2A3zYsvmA/maxresdefault.jpg",
       "links": [
         {
           "label": "open project",
@@ -2325,6 +2565,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/C-EVRshNgxV/"
+        },
+        {
+          "label": "watch on youtube",
+          "url": "https://www.youtube.com/watch?v=2H2A3zYsvmA"
         }
       ],
       "tags": [
@@ -2334,13 +2578,17 @@
       "project": {
         "headline": "Elsewhere headline",
         "body": [
-          "“have dreamed of headlining this room since moving to brooklyn.”",
-          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+          "wev b2b Nick AM headline set at Elsewhere Hall, Brooklyn NY, September 2024 — the feel everything EP release show.",
+          "“have dreamed of headlining this room since moving to brooklyn.”"
         ],
         "links": [
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/C-EVRshNgxV/"
+          },
+          {
+            "label": "watch on youtube",
+            "url": "https://www.youtube.com/watch?v=2H2A3zYsvmA"
           }
         ]
       }
@@ -2532,8 +2780,8 @@
       "date": "2025-09-15",
       "title": "SPEEDSTAR X-2",
       "dek": "Live Moment.",
-      "description": "“PURE.RAVE.DANCE.UTOPIA” sequel w/ @perfectchao + more. 1,459 likes.",
-      "image": "assets/placeholder-flier.svg",
+      "description": "wev's DJ set at SPEEDSTAR Los Angeles, March 16, 2024. A blend of house, UKG, speed garage, and jungle.",
+      "image": "https://img.youtube.com/vi/--GFLrIsehI/maxresdefault.jpg",
       "links": [
         {
           "label": "open project",
@@ -2543,6 +2791,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/reel/DOokV5vktmo/"
+        },
+        {
+          "label": "watch on youtube",
+          "url": "https://www.youtube.com/watch?v=--GFLrIsehI"
         }
       ],
       "tags": [
@@ -2551,13 +2803,17 @@
       "project": {
         "headline": "SPEEDSTAR X-2",
         "body": [
-          "“PURE.RAVE.DANCE.UTOPIA” sequel w/ @perfectchao + more. 1,459 likes.",
-          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+          "wev's DJ set at SPEEDSTAR Los Angeles, March 16, 2024. A blend of house, UKG, speed garage, and jungle.",
+          "“PURE.RAVE.DANCE.UTOPIA” sequel w/ @perfectchao + more. 1,459 likes."
         ],
         "links": [
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/reel/DOokV5vktmo/"
+          },
+          {
+            "label": "watch on youtube",
+            "url": "https://www.youtube.com/watch?v=--GFLrIsehI"
           }
         ]
       }
@@ -2572,8 +2828,8 @@
       "date": "2026-06-02",
       "title": "OST release set @ thelotradio",
       "dek": "Live Moment.",
-      "description": "Full album tracklist w/ guests.",
-      "image": "assets/placeholder-flier.svg",
+      "description": "wev's OST album release set at The Lot Radio, Brooklyn NY, May 29, 2026 — a 1-hour mix exploring the confluence of electronic music, video game worlds, and contemporary club culture.",
+      "image": "https://img.youtube.com/vi/1cpPujuAgx4/maxresdefault.jpg",
       "links": [
         {
           "label": "open project",
@@ -2583,6 +2839,18 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/DZGKJ_jGjzu/"
+        },
+        {
+          "label": "watch on youtube",
+          "url": "https://www.youtube.com/watch?v=1cpPujuAgx4"
+        },
+        {
+          "label": "soundcloud",
+          "url": "https://soundcloud.com/worldwidewev/wev-ost-album-release-the-lot"
+        },
+        {
+          "label": "thelotradio.com",
+          "url": "https://www.thelotradio.com/shows/special-guests/2026-05-29-1900"
         }
       ],
       "tags": [
@@ -2594,13 +2862,25 @@
       "project": {
         "headline": "OST release set @ thelotradio",
         "body": [
-          "Full album tracklist w/ guests.",
-          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+          "wev's OST album release set at The Lot Radio, Brooklyn NY, May 29, 2026 — a 1-hour mix exploring the confluence of electronic music, video game worlds, and contemporary club culture.",
+          "Full album tracklist w/ guests."
         ],
         "links": [
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/DZGKJ_jGjzu/"
+          },
+          {
+            "label": "watch on youtube",
+            "url": "https://www.youtube.com/watch?v=1cpPujuAgx4"
+          },
+          {
+            "label": "soundcloud",
+            "url": "https://soundcloud.com/worldwidewev/wev-ost-album-release-the-lot"
+          },
+          {
+            "label": "thelotradio.com",
+            "url": "https://www.thelotradio.com/shows/special-guests/2026-05-29-1900"
           }
         ]
       }
@@ -3520,7 +3800,7 @@
       "title": "Bomb Rush Cyberfunk (Team Reptile)",
       "dek": "Placement.",
       "description": "“my first tune in a video game 🥲” — Switch + Steam. 1,416 likes.",
-      "image": "assets/placeholder-license.svg",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1353230/header.jpg",
       "links": [
         {
           "label": "open project",
@@ -3530,6 +3810,18 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/reel/CwD1ibzKH6h/"
+        },
+        {
+          "label": "Team Reptile",
+          "url": "https://www.teamreptile.com/"
+        },
+        {
+          "label": "Steam",
+          "url": "https://store.steampowered.com/app/1353230/Bomb_Rush_Cyberfunk/"
+        },
+        {
+          "label": "ost on soundcloud",
+          "url": "https://soundcloud.com/bomb-rush-cyberfunk-ost"
         }
       ],
       "tags": [
@@ -3548,6 +3840,18 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/reel/CwD1ibzKH6h/"
+          },
+          {
+            "label": "Team Reptile",
+            "url": "https://www.teamreptile.com/"
+          },
+          {
+            "label": "Steam",
+            "url": "https://store.steampowered.com/app/1353230/Bomb_Rush_Cyberfunk/"
+          },
+          {
+            "label": "ost on soundcloud",
+            "url": "https://soundcloud.com/bomb-rush-cyberfunk-ost"
           }
         ]
       }
@@ -3602,8 +3906,8 @@
       "date": "2024-04-30",
       "title": "Audio-Technica vinyl mix",
       "dek": "Placement.",
-      "description": "“recorded my first vinyl mix for @audiotechnicausa.”",
-      "image": "assets/placeholder-license.svg",
+      "description": "wev and Nick AM featured in Audio-Technica's Headliner series (Ep 7), recorded at Technica House NY. An interview and storytelling session covering their rise through NYC's music scene.",
+      "image": "https://img.youtube.com/vi/Q6nKsPo9468/maxresdefault.jpg",
       "links": [
         {
           "label": "open project",
@@ -3613,6 +3917,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/C6Y8NucOPrF/"
+        },
+        {
+          "label": "watch on youtube",
+          "url": "https://www.youtube.com/watch?v=Q6nKsPo9468"
         }
       ],
       "tags": [
@@ -3622,13 +3930,17 @@
       "project": {
         "headline": "Audio-Technica vinyl mix",
         "body": [
-          "“recorded my first vinyl mix for @audiotechnicausa.”",
-          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+          "wev and Nick AM featured in Audio-Technica's Headliner series (Ep 7), recorded at Technica House NY. An interview and storytelling session covering their rise through NYC's music scene.",
+          "“recorded my first vinyl mix for @audiotechnicausa.”"
         ],
         "links": [
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/C6Y8NucOPrF/"
+          },
+          {
+            "label": "watch on youtube",
+            "url": "https://www.youtube.com/watch?v=Q6nKsPo9468"
           }
         ]
       }
@@ -3862,6 +4174,14 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/DVy-A5FFcid/"
+        },
+        {
+          "label": "Rocket League",
+          "url": "https://www.rocketleague.com"
+        },
+        {
+          "label": "shigoto werk",
+          "url": "https://soundcloud.com/worldwidewev/shigoto-werk"
         }
       ],
       "tags": [
@@ -3879,6 +4199,14 @@
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/DVy-A5FFcid/"
+          },
+          {
+            "label": "Rocket League",
+            "url": "https://www.rocketleague.com"
+          },
+          {
+            "label": "shigoto werk",
+            "url": "https://soundcloud.com/worldwidewev/shigoto-werk"
           }
         ]
       }
@@ -3893,7 +4221,7 @@
       "date": "2026-05-03",
       "title": "5 Records That Found Me",
       "dek": "Placement.",
-      "description": "Video feature.",
+      "description": "wev shares 5 records that found him — a video essay exploring the music that shaped his sonic vocabulary.",
       "image": "assets/placeholder-license.svg",
       "links": [
         {
@@ -3904,6 +4232,10 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/reel/DX4wG_qic3r/"
+        },
+        {
+          "label": "instagram",
+          "url": "https://www.instagram.com/reel/DX4wG_qic3r"
         }
       ],
       "tags": [
@@ -3912,13 +4244,17 @@
       "project": {
         "headline": "5 Records That Found Me",
         "body": [
-          "Video feature.",
-          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+          "wev shares 5 records that found him — a video essay exploring the music that shaped his sonic vocabulary.",
+          "Video feature."
         ],
         "links": [
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/reel/DX4wG_qic3r/"
+          },
+          {
+            "label": "instagram",
+            "url": "https://www.instagram.com/reel/DX4wG_qic3r"
           }
         ]
       }
@@ -3933,7 +4269,7 @@
       "date": "2026-05-15",
       "title": "WHO IS WEV? (Hyde FM)",
       "dek": "Placement.",
-      "description": "Interview + Spotify top 10.",
+      "description": "Hyde FM radio feature and interview published May 2026 to coincide with the OST album release.",
       "image": "assets/placeholder-license.svg",
       "links": [
         {
@@ -3944,6 +4280,14 @@
         {
           "label": "instagram source",
           "url": "https://www.instagram.com/p/DYXtrXaFo3f/"
+        },
+        {
+          "label": "instagram",
+          "url": "https://www.instagram.com/p/DYXtrXaFo3f"
+        },
+        {
+          "label": "hydefm",
+          "url": "https://www.instagram.com/hydefmradio/"
         }
       ],
       "tags": [
@@ -3953,13 +4297,21 @@
       "project": {
         "headline": "WHO IS WEV? (Hyde FM)",
         "body": [
-          "Interview + Spotify top 10.",
-          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+          "Hyde FM radio feature and interview published May 2026 to coincide with the OST album release.",
+          "Interview + Spotify top 10."
         ],
         "links": [
           {
             "label": "instagram source",
             "url": "https://www.instagram.com/p/DYXtrXaFo3f/"
+          },
+          {
+            "label": "instagram",
+            "url": "https://www.instagram.com/p/DYXtrXaFo3f"
+          },
+          {
+            "label": "hydefm",
+            "url": "https://www.instagram.com/hydefmradio/"
           }
         ]
       }
@@ -3974,13 +4326,17 @@
       "date": "2026-05-29",
       "title": "EARMILK OST release-day interview",
       "dek": "Placement.",
-      "description": "Press around the album launch.",
-      "image": "assets/placeholder-license.svg",
+      "description": "EARMILK feature published May 29, 2026 — release day for OST. wev discusses translating memory, hardware, and house music into his debut album.",
+      "image": "https://earmilk.com/wp-content/uploads/2026/05/wev-OST-e1748561100930.jpg",
       "links": [
         {
           "label": "open project",
           "url": "#",
           "action": "open-project"
+        },
+        {
+          "label": "read on earmilk",
+          "url": "https://earmilk.com/2026/05/29/how-wev-translates-memory-hardware-and-house-music-into-ost-interview"
         }
       ],
       "tags": [
@@ -3992,10 +4348,15 @@
       "project": {
         "headline": "EARMILK OST release-day interview",
         "body": [
-          "Press around the album launch.",
-          "Source-ready archive entry imported from the Release & Moments Archive document. Add final visuals, credits, embeds, and captions through the CMS."
+          "EARMILK feature published May 29, 2026 — release day for OST. wev discusses translating memory, hardware, and house music into his debut album.",
+          "Press around the album launch."
         ],
-        "links": []
+        "links": [
+          {
+            "label": "read on earmilk",
+            "url": "https://earmilk.com/2026/05/29/how-wev-translates-memory-hardware-and-house-music-into-ost-interview"
+          }
+        ]
       }
     },
     {
