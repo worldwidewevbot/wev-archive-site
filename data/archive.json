@@ -1926,15 +1926,7 @@
             "url": "https://open.spotify.com/album/0bW9pf2djC7kJKs0b2GWUi"
           }
         ]
-      },
-      "gallery": [
-        "assets/ost-listening-party-1.jpg",
-        "assets/ost-listening-party-2.jpg",
-        "assets/ost-listening-party-3.jpg",
-        "assets/ost-listening-party-4.jpg",
-        "assets/ost-listening-party-5.jpg",
-        "assets/ost-listening-party-6.jpg"
-      ]
+      }
     },
     {
       "showInArchive": true,
@@ -2942,6 +2934,45 @@
         "assets/ost-release-party-5.jpg",
         "assets/ost-release-party-6.jpg",
         "assets/ost-release-party-7.jpg"
+      ]
+    },
+    {
+      "showInArchive": true,
+      "isSelectedWork": false,
+      "showInWorks": false,
+      "id": "ost-listening-party-2026-05-24",
+      "type": "live",
+      "year": "2026",
+      "date": "2026-05-24",
+      "title": "OST listening party",
+      "dek": "Live Moment.",
+      "description": "Private listening session ahead of the OST release. Intimate crowd, full album playthrough, the whole room standing still.",
+      "image": "assets/ost-listening-party-6.jpg",
+      "links": [
+        {
+          "label": "open project",
+          "url": "#",
+          "action": "open-project"
+        }
+      ],
+      "tags": [
+        "listening party",
+        "OST",
+        "live moment"
+      ],
+      "project": {
+        "headline": "OST listening party",
+        "body": [
+          "Private listening session ahead of the OST release. Intimate crowd, full album playthrough, the whole room standing still."
+        ],
+        "links": []
+      },
+      "gallery": [
+        "assets/ost-listening-party-1.jpg",
+        "assets/ost-listening-party-2.jpg",
+        "assets/ost-listening-party-3.jpg",
+        "assets/ost-listening-party-4.jpg",
+        "assets/ost-listening-party-5.jpg"
       ]
     },
     {
