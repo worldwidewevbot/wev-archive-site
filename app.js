@@ -379,11 +379,13 @@ function renderProjectDetail(item) {
           <div>${escapeHtml(item.type)}</div>
           <div>${escapeHtml(item.year)}</div>
         </div>
-        <h2>${escapeHtml(item.project.headline)}</h2>
-        ${item.project.body.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
-        ${renderProjectBlocks(item)}
-        <div class="link-row" aria-label="Links">
-          ${item.project.links.map((link) => `<a class="text-link" href="${escapeAttribute(link.url)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>`).join("")}
+        <div class="project-copy-body">
+          <h2>${escapeHtml(item.project.headline)}</h2>
+          ${item.project.body.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+          ${renderProjectBlocks(item)}
+          <div class="link-row" aria-label="Links">
+            ${item.project.links.map((link) => `<a class="text-link" href="${escapeAttribute(link.url)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>`).join("")}
+          </div>
         </div>
       </div>
     </article>

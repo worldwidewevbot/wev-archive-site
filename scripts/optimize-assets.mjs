@@ -22,7 +22,7 @@ const ARCHIVE_PATH = path.join(ROOT, "data", "archive.json");
 
 mkdirSync(THUMBS, { recursive: true });
 
-const SKIP_PREFIXES = ["placeholder", "w64"];
+const SKIP_PREFIXES = ["placeholder", "w64", "wev-logo"];
 const IMAGE_EXTS = new Set([".jpg", ".jpeg", ".png", ".webp"]);
 
 const files = readdirSync(ASSETS).filter((f) => {

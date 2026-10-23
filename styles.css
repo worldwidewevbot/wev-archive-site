@@ -738,9 +738,12 @@ body.modal-open {
 
 body.lightbox-open { overflow: hidden; }
 
+.project-copy-body {
+  min-width: 0;
+}
+
 .project-blocks {
   display: grid;
-  grid-column: 2;
   gap: 14px;
   margin-top: 4px;
 }
