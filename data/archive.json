@@ -1683,7 +1683,7 @@
       "title": "TECHNOCHRONIC (feat. yoshitee_)",
       "dek": "Single release.",
       "description": "“the second or third time yoshi pulled up… his scratch flow reminded me of daft punk’s ‘technologic’.” Visuals @lordstingray.",
-      "image": "https://i.scdn.co/image/ab67616d0000b273cc70bc8c5382d386d65370bc",
+      "image": "assets/technochronic-cover-art.png",
       "links": [
         {
           "label": "open project",
@@ -1785,7 +1785,7 @@
       "title": "GET W THIS",
       "dek": "Single release.",
       "description": "Lead single; OST album announced same day. 3,453 likes — biggest announcement post to date. Visualizer @lordstingray.",
-      "image": "https://i.scdn.co/image/ab67616d0000b273c25905cb5b033acc06088812",
+      "image": "assets/get-w-this-cover-art.png",
       "links": [
         {
           "label": "open project",
@@ -1836,7 +1836,7 @@
       "title": "SPECTRUM (w/ sc.ruz)",
       "dek": "Single release.",
       "description": "“easily the most requested ID i’ve had since starting to rinse it a couple years ago… over the next 2 years there were more [versions].” OST single.",
-      "image": "https://i.scdn.co/image/ab67616d0000b27330f9dc2015bf513b3e832f35",
+      "image": "assets/spectrum-cover-art.jpg",
       "links": [
         {
           "label": "open project",
@@ -1886,7 +1886,7 @@
       "title": "OST",
       "dek": "Album release.",
       "description": "Debut album. Mixed by @nosajkrap, mastered by @joshuapleeter. Contributors include @lordstingray, @sc.ruz, @nick.am, @yoshitee_ and more. Early listening @dimension.70. Release set @thelotradio 2026-06-02. 12” translucent purple vinyl pre-order (Aug 2026). “a record which captures the spirit i feel living and working in new york.”",
-      "image": "https://i.scdn.co/image/ab67616d0000b273c4e59cd42e2d3155c39af482",
+      "image": "assets/ost-artwork-final.jpg",
       "links": [
         {
           "label": "open project",
@@ -1926,7 +1926,15 @@
             "url": "https://open.spotify.com/album/0bW9pf2djC7kJKs0b2GWUi"
           }
         ]
-      }
+      },
+      "gallery": [
+        "assets/ost-listening-party-1.jpg",
+        "assets/ost-listening-party-2.jpg",
+        "assets/ost-listening-party-3.jpg",
+        "assets/ost-listening-party-4.jpg",
+        "assets/ost-listening-party-5.jpg",
+        "assets/ost-listening-party-6.jpg"
+      ]
     },
     {
       "showInArchive": true,
@@ -2896,7 +2904,7 @@
       "title": "OST release party @ market.hotel",
       "dek": "Live Moment.",
       "description": "w/ @nextdimensional + @ossx_nj + secret guests; OST CDs exclusive to the show. “a special one… still buzzing a week later.”",
-      "image": "assets/placeholder-flier.svg",
+      "image": "assets/ost-release-party-8.jpg",
       "links": [
         {
           "label": "open project",
@@ -2925,7 +2933,16 @@
             "url": "https://www.instagram.com/p/DajAK3emk8U/"
           }
         ]
-      }
+      },
+      "gallery": [
+        "assets/ost-release-party-1.jpg",
+        "assets/ost-release-party-2.jpg",
+        "assets/ost-release-party-3.jpg",
+        "assets/ost-release-party-4.jpg",
+        "assets/ost-release-party-5.jpg",
+        "assets/ost-release-party-6.jpg",
+        "assets/ost-release-party-7.jpg"
+      ]
     },
     {
       "showInArchive": true,
@@ -3506,7 +3523,7 @@
       "title": "OST CDs + 7oz OST shirts",
       "dek": "Good.",
       "description": "CDs exclusive to 7/2 release party; shirts limited. Designed w/ @n8mandreza.",
-      "image": "assets/placeholder-goods.svg",
+      "image": "assets/ost-cd-1.jpg",
       "links": [
         {
           "label": "open project",
@@ -3536,7 +3553,14 @@
             "url": "https://www.instagram.com/p/DaDrm6uFT8E/"
           }
         ]
-      }
+      },
+      "gallery": [
+        "assets/ost-cd-2.jpg",
+        "assets/ost-cd-3.jpg",
+        "assets/ost-cd-4.jpg",
+        "assets/ost-shirt-flat.png",
+        "assets/ost-merch-blast.png"
+      ]
     },
     {
       "showInArchive": true,
@@ -3549,7 +3573,7 @@
       "title": "OST 12” translucent purple vinyl",
       "dek": "Good.",
       "description": "Pre-order on Bandcamp; first 100 at $30 pre-order price.",
-      "image": "assets/placeholder-goods.svg",
+      "image": "assets/ost-vinyl-preorder-mockup.jpg",
       "links": [
         {
           "label": "open project",

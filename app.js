@@ -314,6 +314,7 @@ function renderProjectDetail(item) {
         ${renderProjectMedia(item)}
         <button class="text-link button-link project-close" type="button" data-action="close-project">close</button>
       </div>
+      ${renderProjectGallery(item)}
       <div class="project-detail-copy">
         <div class="meta">
           <div>${escapeHtml(item.type)}</div>
@@ -327,6 +328,20 @@ function renderProjectDetail(item) {
         </div>
       </div>
     </article>
+  `;
+}
+
+function renderProjectGallery(item) {
+  const photos = item.gallery;
+  if (!photos || !photos.length) return "";
+  return `
+    <div class="project-gallery" role="list" aria-label="Photos">
+      ${photos.map((src, i) => `
+        <button class="project-gallery-thumb" type="button" data-gallery-index="${i}" data-action="open-gallery" aria-label="Photo ${i + 1} of ${photos.length}">
+          <img src="${escapeAttribute(src)}" alt="" loading="lazy" />
+        </button>
+      `).join("")}
+    </div>
   `;
 }
 
@@ -359,6 +374,66 @@ function bindProjectClose(panel) {
   });
 }
 
+function bindProjectGallery(panel) {
+  const thumbs = panel.querySelectorAll("[data-action='open-gallery']");
+  if (!thumbs.length) return;
+
+  const photos = [...thumbs].map((t) => t.querySelector("img").src);
+
+  let lightbox = document.getElementById("project-lightbox");
+  if (!lightbox) {
+    lightbox = document.createElement("div");
+    lightbox.id = "project-lightbox";
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.setAttribute("aria-label", "Photo viewer");
+    lightbox.innerHTML = `
+      <div class="lightbox-backdrop"></div>
+      <button class="lightbox-prev" type="button" aria-label="Previous photo">&#8592;</button>
+      <div class="lightbox-img-wrap"><img class="lightbox-img" src="" alt="" /></div>
+      <button class="lightbox-next" type="button" aria-label="Next photo">&#8594;</button>
+      <button class="lightbox-close" type="button" aria-label="Close">&#x2715;</button>
+      <div class="lightbox-counter"></div>
+    `;
+    document.body.appendChild(lightbox);
+  }
+
+  const img = lightbox.querySelector(".lightbox-img");
+  const counter = lightbox.querySelector(".lightbox-counter");
+  let current = 0;
+
+  function showPhoto(index) {
+    current = (index + photos.length) % photos.length;
+    img.src = photos[current];
+    counter.textContent = `${current + 1} / ${photos.length}`;
+    lightbox.hidden = false;
+    document.body.classList.add("lightbox-open");
+  }
+
+  function closeLightbox() {
+    lightbox.hidden = true;
+    document.body.classList.remove("lightbox-open");
+  }
+
+  thumbs.forEach((btn) => {
+    btn.addEventListener("click", () => showPhoto(parseInt(btn.dataset.galleryIndex, 10)));
+  });
+
+  lightbox.querySelector(".lightbox-backdrop").onclick = closeLightbox;
+  lightbox.querySelector(".lightbox-close").onclick = closeLightbox;
+  lightbox.querySelector(".lightbox-prev").onclick = () => showPhoto(current - 1);
+  lightbox.querySelector(".lightbox-next").onclick = () => showPhoto(current + 1);
+
+  lightbox._keyHandler && document.removeEventListener("keydown", lightbox._keyHandler);
+  lightbox._keyHandler = (e) => {
+    if (lightbox.hidden) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") showPhoto(current - 1);
+    if (e.key === "ArrowRight") showPhoto(current + 1);
+  };
+  document.addEventListener("keydown", lightbox._keyHandler);
+}
+
 function openProject(id, surface = "archive") {
   const archiveItems = mergeArchiveItems(getSelectedWorks(), state.data.items, state.data.videos);
   const item = archiveItems.find((entry) => entry.id === id);
@@ -372,6 +447,7 @@ function openProject(id, surface = "archive") {
     els.selectedProjectPanel.hidden = false;
     els.selectedProjectPanel.innerHTML = renderProjectDetail(item);
     bindProjectClose(els.selectedProjectPanel);
+    bindProjectGallery(els.selectedProjectPanel);
     els.selectedProjectPanel.scrollIntoView({ block: "start" });
     return;
   }
@@ -386,6 +462,7 @@ function openProject(id, surface = "archive") {
   els.archiveProjectPanel.hidden = false;
   els.archiveProjectPanel.innerHTML = renderProjectDetail(item);
   bindProjectClose(els.archiveProjectPanel);
+  bindProjectGallery(els.archiveProjectPanel);
 }
 
 function openProjectModal(item) {
@@ -395,6 +472,7 @@ function openProjectModal(item) {
   const panel = els.projectModal.querySelector(".project-panel");
   panel.innerHTML = renderProjectDetail(item);
   bindProjectClose(els.projectModal);
+  bindProjectGallery(panel);
   els.projectModal.hidden = false;
 }
 
