@@ -1,5 +1,6 @@
 const state = {
   filter: "all",
+  view: "list",
   page: "selected",
   adminUnlocked: sessionStorage.getItem("wevCmsUnlocked") === "true",
   adminItemId: null,
@@ -166,27 +167,83 @@ function renderWorksTreeItem(item) {
 
 function renderFilters(filters) {
   if (!els.filterBar) return;
-  els.filterBar.replaceChildren(
-    ...filters.map((filter) => {
-      const button = document.createElement("button");
-      button.className = "filter-button";
-      button.type = "button";
-      button.textContent = filter;
-      button.setAttribute("aria-pressed", String(filter === state.filter));
-      button.addEventListener("click", () => {
-        state.filter = filter;
-        renderItems(mergeArchiveItems(getSelectedWorks(), state.data.items, state.data.videos));
-        renderFilters(state.data.filters);
-      });
-      return button;
-    })
-  );
+
+  const filterButtons = filters.map((filter) => {
+    const button = document.createElement("button");
+    button.className = "filter-button";
+    button.type = "button";
+    button.textContent = filter;
+    button.setAttribute("aria-pressed", String(filter === state.filter));
+    button.addEventListener("click", () => {
+      state.filter = filter;
+      renderItems(mergeArchiveItems(getSelectedWorks(), state.data.items, state.data.videos));
+      renderFilters(state.data.filters);
+    });
+    return button;
+  });
+
+  const viewToggle = document.createElement("div");
+  viewToggle.className = "view-toggle";
+  viewToggle.setAttribute("role", "group");
+  viewToggle.setAttribute("aria-label", "View mode");
+  ["list", "grid"].forEach((v) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "view-btn";
+    btn.textContent = v;
+    btn.setAttribute("aria-pressed", String(state.view === v));
+    btn.addEventListener("click", () => {
+      state.view = v;
+      renderItems(mergeArchiveItems(getSelectedWorks(), state.data.items, state.data.videos));
+      renderFilters(state.data.filters);
+    });
+    viewToggle.appendChild(btn);
+  });
+
+  els.filterBar.replaceChildren(...filterButtons, viewToggle);
 }
 
 function renderItems(items) {
   if (!els.archiveList) return;
   const visible = state.filter === "all" ? items : items.filter((item) => item.type === state.filter);
-  els.archiveList.replaceChildren(...visible.map(renderItem));
+  if (state.view === "grid") {
+    els.archiveList.classList.add("grid-mode");
+    els.archiveList.replaceChildren(...visible.map(renderGridItem));
+  } else {
+    els.archiveList.classList.remove("grid-mode");
+    els.archiveList.replaceChildren(...visible.map(renderItem));
+  }
+  bindImageLoading(els.archiveList);
+}
+
+function renderGridItem(item) {
+  const card = document.createElement("article");
+  card.className = "grid-item";
+  card.dataset.type = item.type;
+  const media = getPrimaryMedia(item);
+  const src = media?.src || item.image || "assets/placeholder-release.svg";
+  const ph = item.placeholder ? ` style="--ph:url(${item.placeholder})"` : "";
+  card.innerHTML = `
+    <div class="img-wrap"${ph}>
+      <img class="grid-media" src="${escapeAttribute(src)}" alt="" loading="lazy" />
+    </div>
+    <div class="grid-copy">
+      <span class="grid-type">${escapeHtml(item.type)} · ${escapeHtml(item.year)}</span>
+      <h3>${escapeHtml(item.title)}</h3>
+    </div>
+  `;
+  card.addEventListener("click", () => openProject(item.id, "archive"));
+  return card;
+}
+
+function bindImageLoading(container) {
+  container.querySelectorAll(".img-wrap img").forEach((img) => {
+    if (img.complete) {
+      img.closest(".img-wrap")?.classList.add("img-loaded");
+    } else {
+      img.addEventListener("load", () => img.closest(".img-wrap")?.classList.add("img-loaded"), { once: true });
+    }
+  });
 }
 
 function renderItem(item, options = {}) {
@@ -230,7 +287,9 @@ function renderItemMedia(item) {
   if (media?.kind === "video") {
     return `<video class="archive-media" src="${escapeAttribute(media.src)}" controls playsinline preload="metadata"></video>`;
   }
-  return `<img class="archive-media" src="${escapeAttribute(media?.src || item.image || "assets/placeholder-release.svg")}" alt="" loading="lazy" />`;
+  const src = media?.src || item.image || "assets/placeholder-release.svg";
+  const ph = item.placeholder ? ` style="--ph:url(${item.placeholder})"` : "";
+  return `<div class="img-wrap"${ph}><img class="archive-media" src="${escapeAttribute(src)}" alt="" loading="lazy" /></div>`;
 }
 
 function getPrimaryMedia(item) {
