@@ -373,9 +373,10 @@ function renderLink(link, item) {
 }
 
 function renderProjectDetail(item) {
+  const phStyle = item.placeholder ? ` style="--ph:url(${item.placeholder})"` : "";
   return `
     <article class="project-detail">
-      <div class="project-detail-media">
+      <div class="project-detail-media"${phStyle}>
         ${renderProjectMedia(item)}
         <button class="text-link button-link project-close" type="button" data-action="close-project">close</button>
       </div>
@@ -511,6 +512,16 @@ function bindProjectGallery(panel) {
   document.addEventListener("keydown", lightbox._keyHandler);
 }
 
+function bindProjectMedia(panel) {
+  const img = panel.querySelector(".project-detail-media img");
+  if (!img) return;
+  const media = img.closest(".project-detail-media");
+  if (!media) return;
+  const mark = () => media.classList.add("media-loaded");
+  if (img.complete && img.naturalWidth) mark();
+  else img.addEventListener("load", mark, { once: true });
+}
+
 function openProject(id, surface = "archive") {
   const archiveItems = mergeArchiveItems(getSelectedWorks(), state.data.items, state.data.videos);
   const item = archiveItems.find((entry) => entry.id === id);
@@ -525,6 +536,7 @@ function openProject(id, surface = "archive") {
     els.selectedProjectPanel.innerHTML = renderProjectDetail(item);
     bindProjectClose(els.selectedProjectPanel);
     bindProjectGallery(els.selectedProjectPanel);
+    bindProjectMedia(els.selectedProjectPanel);
     els.selectedProjectPanel.scrollIntoView({ block: "start" });
     return;
   }
@@ -540,6 +552,7 @@ function openProject(id, surface = "archive") {
   els.archiveProjectPanel.innerHTML = renderProjectDetail(item);
   bindProjectClose(els.archiveProjectPanel);
   bindProjectGallery(els.archiveProjectPanel);
+  bindProjectMedia(els.archiveProjectPanel);
 }
 
 function openProjectModal(item) {
@@ -550,6 +563,7 @@ function openProjectModal(item) {
   panel.innerHTML = renderProjectDetail(item);
   bindProjectClose(els.projectModal);
   bindProjectGallery(panel);
+  bindProjectMedia(panel);
   els.projectModal.hidden = false;
 }
 

@@ -588,6 +588,23 @@ body.modal-open {
   position: relative;
   border-bottom: 2px solid var(--line);
 }
+.project-detail-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--ph, none);
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px) saturate(0.8);
+  transform: scale(1.04);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+.project-detail-media.media-loaded::before {
+  opacity: 0;
+}
 
 .project-detail-media img {
   display: block;
@@ -595,6 +612,8 @@ body.modal-open {
   max-height: 62vh;
   object-fit: contain;
   background: var(--bg);
+  position: relative;
+  z-index: 1;
 }
 .project-detail-media video {
   display: block;
