@@ -238,10 +238,15 @@ function renderGridItem(item) {
 
 function bindImageLoading(container) {
   container.querySelectorAll(".img-wrap img").forEach((img) => {
-    if (img.complete) {
-      img.closest(".img-wrap")?.classList.add("img-loaded");
+    const markLoaded = () => img.closest(".img-wrap")?.classList.add("img-loaded");
+    if (img.complete && img.naturalWidth > 0) {
+      markLoaded();
     } else {
-      img.addEventListener("load", () => img.closest(".img-wrap")?.classList.add("img-loaded"), { once: true });
+      img.addEventListener("load", markLoaded, { once: true });
+      // Re-check after a paint in case the browser already completed the load
+      requestAnimationFrame(() => {
+        if (img.complete && img.naturalWidth > 0) markLoaded();
+      });
     }
   });
 }
@@ -561,6 +566,8 @@ function closeProject() {
   els.archiveProjectPanel.replaceChildren();
   els.archiveList.hidden = false;
   els.filterBar.hidden = false;
+  // Re-bind image loading: lazy images may have paused while the list was hidden
+  requestAnimationFrame(() => bindImageLoading(els.archiveList));
 }
 
 function renderCatalog() {
