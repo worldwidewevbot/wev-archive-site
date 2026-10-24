@@ -1,6 +1,6 @@
 const state = {
   filter: "all",
-  view: "list",
+  view: "grid",
   page: "selected",
   adminUnlocked: sessionStorage.getItem("wevCmsUnlocked") === "true",
   adminItemId: null,
@@ -462,6 +462,7 @@ function bindProjectGallery(panel) {
   if (!lightbox) {
     lightbox = document.createElement("div");
     lightbox.id = "project-lightbox";
+    lightbox.hidden = true;
     lightbox.setAttribute("role", "dialog");
     lightbox.setAttribute("aria-modal", "true");
     lightbox.setAttribute("aria-label", "Photo viewer");
@@ -640,6 +641,7 @@ function renderAdminArchiveEditor() {
     <label><span>date / year</span><input data-item-field="date" value="${escapeAttribute(item.date || item.year || "")}" /></label>
     <label class="wide"><span>dek</span><input data-item-field="dek" value="${escapeAttribute(item.dek || "")}" /></label>
     <label class="wide"><span>description</span><textarea data-item-field="description" rows="3">${escapeHtml(item.description || "")}</textarea></label>
+    <label class="wide"><span>body text</span><textarea data-item-field="projectBody" rows="5" placeholder="Full text shown when project opens. Separate paragraphs with a blank line.">${escapeHtml((item.project?.body || []).join("\n\n"))}</textarea></label>
     <label class="wide"><span>tags</span><input data-item-field="tags" value="${escapeAttribute((item.tags || []).join(", "))}" /></label>
     <label class="wide"><span>links</span><textarea data-item-field="links" rows="3">${escapeHtml(formatLinksForEdit(item.links || []))}</textarea></label>
     <div class="admin-block-editor wide">
@@ -791,9 +793,15 @@ function handleArchiveItemChange(event) {
   } else if (field === "date") {
     item.date = event.target.value.trim();
     item.year = inferYear(item.date);
+  } else if (field === "projectBody") {
+    if (!item.project) item.project = { headline: item.title, body: [], links: [] };
+    const text = event.target.value.trim();
+    item.project.body = text ? text.split(/\n\n+/).map((s) => s.trim()).filter(Boolean) : [];
   } else {
     item[field] = event.target.value.trim();
-    if (field === "title" && item.project) item.project.headline = item.title;
+    if (field === "title") {
+      if (item.project) item.project.headline = item.title;
+    }
   }
   markCmsDirty();
   render();
@@ -1185,7 +1193,8 @@ function bindCatalogControls() {
 function handleAdminAction(action) {
   if (action === "save") {
     saveArchiveDraft();
-    setSaveStatus("Saved local draft.");
+    render();
+    setSaveStatus("Draft saved and site updated.");
   } else if (action === "export") {
     els.adminExport.value = JSON.stringify(state.data, null, 2);
     setSaveStatus("Export ready.");
@@ -1222,7 +1231,8 @@ function saveArchiveDraft() {
 }
 
 function markCmsDirty() {
-  setSaveStatus("Unsaved changes.");
+  saveArchiveDraft();
+  setSaveStatus("Draft autosaved.");
 }
 
 function setSaveStatus(message) {
