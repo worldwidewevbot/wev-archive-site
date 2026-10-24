@@ -1,6 +1,10 @@
 import { createServer } from "node:http";
-import { readFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
+import { exec } from "node:child_process";
+import { promisify } from "node:util";
 import path from "node:path";
+
+const execAsync = promisify(exec);
 
 const root = process.cwd();
 const types = {
@@ -17,6 +21,29 @@ const types = {
 };
 
 createServer(async (request, response) => {
+  response.setHeader("Access-Control-Allow-Origin", "*");
+
+  if (request.method === "POST" && request.url === "/api/publish") {
+    let body = "";
+    for await (const chunk of request) body += chunk;
+    try {
+      const { archive } = JSON.parse(body);
+      if (!Array.isArray(archive)) throw new Error("expected archive array");
+      const jsonPath = path.join(root, "data", "archive.json");
+      await writeFile(jsonPath, JSON.stringify(archive, null, 2) + "\n", "utf8");
+      const { stdout, stderr } = await execAsync(
+        'git add data/archive.json && git commit -m "cms: publish archive update" && git push origin main',
+        { cwd: root }
+      );
+      response.writeHead(200, { "content-type": "application/json" });
+      response.end(JSON.stringify({ ok: true, output: stdout + stderr }));
+    } catch (err) {
+      response.writeHead(500, { "content-type": "application/json" });
+      response.end(JSON.stringify({ ok: false, error: err.message }));
+    }
+    return;
+  }
+
   const url = new URL(request.url || "/", "http://localhost");
   const pathname = url.pathname === "/" ? "/index.html" : decodeURIComponent(url.pathname);
   const filePath = path.normalize(path.join(root, pathname));

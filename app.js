@@ -1191,6 +1191,27 @@ function bindCatalogControls() {
 }
 
 function handleAdminAction(action) {
+  if (action === "publish") {
+    setSaveStatus("Publishing…");
+    fetch("http://localhost:4173/api/publish", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ archive: state.data }),
+    })
+      .then((r) => r.json())
+      .then((res) => {
+        if (res.ok) {
+          localStorage.removeItem("wevArchiveDraft");
+          setSaveStatus("Published to GitHub Pages.");
+        } else {
+          setSaveStatus("Publish failed: " + res.error + " — use export/download instead.");
+        }
+      })
+      .catch(() => {
+        setSaveStatus("Server not reachable. Use export JSON or download to publish manually.");
+      });
+    return;
+  }
   if (action === "save") {
     saveArchiveDraft();
     render();

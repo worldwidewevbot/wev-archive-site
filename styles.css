@@ -1001,6 +1001,16 @@ body.lightbox-open { overflow: hidden; }
   color: #fff;
 }
 
+.publish-button {
+  border-color: #1a6e1a;
+  color: #1a6e1a;
+}
+
+.publish-button:hover {
+  background: #1a6e1a;
+  color: #fff;
+}
+
 .catalog-button[aria-pressed="true"],
 .tag-button[aria-pressed="true"],
 .catalog-button:hover,
