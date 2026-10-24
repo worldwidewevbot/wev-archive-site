@@ -99,6 +99,7 @@ function mergeArchiveItems(selectedWorks, items, videos = []) {
 function renderSelectedWorks(works) {
   if (!els.selectedList) return;
   els.selectedList.replaceChildren(...works.sort(sortByMostRecent).map((work) => renderItem(work, { selected: true })));
+  bindImageLoading(els.selectedList);
 }
 
 function syncCollectionDesignations() {
@@ -415,7 +416,8 @@ function renderProjectMedia(item) {
   // If first block is a youtube embed, show it as the hero media
   const firstBlock = Array.isArray(item.blocks) && item.blocks[0];
   if (firstBlock?.type === "youtube") {
-    return `<div class="yt-embed yt-hero"><iframe src="https://www.youtube.com/embed/${escapeAttribute(firstBlock.id)}" title="${escapeAttribute(item.title)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`;
+    const thumbUrl = `https://img.youtube.com/vi/${escapeAttribute(firstBlock.id)}/hqdefault.jpg`;
+    return `<div class="yt-embed yt-hero" style="background-image:url(${thumbUrl});background-size:cover;background-position:center"><iframe src="https://www.youtube.com/embed/${escapeAttribute(firstBlock.id)}" title="${escapeAttribute(item.title)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`;
   }
   const media = getPrimaryMedia(item);
   if (media?.kind === "video") {
@@ -560,6 +562,7 @@ function closeProject() {
     els.selectedProjectPanel.hidden = true;
     els.selectedProjectPanel.replaceChildren();
     els.selectedList.hidden = false;
+    requestAnimationFrame(() => bindImageLoading(els.selectedList));
     return;
   }
 
