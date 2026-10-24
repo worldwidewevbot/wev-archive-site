@@ -1190,26 +1190,70 @@ function bindCatalogControls() {
   });
 }
 
+async function publishToGitHub() {
+  const REPO = "worldwidewevbot/wev-archive-site";
+  const FILE = "data/archive.json";
+  const API = `https://api.github.com/repos/${REPO}/contents/${FILE}`;
+
+  let token = localStorage.getItem("wevGithubToken");
+  if (!token) {
+    token = prompt(
+      "Enter a GitHub Personal Access Token with repo write access.\n" +
+      "It will be saved in your browser only (never sent anywhere except GitHub).\n\n" +
+      "Create one at: github.com/settings/tokens/new — select 'repo' scope."
+    );
+    if (!token) { setSaveStatus("Publish cancelled."); return; }
+    localStorage.setItem("wevGithubToken", token.trim());
+    token = token.trim();
+  }
+
+  setSaveStatus("Publishing…");
+  try {
+    // Get current file SHA (required by GitHub API for updates)
+    const meta = await fetch(API, {
+      headers: { Authorization: `token ${token}`, Accept: "application/vnd.github+json" },
+    }).then((r) => r.json());
+
+    if (meta.message === "Bad credentials") {
+      localStorage.removeItem("wevGithubToken");
+      setSaveStatus("Bad token — removed. Click publish again to re-enter.");
+      return;
+    }
+
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(state.data, null, 2) + "\n")));
+    const res = await fetch(API, {
+      method: "PUT",
+      headers: {
+        Authorization: `token ${token}`,
+        Accept: "application/vnd.github+json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message: "cms: publish archive update",
+        content,
+        sha: meta.sha,
+      }),
+    }).then((r) => r.json());
+
+    if (res.content) {
+      localStorage.removeItem("wevArchiveDraft");
+      setSaveStatus("Published to GitHub Pages. Live in ~30s.");
+    } else {
+      setSaveStatus("GitHub error: " + (res.message || JSON.stringify(res)));
+    }
+  } catch (err) {
+    setSaveStatus("Publish failed: " + err.message);
+  }
+}
+
 function handleAdminAction(action) {
   if (action === "publish") {
-    setSaveStatus("Publishing…");
-    fetch("http://localhost:4173/api/publish", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ archive: state.data }),
-    })
-      .then((r) => r.json())
-      .then((res) => {
-        if (res.ok) {
-          localStorage.removeItem("wevArchiveDraft");
-          setSaveStatus("Published to GitHub Pages.");
-        } else {
-          setSaveStatus("Publish failed: " + res.error + " — use export/download instead.");
-        }
-      })
-      .catch(() => {
-        setSaveStatus("Server not reachable. Use export JSON or download to publish manually.");
-      });
+    publishToGitHub();
+    return;
+  }
+  if (action === "clear-token") {
+    localStorage.removeItem("wevGithubToken");
+    setSaveStatus("GitHub token cleared.");
     return;
   }
   if (action === "save") {
