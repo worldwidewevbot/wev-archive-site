@@ -282,6 +282,52 @@
   "items": [
     {
       "showInArchive": true,
+      "isSelectedWork": true,
+      "showInWorks": false,
+      "id": "acid-in-tokyo-2025",
+      "type": "releases",
+      "year": "2025",
+      "date": "2025-01-01",
+      "title": "acid in tokyo (feat. YINYO)",
+      "dek": "Official music video.",
+      "description": "Official music video directed in Tokyo. Featuring YINYO.",
+      "image": "https://img.youtube.com/vi/26axV92xe4c/maxresdefault.jpg",
+      "links": [
+        {
+          "label": "watch",
+          "url": "https://www.youtube.com/watch?v=26axV92xe4c"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/track/7jETAeMftEv9LQHNSmMa8C"
+        }
+      ],
+      "tags": [
+        "music video",
+        "releases"
+      ],
+      "blocks": [
+        {
+          "type": "youtube",
+          "id": "26axV92xe4c",
+          "caption": "acid in tokyo feat. YINYO — official video"
+        }
+      ],
+      "project": {
+        "headline": "acid in tokyo",
+        "body": [
+          "Official music video shot in Tokyo featuring YINYO."
+        ],
+        "links": [
+          {
+            "label": "youtube",
+            "url": "https://www.youtube.com/watch?v=26axV92xe4c"
+          }
+        ]
+      }
+    },
+    {
+      "showInArchive": true,
       "isSelectedWork": false,
       "showInWorks": false,
       "id": "e4rfquake-edit-2019-05-27",
@@ -1929,7 +1975,48 @@
           }
         ]
       },
-      "placeholder": "data:image/jpeg;base64,/9j/2wBDADUlKC8oITUvKy88OTU/UIVXUElJUKN1e2GFwarLyL6qurfV8P//1eL/5re6////////////zv//////////////2wBDATk8PFBGUJ1XV53/3Lrc////////////////////////////////////////////////////////////////////wAARCAAUABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAMEAQIF/8QAHxABAAICAgIDAAAAAAAAAAAAAQACAxEhMQRBEhOx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAIDAf/EABsRAAMAAgMAAAAAAAAAAAAAAAABAiExAxFR/9oADAMBAAIRAxEAPwDNPHbcvBNrYsZT2O+0ljKWxpatWwmkP2R/cZRKY73rrSh0x3dt9rROZS2is4rDrUTomI+IPOj3EdcuMmOPCSNB0REiVEREAP/Z"
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDADUlKC8oITUvKy88OTU/UIVXUElJUKN1e2GFwarLyL6qurfV8P//1eL/5re6////////////zv//////////////2wBDATk8PFBGUJ1XV53/3Lrc////////////////////////////////////////////////////////////////////wAARCAAUABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAMEAQIF/8QAHxABAAICAgIDAAAAAAAAAAAAAQACAxEhMQRBEhOx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAIDAf/EABsRAAMAAgMAAAAAAAAAAAAAAAABAiExAxFR/9oADAMBAAIRAxEAPwDNPHbcvBNrYsZT2O+0ljKWxpatWwmkP2R/cZRKY73rrSh0x3dt9rROZS2is4rDrUTomI+IPOj3EdcuMmOPCSNB0REiVEREAP/Z",
+      "blocks": [
+        {
+          "type": "image",
+          "src": "assets/ost-vinyl-preorder-mockup.jpg",
+          "caption": "12” translucent purple vinyl"
+        },
+        {
+          "type": "image",
+          "src": "assets/ost-cd-1.jpg",
+          "caption": "OST compact disc"
+        },
+        {
+          "type": "image",
+          "src": "assets/ost-shirt-flat.jpg",
+          "caption": "7oz OST shirt"
+        },
+        {
+          "type": "image",
+          "src": "assets/ost-merch-blast.jpg",
+          "caption": "merch package"
+        },
+        {
+          "type": "youtube",
+          "id": "1cpPujuAgx4",
+          "caption": "release set @ thelotradio 2026-06-02"
+        }
+      ],
+      "gallery": [
+        "assets/ost-listening-party-1.jpg",
+        "assets/ost-listening-party-2.jpg",
+        "assets/ost-listening-party-3.jpg",
+        "assets/ost-listening-party-4.jpg",
+        "assets/ost-listening-party-5.jpg",
+        "assets/ost-release-party-1.jpg",
+        "assets/ost-release-party-2.jpg",
+        "assets/ost-release-party-3.jpg",
+        "assets/ost-release-party-4.jpg",
+        "assets/ost-release-party-5.jpg",
+        "assets/ost-release-party-6.jpg",
+        "assets/ost-release-party-7.jpg"
+      ]
     },
     {
       "showInArchive": true,
@@ -4493,6 +4580,12 @@
   ],
   "videos": [
     {
+      "id": "_NAxAdTfZGE",
+      "title": "TIJOLO BUS @ WEV",
+      "url": "https://www.youtube.com/watch?v=_NAxAdTfZGE",
+      "caption": ""
+    },
+    {
       "id": "1cpPujuAgx4",
       "title": "wev OST album release @ The Lot Radio May 2026",
       "url": "https://www.youtube.com/watch?v=1cpPujuAgx4&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
@@ -4568,12 +4661,6 @@
       "id": "2H2A3zYsvmA",
       "title": "wev b2b Nick AM | Elsewhere Hall: Brooklyn, NY",
       "url": "https://www.youtube.com/watch?v=2H2A3zYsvmA&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
-      "caption": "from the public YouTube playlist"
-    },
-    {
-      "id": "26axV92xe4c",
-      "title": "wev - acid in tokyo feat. YINYO [official video]",
-      "url": "https://www.youtube.com/watch?v=26axV92xe4c&list=PLll0g51V72motiodQbSB8hIncvZBBSSZ3",
       "caption": "from the public YouTube playlist"
     }
   ],

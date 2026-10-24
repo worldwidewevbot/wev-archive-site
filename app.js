@@ -412,6 +412,11 @@ function renderProjectGallery(item) {
 }
 
 function renderProjectMedia(item) {
+  // If first block is a youtube embed, show it as the hero media
+  const firstBlock = Array.isArray(item.blocks) && item.blocks[0];
+  if (firstBlock?.type === "youtube") {
+    return `<div class="yt-embed yt-hero"><iframe src="https://www.youtube.com/embed/${escapeAttribute(firstBlock.id)}" title="${escapeAttribute(item.title)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`;
+  }
   const media = getPrimaryMedia(item);
   if (media?.kind === "video") {
     return `<video src="${escapeAttribute(media.src)}" controls playsinline preload="metadata"></video>`;
@@ -420,7 +425,10 @@ function renderProjectMedia(item) {
 }
 
 function renderProjectBlocks(item) {
-  const blocks = item.blocks || [];
+  let blocks = item.blocks || [];
+  if (!blocks.length) return "";
+  // Skip first block if it's a youtube embed (already rendered as hero media)
+  if (blocks[0]?.type === "youtube") blocks = blocks.slice(1);
   if (!blocks.length) return "";
   return `<div class="project-blocks">${blocks.map(renderProjectBlock).join("")}</div>`;
 }
@@ -428,6 +436,7 @@ function renderProjectBlocks(item) {
 function renderProjectBlock(block) {
   if (block.type === "image") return `<figure><img src="${escapeAttribute(block.src || "")}" alt="" /><figcaption>${escapeHtml(block.caption || "")}</figcaption></figure>`;
   if (block.type === "video") return `<figure><video src="${escapeAttribute(block.src || "")}" controls playsinline preload="metadata"></video><figcaption>${escapeHtml(block.caption || "")}</figcaption></figure>`;
+  if (block.type === "youtube") return `<figure class="yt-figure"><div class="yt-embed"><iframe src="https://www.youtube.com/embed/${escapeAttribute(block.id || "")}" title="${escapeAttribute(block.caption || "video")}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>${block.caption ? `<figcaption>${escapeHtml(block.caption)}</figcaption>` : ""}</figure>`;
   if (block.type === "embed") return `<p><a class="text-link" href="${escapeAttribute(block.url || "#")}" target="_blank" rel="noreferrer">${escapeHtml(block.label || block.url || "embed")}</a></p>`;
   if (block.type === "quote") return `<blockquote>${escapeHtml(block.text || "")}</blockquote>`;
   if (block.type === "link") return `<p><a class="text-link" href="${escapeAttribute(block.url || "#")}" target="_blank" rel="noreferrer">${escapeHtml(block.label || block.url || "link")}</a></p>`;
