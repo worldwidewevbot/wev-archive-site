@@ -606,8 +606,12 @@ function renderAdminArchiveEditor() {
   article.dataset.itemId = item.id;
   article.innerHTML = `
     <div class="admin-item-head">
-      <strong>${escapeHtml(item.title)}</strong>
-      <span>${escapeHtml([item.type, item.year].filter(Boolean).join(" / "))}</span>
+      ${item.image ? `<img class="admin-item-thumb" src="${escapeAttribute(item.image)}" alt="" />` : `<div class="admin-item-thumb admin-item-thumb-empty"></div>`}
+      <div>
+        <strong>${escapeHtml(item.title)}</strong>
+        <span>${escapeHtml([item.type, item.year].filter(Boolean).join(" / "))}</span>
+        <span class="admin-item-id">${escapeHtml(item.id)}</span>
+      </div>
     </div>
     <div class="admin-designations" aria-label="Site placement">
       <label><input data-item-flag="showInArchive" type="checkbox" ${item.showInArchive !== false ? "checked" : ""} /> <span>archive</span></label>
@@ -692,10 +696,10 @@ function renderAdminBlockRows(item) {
   return blocks.map((block, index) => `
     <div class="admin-block-row" data-block-index="${index}">
       <select data-block-field="type">
-        ${["text", "quote", "link", "embed", "image", "video"].map((type) => `<option ${block.type === type ? "selected" : ""}>${type}</option>`).join("")}
+        ${["text", "quote", "link", "embed", "image", "video", "youtube"].map((type) => `<option ${block.type === type ? "selected" : ""}>${type}</option>`).join("")}
       </select>
       <input data-block-field="text" value="${escapeAttribute(block.text || block.caption || block.label || "")}" placeholder="text / caption / label" />
-      <input data-block-field="url" value="${escapeAttribute(block.url || block.src || "")}" placeholder="url or media path" />
+      <input data-block-field="url" value="${escapeAttribute(block.url || block.src || block.id || "")}" placeholder="${block.type === "youtube" ? "youtube video id" : "url or media path"}" />
       <button class="catalog-button danger-button" type="button" data-delete-block="${index}">delete</button>
     </div>
   `).join("");
@@ -741,6 +745,7 @@ function handleBlockChange(event) {
   if (field === "url") {
     block.url = event.target.value;
     block.src = event.target.value;
+    if (block.type === "youtube") block.id = event.target.value;
   }
   markCmsDirty();
 }
