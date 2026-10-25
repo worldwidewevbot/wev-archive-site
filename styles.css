@@ -627,6 +627,7 @@ body.modal-open {
   top: 12px;
   right: 12px;
   background: var(--bg);
+  z-index: 2;
 }
 
 .project-detail-copy {
